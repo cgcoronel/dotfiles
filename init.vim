@@ -122,9 +122,8 @@ let g:gruvbox_italic=1
 
 colorscheme gruvbox
 set background=dark
-hi VertSplit guibg=#3A3A3A
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
-hi GruvboxGreenBold gui=bold ctermfg=124 ctermfg=green
+hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 
 " Iconos para git
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -150,9 +149,6 @@ let g:NERDTreeIgnore= ['^node_modules$', '^.git$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
-
-" Barra vertical
-set fillchars+=vert:\ 
 
 """""" Fin tema
 
