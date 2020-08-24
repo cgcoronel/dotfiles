@@ -90,7 +90,8 @@ set statusline+=%= " Right side settings
 " git branch
 set statusline+=%{StatuslineGit()}
 " info file
-set statusline+=\ %#TermCursor#
+set statusline+=\ %#PmenuThumb#
+"set statusline+=\ %#TermCursor#
 set statusline+=\ %{WebDevIconsGetFileTypeSymbol()}
 set statusline+=\ \ \ %p%%
 set statusline+=\ \ \ Ξ
@@ -100,7 +101,6 @@ set statusline+=%c
 set statusline+=\ %#DiffAdd#
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\  
-
 
 
 """"""""""""""""""" Coc extensions 
@@ -123,6 +123,7 @@ let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 hi VertSplit guibg=#3A3A3A
+hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 
 " Iconos para git
 let g:NERDTreeGitStatusIndicatorMapCustom = {
