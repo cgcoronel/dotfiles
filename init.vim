@@ -124,6 +124,7 @@ colorscheme gruvbox
 set background=dark
 hi VertSplit guibg=#3A3A3A
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
+hi GruvboxGreenBold gui=bold ctermfg=124 ctermfg=green
 
 " Iconos para git
 let g:NERDTreeGitStatusIndicatorMapCustom = {
