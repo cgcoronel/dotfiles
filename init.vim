@@ -46,26 +46,6 @@ Plug 'gko/vim-coloresque'					   	" Coloresque
 
 call plug#end()
 
-
-
-"""""""""""""""""""" File path tab line
-"""""""""""""""""""""""""""""""""""""""
-
-set showtabline=2
-
-function! FilePathLine() 
-   return (&modified ? '%#DiffDelete#' : '%#FoldColumn#') 
-          \. ' '
-          \. WebDevIconsGetFileTypeSymbol()
-          \. '  '
-	  \. expand('%f') 
-          \. ' '
-	  \. '%#Pmenu#'  
-endfunction
-set tabline=%!FilePathLine()
-
-
-
 """""""""""""""" Custom status bar
 """"""""""""""""""""""""""""""""""
 
@@ -82,33 +62,30 @@ set statusline+=%#Search#%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
 
 set statusline+=%#FoldColumn#
-set statusline+=\ %t
+set statusline+=\ %f\ %m
 
 " filetype
 set statusline+=%= " Right side settings
 
 " git branch
 set statusline+=%{StatuslineGit()}
+
 " info file
 set statusline+=\ %#PmenuThumb#
-"set statusline+=\ %#TermCursor#
 set statusline+=\ %{WebDevIconsGetFileTypeSymbol()}
 set statusline+=\ \ \ %p%%
 set statusline+=\ \ \ Ξ
 set statusline+=\ %l/%L
 set statusline+=\ \ \ ㏑:
 set statusline+=%c
-set statusline+=\ %#DiffAdd#
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\  
-
 
 """"""""""""""""""" Coc extensions 
 """"""""""""""""""""""""""""""""""
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
 
 let g:coc_snippet_next = '<tab>'
-
 
 
 """"""""""""""""""" Theme params 
