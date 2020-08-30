@@ -43,6 +43,7 @@ Plug 'ryanoasis/vim-devicons'						" Dev icons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'				" Nerd icons syntax and file extensions
 Plug 'Xuyuanp/nerdtree-git-plugin'                                      " Icons git status for NERDTree
 Plug 'gko/vim-coloresque'					   	" Coloresque
+Plug 'airblade/vim-gitgutter'						" Git Gutter
 
 call plug#end()
 
