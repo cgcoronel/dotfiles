@@ -31,14 +31,20 @@ call plug#begin('~/vim/plugged')
 Plug 'morhetz/gruvbox'							" Theme 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}				" Conque of Completion
 Plug 'maxmellon/vim-jsx-pretty'						" React syntax
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }    " Style Components syntax 
 Plug 'pangloss/vim-javascript'						" Js syntax
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }			" Command line Fuzzy Finder
 Plug 'junegunn/fzf.vim'							" Command line Fuzzy Finder
 Plug 'scrooloose/nerdtree'						" NERDTree <3 <3 <3
 Plug 'christoomey/vim-tmux-navigator'					" Tmux Navigator - move between split screens
 Plug 'tpope/vim-fugitive'						" Fugitive - Git Manager
+"Plug 'terryma/vim-multiple-cursors'					" Multiple cursors
+"Plug 'ryanoasis/vim-devicons'						" Dev icons 
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'				" Nerd icons syntax and file extensions
+"Plug 'Xuyuanp/nerdtree-git-plugin'                                      " Icons git status for NERDTree
+"Plug 'gko/vim-coloresque'					   	" Coloresque
 Plug 'airblade/vim-gitgutter'						" Git Gutter
-
+"Plug 'preservim/nerdcommenter'						" Nerd Commenter
 call plug#end()
 
 """""""""""""""" Custom status bar
@@ -67,6 +73,7 @@ set statusline+=%{StatuslineGit()}
 
 " info file
 set statusline+=\ %#PmenuThumb#
+"set statusline+=\ %{WebDevIconsGetFileTypeSymbol()}
 set statusline+=\ \ \ %p%%
 set statusline+=\ \ \ Ξ
 set statusline+=\ %l/%L
@@ -90,6 +97,22 @@ set background=dark
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 
+" Iconos para git
+"let g:NERDTreeGitStatusIndicatorMapCustom = {
+"  \ 'Modified'  :'✹',
+"  \ 'Staged'    :'✚',
+"  \ 'Untracked' :'✭',
+"  \ 'Renamed'   :'➜',
+"  \ 'Unmerged'  :'═',
+"  \ 'Deleted'   :'✖',
+"  \ 'Ignored'   :'☒',
+"  \ 'Clean'     :'✔︎',
+"  \ 'Dirty'     :'!',
+"  \ 'Unknown'   :'?',
+" \ }
+
+
+
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
 let NERDTreeAutoDeleteBuffer = 1
@@ -98,7 +121,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 
-"""""" Fin Theme 
+"""""" Fin tema
+
 
 
 """"""""""""""""""""""" Shortcuts
@@ -113,10 +137,10 @@ imap kj <Esc>
 " Desplega el arbol de directorios
 nmap <Leader>n :NERDTreeFind<CR>
 
-" Save file 
+" Guarda
 nmap <Leader>w :w<CR>
 
-" Quit
+" Salir
 " cierra cada buffer y cuando llega al ultimo buffer cierra vim 
 function! Bye()
      if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
@@ -137,18 +161,18 @@ nmap <Leader>s :vsplit<CR>
 " Finder
 nmap <Leader>f :GFiles<CR>
       
-" Search in file 
+" Busqueda en un archivo
 nmap <Leader>b :/
       
-" Git
+" Comparar cambios git
 nmap <Leader>c :Gdiff<CR>
 nmap <Leader>d :G<CR>
 nmap <Leader>a :Gw<CR> 
 
-" Command line 
+" Linea de comandos
 nmap <Leader>t :!
 
-" list files opened 
+" filtrar archivos abiertos
 nmap <Leader>p :Buffers<CR>
 
 " Move lines con Alt + [ j | l ] o Alt + [Up | Down ] 
@@ -156,13 +180,17 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 nnoremap <A-Down> :m .+1<CR>==
 nnoremap <A-Up> :m .-2<CR>==
 inoremap <A-Down> <Esc>:m .+1<CR>==gi
 inoremap <A-Up> <Esc>:m .-2<CR>==gi
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
 
-" Move 
+" Moverse a los extermos de la vista del editor
 nnoremap gl $
 nnoremap gh 0
 nnoremap gk H
