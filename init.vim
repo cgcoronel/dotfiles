@@ -85,17 +85,11 @@ set statusline+=\
 """"""""""""""""""" Coc extensions 
 """"""""""""""""""""""""""""""""""
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
-
 let g:coc_snippet_next = '<tab>'
 
 
 """"""""""""""""""" Theme params 
 """"""""""""""""""""""""""""""""
-
-"if has('termguicolors')
-"  set termguicolors
-"endif
-
 let g:gruvbox_italic=1
 
 colorscheme gruvbox
@@ -134,6 +128,10 @@ let NERDTreeCascadeOpenSingleChildDir = 1
 
 """"""""""""""""""""""" Shortcuts
 """""""""""""""""""""""""""""""""
+":help key-notation
+" remap tecla escape
+imap jk <Esc>
+imap kj <Esc>
 
 " Desplega el arbol de directorios
 nmap <Leader>n :NERDTreeFind<CR>
@@ -201,9 +199,4 @@ vnoremap gl $
 vnoremap gh 0
 vnoremap gk H
 vnoremap gj L
-
-"nnoremap <Up> :resize +2<CR>
-"nnoremap <Down> :resize -2<CR>
-"nnoremap <Left> :vertical resize +2<CR>
-"nnoremap <Right> :vertical resize -2<CR>
 
