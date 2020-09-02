@@ -38,13 +38,13 @@ Plug 'junegunn/fzf.vim'							" Command line Fuzzy Finder
 Plug 'scrooloose/nerdtree'						" NERDTree <3 <3 <3
 Plug 'christoomey/vim-tmux-navigator'					" Tmux Navigator - move between split screens
 Plug 'tpope/vim-fugitive'						" Fugitive - Git Manager
-Plug 'terryma/vim-multiple-cursors'					" Multiple cursors
-Plug 'ryanoasis/vim-devicons'						" Dev icons 
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'				" Nerd icons syntax and file extensions
-Plug 'Xuyuanp/nerdtree-git-plugin'                                      " Icons git status for NERDTree
-Plug 'gko/vim-coloresque'					   	" Coloresque
+"Plug 'terryma/vim-multiple-cursors'					" Multiple cursors
+"Plug 'ryanoasis/vim-devicons'						" Dev icons 
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'				" Nerd icons syntax and file extensions
+"Plug 'Xuyuanp/nerdtree-git-plugin'                                      " Icons git status for NERDTree
+"Plug 'gko/vim-coloresque'					   	" Coloresque
 Plug 'airblade/vim-gitgutter'						" Git Gutter
-
+"Plug 'preservim/nerdcommenter'						" Nerd Commenter
 call plug#end()
 
 """""""""""""""" Custom status bar
@@ -73,7 +73,7 @@ set statusline+=%{StatuslineGit()}
 
 " info file
 set statusline+=\ %#PmenuThumb#
-set statusline+=\ %{WebDevIconsGetFileTypeSymbol()}
+"set statusline+=\ %{WebDevIconsGetFileTypeSymbol()}
 set statusline+=\ \ \ %p%%
 set statusline+=\ \ \ Ξ
 set statusline+=\ %l/%L
@@ -98,21 +98,20 @@ hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 
 " Iconos para git
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-  \ 'Modified'  :'✹',
-  \ 'Staged'    :'✚',
-  \ 'Untracked' :'✭',
-  \ 'Renamed'   :'➜',
-  \ 'Unmerged'  :'═',
-  \ 'Deleted'   :'✖',
-  \ 'Ignored'   :'☒',
-  \ 'Clean'     :'✔︎',
-  \ 'Dirty'     :'!',
-  \ 'Unknown'   :'?',
- \ }
+"let g:NERDTreeGitStatusIndicatorMapCustom = {
+"  \ 'Modified'  :'✹',
+"  \ 'Staged'    :'✚',
+"  \ 'Untracked' :'✭',
+"  \ 'Renamed'   :'➜',
+"  \ 'Unmerged'  :'═',
+"  \ 'Deleted'   :'✖',
+"  \ 'Ignored'   :'☒',
+"  \ 'Clean'     :'✔︎',
+"  \ 'Dirty'     :'!',
+"  \ 'Unknown'   :'?',
+" \ }
 
 
-let mapleader = " "
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
@@ -128,6 +127,8 @@ let NERDTreeCascadeOpenSingleChildDir = 1
 
 """"""""""""""""""""""" Shortcuts
 """""""""""""""""""""""""""""""""
+let mapleader = " "
+
 ":help key-notation
 " remap tecla escape
 imap jk <Esc>
