@@ -59,11 +59,8 @@ set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
 set statusline+=%#FoldColumn#
 set statusline+=\ %f\ %m
 
-" filetype
 set statusline+=%= " Right side settings
-
-" git branch
-set statusline+=%{StatuslineGit()}
+set statusline+=%{StatuslineGit()} " git branch
 
 " info file
 set statusline+=\ %#PmenuThumb#
