@@ -43,6 +43,8 @@ function! StatuslineGit()
 endfunction
 
 " mode
+let ctrlv = "\<C-v>"
+set statusline+=%#QuickFixLine#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
 set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
