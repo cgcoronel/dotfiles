@@ -1,8 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""  ViM Custom Setup for js
-"""""""""""""""""" by Cristian G. Coronel 
-"""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""
 syntax on 
 set mouse=a
 set numberwidth=1
@@ -25,25 +20,23 @@ set history=1000
 set t_Co=256
 
 """"""""""""""""""" Plugins 
-""""""""""""""""""""""""""""
 call plug#begin('~/vim/plugged')
 
-Plug 'morhetz/gruvbox'							" Theme 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}				" Conque of Completion
-Plug 'maxmellon/vim-jsx-pretty'						" React syntax
-Plug 'pangloss/vim-javascript'						" Js syntax
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }			" Command line Fuzzy Finder
-Plug 'junegunn/fzf.vim'							" Command line Fuzzy Finder
-Plug 'scrooloose/nerdtree'						" NERDTree <3 <3 <3
-Plug 'christoomey/vim-tmux-navigator'					" Tmux Navigator - move between split screens
-Plug 'tpope/vim-fugitive'						" Fugitive - Git Manager
-Plug 'airblade/vim-gitgutter'						" Git Gutter
+Plug 'morhetz/gruvbox'					" Theme 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conque of Completion
+Plug 'maxmellon/vim-jsx-pretty'				" React syntax
+Plug 'pangloss/vim-javascript'				" Js syntax
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" Command line Fuzzy Finder
+Plug 'junegunn/fzf.vim'					" Command line Fuzzy Finder
+Plug 'scrooloose/nerdtree'				" NERDTree <3 <3 <3
+Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split screens
+Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
+Plug 'airblade/vim-gitgutter'				" Git Gutter
 
 call plug#end()
 
-"""""""""""""""" Custom status bar
-""""""""""""""""""""""""""""""""""
 
+"""""""""""""""" Custom status bar
 function! StatuslineGit()
   let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
   return strlen(l:branchname) > 0?'  ⎇  '.l:branchname.' ':''
@@ -72,14 +65,13 @@ set statusline+=%c
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\  
 
+
 """"""""""""""""""" Coc extensions 
-""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
 let g:coc_snippet_next = '<tab>'
 
 
 """"""""""""""""""" Theme params 
-""""""""""""""""""""""""""""""""
 let g:gruvbox_italic=1
 
 colorscheme gruvbox
@@ -95,11 +87,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 
-"""""" Fin Theme 
-
 
 """"""""""""""""""""""" Shortcuts
-"""""""""""""""""""""""""""""""""
 let mapleader = " "
 
 ":help key-notation
@@ -120,7 +109,7 @@ function! Bye()
          :q 
      else
          :bdelete
-    endif
+     endif
 endfunction
 
 nmap <Leader>q :call Bye()<CR>
@@ -148,7 +137,7 @@ nmap <Leader>t :!
 " list files opened 
 nmap <Leader>p :Buffers<CR>
 
-" Move lines con Alt + [ j | l ] o Alt + [Up | Down ] 
+" Move lines with Alt + [ j | l ] o Alt + [Up | Down ] 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
