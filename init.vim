@@ -33,6 +33,8 @@ Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split sc
 Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
 Plug 'airblade/vim-gitgutter'				" Git Gutter
 
+Plug 'dart-lang/dart-vim-plugin'
+
 call plug#end()
 
 
