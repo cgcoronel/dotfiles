@@ -32,9 +32,11 @@ Plug 'scrooloose/nerdtree'				" NERDTree <3 <3 <3
 Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split screens
 Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
 Plug 'airblade/vim-gitgutter'				" Git Gutter
+Plug 'Yggdroot/indentLine'				" Ident Line | 
 
 call plug#end()
 
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
 """""""""""""""" Custom status bar
 function! StatuslineGit()
