@@ -2,6 +2,12 @@
 
 # Mi Setup en Vim!
 
+### Instaler nvim!
+
+```console
+ https://github.com/neovim/neovim/wiki/Installing-Neovim 
+```
+
 ### Copiar init.vim dentro de 
 ```console
 .config/nvim/
