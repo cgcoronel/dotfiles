@@ -2,7 +2,7 @@
 
 # Mi Setup en Vim!
 
-### Instaler nvim!
+### Instalar nvim!
 
 ```console
  https://github.com/neovim/neovim/wiki/Installing-Neovim 
