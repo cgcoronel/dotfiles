@@ -106,6 +106,9 @@ nmap <Leader>n :NERDTreeFind<CR>
 " Save file 
 nmap <Leader>w :w<CR>
 
+" Save file without prettier format
+cmap ww :noa w<CR>
+
 " Quit
 " cierra cada buffer y cuando llega al ultimo buffer cierra vim 
 function! Bye()
