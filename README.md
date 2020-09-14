@@ -55,3 +55,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```console
 # sudo apt install fd-find
 ```
+
+
+### Screenshots
+
+<img src="https://github.com/cgcoronel/vim-setup/blob/master/screens/1.jpeg" width='100%' aling="right">
+<img src="https://github.com/cgcoronel/vim-setup/blob/master/screens/2.jpeg" width='100%' aling="right">
+<img src="https://github.com/cgcoronel/vim-setup/blob/master/screens/3.jpeg" width='100%' aling="right">
+
+
