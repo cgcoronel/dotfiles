@@ -2,7 +2,7 @@
 
 # Mi Setup en Vim!
 
-### Instaler nvim!
+### Instalar nvim!
 
 ```console
  https://github.com/neovim/neovim/wiki/Installing-Neovim 
@@ -48,7 +48,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
  }
 ```
 
-### Instaler Fuentes
+### Instalar Fuentes
 ```console
 # mkdir -p ~/.local/share/fonts
  cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
@@ -57,7 +57,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ```
 
-### Instaler fd-find
+### Instalar fd-find
 ```console
 # sudo apt install fd-find
 ```
