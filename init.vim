@@ -4,7 +4,7 @@ set numberwidth=1
 set clipboard=unnamedplus
 set showcmd
 set ruler
-set cursorline
+"set cursorline
 set encoding=UTF-8
 set showmatch
 set sw=2
