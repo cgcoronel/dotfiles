@@ -133,7 +133,12 @@ nmap <Leader>s :vsplit<CR>
 
 " Finder
 nmap <Leader>f :GFiles<CR>
-      
+
+
+" Finder in files
+nmap <Leader>F :Rg<CR>
+
+
 " Search in file 
 nmap <Leader>b :/
       

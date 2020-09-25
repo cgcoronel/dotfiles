@@ -62,6 +62,11 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # sudo apt install fd-find
 ```
 
+### Instalar Ripgrep
+```
+# brew install ripgrep
+```
+
 ### Instalar dependencias Python
 ```console
 # python3 -m pip install --user --upgrade pynvim
