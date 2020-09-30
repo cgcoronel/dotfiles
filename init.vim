@@ -143,7 +143,7 @@ nmap <Leader>F :Rg<CR>
 nmap <Leader>b :/
       
 " Git
-nmap <Leader>c :Gdiff<CR>
+nmap <Leader>c :Gdiffsplit<CR>
 nmap <Leader>d :0G<CR>
 nmap <Leader>a :Gw<CR> 
 
