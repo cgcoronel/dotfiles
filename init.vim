@@ -144,7 +144,7 @@ nmap <Leader>b :/
       
 " Git
 nmap <Leader>c :Gdiffsplit<CR>
-nmap <Leader>d :0G<CR>
+nmap <Leader>d :0Git<CR>
 nmap <Leader>a :Gw<CR> 
 
 " Command line 
