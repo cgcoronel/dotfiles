@@ -52,6 +52,7 @@ set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
 set statusline+=%#Search#%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='c')?'\ \ COMMAND\ ':''}
 
 set statusline+=%#FoldColumn#
 set statusline+=\ %f\ %m
