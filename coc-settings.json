@@ -15,5 +15,6 @@
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "prettier.bracketSpacing": true,
-  "prettier.disableSuccessMessage": true
+  "prettier.disableSuccessMessage": true,
+  "javascript.suggestionActions.enabled": false
 }
