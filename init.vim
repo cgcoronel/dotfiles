@@ -70,7 +70,6 @@ set statusline+=%c
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\  
 
-
 """"""""""""""""""" Coc extensions 
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
 let g:coc_snippet_next = '<tab>'
