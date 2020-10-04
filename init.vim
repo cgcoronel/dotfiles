@@ -132,7 +132,7 @@ nmap <Leader>	 :bnext<CR>
 nmap <Leader>s :vsplit<CR>
 
 " Finder
-nmap <Leader>f :GFiles<CR>
+nmap <Leader>f :Files<CR>
 
 
 " Finder in files

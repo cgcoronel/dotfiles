@@ -63,8 +63,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 
 ### Instalar Ripgrep
-```
+```console
 # brew install ripgrep
+```
+
+### Agregar la siguiente linea al .bashrc o .zshrc
+```console
+export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 ```
 
 ### Instalar dependencias Python
