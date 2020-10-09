@@ -134,7 +134,6 @@ nmap <Leader>s :vsplit<CR>
 " Finder
 nmap <Leader>f :Files<CR>
 
-
 " Finder in files
 nmap <Leader>F :Rg<CR>
 
@@ -149,6 +148,7 @@ nmap <Leader>a :Gw<CR>
 
 " Command line 
 nmap <Leader>t :!
+map <Leader>; : 
 
 " list files opened 
 nmap <Leader>p :Buffers<CR>
