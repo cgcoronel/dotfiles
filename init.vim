@@ -8,7 +8,7 @@ set cursorline
 set encoding=UTF-8
 set showmatch
 set sw=2
-set number "relativenumber
+set number relativenumber
 set laststatus=2
 set noshowmode
 set updatetime=100
