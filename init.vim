@@ -108,6 +108,12 @@ imap kj <Esc>
 cmap jk <Esc>
 cmap kj <Esc>
 
+" remap got to definitions local
+nmap fd gd 
+
+" remap go to definition file
+nmap ff gf
+
 " Desplega el arbol de directorios
 nmap <Leader>n :NERDTreeFind<CR>
 
