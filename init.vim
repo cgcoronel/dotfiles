@@ -156,7 +156,7 @@ nmap <Leader>c :Gdiffsplit<CR>
 nmap <Leader>d :0Git<CR>
 nmap <Leader>a :Gw<CR> 
 
-"alias from git commands
+"abbreviations from git commands
 cnoreabbrev gpush Gpush
 cnoreabbrev gstatus Gstatus
 cnoreabbrev gco Gco
