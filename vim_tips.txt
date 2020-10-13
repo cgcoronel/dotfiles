@@ -53,3 +53,4 @@ VIM TIPS
 [ gf ] Para ir a un archivos desde un require	
 [ espacio + F ] Búsqueda dentro de todos los archivos
 
+
