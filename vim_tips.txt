@@ -34,6 +34,7 @@ VIM TIPS
 [ a ] Pasar archivos a staged
 [ u ] Pasar de staged a unstaged
 [ dd ] Dentro de vim Fugitive abre un archivo con las diferencias
+[ X ] Dentro de vim Fugitive realiza un checkout o clean del archivo seleccionado
 [ :Gco ] commit cambios
 [ :Gpush ] push cambios
 
