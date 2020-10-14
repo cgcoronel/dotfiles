@@ -168,18 +168,7 @@ map <Leader>; :
 " list files opened 
 nmap <Leader>p :Buffers<CR>
 
-" Move lines with Alt + [ j | l ] o Alt + [Up | Down ] 
-"nnoremap <A-j> :m .+1<CR>==
-"nnoremap <A-k> :m .-2<CR>==
-"inoremap <A-j> <Esc>:m .+1<CR>==gi
-"inoremap <A-k> <Esc>:m .-2<CR>==gi
-
-"nnoremap <A-Down> :m .+1<CR>==
-"nnoremap <A-Up> :m .-2<CR>==
-"inoremap <A-Down> <Esc>:m .+1<CR>==gi
-"inoremap <A-Up> <Esc>:m .-2<CR>==gi
-
-"Control + hjkl para mover el cursor en modo insert
+"Ctrl + [ h,j, k, l ] move de cursor on insert mode 
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
