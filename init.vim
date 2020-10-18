@@ -147,7 +147,6 @@ nmap <Leader>f :Files<CR>
 " Finder in files
 nmap <Leader>F :Rg<CR>
 
-
 " Search in file 
 nmap <Leader>b :/
       
@@ -163,6 +162,10 @@ cnoreabbrev gco Gco
 
 cnoreabbrev gpu Gpush
 cnoreabbrev gst Gstatus
+
+" Diagnostics
+cnoreabbrev dia CocDiagnostics
+
 
 " Command line 
 nmap <Leader>t :!
