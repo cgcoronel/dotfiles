@@ -161,6 +161,9 @@ cnoreabbrev gpush Gpush
 cnoreabbrev gstatus Gstatus
 cnoreabbrev gco Gco
 
+cnoreabbrev gpu Gpush
+cnoreabbrev gst Gstatus
+
 " Command line 
 nmap <Leader>t :!
 map <Leader>; : 
