@@ -99,6 +99,10 @@ let NERDTreeCascadeOpenSingleChildDir = 1
 """"""""""""""""""""""" Shortcuts
 let mapleader = " "
 
+tnoremap <Esc> <C-\><C-n>
+tnoremap jk <C-\><C-n>
+tnoremap kj <C-\><C-n>
+
 ":help key-notation
 " remap key scape in insert mode
 imap jk <Esc>
