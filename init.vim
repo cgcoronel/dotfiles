@@ -99,16 +99,18 @@ let NERDTreeCascadeOpenSingleChildDir = 1
 """"""""""""""""""""""" Shortcuts
 let mapleader = " "
 
+":help key-notation
+
+"remap escape in terminal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap jk <C-\><C-n>
 tnoremap kj <C-\><C-n>
 
-":help key-notation
-" remap key scape in insert mode
+" remap escape key in insert mode
 imap jk <Esc>
 imap kj <Esc>
 
-" remap key scape in command mode 
+" remap escape key in command mode 
 cmap jk <Esc>
 cmap kj <Esc>
 
@@ -118,7 +120,7 @@ nmap fd gd
 " remap go to definition file
 nmap ff gf
 
-" Desplega el arbol de directorios
+" show tree directories 
 nmap <Leader>n :NERDTreeFind<CR>
 
 " Save file 
