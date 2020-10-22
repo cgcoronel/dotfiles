@@ -24,7 +24,7 @@ call plug#begin('~/vim/plugged')
 
 Plug 'morhetz/gruvbox'					" Theme 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conque of Completion
-Plug 'maxmellon/vim-jsx-pretty'				" React syntax
+"Plug 'maxmellon/vim-jsx-pretty'				" React syntax
 Plug 'pangloss/vim-javascript'				" Js syntax
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" Command line Fuzzy Finder
 Plug 'junegunn/fzf.vim'					" Command line Fuzzy Finder
@@ -95,17 +95,10 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 
-
 """"""""""""""""""""""" Shortcuts
 let mapleader = " "
 
 ":help key-notation
-
-"remap escape in terminal mode
-tnoremap <Esc> <C-\><C-n>
-tnoremap jk <C-\><C-n>
-tnoremap kj <C-\><C-n>
-
 " remap escape key in insert mode
 imap jk <Esc>
 imap kj <Esc>
@@ -172,7 +165,6 @@ cnoreabbrev gst Gstatus
 " Diagnostics
 cnoreabbrev dia CocDiagnostics
 
-
 " Command line 
 nmap <Leader>t :!
 map <Leader>; : 
@@ -180,7 +172,7 @@ map <Leader>; :
 " list files opened 
 nmap <Leader>p :Buffers<CR>
 
-"Ctrl + [ h,j, k, l ] move de cursor on insert mode 
+"Ctrl + [ h,j, k, l ] move the cursor on insert mode 
 inoremap <C-h> <C-o>h
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
