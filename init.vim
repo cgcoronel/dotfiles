@@ -8,7 +8,7 @@ set cursorline
 set encoding=UTF-8
 set showmatch
 set sw=2
-set number relativenumber
+set number "relativenumber
 set laststatus=2
 set noshowmode
 set updatetime=100
@@ -96,7 +96,7 @@ let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 
 """"""""""""""""""""""" Shortcuts
-let mapleader = " "
+let mapleader = "\<space>"
 
 ":help key-notation
 " remap escape key in insert mode
@@ -108,7 +108,7 @@ cmap jk <Esc>
 cmap kj <Esc>
 
 " remap got to definitions local
-nmap fd gd 
+nmap fs gd 
 
 " remap go to definition file
 nmap ff gf
@@ -148,7 +148,7 @@ nmap <Leader>F :Rg<CR>
 
 " Search in file 
 nmap <Leader>b :/
-      
+ 
 " Git
 nmap <Leader>c :Gdiffsplit<CR>
 nmap <Leader>d :0Git<CR>
@@ -158,9 +158,11 @@ nmap <Leader>a :Gw<CR>
 cnoreabbrev gpush Gpush
 cnoreabbrev gstatus Gstatus
 cnoreabbrev gco Gco
+cnoreabbrev gpull Gpull
 
 cnoreabbrev gpu Gpush
 cnoreabbrev gst Gstatus
+cnoreabbrev gpl Gpull
 
 " Diagnostics
 cnoreabbrev dia CocDiagnostics
