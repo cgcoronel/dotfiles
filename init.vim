@@ -123,7 +123,7 @@ nmap <Leader>w :w<CR>
 cmap ww :noa w<CR>
 
 " Quit
-" cierra cada buffer y cuando llega al ultimo buffer cierra vim 
+" close each buffer and close vim 
 function! Bye()
      if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
          :q 
