@@ -78,10 +78,8 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 
 ```
 
-### Tips basicos 
+### Comandos basicos 
 ```console
-
-- Comandos basicos
 
 - Moverse entra palabras
 [ w ] Para ir a la siguiente palabra
