@@ -135,7 +135,7 @@ endfunction
 nmap <Leader>q :call Bye()<CR>
 
 " Next Tab (Space + Tab)
-nmap <Leader>	 :bnext<CR>
+"nmap <Leader>	 :bnext<CR>
 
 " Split vertical 
 nmap <Leader>s :vsplit<CR>
@@ -170,6 +170,10 @@ cnoreabbrev dia CocDiagnostics
 " Command line 
 nmap <Leader>t :!
 map <Leader>; : 
+
+" Command find and replace
+command! -nargs=+ Replace :%s/<args>/gc
+cnoreabbrev replace Replace
 
 " list files opened 
 nmap <Leader>p :Buffers<CR>

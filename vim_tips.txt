@@ -9,7 +9,9 @@ VIM TIPS
 
 [ gd ] Ir a la definicion
 [ gf ] Ir al archivo marcado en la definicion
- 
+
+- Moverse de {, [, ( de inicio a  ), ], } de fin
+[ % ] posicionarse en [, {, ( o ), }, ]
 
 - Insertar texto
 [ i ] Inserta texto anstes de donde este el cursor
@@ -53,4 +55,8 @@ VIM TIPS
 [ gf ] Para ir a un archivos desde un require	
 [ espacio + F ] Búsqueda dentro de todos los archivos
 
+- Remplazar ocurrencia de la linea donde esta el cursor
+:s/busqueda/reemplazo/g
 
+- Remplazar ocurrencia de todo el archivo
+:%s/busqueda/reemplazo/g
