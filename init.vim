@@ -18,7 +18,7 @@ set undofile
 set undodir=~/.vim/undodir/
 set history=1000
 "set t_Co=256
-"
+
 so ~/.config/nvim/maps.vim
 
 """"""""""""""""""" Plugins 
