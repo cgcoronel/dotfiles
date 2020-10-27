@@ -67,7 +67,7 @@ set statusline+=\ %#PmenuThumb#
 set statusline+=\ \ %p%%
 set statusline+=\ \ Ξ
 set statusline+=\ %l/%L
-set statusline+=\ \ ㏑:
+set statusline+=\ ㏑\ :\ 
 set statusline+=%c
 "set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\ \  
@@ -96,5 +96,4 @@ let g:NERDTreeIgnore= ['^node_modules$', '^.git$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
-
 
