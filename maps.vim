@@ -81,12 +81,6 @@ cnoreabbrev replace Replace
 " list files opened 
 nmap <Leader>p :Buffers<CR>
 
-"Ctrl + [ h,j, k, l ] move the cursor on insert mode 
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>l
-
 " Move 
 nnoremap gl $
 nnoremap gh 0
