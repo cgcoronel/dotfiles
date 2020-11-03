@@ -10,7 +10,7 @@ set showmatch
 set sw=2
 set number "relativenumber
 set laststatus=2
-set noshowmode
+"set noshowmode
 set updatetime=100
 set ttimeoutlen=50
 set directory=~/.vim/swap/
@@ -47,27 +47,27 @@ function! StatuslineGit()
 endfunction
 
 " mode
-let ctrlv = "\<C-v>"
-set statusline+=%#QuickFixLine#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
-set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
-set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
-set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
-set statusline+=%#Search#%{(mode()=='v')?'\ \ VISUAL\ ':''}
-set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
-set statusline+=%#QuickFixLine#%{(mode()=='c')?'\ \ COMMAND\ ':''}
+"let ctrlv = "\<C-v>"
+"set statusline+=%#QuickFixLine#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
+"set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+"set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
+"set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+"set statusline+=%#Search#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+"set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
+"set statusline+=%#QuickFixLine#%{(mode()=='c')?'\ \ COMMAND\ ':''}
 
 set statusline+=%#FoldColumn#
-set statusline+=\ %f\ %m
+set statusline+=\ \ %f\ %m
 
-set statusline+=%= " Right side settings
+set statusline+=%=" Right side settings
 set statusline+=%{StatuslineGit()} " git branch
 
 " info file
-set statusline+=\ %#PmenuThumb#
-set statusline+=\ \ %p%%
+"set statusline+=\ %#PmenuThumb#
+set statusline+=\ %p%%
 set statusline+=\ \ Ξ
 set statusline+=\ %l/%L
-set statusline+=\ ㏑:
+set statusline+=\ ㏑
 set statusline+=\ %c
 "set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\ \  
@@ -75,7 +75,6 @@ set statusline+=\ \
 """"""""""""""""""" Coc extensions 
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
 let g:coc_snippet_next = '<tab>'
-
 
 """"""""""""""""""" fzf config
 let g:fzf_layout = { 'down': '~40%' }
@@ -88,6 +87,8 @@ colorscheme gruvbox
 set background=dark
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
+hi ModeMsg gui=none ctermfg=124 ctermfg=white 
+hi MsgArea gui=none ctermfg=124 ctermfg=white 
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
