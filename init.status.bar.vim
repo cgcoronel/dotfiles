@@ -10,6 +10,7 @@ set showmatch
 set sw=2
 set number "relativenumber
 set laststatus=2
+set noshowmode
 set updatetime=100
 set ttimeoutlen=50
 set directory=~/.vim/swap/
@@ -42,17 +43,33 @@ let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 """""""""""""""" Custom status bar
 function! StatuslineGit()
   let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  return strlen(l:branchname) > 0?'⎇  '.l:branchname.'':''
+  return strlen(l:branchname) > 0?'  ⎇  '.l:branchname.' ':''
 endfunction
 
-set statusline+=%#PmenuThumb#
-set statusline+=\ %f\ %m
+" mode
+let ctrlv = "\<C-v>"
+set statusline+=%#QuickFixLine#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
+set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+set statusline+=%#Search#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='c')?'\ \ COMMAND\ ':''}
 
 set statusline+=%#FoldColumn#
+set statusline+=\ \ %f\ %m
+
 set statusline+=%=" Right side settings
 set statusline+=%{StatuslineGit()} " git branch
-set statusline+=\ %l/%L,
+
+" info file
+set statusline+=\ %#PmenuThumb#
+set statusline+=\ %p%%
+set statusline+=\ \ Ξ
+set statusline+=\ %l/%L
+set statusline+=\ ㏑
 set statusline+=\ %c
+"set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\ \  
 
 """"""""""""""""""" Coc extensions 
