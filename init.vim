@@ -16,7 +16,6 @@ set directory=~/.vim/swap/
 set undofile
 set undodir=~/.vim/undodir/
 set history=1000
-"set t_Co=256
 
 so ~/.config/nvim/maps.vim
 
@@ -47,12 +46,12 @@ endfunction
 
 set statusline+=%#PmenuThumb#
 set statusline+=\ %f\ %m
-
 set statusline+=%#FoldColumn#
-set statusline+=%=" Right side settings
+" Right side settings
+set statusline+=%=
 set statusline+=%{StatuslineGit()} " git branch
 set statusline+=\ %l/%L,
-set statusline+=\ %c
+set statusline+=\ %c 
 set statusline+=\ \  
 
 """"""""""""""""""" Coc extensions 
