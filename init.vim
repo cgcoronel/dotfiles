@@ -2,7 +2,7 @@ syntax on
 set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
-set showcmd
+set noshowcmd
 set ruler
 set cursorline
 set encoding=UTF-8
