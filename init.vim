@@ -45,8 +45,10 @@ function! StatuslineGit()
 endfunction
 
 set statusline+=%#PmenuThumb#
-set statusline+=\ %f\ %m
+set statusline+=\ %f\ 
 set statusline+=%#FoldColumn#
+set statusline+=\ %m
+
 " Right side settings
 set statusline+=%=
 set statusline+=%{StatuslineGit()} " git branch
