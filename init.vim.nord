@@ -21,8 +21,8 @@ so ~/.config/nvim/maps.vim
 
 """"""""""""""""""" Plugins 
 call plug#begin('~/vim/plugged')
+Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
 
-Plug 'morhetz/gruvbox'					" Theme 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conque of Completion
 "Plug 'maxmellon/vim-jsx-pretty'				" React syntax
 Plug 'pangloss/vim-javascript'				" Js syntax
@@ -44,10 +44,9 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'⎇  '.l:branchname.'':''
 endfunction
 
-set statusline+=%#PmenuThumb#
+set statusline+=%#DiffText#
 set statusline+=\ %f\ 
-"set statusline+=%#FoldColumn#
-set statusline+=%#IndentGuidesOdd#
+set statusline+=%#Folded#
 set statusline+=\ %m
 
 " Right side settings
@@ -65,15 +64,15 @@ let g:coc_snippet_next = '<tab>'
 let g:fzf_layout = { 'down': '~40%' }
 
 """"""""""""""""""" Theme params 
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
 
-colorscheme gruvbox
-set background=dark
-hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
-hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
-hi ModeMsg gui=none ctermfg=124 ctermfg=white 
-hi MsgArea gui=none ctermfg=124 ctermfg=white 
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+let g:nord_italic = 1
+let g:nord_cursor_line_number_background = 1
+let g:nord_uniform_status_lines = 1
+colorscheme nord 
+
+hi Visual term=reverse cterm=reverse guibg=Grey
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
