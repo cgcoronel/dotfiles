@@ -41,7 +41,7 @@ let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 """""""""""""""" Custom status bar
 function! StatuslineGit()
   let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  return strlen(l:branchname) > 0?'⎇  '.l:branchname.'':''
+  return strlen(l:branchname) > 0?l:branchname:''
 endfunction
 
 set statusline+=%#PmenuThumb#
