@@ -44,10 +44,9 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?l:branchname:''
 endfunction
 
-set statusline+=%#PmenuThumb#
-set statusline+=\ %f\ 
-"set statusline+=%#FoldColumn#
 set statusline+=%#IndentGuidesOdd#
+set statusline+=\ %f\ 
+set statusline+=%#IndentGuidesEven#
 set statusline+=\ %m
 
 " Right side settings
