@@ -68,12 +68,14 @@ let g:gruvbox_contrast_dark='hard'
 
 colorscheme gruvbox
 set background=dark
+
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 hi ModeMsg gui=none ctermfg=124 ctermfg=white 
 hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
 hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=237
+hi Normal ctermbg=Black
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
@@ -83,3 +85,4 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 let g:NERDTreeStatusline ='%#StatusFileBar#'
+
