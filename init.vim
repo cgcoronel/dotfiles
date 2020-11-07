@@ -22,17 +22,17 @@ so ~/.config/nvim/maps.vim
 """"""""""""""""""" Plugins 
 call plug#begin('~/vim/plugged')
 
-Plug 'morhetz/gruvbox'					" Theme 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conque of Completion
-"Plug 'maxmellon/vim-jsx-pretty'				" React syntax
-Plug 'pangloss/vim-javascript'				" Js syntax
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" Command line Fuzzy Finder
-Plug 'junegunn/fzf.vim'					" Command line Fuzzy Finder
-Plug 'scrooloose/nerdtree'				" NERDTree <3 <3 <3
-Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split screens
-Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
-Plug 'airblade/vim-gitgutter'				" Git Gutter
-Plug 'Yggdroot/indentLine'				" Ident Line | 
+  Plug 'morhetz/gruvbox'				" Theme 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}	" Conque of Completion
+  "Plug 'maxmellon/vim-jsx-pretty'			" React syntax
+  Plug 'pangloss/vim-javascript'			" Js syntax
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" Command line Fuzzy Finder
+  Plug 'junegunn/fzf.vim'				" Command line Fuzzy Finder
+  Plug 'scrooloose/nerdtree'				" NERDTree <3 <3 <3
+  Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split screens
+  Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
+  Plug 'airblade/vim-gitgutter'				" Git Gutter
+  Plug 'Yggdroot/indentLine'				" Ident Line | 
 
 call plug#end()
 
@@ -51,9 +51,9 @@ set statusline+=\ %m
 
 " Right side settings
 set statusline+=%=
-set statusline+=%{StatuslineGit()} " git branch
-set statusline+=\ %l/%L,
-set statusline+=\ %c 
+set statusline+=%#IndentGuidesOdd#
+set statusline+=\ %{StatuslineGit()} " git branch
+set statusline+=\ %l/%L,%c 
 set statusline+=\ \  
 
 """"""""""""""""""" Coc extensions 
