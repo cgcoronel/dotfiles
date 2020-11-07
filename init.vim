@@ -44,14 +44,14 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?l:branchname:''
 endfunction
 
-set statusline+=%#IndentGuidesOdd#
+set statusline+=%#StatusBar#
 set statusline+=\ %f\ 
 set statusline+=%#IndentGuidesEven#
 set statusline+=\ %m
 
 " Right side settings
 set statusline+=%=
-set statusline+=%#IndentGuidesOdd#
+set statusline+=%#StatusFileBar#
 set statusline+=\ %{StatuslineGit()} " git branch
 set statusline+=\ %l/%L,%c 
 set statusline+=\ \  
@@ -73,6 +73,8 @@ hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 hi ModeMsg gui=none ctermfg=124 ctermfg=white 
 hi MsgArea gui=none ctermfg=124 ctermfg=white 
+hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
+hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=237
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
