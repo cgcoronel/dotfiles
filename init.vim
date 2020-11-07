@@ -46,12 +46,11 @@ endfunction
 
 set statusline+=%#StatusBar#
 set statusline+=\ %f\ 
-set statusline+=%#IndentGuidesEven#
+set statusline+=%#StatusFileBar#
 set statusline+=\ %m
 
 " Right side settings
 set statusline+=%=
-set statusline+=%#StatusFileBar#
 set statusline+=\ %{StatuslineGit()} " git branch
 set statusline+=\ %l/%L,%c 
 set statusline+=\ \  
