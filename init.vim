@@ -44,7 +44,8 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?l:branchname:''
 endfunction
 
-set statusline+=%#StatusBar#
+set statusline+=%#StatusFileBar#
+"set statusline+=%#StatusBar#
 set statusline+=\ %f\ 
 set statusline+=%#StatusFileBar#
 set statusline+=\ %m
@@ -52,8 +53,7 @@ set statusline+=\ %m
 " Right side settings
 set statusline+=%=
 set statusline+=\ %{StatuslineGit()} " git branch
-set statusline+=\ %l/%L,%c 
-set statusline+=\ \  
+set statusline+=\ %l/%L,%c\ \  
 
 """"""""""""""""""" Coc extensions 
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
