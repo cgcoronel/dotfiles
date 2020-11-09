@@ -45,7 +45,6 @@ function! StatuslineGit()
 endfunction
 
 set statusline+=%#StatusFileBar#
-"set statusline+=%#StatusBar#
 set statusline+=\ %f\ 
 set statusline+=%#StatusFileBar#
 set statusline+=\ %m
@@ -75,7 +74,7 @@ hi ModeMsg gui=none ctermfg=124 ctermfg=white
 hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
 hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=237
-hi Normal ctermbg=Black
+"hi Normal ctermbg=Black
 
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
