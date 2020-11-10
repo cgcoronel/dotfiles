@@ -74,6 +74,7 @@ hi ModeMsg gui=none ctermfg=124 ctermfg=white
 hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
 hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=237
+hi LineNr ctermfg=237 guifg=#3c3836
 "hi Normal ctermbg=Black
 
 let NERDTreeQuitOnOpen = 1
