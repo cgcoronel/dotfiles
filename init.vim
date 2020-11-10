@@ -82,6 +82,9 @@ hi GitGutterDelete ctermfg=167 ctermbg=234 guifg=#fb4934 guibg=#3c3836
 hi GitGutterChangeDelete ctermfg=108 ctermbg=237 guifg=#8ec07c guibg=#3c3836
 hi SignColumn ctermbg=234 guibg=#3c3836
 
+hi Folded cterm=italic ctermfg=245 ctermbg=235 gui=italic guifg=#928374 guibg=#3c3836
+hi FoldColumn ctermfg=245 ctermbg=235 guifg=#928374 guibg=#3c3836
+
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
 let NERDTreeAutoDeleteBuffer = 1
