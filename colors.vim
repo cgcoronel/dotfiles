@@ -16,3 +16,12 @@ hi SignColumn ctermbg=234 guibg=#3c3836
 
 hi Folded cterm=italic ctermfg=245 ctermbg=235 gui=italic guifg=#928374 guibg=#3c3836
 hi FoldColumn ctermfg=245 ctermbg=235 guifg=#928374 guibg=#3c3836
+
+"NerdTree
+hi NERDTreeDir gui=bold ctermfg=243 guifg=#7c6f64
+hi NERDTreeDirSlash gui=bold ctermfg=243 guifg=#7c6f64
+
+hi NERDTreeOpenable ctermfg=167 
+hi NERDTreeClosable ctermfg=167
+hi NERDTreeCWD gui=bold ctermfg=167 
+
