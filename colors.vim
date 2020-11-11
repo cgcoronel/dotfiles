@@ -2,8 +2,6 @@ hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 hi ModeMsg gui=none ctermfg=124 ctermfg=white 
 hi MsgArea gui=none ctermfg=124 ctermfg=white 
-hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
-hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=235
 hi LineNr ctermfg=237 guifg=#3c3836
 "hi Normal ctermbg=Black
 
@@ -24,4 +22,12 @@ hi NERDTreeDirSlash gui=bold ctermfg=243 guifg=#7c6f64
 hi NERDTreeOpenable ctermfg=167 
 hi NERDTreeClosable ctermfg=167
 hi NERDTreeCWD gui=bold ctermfg=167 
+
+"Status bar
+hi StatusLine ctermfg=235 ctermbg=235 
+hi StatusLineNC ctermfg=235 ctermbg=235 
+hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
+hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=235
+
+hi VertSplit ctermfg=235 ctermbg=235
 
