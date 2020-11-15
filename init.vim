@@ -44,7 +44,7 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?l:branchname:''
 endfunction
 
-set statusline+=%#StatusFileBar#
+set statusline+=%#StatusBar#
 set statusline+=\ %f\ 
 set statusline+=\ %m
 

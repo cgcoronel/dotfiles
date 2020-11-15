@@ -3,7 +3,6 @@ hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 hi ModeMsg gui=none ctermfg=124 ctermfg=white 
 hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi LineNr ctermfg=237 guifg=#3c3836
-"hi Normal ctermbg=Black
 
 hi GitGutterAdd ctermfg=142 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
 hi GitGutterChange ctermfg=108 ctermbg=234 guifg=#8ec07c guibg=#3c3836
@@ -26,8 +25,8 @@ hi NERDTreeCWD gui=bold ctermfg=167
 "Status bar
 hi StatusLine ctermfg=235 ctermbg=235 
 hi StatusLineNC ctermfg=235 ctermbg=235 
-hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=236
-hi StatusFileBar ctermfg=167 guifg=#fb4934 ctermbg=235
+hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
 
+"Split bar
 hi VertSplit ctermfg=235 ctermbg=235
 
