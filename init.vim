@@ -37,8 +37,6 @@ call plug#begin('~/vim/plugged')
 
 call plug#end()
 
-let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
-
 """""""""""""""" Custom status bar
 function! StatuslineGit()
   let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
@@ -47,7 +45,6 @@ endfunction
 
 set statusline+=%#StatusFileBar#
 set statusline+=\ %f\ 
-set statusline+=%#StatusFileBar#
 set statusline+=\ %m
 
 " Right side settings
@@ -68,6 +65,7 @@ let g:gruvbox_contrast_dark='hard'
 
 colorscheme gruvbox
 set background=dark
+
 so ~/.config/nvim/colors.vim
 
 let NERDTreeQuitOnOpen = 1
@@ -77,7 +75,8 @@ let g:NERDTreeIgnore= ['^node_modules$', '^.git$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
-let g:NERDTreeStatusline ='%#StatusFileBar#'
+""let g:NERDTreeStatusline ='%#StatusFileBar#'
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
 " Mark white space on end line
 hi ExtraWhitespace ctermbg=1
