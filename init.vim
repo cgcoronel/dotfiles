@@ -18,6 +18,7 @@ set undodir=~/.vim/undodir/
 set history=1000
 set autoindent
 
+""""""""""""""""""" Imports shortcuts
 so ~/.config/nvim/maps.vim
 
 """"""""""""""""""" Plugins
@@ -66,8 +67,10 @@ let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 set background=dark
 
+" Imports colors
 so ~/.config/nvim/colors.vim
 
+""""""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
 let NERDTreeAutoDeleteBuffer = 1
