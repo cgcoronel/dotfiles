@@ -44,13 +44,10 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?l:branchname:''
 endfunction
 
-set statusline+=%#StatusBar#
-set statusline+=\ %f\ 
-set statusline+=\ %m
+set statusline+=%#StatusBar#\ %f\ \ %m
 
 " Right side settings
-set statusline+=%=
-set statusline+=\ %{StatuslineGit()} " git branch
+set statusline+=%=\ %{StatuslineGit()} 
 set statusline+=\ %l/%L,%c\ \ 
 
 """"""""""""""""""" Coc extensions
@@ -74,7 +71,7 @@ so ~/.config/nvim/colors.vim
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
 let NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeIgnore= ['^node_modules$', '^.git$']
+let NERDTreeIgnore = ['^node_modules$', '^.git$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
