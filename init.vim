@@ -1,4 +1,4 @@
-syntax on 
+syntax on
 set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
@@ -16,13 +16,14 @@ set directory=~/.vim/swap/
 set undofile
 set undodir=~/.vim/undodir/
 set history=1000
+set autoindent
 
 so ~/.config/nvim/maps.vim
 
-""""""""""""""""""" Plugins 
+""""""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-  Plug 'morhetz/gruvbox'				" Theme 
+  Plug 'morhetz/gruvbox'				" Theme
   Plug 'neoclide/coc.nvim', {'branch': 'release'}	" Conque of Completion
   "Plug 'maxmellon/vim-jsx-pretty'			" React syntax
   Plug 'pangloss/vim-javascript'			" Js syntax
@@ -32,7 +33,7 @@ call plug#begin('~/vim/plugged')
   Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split screens
   Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
   Plug 'airblade/vim-gitgutter'				" Git Gutter
-  Plug 'Yggdroot/indentLine'				" Ident Line | 
+  Plug 'Yggdroot/indentLine'				" Ident Line |
 
 call plug#end()
 
@@ -52,16 +53,16 @@ set statusline+=\ %m
 " Right side settings
 set statusline+=%=
 set statusline+=\ %{StatuslineGit()} " git branch
-set statusline+=\ %l/%L,%c\ \  
+set statusline+=\ %l/%L,%c\ \ 
 
-""""""""""""""""""" Coc extensions 
+""""""""""""""""""" Coc extensions
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
 let g:fzf_layout = { 'down': '~40%' }
 
-""""""""""""""""""" Theme params 
+""""""""""""""""""" Theme params
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 
@@ -77,3 +78,7 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 let g:NERDTreeStatusline ='%#StatusFileBar#'
+
+" Mark white space on end line
+hi ExtraWhitespace ctermbg=1
+match ExtraWhitespace /\s\+$/
