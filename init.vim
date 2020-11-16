@@ -75,7 +75,6 @@ let NERDTreeIgnore = ['^node_modules$', '^.git$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
-""let g:NERDTreeStatusline ='%#StatusFileBar#'
 let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
 " Mark white space on end line
