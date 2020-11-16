@@ -78,5 +78,5 @@ let NERDTreeCascadeOpenSingleChildDir = 1
 let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 
 " Mark white space on end line
-hi ExtraWhitespace ctermbg=1
-match ExtraWhitespace /\s\+$/
+"hi ExtraWhitespace ctermbg=1
+"match ExtraWhitespace /\s\+$/
