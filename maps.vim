@@ -1,7 +1,8 @@
+":help key-notation
+
 """"""""""""""""""""""" Shortcuts
 let mapleader = "\<space>"
 
-":help key-notation
 " remap escape key in insert mode
 imap jk <Esc>
 imap kj <Esc>
