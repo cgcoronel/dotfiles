@@ -1,7 +1,7 @@
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 hi ModeMsg gui=none ctermfg=124 ctermfg=white 
-hi MsgArea gui=none ctermfg=124 ctermfg=white 
+"hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi LineNr ctermfg=237 guifg=#3c3836
 
 hi GitGutterAdd ctermfg=142 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
@@ -30,3 +30,7 @@ hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
 "Split bar
 hi VertSplit ctermfg=235 ctermbg=235
 
+
+"Mode color
+hi ModeMsg ctermfg=243
+hi MsgArea ctermfg=243
