@@ -30,7 +30,8 @@ hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
 "Split bar
 hi VertSplit ctermfg=235 ctermbg=235
 
-
 "Mode color
 hi ModeMsg ctermfg=243
 hi MsgArea ctermfg=243
+
+hi GruvboxYellowBold cterm=bold ctermfg=243 gui=bold guifg=#fabd2f
