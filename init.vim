@@ -1,4 +1,5 @@
 syntax on
+language messages en_US.UTF-8
 set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
