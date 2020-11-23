@@ -1,5 +1,4 @@
 syntax on
-language messages en_US.UTF-8
 set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
@@ -18,6 +17,8 @@ set undofile
 set undodir=~/.vim/undodir/
 set history=1000
 set autoindent
+
+language messages en_US.UTF-8
 
 """"""""""""""""""" Imports shortcuts
 so ~/.config/nvim/maps.vim
