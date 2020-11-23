@@ -18,7 +18,7 @@ set undodir=~/.vim/undodir/
 set history=1000
 set autoindent
 
-language messages en_US.UTF-8
+language en_US.UTF-8
 
 """"""""""""""""""" Imports shortcuts
 so ~/.config/nvim/maps.vim
