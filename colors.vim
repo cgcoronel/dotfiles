@@ -25,7 +25,8 @@ hi NERDTreeCWD gui=bold ctermfg=167
 "Status bar
 hi StatusLine ctermfg=235 ctermbg=235 
 hi StatusLineNC ctermfg=235 ctermbg=235 
-hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
+"hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
+hi StatusBar ctermfg=243 guifg=#fb4934 ctermbg=235
 
 "Split bar
 hi VertSplit ctermfg=235 ctermbg=235
