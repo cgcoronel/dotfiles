@@ -28,7 +28,7 @@ cmap ww :noa w<CR>
 
 " Quit
 " close each buffer and close vim 
-function! Bye()
+function! CloseFile()
      if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
          :q 
      else
@@ -36,7 +36,7 @@ function! Bye()
      endif
 endfunction
 
-nmap <Leader>q :call Bye()<CR>
+nmap <Leader>q :call CloseFile()<CR>
 
 " Next Tab (Space + Tab)
 "nmap <Leader>	 :bnext<CR>
