@@ -18,8 +18,11 @@ hi FoldColumn ctermfg=245 ctermbg=235 guifg=#928374 guibg=#3c3836
 hi NERDTreeDir gui=bold ctermfg=243 guifg=#7c6f64
 hi NERDTreeDirSlash gui=bold ctermfg=243 guifg=#7c6f64
 
+"NerdTree Arrows
 hi NERDTreeOpenable ctermfg=167 
 hi NERDTreeClosable ctermfg=167
+
+"NerdTree file directory name
 hi NERDTreeCWD gui=bold ctermfg=167 
 
 "Status bar
