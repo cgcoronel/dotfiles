@@ -50,7 +50,7 @@ set statusline+=%#StatusBar#\ %f\ \ %m
 
 " Right side settings
 set statusline+=%=\ %{StatuslineGit()} 
-set statusline+=\ %l/%L,%c\ \ 
+set statusline+=\ %l/%L,%c\ 
 
 """"""""""""""""""" Coc extensions
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
