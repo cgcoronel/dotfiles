@@ -54,6 +54,7 @@ set statusline+=\ %l/%L,%c\ \
 
 """"""""""""""""""" Coc extensions
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
+
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
@@ -77,7 +78,8 @@ let NERDTreeIgnore = ['^node_modules$', '^.git$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
-let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
+"let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
+let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
 " Mark white space on end line
 "hi ExtraWhitespace ctermbg=1
