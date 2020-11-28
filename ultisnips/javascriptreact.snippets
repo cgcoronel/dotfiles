@@ -1,7 +1,10 @@
-snippet obj 'object = {}' b
-const $1 = {
-  $2
-}
+
+snippet console 'console.log()' b
+console.log('$1');
+endsnippet
+
+snippet require 'Require Node.js' b
+const ${1} = require('${2}');${3}
 endsnippet
 
 snippet fn 'function () => {}' b 
@@ -14,18 +17,6 @@ snippet afn 'arrow function () => {}' b
 ${2:($3)} => ${4:{
   $5
 }}
-endsnippet
-
-snippet describe 'Unit Test Template' b
-/**
- * @desc ${1}
- */
-describe('${2}', () => {
-  it('${3}', () => {${4}});
-  it('', () => {});
-  it('', () => {});
-  it('', () => {});
-});
 endsnippet
 
 snippet comment 'Commentary function' b
@@ -44,32 +35,13 @@ snippet desc 'Commentary function' b
  */
 endsnippet
 
-snippet import 'Import React' b
-import ${1} from '${2}';${3}
-endsnippet
-
-snippet require 'Require Node.js' b
-const ${1} = require('${2}');${3}
-endsnippet
-
 snippet const 'Variable' b
 const ${1} = '${2}';${3}
 endsnippet
 
-snippet tg 'React Tag Element'
+snippet tag 'React Tag Element'
 <${1}>
   ${2}
 </${1}>
 endsnippet
-
-snippet tgu 'React Tag Element Unique'
-<${1} />
-endsnippet
-
-snippet tc 'React Tag Element with ClassName'
-<${1} className={${2}}>
-  ${3}
-</${1}>
-endsnippet
-
 

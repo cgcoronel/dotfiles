@@ -53,7 +53,7 @@ set statusline+=%=\ %{StatuslineGit()}
 set statusline+=\ %l/%L,%c\ 
 
 """"""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
+let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
 
 let g:coc_snippet_next = '<tab>'
 
