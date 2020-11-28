@@ -5,7 +5,7 @@ hi ModeMsg gui=none ctermfg=124 ctermfg=white
 hi LineNr ctermfg=237 guifg=#3c3836
 
 "background color
-hi Normal ctermbg=black
+"hi Normal ctermbg=black
 
 "notifications simbols in status vertical bar
 hi GitGutterAdd ctermfg=142 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
