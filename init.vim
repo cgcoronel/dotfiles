@@ -37,6 +37,7 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
   Plug 'airblade/vim-gitgutter'				" Git Gutter
   Plug 'Yggdroot/indentLine'				" Ident Line |
+  Plug 'jiangmiao/auto-pairs'                           " Autocomplete pairs [{()}]
 
 call plug#end()
 
@@ -53,8 +54,7 @@ set statusline+=%=\ %{StatuslineGit()}
 set statusline+=\ %l/%L,%c\ 
 
 """"""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-pairs', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-emmet']
-
+let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-eslint', 'coc-prettier', 'coc-json' ]
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
