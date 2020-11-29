@@ -54,7 +54,7 @@ set statusline+=%=\ %{StatuslineGit()}
 set statusline+=\ %l/%L,%c\ 
 
 """"""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-eslint', 'coc-prettier', 'coc-json' ]
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json' ]
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
