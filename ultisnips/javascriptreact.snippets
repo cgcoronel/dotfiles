@@ -1,25 +1,25 @@
 
-snippet console 'console.log()' b
+snippet console "console.log()" b
 console.log('$1');
 endsnippet
 
-snippet require 'Require Node.js' b
+snippet require "Require Node.js" b
 const ${1} = require('${2}');${3}
 endsnippet
 
-snippet fn 'function () => {}' b 
+snippet fn "function () => {}" b 
 const $1 = ${2:($3)} => ${4:{
   $5
 }};
 endsnippet
 
-snippet afn 'arrow function () => {}' b 
+snippet afn "arrow function () => {}" b 
 ${2:($3)} => ${4:{
   $5
 }}
 endsnippet
 
-snippet comment 'Commentary function' b
+snippet comment "Commentary function" b
 /**
  * @desc ${1}
  *
@@ -29,17 +29,17 @@ snippet comment 'Commentary function' b
  */
 endsnippet
 
-snippet desc 'Commentary function' b
+snippet desc "Commentary function" b
 /**
  * @desc ${1}
  */
 endsnippet
 
-snippet const 'Variable' b
+snippet const "Variable" b
 const ${1} = '${2}';${3}
 endsnippet
 
-snippet tag 'React Tag Element'
+snippet tag "React Tag Element" b
 <${1}>
   ${2}
 </${1}>

@@ -4,6 +4,10 @@ hi ModeMsg gui=none ctermfg=124 ctermfg=white
 "hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi LineNr ctermfg=237 guifg=#3c3836
 
+"Coc suggestion box
+hi Pmenu ctermfg=223 ctermbg=236 guifg=bg guibg=#504945
+hi PmenuSel cterm=bold ctermfg=234 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
+
 "background color
 "hi Normal ctermbg=black
 
