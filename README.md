@@ -96,6 +96,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ i ] Inserta texto anstes de donde este el cursor
 [ a ] Inserta texto despues de donde este el cursor
 [ Shift + i ] Inserta texto al principio de una linea
+[ Shift + s ] Borrar e inserta texto al principio de una linea
 [ Shift + a ] Inserta texto al final de una linea
 [ o ] Insertar una linea y texto por debajo
 [ Shift + o ] Insertar una linea y texto por encima
