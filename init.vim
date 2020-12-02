@@ -18,6 +18,11 @@ set undodir=~/.vim/undodir/
 set history=1000
 set autoindent
 
+set foldmethod=syntax "syntax highlighting items specify folds
+set foldcolumn=0 "defines 1 col at window left, to indicate folding
+let javaScript_fold=1 "activate folding by JS syntax
+set foldlevelstart=99 "start file with all folds opened
+
 language en_US.UTF-8
 
 """"""""""""""""""" Imports shortcuts
