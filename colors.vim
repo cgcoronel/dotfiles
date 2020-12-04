@@ -52,3 +52,8 @@ hi ModeMsg ctermfg=243
 hi MsgArea ctermfg=243
 
 hi GruvboxYellowBold cterm=bold ctermfg=243 gui=bold guifg=#fabd2f
+
+"Cursor line
+hi CursorLine ctermbg=235 guibg=#3c3836
+hi CursorLineNr ctermfg=167 ctermbg=237 guifg=#fabd2f guibg=#3c3836
+
