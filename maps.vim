@@ -95,3 +95,9 @@ vnoremap gh 0
 vnoremap gk H
 vnoremap gj L
 
+"Move focus between split screens
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+noremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+

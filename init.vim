@@ -37,13 +37,17 @@ call plug#begin('~/vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" Command line Fuzzy Finder
   Plug 'junegunn/fzf.vim'				" Command line Fuzzy Finder
   Plug 'scrooloose/nerdtree'				" NERDTree <3 <3 <3
-  Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator - move between split screens
   Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
   Plug 'airblade/vim-gitgutter'				" Git Gutter
   Plug 'Yggdroot/indentLine'				" Ident Line |
   Plug 'jiangmiao/auto-pairs'                           " Autocomplete pairs [{()}]
 
 call plug#end()
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+noremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 """""""""""""""" Custom status bar
 function! StatuslineGit()
