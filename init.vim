@@ -44,11 +44,6 @@ call plug#begin('~/vim/plugged')
 
 call plug#end()
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-noremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 """""""""""""""" Custom status bar
 function! StatuslineGit()
   let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
