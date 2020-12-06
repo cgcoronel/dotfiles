@@ -134,6 +134,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ gd ] Ir a la definición de una función 
 [ gf ] Para ir a un archivos desde un require	
 [ espacio + F ] Búsqueda dentro de todos los archivos
+[ az ] Toggle Contraer / Expandir bloque de codigo
 
 - Remplazar ocurrencia de la linea donde esta el cursor
 :s/busqueda/reemplazo/g
