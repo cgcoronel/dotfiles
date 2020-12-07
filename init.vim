@@ -40,7 +40,6 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
   Plug 'airblade/vim-gitgutter'				" Git Gutter
   Plug 'Yggdroot/indentLine'				" Ident Line |
-  Plug 'jiangmiao/auto-pairs'                           " Autocomplete pairs [{()}]
 
 call plug#end()
 
