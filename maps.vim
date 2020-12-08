@@ -102,7 +102,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "Autocomplete parents pairs
-inoremap ( (<CR>)<C-c>O
 inoremap { {<CR>}<C-c>O
-inoremap [ [<CR>]<C-c>O
-
+inoremap ( ()<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap ` ``<Esc>i
