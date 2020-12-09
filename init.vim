@@ -30,16 +30,16 @@ so ~/.config/nvim/maps.vim
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-  Plug 'morhetz/gruvbox'				" Theme
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}	" Conque of Completion
-  "Plug 'maxmellon/vim-jsx-pretty'			" React syntax
-  Plug 'pangloss/vim-javascript'			" Js syntax
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	" Command line Fuzzy Finder
-  Plug 'junegunn/fzf.vim'				" Command line Fuzzy Finder
-  Plug 'scrooloose/nerdtree'				" NERDTree <3 <3 <3
-  Plug 'tpope/vim-fugitive'				" Fugitive - Git Manager
-  Plug 'airblade/vim-gitgutter'				" Git Gutter
-  Plug 'Yggdroot/indentLine'				" Ident Line |
+  Plug 'morhetz/gruvbox'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  "Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'pangloss/vim-javascript'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
