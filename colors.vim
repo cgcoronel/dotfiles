@@ -58,3 +58,11 @@ hi CursorLine ctermbg=235 guibg=#3c3836
 hi CursorLineNr ctermfg=167 ctermbg=235 guifg=#fabd2f guibg=#3c3836
 
 hi Ignore ctermfg=241 guifg=bg
+
+"Global text
+""hi Question ctermfg=121 gui=bold guifg=Green
+hi GruvboxOrange ctermfg=209 guifg=#fe8019
+hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
+hi GruvboxYellow ctermfg=214 guifg=#fabd2f
+hi String ctermfg=143 guifg=#b8bb26
+
