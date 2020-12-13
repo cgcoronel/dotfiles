@@ -64,5 +64,5 @@ hi Ignore ctermfg=241 guifg=bg
 hi GruvboxOrange ctermfg=209 guifg=#fe8019
 hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
 hi GruvboxYellow ctermfg=214 guifg=#fabd2f
-hi String ctermfg=143 guifg=#b8bb26
+hi String ctermfg=144 guifg=#b8bb26
 
