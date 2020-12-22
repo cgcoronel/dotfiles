@@ -117,8 +117,8 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ u ] Pasar de staged a unstaged
 [ dd ] Dentro de vim Fugitive abre un archivo con las diferencias
 [ X ] Dentro de vim Fugitive realiza un checkout o clean del archivo seleccionado
-[ :Gco ] commit cambios
-[ :Gpush ] push cambios
+[ :gco ] commit cambios
+[ :gpu ] push cambios
 
 - Multi cursor
 
@@ -136,6 +136,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ espacio + F ] Búsqueda dentro de todos los archivos
 [ az ] Toggle Contraer / Expandir bloque de codigo
 [ ctrl + o ] vuelve a la posicion anterior
+[ ctrl + i ] vuelve a la posicion siguiente 
 
 - Remplazar ocurrencia de la linea donde esta el cursor
 :s/busqueda/reemplazo/g
