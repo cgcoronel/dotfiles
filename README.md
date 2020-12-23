@@ -143,6 +143,13 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 
 - Remplazar ocurrencia de todo el archivo
 :%s/busqueda/reemplazo/g
+:replace busqueda/reemplazo
+
+- Buscar
+[ space + b ] Busca una palabre dentro del archivo 
+[ space + / ] Busca una palabre dentro del archivo 
+[ n ] siguiente coincidencia
+[ N ] anterior coincidencia
 
 ```
 

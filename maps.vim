@@ -54,6 +54,7 @@ nmap <Leader>F :Rg<CR>
 
 " Search in file 
 nmap <Leader>b :/
+nmap <Leader>/ :/
  
 " Git
 nmap <Leader>c :Gdiffsplit<CR>
