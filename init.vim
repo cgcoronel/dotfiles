@@ -55,30 +55,10 @@ set statusline+=%#StatusBar#\ %f\ \ %m
 set statusline+=%=\ %{StatuslineGit()} 
 set statusline+=\ %l/%L,%c\ 
 
-""""""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json' ]
-let g:coc_snippet_next = '<tab>'
 
-""""""""""""""""""" fzf config
-let g:fzf_layout = { 'down': '~40%' }
+""""""""""""""""""" Plugins config 
+so ~/.config/nvim/plug.config.vim
 
-""""""""""""""""""" Theme params
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-
-colorscheme gruvbox
-set background=dark
-
-" Imports colors
+""""""""""""""""""" Imports colors
 so ~/.config/nvim/colors.vim
-
-""""""""""""""""""" NERDTree config
-let NERDTreeQuitOnOpen = 1
-let NERDTreeShowHidden = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeIgnore = ['^node_modules$', '^.git$']
-let NERDTreeMinimalUI = 1
-let NERDTreeMinimalMenu = 0
-let NERDTreeCascadeOpenSingleChildDir = 1
-let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
