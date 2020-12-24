@@ -38,15 +38,10 @@ endfunction
 
 nmap <Leader>q :call CloseFile()<CR>
 
-" Next Tab (Space + Tab)
-"nmap <Leader>	 :bnext<CR>
-
 " Split vertical 
 nmap <Leader>s :vsplit<CR>
 
 " Finder
-"nmap <Leader>f :Files<CR>
-"nmap <Leader>f :FZF<CR>
 nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%'})<CR>
 
 " Finder in files
