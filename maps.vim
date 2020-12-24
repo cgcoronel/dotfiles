@@ -62,7 +62,8 @@ cnoreabbrev gstatus Gstatus
 cnoreabbrev gco Gco
 cnoreabbrev gpull Gpull
 
-cnoreabbrev gpu Gpush
+""cnoreabbrev gpu Gpush
+cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus
 cnoreabbrev gpl Gpull
 
