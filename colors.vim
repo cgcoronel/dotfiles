@@ -68,4 +68,4 @@ hi String ctermfg=144 guifg=#b8bb26
 
 "highlighting console.log
 hi console ctermbg=1 ctermfg=235
-match console /console.log/
+match console '^.*console.*'

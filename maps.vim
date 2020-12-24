@@ -106,3 +106,6 @@ inoremap " ""<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 inoremap { {<CR>}<C-c>O
+
+"Autocomplete arrow function 
+inoremap => => {<CR>}<Esc>i
