@@ -66,3 +66,6 @@ hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
 hi GruvboxYellow ctermfg=214 guifg=#fabd2f
 hi String ctermfg=144 guifg=#b8bb26
 
+"highlighting console.log
+hi console ctermbg=1 ctermfg=235
+match console /console.log/

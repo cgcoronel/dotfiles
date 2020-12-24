@@ -61,4 +61,3 @@ so ~/.config/nvim/plug.config.vim
 
 """"""""""""""""""" Imports colors
 so ~/.config/nvim/colors.vim
-
