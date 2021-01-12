@@ -21,3 +21,4 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
+let NERDTreeWinSize=30
