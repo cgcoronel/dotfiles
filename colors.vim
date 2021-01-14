@@ -69,3 +69,18 @@ hi String ctermfg=144 guifg=#b8bb26
 "highlighting console.log
 hi console ctermbg=1 ctermfg=235
 match console '^.*console.*'
+
+"General color text
+hi Pmenu ctermfg=180
+hi Normal ctermfg=180
+hi GruvboxFg2 ctermfg=180
+hi Todo ctermfg=180
+hi GruvboxFg1 ctermfg=180 
+
+hi htmlBold ctermfg=180 
+hi htmlBoldUnderline ctermfg=180
+hi htmlBoldItalic ctermfg=180
+hi htmlBoldUnderlineItalic ctermfg=180
+hi htmlUnderline ctermfg=180
+hi htmlUnderlineItalic ctermfg=180
+hi htmlItalic ctermfg=180
