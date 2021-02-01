@@ -7,6 +7,9 @@ let mapleader = "\<space>"
 imap jk <Esc>
 imap kj <Esc>
 
+"in insert mode add new line
+imap <Leader>o <Esc>o
+
 " remap escape key in command mode 
 cmap jk <Esc>
 cmap kj <Esc>
