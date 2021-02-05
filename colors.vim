@@ -69,12 +69,17 @@ hi String ctermfg=144 guifg=#b8bb26
 "highlighting console.log
 hi console ctermbg=1 ctermfg=235
 match console '^.*console.*'
+"autocmd VimEnter,WinEnter * match console '^.*console.*' 
+
+"highlighting TODO
+match DiffText 'TODO'
+"hi Todo cterm=reverse ctermfg=214 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
 
 "General color text
 hi Pmenu ctermfg=180
 hi Normal ctermfg=180
 hi GruvboxFg2 ctermfg=180
-hi Todo ctermfg=180
+"hi Todo ctermfg=180
 hi GruvboxFg1 ctermfg=180 
 
 hi htmlBold ctermfg=180 
