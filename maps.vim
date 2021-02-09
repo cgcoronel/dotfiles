@@ -15,10 +15,12 @@ cmap jk <Esc>
 cmap kj <Esc>
 
 " remap got to definitions local
-nmap fs gd 
+nnoremap  fs gd 
 
-" remap go to definition file
-nmap ff gf
+" remap go to definition file, search firts occurrence, and search
+" require('....
+nmap ff :call search('\V' . '(')<CR> gf
+"nmap ff gf
 
 " show tree directories 
 nmap <Leader>n :NERDTreeFind<CR>
