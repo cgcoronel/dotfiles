@@ -7,6 +7,9 @@ let mapleader = "\<space>"
 imap jk <Esc>
 imap kj <Esc>
 
+" Duplicate a paragraph
+noremap cp yap<S-}>p
+
 "in insert mode add new line
 imap oo <Esc>o
 
@@ -15,7 +18,7 @@ cmap jk <Esc>
 cmap kj <Esc>
 
 " remap got to definitions local
-nnoremap  fs gd 
+nnoremap fs gd 
 
 " remap go to definition file, search firts occurrence, and search
 " require('....
@@ -83,7 +86,7 @@ map <Leader>; :
 command! -nargs=+ Replace :%s/<args>/gc
 cnoreabbrev replace Replace
 
-" list files opened 
+" List files opened 
 nmap <Leader>p :Buffers<CR>
 
 " Move 
@@ -97,13 +100,13 @@ vnoremap gh 0
 vnoremap gk H
 vnoremap gj L
 
-"Move focus between split screens
+" Move focus between split screens
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"Autocomplete parents pairs
+" Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
