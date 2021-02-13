@@ -21,3 +21,6 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
+
+""""""""""""""""""" Vim Mutton
+let g:mutton_min_center_width = 188 
