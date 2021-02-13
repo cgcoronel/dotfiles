@@ -28,6 +28,9 @@ nmap ff :call search('\V' . '(')<CR> gf
 " show tree directories 
 nmap <Leader>n :NERDTreeFind<CR>
 
+" Show Zen mode
+nnoremap <leader>z :MuttonToggle<CR>
+
 " Save file 
 nmap <Leader>w :w<CR>
 
