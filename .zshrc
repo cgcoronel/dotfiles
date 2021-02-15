@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim=nvim
 alias vi=nvim
+alias vim.='nvim .'
 alias python=python3
 alias r=pwd
 alias version-monitor='npm run start --prefix $HOME/projects/tools/version-monitor/'
