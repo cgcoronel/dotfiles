@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gpu='git pull'
+alias gpu='git push'
 alias gco='git commit -m'
 alias ls=ll
 alias vim=nvim
