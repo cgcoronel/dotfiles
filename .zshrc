@@ -103,7 +103,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias gpu='git push'
 alias gco='git commit -m'
-alias ls=ll
 alias vim=nvim
 alias vim.='nvim .'
 alias vi=nvim
