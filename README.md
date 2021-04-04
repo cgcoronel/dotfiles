@@ -86,9 +86,6 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ b ] Para ir a la anterior palabra
 [ e ] Para ir al final de la palabra
 
-[ gd ] Ir a la definicion
-[ gf ] Ir al archivo marcado en la definicion
-
 - Moverse de {, [, ( de inicio a  ), ], } de fin
 [ % ] posicionarse en [, {, ( o ), }, ]
 
@@ -120,19 +117,14 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ :gco ] commit cambios
 [ :gpu ] push cambios
 
-- Multi cursor
-
-[ Ctrl + n ] para seleccionar palabras iguales
-
-
 - Dentro de NERDTree
 
 [ s ] para abrir un archivo en y dividir la pantalla
 [ gs ] para abrir un archivo y mantenerae en el explorador	
 
 - Codigo
-[ gd ] Ir a la definición de una función 
-[ gf ] Para ir a un archivos desde un require	
+[ gd | fs ] Ir a la definicion
+[ gf | ff ] Para ir a un archivos desde un require
 [ espacio + F ] Búsqueda dentro de todos los archivos
 [ az ] Toggle Contraer / Expandir bloque de codigo
 [ ctrl + o ] vuelve a la posicion anterior
