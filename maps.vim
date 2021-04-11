@@ -65,6 +65,9 @@ cnoreabbrev gco Gco
 cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
 
+" Run test in focus file   
+cnoreabbrev test :call RunTest() 
+
 "cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus
 cnoreabbrev gpl Gpull

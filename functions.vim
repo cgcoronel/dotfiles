@@ -37,3 +37,16 @@ function! PushChanges()
     echo(": " . s:cmd)
     echo(l:output)
 endfunction
+
+" Run test in focus file   
+function! RunTest()
+    let b:filename=expand('%:f')
+    echo('Running unit test...')
+
+    let s:cmd='npm run test ' . b:filename 
+    let l:output = system(s:cmd)
+
+    echo(": " . s:cmd)
+    echo(l:output)
+endfunction
+
