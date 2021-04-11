@@ -36,5 +36,4 @@ function! PushChanges()
 
     echo(": " . s:cmd)
     echo(l:output)
-
 endfunction
