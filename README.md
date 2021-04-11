@@ -80,6 +80,8 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 
 ### Comandos basicos 
 ```console
+[ space + n ] Abre explorador de archivos
+[ Esc | jk | kj ] Ir al modo normal
 
 - Moverse entra palabras
 [ w ] Para ir a la siguiente palabra
@@ -88,6 +90,12 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 
 - Moverse de {, [, ( de inicio a  ), ], } de fin
 [ % ] posicionarse en [, {, ( o ), }, ]
+
+- Moverse a extremos (normal mode & visual mode)
+[ gl ] Mover cursor al extremo derecho
+[ gh ] Mover cursor al extremo izquierdo 
+[ gk ] Mover cursor a la primer linea de pantalla
+[ gj ] Mover cursor a la ultima linea de pantalla
 
 - Insertar texto
 [ i ] Inserta texto anstes de donde este el cursor
@@ -140,9 +148,13 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 - Buscar
 [ space + b ] Busca una palabre dentro del archivo 
 [ space + / ] Busca una palabre dentro del archivo 
-[ / ] Busca una palabre dentro del archivo 
+[ / ] Busca una palabre dentro del archivo
 [ n ] siguiente coincidencia
 [ N ] anterior coincidencia
+
+- Buscar archivos
+[ space + f] Buscar un archivo por nombre
+[ space + F] Buscar una expresion en todos los archivos 
 
 ```
 
