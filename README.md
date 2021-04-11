@@ -123,6 +123,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ dd ] Dentro de vim Fugitive abre un archivo con las diferencias
 [ X ] Dentro de vim Fugitive realiza un checkout o clean del archivo seleccionado
 [ :gco ] commit cambios
+[ cc ] commit cambios
 [ :gpu ] push cambios
 
 - Dentro de NERDTree
