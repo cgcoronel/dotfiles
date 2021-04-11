@@ -90,6 +90,7 @@ function! PushChanges()
       let s:cmd = 'git push --set-upstream origin ' . l:branchname 
 
       let l:output = system(s:cmd)
+      
     endif
 
     echo(": " . s:cmd)
