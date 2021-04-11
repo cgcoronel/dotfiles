@@ -24,12 +24,6 @@ set foldlevelstart=99 " start file with all folds opened
 
 language en_US.UTF-8
 
-""""""""""""""""""" Imports functions 
-so ~/.config/nvim/functions.vim
-
-""""""""""""""""""" Imports shortcuts
-so ~/.config/nvim/maps.vim
-
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
@@ -46,6 +40,20 @@ call plug#begin('~/vim/plugged')
 
 call plug#end()
 
+
+""""""""""""""""""" Imports functions 
+so ~/.config/nvim/functions.vim
+
+""""""""""""""""""" Imports shortcuts
+so ~/.config/nvim/maps.vim
+
+""""""""""""""""""" Plugins config 
+so ~/.config/nvim/plug.config.vim
+
+""""""""""""""""""" Imports custom colors
+so ~/.config/nvim/colors.vim
+
+
 """""""""""""""" Custom status bar
 
 set statusline+=%#StatusBar#\ %f\ \ %m
@@ -55,8 +63,4 @@ set statusline+=%=\ %{StatuslineGit()}
 set statusline+=\ %l/%L,%c\ 
 
 
-""""""""""""""""""" Plugins config 
-so ~/.config/nvim/plug.config.vim
 
-""""""""""""""""""" Imports colors
-so ~/.config/nvim/colors.vim
