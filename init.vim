@@ -24,6 +24,9 @@ set foldlevelstart=99 " start file with all folds opened
 
 language en_US.UTF-8
 
+""""""""""""""""""" Imports functions 
+so ~/.config/nvim/functions.vim
+
 """"""""""""""""""" Imports shortcuts
 so ~/.config/nvim/maps.vim
 
@@ -44,10 +47,6 @@ call plug#begin('~/vim/plugged')
 call plug#end()
 
 """""""""""""""" Custom status bar
-function! StatuslineGit()
-  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  return strlen(l:branchname) > 0?l:branchname:''
-endfunction
 
 set statusline+=%#StatusBar#\ %f\ \ %m
 
