@@ -61,12 +61,13 @@ nmap <Leader>a :Gw<CR>
 "abbreviations from git commands
 cnoreabbrev gpush Gpush
 cnoreabbrev gstatus Gstatus
-cnoreabbrev gco Gco
+"cnoreabbrev gco Gco TODO
+cnoreabbrev gco :echom 'you should use *cc* in fugitive!'  
 cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
 
 " Run test in focus file   
-cnoreabbrev test :call RunTest() 
+cnoreabbrev te :call RunTest() 
 
 "cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus

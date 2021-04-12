@@ -40,13 +40,17 @@ endfunction
 
 " Run test in focus file   
 function! RunTest()
-    let b:filename=expand('%:f')
     echo('Running unit test...')
 
-    let s:cmd='npm run test ' . b:filename 
-    let l:output = system(s:cmd)
+    "get filename
+    let b:filename=expand('%')
 
-    echo(": " . s:cmd)
-    echo(l:output)
+    vsplit
+    execute "normal \<C-l>"
+    execute "term npm run test:watch " . b:filename
+    execute "set nonu"
+    execute "set nornu"
+    execute "normal \<C-h>"
 endfunction
+
 
