@@ -77,7 +77,8 @@ cnoreabbrev gpl Gpull
 cnoreabbrev dia CocDiagnostics
 
 " Command line 
-nmap <Leader>t :!
+"nmap <Leader>t :!
+nmap <Leader>t :call OpenTerminal()<CR>
 map <Leader>; : 
 
 " Command find and replace
