@@ -157,6 +157,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ space + f] Buscar un archivo por nombre
 [ space + F] Buscar una expresion en todos los archivos 
 
+[ space + t ] Abre / Cierra terminal 
 ```
 
 ### Screenshots
