@@ -78,10 +78,8 @@ function! OpenTerminal()
     silent au BufWinEnter,WinEnter <buffer> startinsert!
 
     " set maps inside terminal buffer
-    execute "tnoremap <buffer> <C-h> <C-\\><C-n><C-w><C-h>"
     execute "tnoremap <buffer> <C-k> <C-\\><C-n><C-w><C-k>"
     execute "tnoremap <buffer> <C-j> <C-\\><C-n><C-w><C-j>"
-    execute "tnoremap <buffer> <C-l> <C-\\><C-n><C-w><C-l>"
 
     execute "tnoremap <buffer> <Leader>t <C-\\><C-n>:q<CR>"
     execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
