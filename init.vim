@@ -40,19 +40,22 @@ call plug#begin('~/vim/plugged')
 
 call plug#end()
 
+let $VIM = '~/.config/nvim/'
+let $PLUGINS =$VIM . 'plugins/**/*.vim'
 
 """"""""""""""""""" Imports functions 
-so ~/.config/nvim/functions.vim
+for f in glob($PLUGINS, 0, 1)
+  execute 'source' f
+endfor
 
 """"""""""""""""""" Imports shortcuts
-so ~/.config/nvim/maps.vim
+so $VIM/maps.vim
 
 """"""""""""""""""" Plugins config 
-so ~/.config/nvim/plug.config.vim
+so $VIM/plug.config.vim
 
 """"""""""""""""""" Imports custom colors
-so ~/.config/nvim/colors.vim
-
+so $VIM/colors.vim
 
 """""""""""""""" Custom status bar
 set statusline+=%#StatusBar#\ %f\ \ %m

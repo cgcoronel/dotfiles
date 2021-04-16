@@ -45,7 +45,8 @@ hi StatusLineNC ctermfg=235 ctermbg=235
 hi StatusBar ctermfg=241 guifg=#fb4934 ctermbg=235
 
 "Split bar
-hi VertSplit ctermfg=235 ctermbg=235
+"hi VertSplit ctermfg=235 ctermbg=235
+hi VertSplit ctermfg=235 ctermbg=234
 
 "Mode color
 hi ModeMsg ctermfg=243

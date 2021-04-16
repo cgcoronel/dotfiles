@@ -14,7 +14,7 @@ imap kj <Esc>
 noremap cp yap<S-}>p
 
 "in insert mode add new line
-imap oo <Esc>o
+"imap oo <Esc>o
 
 " remap escape key in command mode 
 cmap jk <Esc>
