@@ -25,7 +25,6 @@ function! OpenTerminal()
     execute "tnoremap <buffer> <C-k> <C-\\><C-n><C-w><C-k>"
     execute "tnoremap <buffer> <C-j> <C-\\><C-n><C-w><C-j>"
 
-    execute "tnoremap <buffer> <Leader>t <C-\\><C-n>:q<CR>"
     execute "tnoremap <buffer> <Leader>q <C-\\><C-n>:q<CR>"
     execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
 
