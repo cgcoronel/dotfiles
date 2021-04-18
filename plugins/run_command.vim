@@ -1,6 +1,13 @@
-" Run test in focus file   
-function! RunTest()
-    echo('Running unit test...')
+" Open terminal and run command 
+" param1 : command
+" param2 : focus in terminal
+"          0: false, 
+"          null or 1: true  
+function! RunCommand(command,...)
+    let command = a:command
+    let focus = get(a:, 1, 1) 
+
+    echo('Running Command...' . command)
 
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&buftype", "not found")
@@ -9,12 +16,9 @@ function! RunTest()
     " close existing terminal
     execute "q"
   else 
-    "get filename
-    let b:filename=expand('%')
-
     vsplit
     execute "normal \<C-l>"
-    execute "term npm run test:watch " . b:filename
+    execute "term " . command
     execute "set nonu"
     execute "set nornu"
 
@@ -23,7 +27,10 @@ function! RunTest()
     silent au BufWinEnter,WinEnter <buffer> startinsert!
 
     execute "tnoremap <buffer> <Leader>q <C-\\><C-n>:q<CR>"
-    execute "normal \<C-h>"
+
+    if (!focus)
+     execute "normal \<C-h>"
+    endif
+
   endif
 endfunction
-
