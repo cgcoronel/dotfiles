@@ -6,6 +6,9 @@ vnoremap L iwyoconsole.log(':::::::::::::::: <ESC>pa: ', <ESC>pa);<ESC>
 """"""""""""""""""""""" Shortcuts
 let mapleader = "\<space>"
 
+" Clean search result
+nnoremap <Leader><space> :noh<cr>
+
 " remap escape key in insert mode
 imap jk <Esc>
 imap kj <Esc>

@@ -152,6 +152,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ / ] Busca una palabre dentro del archivo
 [ n ] siguiente coincidencia
 [ N ] anterior coincidencia
+[ space + space ] Limpiar resultados de busqueda 
 
 - Buscar archivos
 [ space + f] Buscar un archivo por nombre

@@ -4,12 +4,13 @@ hi ModeMsg gui=none ctermfg=124 ctermfg=white
 "hi MsgArea gui=none ctermfg=124 ctermfg=white 
 hi LineNr ctermfg=237 guifg=#3c3836
 
+"Code Comments
+hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
+hi Normal ctermfg=245 guifg=#928374
+
 "Coc suggestion box
 hi Pmenu ctermfg=223 ctermbg=236 guifg=bg guibg=#504945
 hi PmenuSel cterm=bold ctermfg=234 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
-
-"background color
-"hi Normal ctermbg=black
 
 "notifications simbols in status vertical bar
 hi GitGutterAdd ctermfg=142 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
@@ -92,4 +93,7 @@ hi htmlItalic ctermfg=180
 
 "require()
 hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
+
+"background color
+"hi Normal ctermbg=black
 
