@@ -48,11 +48,11 @@ for f in glob($PLUGINS, 0, 1)
   execute 'source' f
 endfor
 
-""""""""""""""""""" Imports shortcuts
-so $VIM/maps.vim
-
 """"""""""""""""""" Plugins config 
 so $VIM/plug.config.vim
+
+""""""""""""""""""" Imports shortcuts
+so $VIM/maps.vim
 
 """"""""""""""""""" Imports custom colors
 so $VIM/colors.vim
@@ -62,6 +62,5 @@ set statusline+=%#StatusBar#\ %f\ \ %m
 " Right side settings
 set statusline+=%=\ %{StatuslineGit()} 
 set statusline+=\ %l/%L,%c\ 
-
 
 
