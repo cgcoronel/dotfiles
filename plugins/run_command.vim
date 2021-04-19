@@ -30,6 +30,8 @@ function! RunCommand(command,...)
 
     if (!focus)
      execute "normal \<C-h>"
+    else
+     execute "normal \<C-h>\<C-l>"
     endif
 
   endif

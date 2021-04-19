@@ -73,7 +73,7 @@ cnoreabbrev gpu :call PushChanges()
 cnoreabbrev te :call RunCommand('npm run test:watch ' . expand('%'), 0) 
 
 " Open version monitor
-cnoreabbrev vm :call RunCommand('npm run start --prefix ../../projects/tools/version-monitor') 
+cnoreabbrev vm :call RunCommand('npm run start --prefix /Users/u631185/projects/tools/version-monitor') 
 
 "cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus
