@@ -98,4 +98,4 @@ hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
 
 "Visual color selection
 hi clear Visual 
-hi Visual ctermbg=237 ctermfg=NONE
+hi Visual ctermbg=238 ctermfg=NONE
