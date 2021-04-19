@@ -75,7 +75,6 @@ hi String ctermfg=144 guifg=#b8bb26
 "highlighting TODO
 hi Todo cterm=bold ctermfg=234 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
 
-
 "General color text
 hi Pmenu ctermfg=180
 hi Normal ctermfg=180
@@ -97,3 +96,6 @@ hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
 "background color
 "hi Normal ctermbg=black
 
+"Visual color selection
+hi clear Visual 
+hi Visual ctermbg=237 ctermfg=NONE

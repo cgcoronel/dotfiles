@@ -63,4 +63,3 @@ set statusline+=%#StatusBar#\ %f\ \ %m
 set statusline+=%=\ %{StatuslineGit()} 
 set statusline+=\ %l/%L,%c\ 
 
-
