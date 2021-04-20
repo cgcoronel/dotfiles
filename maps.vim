@@ -71,9 +71,11 @@ cnoreabbrev gpu :call PushChanges()
 
 " Run test in focus file   
 cnoreabbrev te :call RunCommand('npm run test:watch ' . expand('%'), 0) 
+cnoreabbrev ta :call RunCommand('npm run test') 
 
 " Open version monitor
-cnoreabbrev vm :call RunCommand('npm run start --prefix /Users/u631185/projects/tools/version-monitor') 
+cnoreabbrev up :call RunCommand('npm run start') 
+cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js') 
 
 "cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus
@@ -83,8 +85,7 @@ cnoreabbrev gpl Gpull
 cnoreabbrev dia CocDiagnostics
 
 " Command line 
-"nmap <Leader>t :!
-nmap <Leader>t :call OpenTerminal()<CR>
+nmap <Leader>t :!
 map <Leader>; : 
 
 " Command find and replace
