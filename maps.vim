@@ -106,11 +106,15 @@ vnoremap gh 0
 vnoremap gk H
 vnoremap gj L
 
+" Select all text
+vnorema aa <Esc>ggVG<CR>
+
 " Move focus between split screens
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
