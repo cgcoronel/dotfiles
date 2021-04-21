@@ -64,7 +64,7 @@ nmap <Leader>a :Gw<CR>
 "abbreviations from git commands
 cnoreabbrev gpush Gpush
 cnoreabbrev gstatus Gstatus
-cnoreabbrev gco Gco
+cnoreabbrev gco Git commit
 cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
 
