@@ -64,8 +64,7 @@ nmap <Leader>a :Gw<CR>
 "abbreviations from git commands
 cnoreabbrev gpush Gpush
 cnoreabbrev gstatus Gstatus
-"cnoreabbrev gco Gco TODO
-cnoreabbrev gco :echom 'you should use *cc* in fugitive!'  
+cnoreabbrev gco Gco
 cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
 
