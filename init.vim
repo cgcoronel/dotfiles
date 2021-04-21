@@ -21,6 +21,7 @@ set autoindent
 set foldmethod=syntax " syntax highlighting items specify folds
 set foldcolumn=0      " defines 1 col at window left, to indicate folding
 set foldlevelstart=99 " start file with all folds opened
+set ignorecase
 
 language en_US.UTF-8
 

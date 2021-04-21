@@ -44,7 +44,8 @@ hi NERDTreeCWD gui=bold ctermfg=241
 hi StatusLine ctermfg=235 ctermbg=235 
 hi StatusLineNC ctermfg=235 ctermbg=235 
 "hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
-hi StatusBar ctermfg=241 guifg=#fb4934 ctermbg=235
+"hi StatusBar ctermfg=241 guifg=#fb4934 ctermbg=235
+hi StatusBar ctermfg=214 guifg=#fb4934 ctermbg=235 
 
 "Split bar
 "hi VertSplit ctermfg=235 ctermbg=235
@@ -96,9 +97,8 @@ hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
 
 "background color
 "hi Normal ctermbg=black
-"
 "text color
-"hi Normal ctermfg=15
+"hi Normal ctermfg=247
 
 "Visual color selection
 hi clear Visual 
