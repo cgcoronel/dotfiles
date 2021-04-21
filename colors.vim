@@ -96,6 +96,9 @@ hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
 
 "background color
 "hi Normal ctermbg=black
+"
+"text color
+"hi Normal ctermfg=15
 
 "Visual color selection
 hi clear Visual 
