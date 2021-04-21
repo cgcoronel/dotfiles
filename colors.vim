@@ -82,7 +82,8 @@ hi Pmenu ctermfg=180
 "hi Normal ctermfg=180
 hi GruvboxFg2 ctermfg=180
 "hi Todo ctermfg=180
-hi GruvboxFg1 ctermfg=180 
+"hi GruvboxFg1 ctermfg=14 
+"
 
 hi htmlBold ctermfg=180 
 hi htmlBoldUnderline ctermfg=180
