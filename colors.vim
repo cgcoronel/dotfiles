@@ -6,7 +6,7 @@ hi LineNr ctermfg=237 guifg=#3c3836
 
 "Code Comments
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
-hi Normal ctermfg=245 guifg=#928374
+"hi Normal ctermfg=245 guifg=#928374
 
 "Coc suggestion box
 hi Pmenu ctermfg=223 ctermbg=236 guifg=bg guibg=#504945
@@ -64,7 +64,7 @@ hi CursorLineNr ctermfg=214 ctermbg=235 guifg=#fabd2f guibg=#3c3836
 hi Ignore ctermfg=241 guifg=bg
 
 "Global text
-""hi Question ctermfg=121 gui=bold guifg=Green
+"hi Question ctermfg=121 gui=bold guifg=Green
 hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
 hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
 hi GruvboxYellow ctermfg=214 guifg=#fabd2f
@@ -79,7 +79,7 @@ hi Todo cterm=bold ctermfg=234 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "General color text
 hi Pmenu ctermfg=180
-hi Normal ctermfg=180
+"hi Normal ctermfg=180
 hi GruvboxFg2 ctermfg=180
 "hi Todo ctermfg=180
 hi GruvboxFg1 ctermfg=180 
