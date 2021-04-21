@@ -58,7 +58,7 @@ hi GruvboxYellowBold cterm=bold ctermfg=243 gui=bold guifg=#fabd2f
 
 "Cursor line
 hi CursorLine ctermbg=235 guibg=#3c3836
-hi CursorLineNr ctermfg=241 ctermbg=235 guifg=#fabd2f guibg=#3c3836
+hi CursorLineNr ctermfg=214 ctermbg=235 guifg=#fabd2f guibg=#3c3836
 
 hi Ignore ctermfg=241 guifg=bg
 
