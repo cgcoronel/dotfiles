@@ -127,3 +127,6 @@ nmap <Leader>rn <Plug>(coc-rename)
 " Toggle relativenumber
 map <C-N> :set relativenumber!<cr>
 
+
+map <C-J> 10j
+map <C-K> 10k
