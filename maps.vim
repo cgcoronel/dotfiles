@@ -103,7 +103,7 @@ vnoremap gk H
 vnoremap gj L
 
 " Select all text
-vnorema aa <Esc>ggVG<CR>
+nnoremap <Leader>a <Esc>ggVG<CR>
 
 " Move focus between split screens
 nnoremap <C-J> <C-W><C-J>
