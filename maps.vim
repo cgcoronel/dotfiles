@@ -106,11 +106,15 @@ vnoremap gj L
 nnoremap <Leader>a <Esc>ggVG<CR>
 
 " Move focus between split screens
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+map <C-J> <Esc><C-W><C-J>
+map <C-K> <Esc><C-W><C-K>
+map <C-L> <Esc><C-W><C-L>
+map <C-H> <Esc><C-W><C-H>
 
+imap <C-J> <Esc><C-W><C-J>
+imap <C-K> <Esc><C-W><C-K>
+imap <C-L> <Esc><C-W><C-L>
+imap <C-H> <Esc><C-W><C-H>
 
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
