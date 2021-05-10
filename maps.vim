@@ -66,6 +66,13 @@ cnoreabbrev gco Git commit
 cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
 
+" git checkout -b branch_name
+command! -nargs=* Gc :!git checkout <args>
+cnoreabbrev gc Gc
+
+command! -nargs=* Gcb :!git checkout -b <args>
+cnoreabbrev gcb Gcb
+
 " Run test in focus file   
 cnoreabbrev te :call RunCommand('npm run test:watch ' . expand('%'), 0) 
 cnoreabbrev ta :call RunCommand('npm run test') 
