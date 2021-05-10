@@ -1,5 +1,5 @@
 """"""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-tabnine', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-snippets']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-snippets']
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
@@ -21,3 +21,6 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
+
+"""""""""""""""""""IndentLine
+let g:indentLine_char_list = [ '│']

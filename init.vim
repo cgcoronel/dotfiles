@@ -62,5 +62,5 @@ so $VIM/colors.vim
 set statusline+=%#StatusBar#\ %f\ \ %m
 " Right side settings
 set statusline+=%=\ %{StatuslineGit()} 
-set statusline+=\ %l/%L,%c\ 
+"set statusline+=\ %l/%L,%c\ 
 

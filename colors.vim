@@ -7,6 +7,7 @@ hi LineNr ctermfg=237 guifg=#3c3836
 "Code Comments
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 "hi Normal ctermfg=245 guifg=#928374
+hi Normal ctermfg=15 guifg=#928374
 
 "Coc suggestion box
 hi Pmenu ctermfg=223 ctermbg=236 guifg=bg guibg=#504945
@@ -43,9 +44,9 @@ hi NERDTreeCWD gui=bold ctermfg=241
 "Status bar
 hi StatusLine ctermfg=235 ctermbg=235 
 hi StatusLineNC ctermfg=235 ctermbg=235 
-"hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
-"hi StatusBar ctermfg=241 guifg=#fb4934 ctermbg=235
-hi StatusBar ctermfg=214 guifg=#fb4934 ctermbg=235 
+""hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
+hi StatusBar ctermfg=241 guifg=#fb4934 ctermbg=235
+"hi StatusBar ctermfg=214 guifg=#fb4934 ctermbg=235 
 
 "Split bar
 "hi VertSplit ctermfg=235 ctermbg=235
@@ -65,7 +66,8 @@ hi Ignore ctermfg=241 guifg=bg
 
 "Global text
 "hi Question ctermfg=121 gui=bold guifg=Green
-hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
+"hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
+hi GruvboxOrange cterm=italic gui=italic ctermfg=215 guifg=#fe8019
 hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
 hi GruvboxYellow ctermfg=214 guifg=#fabd2f
 hi String ctermfg=144 guifg=#b8bb26
