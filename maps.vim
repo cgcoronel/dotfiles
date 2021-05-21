@@ -65,6 +65,7 @@ cnoreabbrev gstatus Gstatus
 cnoreabbrev gco Git commit
 cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
+cnoreabbrev gs :echo StatuslineGit()
 
 " git checkout -b branch_name
 command! -nargs=* Gc :!git checkout <args>
