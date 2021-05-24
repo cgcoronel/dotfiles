@@ -1,5 +1,18 @@
 snippet console "console.log()" b
-console.log(':::::::::::::::: $1: ', $1);
+console.log($1);
+endsnippet
+
+snippet logger.info "logger.info()" b
+logger.info($1);
+endsnippet
+
+snippet if "if ()" b
+if ($1)
+ $2
+endsnippet
+
+snippet logger.error "logger.error()" b
+logger.error($1);
 endsnippet
 
 snippet try "try {} catch (err) { console.log(err); }" i
