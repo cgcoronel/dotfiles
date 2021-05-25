@@ -11,6 +11,7 @@
     "css",
     "scss"
   ],
+  "tabnine.priority": 80,
   "suggest.languageSourcePriority": 90,
   "prettier.useTabs": false,
   "prettier.semi": true,
