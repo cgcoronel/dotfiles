@@ -114,3 +114,6 @@ hi fzf3 ctermfg=241 ctermbg=235 guifg=#E12672 guibg=#565656
 
 " Search 
 hi Search cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
+
+" Conditionals
+hi GruvboxRed cterm=bold ctermfg=4 guifg=#fb4934
