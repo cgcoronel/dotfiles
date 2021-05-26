@@ -125,3 +125,6 @@ hi Search cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=
 
 " Conditionals
 hi GruvboxRed cterm=bold ctermfg=4 guifg=#fb4934
+
+"hide buffer line ~
+highlight EndOfBuffer ctermfg=234 ctermbg=234
