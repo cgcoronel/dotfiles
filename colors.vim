@@ -60,7 +60,7 @@ hi GruvboxYellowBold cterm=bold ctermfg=243 gui=bold guifg=#fabd2f
 
 "Cursor line
 hi CursorLine ctermbg=235 guibg=#3c3836
-hi CursorLineNr ctermfg=214 ctermbg=235 guifg=#fabd2f guibg=#3c3836
+hi CursorLineNr ctermfg=15 ctermbg=235 guifg=#fabd2f guibg=#3c3836
 
 hi Ignore ctermfg=241 guifg=bg
 
@@ -69,7 +69,7 @@ hi Ignore ctermfg=241 guifg=bg
 "hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
 hi GruvboxOrange cterm=italic gui=italic ctermfg=215 guifg=#fe8019
 hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
-hi GruvboxYellow ctermfg=214 guifg=#fabd2f
+hi GruvboxYellow ctermfg=179 guifg=#fabd2f
 hi String ctermfg=144 guifg=#b8bb26
 
 "highlighting console.log
