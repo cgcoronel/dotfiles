@@ -111,3 +111,6 @@ hi Visual ctermbg=239 ctermfg=NONE
 hi fzf1 ctermfg=241 ctermbg=235 guifg=#E12672 guibg=#565656
 hi fzf2 ctermfg=241 ctermbg=235 guifg=#E12672 guibg=#565656 cterm=bold 
 hi fzf3 ctermfg=241 ctermbg=235 guifg=#E12672 guibg=#565656
+
+" Search 
+hi Search cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
