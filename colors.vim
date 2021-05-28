@@ -88,20 +88,20 @@ hi String ctermfg=144 guifg=#b8bb26
 hi Todo cterm=bold ctermfg=234 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "General color text
-hi Pmenu ctermfg=180
+hi Pmenu ctermfg=15
 "hi Normal ctermfg=180
-hi GruvboxFg2 ctermfg=180
+hi GruvboxFg2 ctermfg=15
 "hi Todo ctermfg=180
-"hi GruvboxFg1 ctermfg=14 
-"
+hi GruvboxFg1 ctermfg=15 
 
-hi htmlBold ctermfg=180 
-hi htmlBoldUnderline ctermfg=180
-hi htmlBoldItalic ctermfg=180
-hi htmlBoldUnderlineItalic ctermfg=180
-hi htmlUnderline ctermfg=180
-hi htmlUnderlineItalic ctermfg=180
-hi htmlItalic ctermfg=180
+
+hi htmlBold ctermfg=15 
+hi htmlBoldUnderline ctermfg=15
+hi htmlBoldItalic ctermfg=15
+hi htmlBoldUnderlineItalic ctermfg=15
+hi htmlUnderline ctermfg=15
+hi htmlUnderlineItalic ctermfg=15
+hi htmlItalic ctermfg=15
 
 "require()
 hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
