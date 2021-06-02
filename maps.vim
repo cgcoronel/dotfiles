@@ -1,8 +1,5 @@
 ":help key-notation
 
-" add console.log with the variable under cursor  
-vnoremap L iwyoconsole.log(':::::::::::::::: <ESC>pa: ', <ESC>pa);<ESC>
-
 """"""""""""""""""""""" Shortcuts
 let mapleader = "\<space>"
 

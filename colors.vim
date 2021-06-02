@@ -42,8 +42,8 @@ hi NERDTreeClosable ctermfg=241
 hi NERDTreeCWD gui=bold ctermfg=241 
 
 "Status bar
-hi StatusLine ctermfg=235 ctermbg=235 
-hi StatusLineNC ctermfg=235 ctermbg=235 
+hi StatusLine ctermfg=235 ctermbg=241 
+hi StatusLineNC ctermfg=235 ctermbg=241 
 ""hi StatusBar ctermfg=167 guifg=#fb4934 ctermbg=235
 hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=235
 "hi StatusBar ctermfg=214 guifg=#fb4934 ctermbg=235 
