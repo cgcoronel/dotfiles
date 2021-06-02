@@ -14,14 +14,21 @@ endfunction
 " Return branch status 
 function! StatuslineBranch()
   let l:branchname = get(b:, 'git_clean', '') 
-let bar = substitute(l:branchname, ' files changed,', '~', '')
-let bar1 = substitute(l:bar, ' insertions(+),', '+', '')
-let bar2 = substitute(l:bar1, ' insertion(+),', '+', '')
-let bar3 = substitute(l:bar2, ' deletion(-)', "-", '')
-let bar4 = substitute(l:bar3, ' deletions(-)', '-', '')
-let bar5 = substitute(l:bar4, ' file changed,', '~', '')
 
- return strlen(l:bar5) > 0?l:bar5:''
+" TODO REFACTOR!!!!!!!!!!!!!!!!!!!!
+let bar = substitute(l:branchname, ' ', '', 'g')
+
+let bar1 = substitute(l:bar, 'changed', '~ ', 'g')
+let bar2 = substitute(l:bar1, 'insertion', '+ ', 'g')
+let bar3 = substitute(l:bar2, 'deletion', '- ', 'g')
+
+let bar4 = substitute(l:bar3, 'file', '', 'g')
+let bar5 = substitute(l:bar4, ',', '', 'g')
+let bar6 = substitute(l:bar5, '(+)', '', 'g')
+let bar7 = substitute(l:bar6, '(-)', '', 'g')
+let bar8 = substitute(l:bar7, 's', '', 'g')
+
+ return strlen(l:bar8) > 0?l:bar8:''
 endfunction
 
 
