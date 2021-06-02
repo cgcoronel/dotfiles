@@ -13,22 +13,20 @@ endfunction
 
 " Return branch status 
 function! StatuslineBranch()
-  let l:branchname = get(b:, 'git_clean', '') 
+  let l:status = get(b:, 'git_clean', '') 
+  let l:branchname = get(b:, 'git_branch', '') 
 
-" TODO REFACTOR!!!!!!!!!!!!!!!!!!!!
-let bar = substitute(l:branchname, ' ', '', 'g')
+  let l:bar = substitute(l:status, ' ', '', 'g')
+  let l:bar = substitute(l:bar, 'changed', '~ ', 'g')
+  let l:bar = substitute(l:bar, 'insertion', '+ ', 'g')
+  let l:bar = substitute(l:bar, 'deletion', '- ', 'g')
+  let l:bar = substitute(l:bar, 'file', '', 'g')
+  let l:bar = substitute(l:bar, ',', '', 'g')
+  let l:bar = substitute(l:bar, '(+)', '', 'g')
+  let l:bar = substitute(l:bar, '(-)', '', 'g')
+  let l:bar = substitute(l:bar, 's', '', 'g')
 
-let bar1 = substitute(l:bar, 'changed', '~ ', 'g')
-let bar2 = substitute(l:bar1, 'insertion', '+ ', 'g')
-let bar3 = substitute(l:bar2, 'deletion', '- ', 'g')
-
-let bar4 = substitute(l:bar3, 'file', '', 'g')
-let bar5 = substitute(l:bar4, ',', '', 'g')
-let bar6 = substitute(l:bar5, '(+)', '', 'g')
-let bar7 = substitute(l:bar6, '(-)', '', 'g')
-let bar8 = substitute(l:bar7, 's', '', 'g')
-
- return strlen(l:bar8) > 0?l:bar8:''
+ return strlen(l:branchname) > 0?l:bar:''
 endfunction
 
 
