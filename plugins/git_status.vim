@@ -1,7 +1,7 @@
-autocmd BufEnter,ShellCmdPost *
+autocmd VimEnter,BufEnter,ShellCmdPost *
   \ let b:git_branch = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
  
-autocmd BufEnter,FocusGained,BufWritePost *
+autocmd VimEnter,BufEnter,FocusGained,BufWritePost *
   \ let b:git_clean = system("git diff --stat | tail -n1 | HEAD 2>/dev/null | tr -d '\n'")
 
 " Return branch name
