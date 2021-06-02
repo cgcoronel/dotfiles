@@ -66,5 +66,3 @@ set statusline+=%#StatusBar#\ %f\ \ %m
 "set statusline+=%=\ %{StatuslineGit()}\ %{StatuslineBranch()}\  
 "set statusline+=%=\ %{StatuslineGit()}\   
 "set statusline+=\ %l/%L,%c\ 
-
-let NERDTreeStatusline='%{StatuslineGit()} %{StatuslineBranch()}'
