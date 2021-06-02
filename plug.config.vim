@@ -21,7 +21,7 @@ let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
-let NERDTreeStatusline='%{StatuslineGit()} %{StatuslineBranch()}'
+let NERDTreeStatusline=' %{StatuslineGit()} %{StatuslineBranch()}'
 
 """""""""""""""""""IndentLine
 let g:indentLine_char_list = [ '│']
