@@ -63,5 +63,6 @@ set statusline+=%#StatusBar#\ %f\ \ %m
 
 " Right side settings
 set statusline+=%=\ %{StatuslineGit()}\ %{StatuslineBranch()}\  
+"set statusline+=%=\ %{StatuslineGit()}\   
 "set statusline+=\ %l/%L,%c\ 
 
