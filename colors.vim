@@ -21,8 +21,9 @@ hi GitGutterDelete ctermfg=167 ctermbg=234 guifg=#fb4934 guibg=#3c3836
 hi GitGutterChangeDelete ctermfg=108 ctermbg=234 guifg=#8ec07c guibg=#3c3836
 
 hi CocErrorSign ctermfg=167 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
-hi CocWarningSign ctermfg=208 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
-hi CocInfoSign ctermfg=214 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
+hi CocWarningSign ctermfg=179 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
+"hi CocWarningSign ctermfg=208 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
+hi CocInfoSign ctermfg=179 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
 hi CocHintSign ctermfg=109 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
 
 hi SignColumn ctermbg=234 guibg=#3c3836
