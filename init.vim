@@ -32,6 +32,7 @@ call plug#begin('~/vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
