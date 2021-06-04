@@ -62,8 +62,5 @@ so $VIM/colors.vim
 """""""""""""""" Custom status bar
 set statusline+=%#StatusBar#\ %f\ \ %m
 
-"set statusline+=%=\ %{StatuslineGit()}\ %{StatuslineBranch()}\  
 " Right side settings
-"set statusline+=%=\ %{StatuslineGit()}\ %{StatuslineBranch()}\  
-"set statusline+=%=\ %{StatuslineGit()}\   
-"set statusline+=\ %l/%L,%c\ 
+set statusline+=%=\ %l/%L,%c\ 
