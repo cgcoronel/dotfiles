@@ -8,12 +8,13 @@ function! PushChanges()
     "check add origin
     if l:output[0:24] == 'fatal: The current branch'
 
-      "get branchname
+      "get branchname from buffer
       let l:branchname = get(b:, 'git_branch', '') 
 
       "set command
       let s:cmd = 'git push --set-upstream origin ' . l:branchname 
 
+      "run command
       let l:output = system(s:cmd)
       
     endif
