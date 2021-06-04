@@ -132,3 +132,5 @@ hi EndOfBuffer ctermfg=234 ctermbg=234
 
 "vim fugitive diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=234 gui=reverse guifg=#b8bb26 guibg=#1d2021
+hi DiffText cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
+hi GruvboxGreen ctermfg=10 guifg=#b8bb26

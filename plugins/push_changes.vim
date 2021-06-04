@@ -9,8 +9,8 @@ function! PushChanges()
     if l:output[0:24] == 'fatal: The current branch'
 
       "get branchname
-      let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-      
+      let l:branchname = get(b:, 'git_branch', '') 
+
       "set command
       let s:cmd = 'git push --set-upstream origin ' . l:branchname 
 
