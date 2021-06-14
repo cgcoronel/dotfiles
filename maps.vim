@@ -54,7 +54,6 @@ nmap <Leader>/ :/
 " Git
 nmap <Leader>c :Gdiffsplit<CR>
 nmap <Leader>d :0Git<CR>
-nmap <Leader>a :Gw<CR> 
 
 "abbreviations from git commands
 cnoreabbrev gpush Gpush
@@ -136,8 +135,7 @@ inoremap { {<CR>}<C-c>O
 nmap <Leader>rn <Plug>(coc-rename)
 
 " Toggle relativenumber
-map <C-N> :set relativenumber!<cr>
-
+map <C-N> :set relativenumber!<CR>
 
 map <C-J> 10j
 map <C-K> 10k
