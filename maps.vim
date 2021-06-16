@@ -86,8 +86,8 @@ cnoreabbrev gpl Gpull
 cnoreabbrev dia CocDiagnostics
 
 " Command line 
-"nmap <Leader>t :!
-map <Leader>t :call RunCommand('')<CR> 
+nmap <Leader>t :!
+"map <Leader>t :call RunCommand('')<CR> 
 map <Leader>; : 
 
 " Command find and replace
