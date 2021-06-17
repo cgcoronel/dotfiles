@@ -12,7 +12,7 @@ hi Normal ctermfg=15 guifg=#928374
 "Coc suggestion box
 hi Pmenu ctermfg=223 ctermbg=236 guifg=bg guibg=#504945
 "hi PmenuSel cterm=bold ctermfg=234 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934 "red
-hi PmenuSel cterm=bold ctermfg=234 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
+hi PmenuSel ctermfg=234 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "notifications simbols in status vertical bar
 hi GitGutterAdd ctermfg=143 ctermbg=234 guifg=#b8bb26 guibg=#3c3836

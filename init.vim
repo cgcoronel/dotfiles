@@ -59,18 +59,18 @@ so $VIM/maps.vim
 """"""""""""""""""" Imports custom colors
 so $VIM/colors.vim
 
-"set noshowmode
-"let ctrlv = "\<C-v>"
-"set statusline+=%#DiffAdd#%{(mode()==ctrlv)?'\ \ V-BLOCK\ ':''}
-"set statusline+=%#QuickFixLine#%{(mode()=='n')?'\ \ NORMAL\ ':''}
-"set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
-"set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
-"set statusline+=%#DiffAdd#%{(mode()=='v')?'\ \ VISUAL\ ':''}
-"set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
-"set statusline+=%#DiffDelete#%{(mode()=='c')?'\ \ COMMAND\ ':''}
+set noshowmode
+let ctrlv = "\<C-v>"
+set statusline+=%#DiffAdd#%{(mode()==ctrlv)?'\ \ V-BLOCK\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+set statusline+=%#DiffAdd#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='c')?'\ \ COMMAND\ ':''}
 
 """""""""""""""" Custom status bar
-set statusline+=%#StatusBar#\ \ %f\ \ %m
+set statusline+=%#StatusBar#\ %f\ \ %m
 
 " Right side settings
 set statusline+=%=\ %l/%L,%c\ 
