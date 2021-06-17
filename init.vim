@@ -28,7 +28,8 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-  Plug 'morhetz/gruvbox'
+  Plug 'arcticicestudio/nord-vim'
+  "Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'pangloss/vim-javascript'
@@ -57,7 +58,18 @@ so $VIM/plug.config.vim
 so $VIM/maps.vim
 
 """"""""""""""""""" Imports custom colors
-so $VIM/colors.vim
+"so $VIM/colors.vim
+so $VIM/colors_nord.vim
+
+set noshowmode
+let ctrlv = "\<C-v>"
+set statusline+=%#DiffAdd#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+set statusline+=%#DiffAdd#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='c')?'\ \ COMMAND\ ':''}
 
 """""""""""""""" Custom status bar
 set statusline+=%#StatusBar#\ %f\ \ %m
