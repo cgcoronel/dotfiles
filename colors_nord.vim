@@ -12,6 +12,9 @@ hi VertSplit ctermfg=0
 "highlighting TODO
 hi Todo cterm=bold ctermfg=234 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
 
+"Mode color
+hi ModeMsg ctermfg=8
+hi MsgArea ctermfg=8
 
 "require()
 hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
