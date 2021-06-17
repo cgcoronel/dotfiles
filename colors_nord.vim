@@ -2,9 +2,9 @@
 hi Comment cterm=italic gui=italic 
 
 "Status bar
-hi StatusLine ctermfg=7 ctermbg=0 
-hi StatusLineNC ctermfg=7 ctermbg=0 
-hi StatusBar ctermfg=7 ctermbg=0
+hi StatusLine ctermfg=8 ctermbg=0 
+hi StatusLineNC ctermfg=8 ctermbg=0 
+hi StatusBar ctermfg=8 ctermbg=0
 
 "Split bar
 hi VertSplit ctermfg=0
