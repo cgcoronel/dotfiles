@@ -69,7 +69,7 @@ set statusline+=\ \ Ξ
 set statusline+=\ %l/%L
 set statusline+=\ ㏑
 set statusline+=\ %c
-"set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
 set statusline+=\ \  
 
 """"""""""""""""""" Coc extensions 
