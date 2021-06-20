@@ -94,7 +94,7 @@ hi DiffText cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guib
 
 """""
 hi SpecialKey ctermfg=12
-hi Type ctermfg=12 gui=bold cterm=italic
+"hi Type ctermfg=12 gui=bold cterm=italic
 hi CursorLine ctermbg=235 guibg=#3c3836 cterm=NONE
 hi Title ctermfg=11 
 hi Statement ctermfg=12 gui=bold guifg=#ffff60
@@ -106,3 +106,21 @@ hi Function cterm=bold ctermfg=10
 hi DiffDelete cterm=reverse ctermfg=167 ctermbg=234 gui=reverse guifg=#fb4934 guibg=#1d2021
 hi IncSearch cterm=reverse ctermfg=208 ctermbg=234 gui=reverse guifg=#fe8019 guibg=#1d2021
 hi VertSplit ctermfg=235 ctermbg=235
+
+
+hi Type ctermfg=10
+
+"js const
+hi StorageClass cterm=italic ctermfg=12
+"hi Structure 
+"hi Typedef 
+"
+hi PreProc ctermfg=12
+hi MoreMsg  ctermfg=243 gui=bold guifg=SeaGreen
+hi ErrorMsg cterm=reverse ctermfg=167 ctermbg=234 gui=reverse guifg=#fb4934 guibg=#1d2021
+hi Question ctermfg=10 gui=bold guifg=Green
+
+hi DiffAdd cterm=reverse ctermfg=10 ctermbg=234 gui=reverse guifg=#b8bb26 guibg=#1d2021
+hi DiffText cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
+"hi GruvboxGreen ctermfg=10 guifg=#b8bb26
+hi DiffChange cterm=reverse ctermfg=108 ctermbg=234 gui=reverse guifg=#8ec07c guibg=#1d2021
