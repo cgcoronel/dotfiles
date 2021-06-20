@@ -118,7 +118,7 @@ hi StorageClass cterm=italic ctermfg=12
 hi PreProc ctermfg=12
 hi MoreMsg  ctermfg=243 gui=bold guifg=SeaGreen
 hi ErrorMsg cterm=reverse ctermfg=167 ctermbg=234 gui=reverse guifg=#fb4934 guibg=#1d2021
-hi Question ctermfg=10 gui=bold guifg=Green
+hi Question ctermfg=243 gui=bold guifg=Green
 
 "git diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=234 gui=reverse guifg=#b8bb26 guibg=#1d2021
