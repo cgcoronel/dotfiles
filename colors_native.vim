@@ -127,3 +127,4 @@ hi DiffChange cterm=reverse ctermfg=108 ctermbg=234 gui=reverse guifg=#8ec07c gu
 
 hi WarningMsg ctermfg=243 guifg=Red
 hi Directory ctermfg=15 
+hi Special ctermfg=15 guifg=Orange
