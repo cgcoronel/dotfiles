@@ -120,6 +120,7 @@ hi MoreMsg  ctermfg=243 gui=bold guifg=SeaGreen
 hi ErrorMsg cterm=reverse ctermfg=167 ctermbg=234 gui=reverse guifg=#fb4934 guibg=#1d2021
 hi Question ctermfg=10 gui=bold guifg=Green
 
+"git diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=234 gui=reverse guifg=#b8bb26 guibg=#1d2021
 hi DiffText cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
 hi DiffChange cterm=reverse ctermfg=108 ctermbg=234 gui=reverse guifg=#8ec07c guibg=#1d2021
