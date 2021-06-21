@@ -131,9 +131,6 @@ inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 inoremap { {<CR>}<C-c>O
 
-" Coc maps
-nmap <Leader>rn <Plug>(coc-rename)
-
 " Toggle relativenumber
 map <C-N> :set relativenumber!<CR>
 
