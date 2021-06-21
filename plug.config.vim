@@ -6,10 +6,10 @@ let g:coc_snippet_next = '<tab>'
 let g:fzf_layout = { 'down': '~40%' }
 
 """"""""""""""""""" Theme params
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-
+"let g:gruvbox_italic=1
+"let g:gruvbox_contrast_dark='hard'
 "colorscheme gruvbox
+
 set background=dark
 
 """"""""""""""""""" NERDTree config
