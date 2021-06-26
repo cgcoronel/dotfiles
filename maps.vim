@@ -42,7 +42,8 @@ vmap <Leader>q :call CloseFile()<CR>
 nmap <Leader>s :vsplit<CR>
 
 " Finder
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%'})<CR>
+"nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%'})<CR>
+nmap <Leader>f :Files<CR>
 
 " Finder in files
 nmap <Leader>F :Rg<CR>

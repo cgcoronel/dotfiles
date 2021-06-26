@@ -3,7 +3,8 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier', 'co
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
-let g:fzf_layout = { 'down': '~40%' }
+"let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6, 'highlight': 'Visual' } }
 
 """"""""""""""""""" Theme params
 "let g:gruvbox_italic=1
