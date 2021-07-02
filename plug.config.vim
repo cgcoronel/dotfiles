@@ -7,9 +7,9 @@ let g:fzf_layout = { 'down': '~40%' }
 "let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6, 'highlight': 'Visual' } }
 
 """"""""""""""""""" Theme params
-"let g:gruvbox_italic=1
-"let g:gruvbox_contrast_dark='hard'
-"colorscheme gruvbox
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 
 set background=dark
 
