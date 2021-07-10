@@ -28,7 +28,8 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-  Plug 'morhetz/gruvbox'
+  Plug 'sainnhe/everforest'
+"  Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
@@ -54,7 +55,3 @@ so $VIM/plug.config.vim
 
 """"""""""""""""""" Imports shortcuts
 so $VIM/maps.vim
-
-""""""""""""""""""" Imports custom colors
-so $VIM/colors.vim
-"so $VIM/colors_native.vim

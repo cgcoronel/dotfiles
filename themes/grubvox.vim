@@ -1,3 +1,14 @@
+"""""""""""""" Config params
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='hard'
+
+colorscheme gruvbox
+
+" For dark version.
+set background=dark
+
+"""""""""""""" Custom colors
+
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi GruvboxGreenBold gui=none ctermfg=124 ctermfg=green
 hi ModeMsg gui=none ctermfg=124 ctermfg=white 

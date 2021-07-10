@@ -7,11 +7,10 @@ let g:fzf_layout = { 'down': '~40%' }
 "let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6, 'highlight': 'Visual' } }
 
 """"""""""""""""""" Theme params
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+so $VIM/themes/everforest.vim
 
-set background=dark
+"so $VIM/themes/colors_native.vim
+"so $VIM/themes/gruvbox.vim
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
