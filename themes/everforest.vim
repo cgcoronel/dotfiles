@@ -2,11 +2,13 @@ if has('termguicolors')
  set termguicolors
 endif
 
-let g:everforest_background = 'hard'
-colorscheme everforest
-
 " For dark version.
 set background=dark
+
+let g:everforest_background = 'hard'
+
+colorscheme everforest
+
 
 
 """"""" Custom colors
@@ -31,3 +33,6 @@ hi Visual ctermbg=52 guibg=#503946
 
 """""" "hide buffer line ~
 hi EndOfBuffer ctermfg=234 ctermbg=239 guifg=#2b3339 guibg=#2b3339
+
+"""""" Color selection in visual mode
+hi Visual ctermbg=52 guibg=#5f5c5c
