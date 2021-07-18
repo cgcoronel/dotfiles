@@ -28,8 +28,8 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-  Plug 'sainnhe/everforest'
-"  Plug 'morhetz/gruvbox'
+"  Plug 'sainnhe/everforest'
+  Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
