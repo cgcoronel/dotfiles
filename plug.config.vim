@@ -7,10 +7,8 @@ let g:fzf_layout = { 'down': '~40%' }
 "let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.6, 'highlight': 'Visual' } }
 
 """"""""""""""""""" Theme params
-"so $VIM/themes/everforest.vim
-
-so $VIM/themes/native.vim
-"so $VIM/themes/gruvbox.vim
+"so $VIM/themes/native.vim
+so $VIM/themes/gruvbox.vim
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
