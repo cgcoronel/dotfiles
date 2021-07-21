@@ -83,12 +83,10 @@ cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js')
 cnoreabbrev gst Gstatus
 cnoreabbrev gpl Gpull
 
-" Diagnostics
-cnoreabbrev dia CocDiagnostics
-
 " Command line 
 nmap <Leader>t :!
 "map <Leader>t :call RunCommand('')<CR> 
+
 map <Leader>; : 
 
 " Command find and replace
