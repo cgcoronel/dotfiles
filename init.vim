@@ -28,6 +28,7 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
+"  Plug 'sainnhe/gruvbox-material'
   Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
@@ -37,7 +38,7 @@ call plug#begin('~/vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
-  Plug 'Yggdroot/indentLine'
+"  Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
