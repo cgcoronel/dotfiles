@@ -39,6 +39,7 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'Yggdroot/indentLine'
+  Plug 'mxw/vim-jsx'
 
 call plug#end()
 
