@@ -124,6 +124,7 @@ imap <C-H> <Esc><C-W><C-H>
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
+inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap ` ``<Esc>i
