@@ -14,7 +14,7 @@
 set statusline+=%#StatusBar#\ %f\ \ %m
 
 " Right side settings
-"set statusline+=%=\ %l/%L,%c\ 
+set statusline+=%=\ %l/%L,%c\ 
 
 
 """""""""""""""" full statusline
