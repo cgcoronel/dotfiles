@@ -25,6 +25,7 @@ set ignorecase
 
 language en_US.UTF-8
 
+
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
