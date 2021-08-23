@@ -1,7 +1,5 @@
 """""""""""""" Config params
-if has('termguicolors')
-    set termguicolors
-endif
+set termguicolors
 
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_enable_italic = 1
