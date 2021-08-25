@@ -72,7 +72,7 @@ command! -nargs=* Gcb :!git checkout -b <args>
 cnoreabbrev gcb Gcb
 
 " Run test in focus file   
-cnoreabbrev te :call RunCommand('npm run test:watch ' . expand('%'), 0) 
+cnoreabbrev te :call RunCommand('yarn jest --watch ' . expand('%'), 0) 
 cnoreabbrev ta :call RunCommand('npm run test') 
 
 " Open version monitor
