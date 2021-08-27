@@ -73,7 +73,7 @@ cnoreabbrev gcb Gcb
 
 " Run test in focus file   
 cnoreabbrev te :call RunCommand('yarn jest --watch ' . expand('%'), 0) 
-cnoreabbrev ta :call RunCommand('npm run test') 
+cnoreabbrev tc :call RunCommand('yarn test:coverage '  . expand('%'), 0) 
 
 " Open version monitor
 cnoreabbrev up :call RunCommand('npm run start') 
