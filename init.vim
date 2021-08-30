@@ -42,7 +42,7 @@ call plug#begin('~/vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'Yggdroot/indentLine'
   Plug 'APZelos/blamer.nvim'
-"  Plug 'mxw/vim-jsx'
+""  Plug 'mxw/vim-jsx'
 
 call plug#end()
 
