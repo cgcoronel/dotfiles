@@ -133,6 +133,8 @@ inoremap " ""<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 inoremap { {<CR>}<C-c>O
+inoremap /f /*<Esc>
+inoremap f/ */<Esc>
 
 " Toggle relativenumber
 map <C-N> :set relativenumber!<CR>

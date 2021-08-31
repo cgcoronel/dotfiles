@@ -9,4 +9,7 @@ colorscheme tokyonight
 
 set background=dark
 
+highlight fzf1 ctermfg=161 ctermbg=251
+highlight fzf2 ctermfg=23 ctermbg=251
+highlight fzf3 ctermfg=237 ctermbg=251
 

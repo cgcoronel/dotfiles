@@ -28,6 +28,3 @@ function! StatuslineBranch()
 
  return strlen(l:branchname) > 0?l:bar:''
 endfunction
-
-
-
