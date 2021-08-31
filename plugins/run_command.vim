@@ -20,7 +20,7 @@ function! RunCommand(command,...)
   else 
 
       vsp
-      execute "normal \<C-l>"
+      execute "normal \<C-l>\<C-l>\<C-l>"
       execute "term " . command
       execute "set nonu"
       execute "set nornu"
