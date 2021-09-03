@@ -43,7 +43,6 @@ call plug#begin('~/vim/plugged')
   Plug 'Yggdroot/indentLine'
   Plug 'APZelos/blamer.nvim'
 ""  Plug 'mxw/vim-jsx'
-  Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
