@@ -59,15 +59,3 @@ so $VIM/plug.config.vim
 
 """"""""""""""""""" Imports shortcuts
 so $VIM/maps.vim
-
-
-
-fun! FindFiles(filename)
-  let error_file = tempname()
-  silent exe '!find . -name "*__test__*'.a:filename.'*" | xargs file | sed "s/:/:1:/" > '.error_file
-  set errorformat=%f:%l:%m
-  exe "cfile ". error_file
-  copen
-  call delete(error_file)
-endfun
-command! FindFile call FindFiles(expand('%')))
