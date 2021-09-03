@@ -25,6 +25,9 @@ nnoremap fs gd
 nmap ff :call search('\V' . '(')<CR> gf
 nmap fd gf
 
+" Zen mode
+nmap <Leader>g :Goyo<CR>
+
 " show tree directories 
 nmap <Leader>n :NERDTreeFind<CR>
 
