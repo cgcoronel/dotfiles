@@ -134,14 +134,12 @@ inoremap " ""<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 inoremap { {<CR>}<C-c>O
+
 inoremap /f /*<Esc>
 inoremap f/ */<Esc>
-inoremap /s (<Esc>a
-inoremap s/ )<Esc>a
-inoremap /d {<Esc>a
-inoremap d/ }<Esc>a
-inoremap /a [<Esc>a
-inoremap a/ ]<Esc>a
+inoremap /d ()<Esc>i
+inoremap /s []<Esc>i
+inoremap /a {<CR>}<C-c>O
 
 
 " Toggle relativenumber
