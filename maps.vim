@@ -130,17 +130,32 @@ imap <C-H> <Esc><C-W><C-H>
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 inoremap { {<CR>}<C-c>O
 inoremap /f /*<Esc>
 inoremap f/ */<Esc>
+inoremap /s (<Esc>a
+inoremap s/ )<Esc>a
+inoremap /d {<Esc>a
+inoremap d/ }<Esc>a
+inoremap /a [<Esc>a
+inoremap a/ ]<Esc>a
+
 
 " Toggle relativenumber
 map <C-N> :set relativenumber!<CR>
 
 map <C-J> 10j
 map <C-K> 10k
+
+""nmap <Leader>te :call FindTestFiles()<CR>
+
+" git push --set-upstream origin [branchname] 
+""function! FindTestFiles()
+""let command = a:command
+"" expand('%')
+ "" :find '**/*' . expand('%:t')
+""    echo(": " . s:cmd)
+ ""   echo(l:output)
