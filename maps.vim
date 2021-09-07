@@ -131,6 +131,7 @@ imap <C-H> <Esc><C-W><C-H>
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 inoremap { {<CR>}<C-c>O
