@@ -134,7 +134,8 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
-inoremap { {<CR>}<C-c>O
+""inoremap { {<CR>}<C-c>O
+inoremap { {}<Esc>i
 
 inoremap /f /*<Esc>
 inoremap f/ */<Esc>
