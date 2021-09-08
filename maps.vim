@@ -82,8 +82,8 @@ cnoreabbrev tc :call RunCommand('yarn test:coverage '  . expand('%'), 0)
 cnoreabbrev ta :call RunCommand('yarn test:coverage ', 0) 
 
 " Open version monitor
-cnoreabbrev up :call RunCommand('yarn devel') 
-cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js') 
+cnoreabbrev up :call RunCommand('yarn devel', 0) 
+cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js', 0) 
 
 "cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus
