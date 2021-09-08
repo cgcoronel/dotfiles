@@ -140,7 +140,9 @@ inoremap /f /*<Esc>
 inoremap f/ */<Esc>
 inoremap /d ()<Esc>i
 inoremap /s []<Esc>i
-inoremap /a {<CR>}<C-c>O
+""inoremap /a {<CR>}<C-c>O
+inoremap /a {}<Esc>i
+
 
 
 " Toggle relativenumber
