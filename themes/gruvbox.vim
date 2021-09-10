@@ -77,15 +77,15 @@ hi CursorLineNr ctermfg=15 ctermbg=235 guifg=#fabd2f guibg=#3c3836
 hi Ignore ctermfg=241 guifg=bg
 
 "Global text
-"hi Question ctermfg=121 gui=bold guifg=Green
-"hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
+""hi Question ctermfg=121 gui=bold guifg=Green
+hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
 
 " Naranja
-"hi GruvboxOrange cterm=italic gui=italic ctermfg=215 guifg=#fe8019
-"hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
+hi GruvboxOrange cterm=italic gui=italic ctermfg=215 guifg=#fe8019
+hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
 " Celeste
-hi GruvboxOrange cterm=italic gui=italic ctermfg=4 guifg=#fe8019
-hi GruvboxOrangeBold cterm=bold ctermfg=4 gui=bold guifg=#fe8019
+""hi GruvboxOrange cterm=italic gui=italic ctermfg=4 guifg=#fe8019
+""hi GruvboxOrangeBold cterm=bold ctermfg=4 gui=bold guifg=#fe8019
 
 hi GruvboxYellow ctermfg=179 guifg=#fabd2f
 hi String ctermfg=144 guifg=#b8bb26
