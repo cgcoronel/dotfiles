@@ -8,9 +8,9 @@ let g:fzf_layout = { 'down': '~40%' }
 
 """"""""""""""""""" Theme params
 "so $VIM/themes/native.vim
-""so $VIM/themes/gruvbox.vim
-""so $VIM/themes/gruvbox-material.vim
-so $VIM/themes/tokyonight.vim
+so $VIM/themes/gruvbox.vim
+"so $VIM/themes/gruvbox-material.vim
+"so $VIM/themes/tokyonight.vim
 
 
 """"""""""""""""""" NERDTree config
