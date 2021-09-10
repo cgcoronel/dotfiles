@@ -13,5 +13,4 @@ highlight fzf1 ctermfg=161 ctermbg=251
 highlight fzf2 ctermfg=23 ctermbg=251
 highlight fzf3 ctermfg=237 ctermbg=251
 
-hi StorageClass guifg=#f7768e
-
+hi StorageClass ctermfg=11 guifg=#bb9af7
