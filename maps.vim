@@ -147,8 +147,8 @@ inoremap /s []<Esc>i
 ""inoremap /a {<CR>}<C-c>O
 inoremap /a {}<Esc>i
 
-nnoremap <Leader>, 10<C-w>>
-nnoremap <Leader>. 10<C-w><
+nnoremap <Leader>, 10<C-w><
+nnoremap <Leader>. 10<C-w>>
 
 " Toggle relativenumber
 map <C-N> :set relativenumber!<CR>
