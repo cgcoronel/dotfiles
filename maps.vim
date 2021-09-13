@@ -80,6 +80,9 @@ cnoreabbrev te :call RunCommand('yarn jest --watch ' . expand('%'), 0)
 cnoreabbrev tc :call RunCommand('yarn test:coverage '  . expand('%'), 0) 
 " Run test and coverage all files   
 cnoreabbrev ta :call RunCommand('yarn test:coverage ', 0) 
+" Open file test from current file
+cnoreabbrev to :call FindTestFiles() 
+
 
 " Open version monitor
 cnoreabbrev up :call RunCommand('yarn devel', 0) 
@@ -144,20 +147,11 @@ inoremap /s []<Esc>i
 ""inoremap /a {<CR>}<C-c>O
 inoremap /a {}<Esc>i
 
-
+nnoremap <Leader>, 10<C-w>>
+nnoremap <Leader>. 10<C-w><
 
 " Toggle relativenumber
 map <C-N> :set relativenumber!<CR>
 
 map <C-J> 10j
 map <C-K> 10k
-
-""nmap <Leader>te :call FindTestFiles()<CR>
-
-" git push --set-upstream origin [branchname] 
-""function! FindTestFiles()
-""let command = a:command
-"" expand('%')
- "" :find '**/*' . expand('%:t')
-""    echo(": " . s:cmd)
- ""   echo(l:output)
