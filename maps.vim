@@ -157,5 +157,5 @@ map <C-J> 10j
 map <C-K> 10k
 
 "Move lines up / down
-nnoremap <C-J> :m .+1<CR>==
-nnoremap <C-K> :m .-2<CR>==
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
