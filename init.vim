@@ -25,7 +25,6 @@ set foldlevelstart=99 " start file with all folds opened
 set ignorecase
 language en_US.UTF-8
 
-
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
