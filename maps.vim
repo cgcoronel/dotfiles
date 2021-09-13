@@ -155,3 +155,7 @@ map <C-N> :set relativenumber!<CR>
 
 map <C-J> 10j
 map <C-K> 10k
+
+"Move lines up / down
+nnoremap <C-J> :m .+1<CR>==
+nnoremap <C-K> :m .-2<CR>==
