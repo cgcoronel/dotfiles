@@ -29,8 +29,7 @@ language en_US.UTF-8
 call plug#begin('~/vim/plugged')
 
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-  ""Plug 'sainnhe/gruvbox-material'
-  ""Plug 'morhetz/gruvbox'
+  Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
@@ -41,7 +40,6 @@ call plug#begin('~/vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'Yggdroot/indentLine'
   Plug 'APZelos/blamer.nvim'
-""  Plug 'mxw/vim-jsx'
 
 call plug#end()
 

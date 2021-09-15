@@ -43,15 +43,15 @@ hi Folded cterm=italic ctermfg=245 ctermbg=235 gui=italic guifg=#928374 guibg=#3
 hi FoldColumn ctermfg=245 ctermbg=235 guifg=#928374 guibg=#3c3836
 
 "NerdTree
-hi NERDTreeDir gui=bold ctermfg=243 guifg=#7c6f64
-hi NERDTreeDirSlash gui=bold ctermfg=243 guifg=#7c6f64
+""""""hi NERDTreeDir gui=bold ctermfg=243 guifg=#7c6f64
+""""""""""""hi NERDTreeDirSlash gui=bold ctermfg=243 guifg=#7c6f64
 
 "NerdTree Arrows red 167
-hi NERDTreeOpenable ctermfg=241
-hi NERDTreeClosable ctermfg=241
+""hi NERDTreeOpenable ctermfg=241
+""hi NERDTreeClosable ctermfg=241
 
 "NerdTree file directory name
-hi NERDTreeCWD gui=bold ctermfg=241 
+""hi NERDTreeCWD gui=bold ctermfg=241 
 
 "Status bar
 hi StatusLine ctermfg=235 ctermbg=241 
@@ -81,8 +81,8 @@ hi Ignore ctermfg=241 guifg=bg
 hi GruvboxOrange cterm=italic gui=italic ctermfg=209 guifg=#fe8019
 
 " Naranja
-hi GruvboxOrange cterm=italic gui=italic ctermfg=215 guifg=#fe8019
-hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
+""hi GruvboxOrange cterm=italic gui=italic ctermfg=215 guifg=#fe8019
+""hi GruvboxOrangeBold cterm=bold ctermfg=209 gui=bold guifg=#fe8019
 " Celeste
 ""hi GruvboxOrange cterm=italic gui=italic ctermfg=4 guifg=#fe8019
 ""hi GruvboxOrangeBold cterm=bold ctermfg=4 gui=bold guifg=#fe8019
@@ -106,15 +106,6 @@ hi GruvboxFg2 ctermfg=15
 "hi Todo ctermfg=180
 hi GruvboxFg1 ctermfg=15 
 
-
-hi htmlBold ctermfg=15 
-hi htmlBoldUnderline ctermfg=15
-hi htmlBoldItalic ctermfg=15
-hi htmlBoldUnderlineItalic ctermfg=15
-hi htmlUnderline ctermfg=15
-hi htmlUnderlineItalic ctermfg=15
-hi htmlItalic ctermfg=15
-
 "require()
 hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
 
@@ -134,9 +125,6 @@ hi fzf3 ctermfg=241 ctermbg=235 guifg=#E12672 guibg=#565656
 
 " Search 
 hi Search cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
-
-" Conditionals
-hi GruvboxRed cterm=bold ctermfg=4 guifg=#fb4934
 
 "hide buffer line ~
 hi EndOfBuffer ctermfg=234 ctermbg=234
