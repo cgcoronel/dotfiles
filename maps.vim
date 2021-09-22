@@ -67,6 +67,10 @@ cnoreabbrev gpull Gpull
 cnoreabbrev gpu :call PushChanges() 
 cnoreabbrev gs :echo StatuslineGit()
 
+" Git move between changes 
+nnoremap <silent> <cr> :GitGutterNextHunk<cr>
+nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
+
 " git checkout -b branch_name
 command! -nargs=* Gc :!git checkout <args>
 cnoreabbrev gc Gc
