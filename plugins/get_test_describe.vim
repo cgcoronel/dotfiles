@@ -24,6 +24,6 @@ function! GetFullName() abort
   let it = GetIt()
   let describe = GetDescribe()
 
-  return "'" . describe . ' ' . it . "'"
+  return  describe . ' ' . it 
 endfunction
 

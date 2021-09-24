@@ -79,9 +79,9 @@ command! -nargs=* Gcb :!git checkout -b <args>
 cnoreabbrev gcb Gcb
 
 " Run test focus describe
-cnoreabbrev td :call RunCommand('yarn jest --watch -t ' . GetDescribe() . ' ' . expand('%'), 0) 
+cnoreabbrev td :call RunCommand('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
 " Run test focus it 
-cnoreabbrev ti :call RunCommand('yarn jest --watch -t ' . GetFullName() . ' ' . expand('%'), 0) 
+cnoreabbrev ti :call RunCommand('yarn jest --watch -t "' . GetFullName() . '" ' . expand('%'), 0) 
 " Run test in focus file   
 cnoreabbrev te :call RunCommand('yarn jest --watch ' . expand('%'), 0) 
 " Run test and coverage in focus file   
