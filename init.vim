@@ -28,11 +28,12 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-  Plug 'morhetz/gruvbox'
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+""  Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'pangloss/vim-javascript'
-  Plug 'leafgarland/typescript-vim'
+  Plug 'sheerun/vim-polyglot'
+""  Plug 'pangloss/vim-javascript'
+""  Plug 'leafgarland/typescript-vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
