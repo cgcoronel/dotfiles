@@ -8,8 +8,8 @@ let g:fzf_layout = { 'down': '~40%' }
 
 """"""""""""""""""" Theme params
 "so $VIM/themes/native.vim
-""so $VIM/themes/gruvbox.vim
-so $VIM/themes/tokyonight.vim
+so $VIM/themes/gruvbox.vim
+""so $VIM/themes/tokyonight.vim
 
 
 
@@ -26,7 +26,8 @@ let NERDTreeStatusline=' %{StatuslineGit()} %{StatuslineBranch()}'
 let g:NERDTreeWinSize=40
 
 """""""""""""""""""IndentLine
-let g:indentLine_char_list = [ '│']
+""let g:indentLine_char_list = [ '│']
+let g:indentLine_char_list = [ '|']
 autocmd Filetype json let g:indentLine_setConceal = 0
 
 """"""""""""""""""""Blame
