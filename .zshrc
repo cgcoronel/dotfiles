@@ -109,13 +109,8 @@ alias vi=nvim
 alias python=python3
 alias r=pwd
 alias version-monitor='npm run start --prefix $HOME/projects/tools/version-monitor/'
-
-#Android studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+alias x='cd /Users/cristiancoronel/projects/xepelin'
+alias b='git checkout $(git branch -a | fzf)'
 
 
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.git/*}"'
