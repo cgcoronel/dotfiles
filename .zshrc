@@ -113,7 +113,8 @@ alias x='cd /Users/cristiancoronel/projects/xepelin'
 alias b='git checkout $(git branch -a | fzf)'
 
 
-export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.git/*}"'
+#poner en el .zshenv
+#export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.git/*}"'
 
 
 
