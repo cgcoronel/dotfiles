@@ -143,6 +143,8 @@ inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 ""inoremap " ""<Esc>i
 ""inoremap ' ''<Esc>i
+inoremap "" ""<Esc>i
+inoremap '" ''<Esc>i
 inoremap ` ``<Esc>i
 inoremap ${ ${}<Esc>i
 ""inoremap { {<CR>}<C-c>O
