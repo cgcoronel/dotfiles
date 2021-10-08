@@ -159,12 +159,3 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 [ space + F] Buscar una expresion en todos los archivos 
 
 [ space + t ] Abre / Cierra terminal 
-```
-
-### Screenshots
-
-<img src="https://github.com/cgcoronel/vim-setup/blob/master/screens/1.jpeg" width='100%' aling="right">
-<img src="https://github.com/cgcoronel/vim-setup/blob/master/screens/2.jpeg" width='100%' aling="right">
-<img src="https://github.com/cgcoronel/vim-setup/blob/master/screens/3.jpeg" width='100%' aling="right">
-
-
