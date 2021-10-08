@@ -10,9 +10,6 @@ nnoremap <Leader><space> :noh<cr>
 imap jk <Esc>
 imap kj <Esc>
 
-" Duplicate a paragraph
-noremap cp yap<S-}>p
-
 " remap escape key in command mode 
 cmap jk <Esc>
 cmap kj <Esc>
@@ -24,9 +21,6 @@ nnoremap fs gd
 " require('....
 nmap ff :call search('\V' . '(')<CR> gf
 nmap fd gf
-
-" Zen mode
-nmap <Leader>g :Goyo<CR>
 
 " show tree directories 
 nmap <Leader>n :NERDTreeFind<CR>
@@ -52,7 +46,6 @@ nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<C
 nmap <Leader>F :Rg<CR>
 
 " Search in file 
-nmap <Leader>b :/
 nmap <Leader>/ :/
  
 " Git
@@ -91,9 +84,9 @@ cnoreabbrev ta :call RunCommand('yarn test:coverage ', 0)
 " Open file test from current file
 cnoreabbrev to :call FindTestFiles() 
 
-
-" Open version monitor
+" Run node app 
 cnoreabbrev up :call RunCommand('yarn devel', 0) 
+" Run node app in debug
 cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js', 0) 
 
 "cnoreabbrev gpu :!git push 
@@ -141,20 +134,15 @@ imap <C-H> <Esc><C-W><C-H>
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-""inoremap " ""<Esc>i
-""inoremap ' ''<Esc>i
-inoremap "" ""<Esc>i
-inoremap '" ''<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
-inoremap ${ ${}<Esc>i
-""inoremap { {<CR>}<C-c>O
 inoremap { {}<Esc>i
 
 inoremap /f /*<Esc>
 inoremap f/ */<Esc>
 inoremap /d ()<Esc>i
 inoremap /s []<Esc>i
-""inoremap /a {<CR>}<C-c>O
 inoremap /a {}<Esc>i
 
 nnoremap <Leader>, 10<C-w><
