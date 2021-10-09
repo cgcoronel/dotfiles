@@ -6,8 +6,9 @@ let g:coc_snippet_next = '<tab>'
 let g:fzf_layout = { 'down': '~40%' }
 
 """"""""""""""""""" Theme params
-so $VIM/themes/gruvbox.vim
+""so $VIM/themes/gruvbox.vim
 ""so $VIM/themes/tokyonight.vim
+so $VIM/themes/native.vim
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
@@ -26,6 +27,7 @@ let g:NERDTreeWinSize=40
 ""let g:indentLine_char_list = [ '│']
 let g:indentLine_char_list = [ '|']
 autocmd Filetype json let g:indentLine_setConceal = 0
+let g:indentLine_color_term = 239
 
 """"""""""""""""""""Blame
 let g:blamer_enabled = 1

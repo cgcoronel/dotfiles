@@ -28,8 +28,6 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-"  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-  Plug 'morhetz/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
