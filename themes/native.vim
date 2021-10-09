@@ -75,7 +75,7 @@ hi fzf3 ctermfg=241 ctermbg=235 guifg=#E12672 guibg=#565656
 hi Search cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
 
 "hide buffer line ~
-hi EndOfBuffer ctermfg=236 ctermbg=234
+hi EndOfBuffer cterm=bold ctermfg=237 ctermbg=234
 
 "vim fugitive diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=234 gui=reverse guifg=#b8bb26 guibg=#1d2021
