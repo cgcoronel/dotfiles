@@ -32,8 +32,11 @@ nmap <Leader>w :w<CR>
 cmap ww :noa w<CR>
 
 " Quit
-nmap <Leader>q :call CloseFile()<CR>
-vmap <Leader>q :call CloseFile()<CR>
+""nmap <Leader>q :call CloseFile()<CR>
+""vmap <Leader>q :call CloseFile()<CR>
+
+nmap <Leader>q :q<CR>
+vmap <Leader>q :q<CR>
 
 " Split vertical 
 nmap <Leader>s :vsplit<CR>
@@ -104,7 +107,7 @@ command! -nargs=+ Replace :%s/<args>/gc
 cnoreabbrev replace Replace
 
 " List files opened 
-nmap <Leader>p :Buffers<CR>
+nmap <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
 
 " Move 
 nnoremap gl $
