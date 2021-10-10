@@ -32,11 +32,8 @@ nmap <Leader>w :w<CR>
 cmap ww :noa w<CR>
 
 " Quit
-""nmap <Leader>q :call CloseFile()<CR>
-""vmap <Leader>q :call CloseFile()<CR>
-
-nmap <Leader>q :q<CR>
-vmap <Leader>q :q<CR>
+nmap <Leader>q :call CloseFile()<CR>
+vmap <Leader>q :call CloseFile()<CR>
 
 " Split vertical 
 nmap <Leader>s :vsplit<CR>
