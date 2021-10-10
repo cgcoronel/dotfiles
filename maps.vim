@@ -14,6 +14,15 @@ imap kj <Esc>
 cmap jk <Esc>
 cmap kj <Esc>
 
+" Command line 
+nmap <Leader>t :!
+"map <Leader>t :call RunCommand('')<CR> 
+
+map <Leader>; : 
+
+" Split vertical 
+nmap <Leader>s :vsplit<CR>
+
 " remap got to definitions local
 nnoremap fs gd
 
@@ -35,8 +44,12 @@ cmap ww :noa w<CR>
 nmap <Leader>q :call CloseFile()<CR>
 vmap <Leader>q :call CloseFile()<CR>
 
-" Split vertical 
-nmap <Leader>s :vsplit<CR>
+" Command find and replace
+command! -nargs=+ Replace :%s/<args>/gc
+cnoreabbrev replace Replace
+
+" List files opened 
+nmap <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
 
 " Finder
 nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<CR>
@@ -93,19 +106,6 @@ cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js', 0)
 cnoreabbrev gst Gstatus
 cnoreabbrev gpl Gpull
 
-" Command line 
-nmap <Leader>t :!
-"map <Leader>t :call RunCommand('')<CR> 
-
-map <Leader>; : 
-
-" Command find and replace
-command! -nargs=+ Replace :%s/<args>/gc
-cnoreabbrev replace Replace
-
-" List files opened 
-nmap <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
-
 " Move 
 nnoremap gl $
 nnoremap gh 0
@@ -131,6 +131,19 @@ imap <C-K> <Esc><C-W><C-K>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
+nnoremap <Leader>, 10<C-w><
+nnoremap <Leader>. 10<C-w>>
+
+" Toggle relativenumber
+map <C-N> :set relativenumber!<CR>
+
+map <C-J> 10j
+map <C-K> 10k
+
+"Move lines up / down
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
+
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
@@ -145,15 +158,4 @@ inoremap /d ()<Esc>i
 inoremap /s []<Esc>i
 inoremap /a {}<Esc>i
 
-nnoremap <Leader>, 10<C-w><
-nnoremap <Leader>. 10<C-w>>
 
-" Toggle relativenumber
-map <C-N> :set relativenumber!<CR>
-
-map <C-J> 10j
-map <C-K> 10k
-
-"Move lines up / down
-nnoremap <S-j> :m .+1<CR>==
-nnoremap <S-k> :m .-2<CR>==
