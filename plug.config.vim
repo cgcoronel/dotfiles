@@ -6,9 +6,7 @@ let g:coc_snippet_next = '<tab>'
 let g:fzf_layout = { 'down': '~40%' }
 
 """"""""""""""""""" Theme params
-""so $VIM/themes/gruvbox.vim
-""so $VIM/themes/tokyonight.vim
-so $VIM/themes/native.vim
+so $VIM/theme.vim
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
