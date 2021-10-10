@@ -96,3 +96,7 @@ hi DiffText cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guib
 hi DiffChange cterm=reverse ctermfg=108 ctermbg=234 gui=reverse guifg=#8ec07c guibg=#1d2021
 
 hi WarningMsg ctermfg=243 guifg=Red
+hi Special cterm=italic
+
+hi MatchParen ctermbg=14 ctermfg=0
+hi Function cterm=italic ctermfg=6 guifg=DarkCyan
