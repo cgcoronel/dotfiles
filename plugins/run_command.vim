@@ -12,30 +12,27 @@ function! RunCommand(command,...)
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&buftype", "not found")
 
-   if bufType == "terminal"
-
+  if bufType == "terminal"
       " close existing terminal
       execute "q"
-
   else 
+    vsp
+    execute "normal \<C-l>"
+    execute "term " . command
+    execute "set nonu"
+    execute "set nornu"
 
-      vsp
-      execute "normal \<C-l>"
-      execute "term " . command
-      execute "set nonu"
-      execute "set nornu"
+    " toggle insert on enter/exit
+    silent au BufLeave <buffer> stopinsert!
+    silent au BufWinEnter,WinEnter <buffer> startinsert!
 
-      " toggle insert on enter/exit
-      silent au BufLeave <buffer> stopinsert!
-      silent au BufWinEnter,WinEnter <buffer> startinsert!
+    execute "tnoremap <buffer> <Leader>q <C-\\><C-n>:q<CR>"
 
-      execute "tnoremap <buffer> <Leader>q <C-\\><C-n>:q<CR>"
-
-      if (!focus)
-         execute "normal \<C-h>"
-      else
-         execute "normal \<C-h>\<C-l>"
-      endif
+    if (!focus)
+      execute "normal \<C-h>"
+    else
+      execute "normal \<C-h>\<C-l>"
+    endif
 
   endif
 endfunction
