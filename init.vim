@@ -43,7 +43,7 @@ call plug#end()
 let $VIM = '~/.config/nvim/'
 let $PLUGINS =$VIM . 'plugins/**/*.vim'
 
-""""""""""""""""""" Imports cunstom plugins 
+""""""""""""""""""" Imports custom plugins 
 for f in glob($PLUGINS, 0, 1)
   execute 'source' f
 endfor

@@ -24,10 +24,10 @@ let NERDTreeStatusline=' %{StatuslineGit()}'
 let g:NERDTreeWinSize=40
 
 """""""""""""""""""IndentLine
-""let g:indentLine_char_list = [ '│']
-let g:indentLine_char_list = [ '|']
+""let g:indentLine_char_list = ['│']
+let g:indentLine_char_list = ['|']
 autocmd Filetype json let g:indentLine_setConceal = 0
-let g:indentLine_color_term = 239
+let g:indentLine_color_term = 237
 
 """"""""""""""""""""Blame
 let g:blamer_enabled = 1
