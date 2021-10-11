@@ -120,13 +120,13 @@ vnoremap gj L
 nnoremap <Leader>a <Esc>ggVG<CR>
 
 " Move focus between split screens
-map <C-J> <Esc><C-W><C-J>
-map <C-K> <Esc><C-W><C-K>
+""map <C-J> <Esc><C-W><C-J>
+""map <C-K> <Esc><C-W><C-K>
 map <C-L> <Esc><C-W><C-L>
 map <C-H> <Esc><C-W><C-H>
 
-imap <C-J> <Esc><C-W><C-J>
-imap <C-K> <Esc><C-W><C-K>
+""imap <C-J> <Esc><C-W><C-J>
+""imap <C-K> <Esc><C-W><C-K>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
