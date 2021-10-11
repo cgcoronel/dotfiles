@@ -1,4 +1,5 @@
 syntax on
+
 set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
@@ -21,6 +22,8 @@ set foldmethod=indent
 set foldcolumn=0   
 set foldlevelstart=99
 set ignorecase
+set diffopt+=vertical 
+
 
 language en_US.UTF-8
 
@@ -47,12 +50,10 @@ for f in glob($PLUGINS, 0, 1)
   execute 'source' f
 endfor
 
-""""""""""""""""""" Config 
-so $VIM/plug.config.vim
-
-""""""""""""""""""" Imports shortcuts
+so $VIM/plug-config.vim
 so $VIM/maps.vim
 
 """"""""""""""""""" Status line
 set statusline+=%#StatusBar#\ %f\ \ %m%=\ %l/%L,%c\ 
+
 
