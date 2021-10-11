@@ -15,8 +15,7 @@ cmap jk <Esc>
 cmap kj <Esc>
 
 " Command line 
-nmap <Leader>t :!
-"map <Leader>t :call RunCommand('')<CR> 
+map <Leader>t :call RunCmd()<CR> 
 
 map <Leader>; : 
 
@@ -85,22 +84,22 @@ command! -nargs=* Gcb :!git checkout -b <args>
 cnoreabbrev gcb Gcb
 
 " Run test focus describe
-cnoreabbrev td :call RunCommand('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
+cnoreabbrev td :call RunCmd('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
 " Run test focus it 
-cnoreabbrev ti :call RunCommand('yarn jest --watch -t "' . GetFullName() . '" ' . expand('%'), 0) 
+cnoreabbrev ti :call RunCmd('yarn jest --watch -t "' . GetFullName() . '" ' . expand('%'), 0) 
 " Run test in focus file   
-cnoreabbrev te :call RunCommand('yarn jest --watch ' . expand('%'), 0) 
+cnoreabbrev te :call RunCmd('yarn jest --watch ' . expand('%'), 0) 
 " Run test and coverage in focus file   
-cnoreabbrev tc :call RunCommand('yarn test:coverage '  . expand('%'), 0) 
+cnoreabbrev tc :call RunCmd('yarn test:coverage '  . expand('%'), 0) 
 " Run test and coverage all files   
-cnoreabbrev ta :call RunCommand('yarn test:coverage ', 0) 
+cnoreabbrev ta :call RunCmd('yarn test:coverage ', 0) 
 " Open file test from current file
 cnoreabbrev to :call FindTestFiles() 
 
 " Run node app 
-cnoreabbrev up :call RunCommand('yarn devel', 0) 
+cnoreabbrev up :call RunCmd('yarn devel', 0) 
 " Run node app in debug
-cnoreabbrev dg :call RunCommand('node --inspect src/server/index.js', 0) 
+cnoreabbrev dg :call RunCmd('node --inspect src/server/index.js', 0) 
 
 "cnoreabbrev gpu :!git push 
 cnoreabbrev gst Gstatus

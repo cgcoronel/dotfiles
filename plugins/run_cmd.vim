@@ -3,9 +3,9 @@
 " param2 : focus in terminal
 "          0: false, 
 "          null or 1: true  
-function! RunCommand(command,...)
-  let command = a:command
-  let focus = get(a:, 1, 1) 
+function! RunCmd(...)
+  let command = get(a:, 1, '') 
+  let focus = get(a:, 2, 1) 
 
   echo('Running Command...' . command)
 

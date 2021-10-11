@@ -17,12 +17,11 @@ set undofile
 set undodir=~/.vim/undodir/
 set history=1000
 set autoindent
-
-""set foldmethod=syntax " syntax highlighting items specify folds
 set foldmethod=indent
-set foldcolumn=0      " defines 1 col at window left, to indicate folding
-set foldlevelstart=99 " start file with all folds opened
+set foldcolumn=0   
+set foldlevelstart=99
 set ignorecase
+
 language en_US.UTF-8
 
 """"""""""""""""""" Plugins
