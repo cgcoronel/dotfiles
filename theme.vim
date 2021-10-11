@@ -100,3 +100,8 @@ hi WarningMsg ctermfg=243 guifg=Red
 
 hi MatchParen ctermbg=14 ctermfg=0
 hi Function cterm=italic ctermfg=6 guifg=DarkCyan
+
+"git signify
+highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
+highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
+highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE

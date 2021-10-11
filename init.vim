@@ -35,9 +35,9 @@ call plug#begin('~/vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
   Plug 'Yggdroot/indentLine'
   Plug 'APZelos/blamer.nvim'
+  Plug 'mhinz/vim-signify'
 
 call plug#end()
 
