@@ -13,7 +13,6 @@ function! RunCmd(...)
   let bufType = getbufvar(bufNum, "&buftype", "not found")
 
   if bufType == "terminal"
-      " close existing terminal
       execute "q"
   else 
     vsp
@@ -22,7 +21,6 @@ function! RunCmd(...)
     execute "set nonu"
     execute "set nornu"
 
-    " toggle insert on enter/exit
     silent au BufLeave <buffer> stopinsert!
     silent au BufWinEnter,WinEnter <buffer> startinsert!
 
