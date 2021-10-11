@@ -21,13 +21,13 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*']
 let NERDTreeStatusline=' %{StatuslineGit()}'
 let g:NERDTreeWinSize=40
 
-"""""""""""""""""""IndentLine
+""""""""""""""""""" IndentLine
 ""let g:indentLine_char_list = ['│']
 let g:indentLine_char_list = ['|']
 autocmd Filetype json let g:indentLine_setConceal = 0
 let g:indentLine_color_term = 237
 
-""""""""""""""""""""Blame
+""""""""""""""""""" Blame
 let g:blamer_enabled = 1
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_show_in_insert_modes = 0
