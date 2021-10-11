@@ -21,6 +21,7 @@ set foldmethod=indent
 set foldcolumn=0   
 set foldlevelstart=99
 set ignorecase
+set updatetime=300
 
 language en_US.UTF-8
 
