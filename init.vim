@@ -52,6 +52,7 @@ endfor
 
 so $VIM/plug-config.vim
 so $VIM/maps.vim
+so $VIM/theme.vim
 
 """"""""""""""""""" Status line
 set statusline+=%#StatusBar#\ %f\ \ %m%=\ %l/%L,%c\ 
