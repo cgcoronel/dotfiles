@@ -53,3 +53,7 @@ so $VIM/plug.config.vim
 
 """"""""""""""""""" Imports shortcuts
 so $VIM/maps.vim
+
+""""""""""""""""""" Status line
+set statusline+=%#StatusBar#\ %f\ \ %m%=\ %l/%L,%c\ 
+

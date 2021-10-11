@@ -39,8 +39,8 @@ hi CocHintSign ctermfg=109 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
 hi SignColumn ctermbg=234 guibg=#3c3836
 
 "Status bar
-hi StatusLine ctermfg=235 ctermbg=241 
-hi StatusLineNC ctermfg=235 ctermbg=241 
+hi StatusLine cterm=NONE ctermfg=241 ctermbg=235 
+hi StatusLineNC cterm=NONE ctermfg=241 ctermbg=235 
 hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=235
 
 "Mode color
