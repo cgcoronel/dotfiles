@@ -4,7 +4,7 @@
 let mapleader = "\<space>"
 
 " go to visual block
-map <C-f> <C-V><left> 
+map f <C-V><left> 
 
 " Clean search result
 nnoremap <Leader><space> :noh<cr>
