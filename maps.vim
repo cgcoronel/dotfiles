@@ -6,6 +6,9 @@ let mapleader = "\<space>"
 " go to visual block
 map f <C-V><left> 
 
+" Command line 
+map t :call RunCmd()<CR> 
+
 " Clean search result
 nnoremap <Leader><space> :noh<cr>
 
@@ -16,9 +19,6 @@ imap kj <Esc>
 " remap escape key in command mode 
 cmap jk <Esc>
 cmap kj <Esc>
-
-" Command line 
-map <Leader>t :call RunCmd()<CR> 
 
 map <Leader>; : 
 
