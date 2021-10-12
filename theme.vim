@@ -94,14 +94,9 @@ hi Question ctermfg=243 gui=bold guifg=Green
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=234 gui=reverse guifg=#b8bb26 guibg=#1d2021
 hi DiffText cterm=reverse ctermfg=179 ctermbg=234 gui=reverse guifg=#fabd2f guibg=#1d2021
 hi DiffChange cterm=reverse ctermfg=108 ctermbg=234 gui=reverse guifg=#8ec07c guibg=#1d2021
-hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=6 gui=bold guifg=LightBlue guibg=#f6e8d0
+hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=235 gui=bold guifg=LightBlue guibg=#f6e8d0
 
 hi WarningMsg ctermfg=243 guifg=Red
 
 hi MatchParen ctermbg=14 ctermfg=0
 hi Function cterm=italic ctermfg=6 guifg=DarkCyan
-
-"git signify
-highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
-highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
-highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
