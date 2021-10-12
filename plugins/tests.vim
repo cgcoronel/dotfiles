@@ -23,7 +23,7 @@ function! GetIt() abort
 endfunction
 
 " Get describe description and it description concat
-function! GetFullName() abort
+function! GetFullDescribe() abort
   let it = GetIt()
   let describe = GetDescribe()
   return  describe . ' ' . it 
