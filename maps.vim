@@ -3,8 +3,11 @@
 """"""""""""""""""""""" Shortcuts
 let mapleader = "\<space>"
 
-" go to visual block
+" Go to visual block
 map f <C-V><left> 
+
+" Show git blamer
+cnoreabbrev blamer BlamerToggle<cr> 
 
 " Command line 
 map t :call RunCmd()<CR> 
