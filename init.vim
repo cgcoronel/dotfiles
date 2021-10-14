@@ -26,6 +26,10 @@ set diffopt+=vertical
 
 language en_US.UTF-8
 
+" PolyGlot config
+autocmd BufEnter * set indentexpr=
+let g:polyglot_disabled = ['ftdetect', 'autoindent', 'sensible']
+
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
@@ -42,7 +46,7 @@ call plug#begin('~/vim/plugged')
 call plug#end()
 
 let $VIM = '~/.config/nvim/'
-let $PLUGINS =$VIM . 'plugins/**/*.vim'
+let $PLUGINS = $VIM . 'plugins/**/*.vim'
 
 """"""""""""""""""" Imports custom plugins 
 for f in glob($PLUGINS, 0, 1)

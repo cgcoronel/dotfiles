@@ -31,8 +31,3 @@ let g:blamer_show_in_insert_modes = 0
 """"""""""""""""""" Vim Git Gutter 
 " Only show signs when save file
 autocmd BufWritePost * GitGutter
-
-"""""""'""""""""""" PolyGlot
-" reident disabled
-autocmd BufEnter * set indentexpr=
-let g:polyglot_disabled = ['ftdetect', 'autoindent', 'sensible']
