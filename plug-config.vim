@@ -18,9 +18,12 @@ let NERDTreeStatusline= ' '
 let g:NERDTreeWinSize= 40
 
 """"""""""""""""""" IndentLine
-let g:indentLine_char_list = ['|'] 
 autocmd Filetype json let g:indentLine_setConceal = 0
+let g:indentLine_char_list = ['|'] 
 let g:indentLine_color_term = 237
+let g:indentLine_fileTypeExclude = ["help"]
+let g:indentLine_bufTypeExclude = ["help"]
+let g:indentLine_indentLevel = 5 
 
 """"""""""""""""""" Blame
 let g:blamer_enabled = 0 
@@ -31,3 +34,5 @@ let g:blamer_show_in_insert_modes = 0
 """"""""""""""""""" Vim Git Gutter 
 " Only show signs when save file
 autocmd BufWritePost * GitGutter
+let g:gitgutter_highlight_linenrs = 0 
+let g:gitgutter_map_keys = 0
