@@ -26,15 +26,10 @@ set diffopt+=vertical
 
 language en_US.UTF-8
 
-" PolyGlot config
-autocmd BufEnter * set indentexpr=
-let g:polyglot_disabled = ['ftdetect', 'autoindent', 'sensible']
-
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'sheerun/vim-polyglot'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdtree'
@@ -43,19 +38,20 @@ call plug#begin('~/vim/plugged')
   Plug 'APZelos/blamer.nvim'
   Plug 'airblade/vim-gitgutter'
 
+  " unused
+  ""  Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-let $VIM = '~/.config/nvim/'
-let $PLUGINS = $VIM . 'plugins/**/*.vim'
-
 """"""""""""""""""" Imports custom plugins 
-for f in glob($PLUGINS, 0, 1)
-  execute 'source' f
-endfor
+so  ~/.config/nvim/plugins/close-buffer.vim
+so  ~/.config/nvim/plugins/push-changes.vim
+so  ~/.config/nvim/plugins/run-cmd.vim
+so  ~/.config/nvim/plugins/tests.vim
 
-so $VIM/plug-config.vim
-so $VIM/maps.vim
-so $VIM/theme.vim
+""""""""""""""""""" Imports other configs
+so ~/.config/nvim/plug-config.vim
+so ~/.config/nvim/maps.vim
+so ~/.config/nvim/theme.vim
 
 """"""""""""""""""" Status line
 set statusline+=%#StatusBar#\ %f\ %m 
