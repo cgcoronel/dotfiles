@@ -35,7 +35,6 @@ call plug#begin('~/vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
-  Plug 'APZelos/blamer.nvim'
   Plug 'airblade/vim-gitgutter'
 
   " unused

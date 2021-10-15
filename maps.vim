@@ -6,8 +6,8 @@ let mapleader = "\<space>"
 " Go to visual block
 map f <C-V><left> 
 
-" Show git blamer
-cnoreabbrev blamer BlamerToggle<cr> 
+" Show git blame 
+cmap bb :Git blame --date short<CR>
 
 " Command line 
 map t :call RunCmd()<CR> 
