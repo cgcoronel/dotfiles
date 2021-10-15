@@ -36,3 +36,6 @@ let g:blamer_show_in_insert_modes = 0
 autocmd BufWritePost * GitGutter
 let g:gitgutter_highlight_linenrs = 0 
 let g:gitgutter_map_keys = 0
+
+""""""""""""""""""" Vim Fugitive
+let g:fugitive_dynamic_colors = 0 
