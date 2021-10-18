@@ -36,9 +36,8 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
+  Plug 'sheerun/vim-polyglot'
 
-  " unused
-  ""  Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
