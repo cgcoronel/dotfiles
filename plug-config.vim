@@ -3,7 +3,7 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier', 'co
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
-let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'down': '~60%' }
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
