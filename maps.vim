@@ -6,6 +6,12 @@ let mapleader = "\<space>"
 " Go to visual block
 map f <C-V><left> 
 
+" delete one word
+map di diw 
+
+" copy one word
+map ci bye 
+
 " Show git blame 
 cmap bb :Git blame --date short<CR>
 
