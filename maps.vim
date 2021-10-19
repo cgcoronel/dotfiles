@@ -26,7 +26,7 @@ imap kj <Esc>
 cmap jk <Esc>
 cmap kj <Esc>
 
-map <Leader>; : 
+" remap command line 
 map ; : 
 
 " Split vertical 
