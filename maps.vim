@@ -30,7 +30,8 @@ cmap kj <Esc>
 map ; : 
 
 " Split vertical 
-nmap <Leader>s :vsplit<CR>
+""nmap <Leader>s :vsplit<CR>
+nmap s :vsplit<CR>
 
 " remap got to definitions local
 nnoremap fs gd
@@ -65,10 +66,11 @@ nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<C
 "nmap <Leader>f :Files<CR>
 
 " Finder in files
-nmap <Leader>F :Rg<CR>
+""nmap <Leader>F :Rg<CR>
+nmap F :Rg<CR>
 
 " Search in file 
-nmap <Leader>/ :/
+""nmap <Leader>/ :/
  
 " Git
 nmap <Leader>c :Gdiffsplit<CR>
