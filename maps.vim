@@ -27,6 +27,7 @@ cmap jk <Esc>
 cmap kj <Esc>
 
 map <Leader>; : 
+map ; : 
 
 " Split vertical 
 nmap <Leader>s :vsplit<CR>
