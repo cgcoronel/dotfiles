@@ -16,11 +16,9 @@ map t :call RunCmd()<CR>
 nmap <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
-imap jk <Esc>
 imap kj <Esc>
 
 " Leave COMMAND MODE
-cmap jk <Esc>
 cmap kj <Esc>
 
 """"""""""""""""""""""" Interaction with files 
