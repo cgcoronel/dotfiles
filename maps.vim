@@ -1,135 +1,47 @@
 ":help key-notation
 
-""""""""""""""""""""""" Shortcuts
 let mapleader = "\<space>"
 
-" Go to visual block
+""""""""""""""""""""""" Remap Global Shortcuts
+" Enter COMMAND MODE
+map ; : 
+
+" Enter VISUAL BLOCK 
 map f <C-V><left> 
 
-" copy one word
-map ci bye 
-
-" Show git blame 
-cmap bb :Git blame --date short<CR>
-
-" Command line 
+" Enter COMMAND LINE 
 map t :call RunCmd()<CR> 
 
-" Clean search result
-nnoremap <Leader><space> :noh<cr>
+" Open file explorer 
+nmap <Leader>n :NERDTreeFind<CR>
 
-" remap escape key in insert mode
+" Leave INSERT MODE
 imap jk <Esc>
 imap kj <Esc>
 
-" remap escape key in command mode 
+" Leave COMMAND MODE
 cmap jk <Esc>
 cmap kj <Esc>
 
-" remap command line 
-map ; : 
+""""""""""""""""""""""" Interaction with files 
+" Change size of current file window
+nnoremap <Leader>, 10<C-w><
+nnoremap <Leader>. 10<C-w>>
 
-" Split vertical 
-""nmap <Leader>s :vsplit<CR>
-nmap s :vsplit<CR>
-
-" remap got to definitions local
-nnoremap fs gd
-
-" remap go to definition file, search firts occurrence, and search
-" require('....
-nmap ff :call search('\V' . '(')<CR> gf
-nmap fd gf
-
-" show tree directories 
-nmap <Leader>n :NERDTreeFind<CR>
-
-" Save file 
-nmap <Leader>w :w<CR>
-
-" Save file without prettier format
-cmap ww :noa w<CR>
-
-" Quit
-nmap <Leader>q :call CloseFile()<CR>
-vmap <Leader>q :call CloseFile()<CR>
-
-" Command find and replace
-command! -nargs=+ Replace :%s/<args>/gc
-cnoreabbrev replace Replace
-
-" List files opened 
+" Show opened files
 nmap <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
 
-" Finder
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<CR>
-"nmap <Leader>f :Files<CR>
+" Close file in NORMAL MODE 
+nmap <Leader>q :call CloseFile()<CR>
 
-" Finder in files
-""nmap <Leader>F :Rg<CR>
-nmap F :Rg<CR>
+" Close file in VISUAL MODE 
+vmap <Leader>q :call CloseFile()<CR>
 
-" Search in file 
-""nmap <Leader>/ :/
- 
-" Git
-nmap <Leader>c :Gdiffsplit<CR>
-nmap <Leader>d :0Git<CR>
+" Copy one word
+map ci bye 
 
-"abbreviations from git commands
-cnoreabbrev gpush Gpush
-cnoreabbrev gstatus Gstatus
-cnoreabbrev gco Git commit
-cnoreabbrev gpull Gpull
-cnoreabbrev gpu :call PushChanges() 
-cnoreabbrev gs :echo StatuslineGit()
-
-" Git move between changes 
-nnoremap <silent> <cr> :GitGutterNextHunk<cr>
-nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
-
-" git checkout -b branch_name
-command! -nargs=* Gc :!git checkout <args>
-cnoreabbrev gc Gc
-
-command! -nargs=* Gcb :!git checkout -b <args>
-cnoreabbrev gcb Gcb
-
-" Run test focus describe
-cnoreabbrev td :call RunCmd('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
-" Run test focus it 
-cnoreabbrev ti :call RunCmd('yarn jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
-" Run test in focus file   
-cnoreabbrev te :call RunCmd('yarn jest --watch ' . expand('%'), 0) 
-" Run test and coverage in focus file   
-cnoreabbrev tc :call RunCmd('yarn test:coverage '  . expand('%'), 0) 
-" Run test and coverage all files   
-cnoreabbrev ta :call RunCmd('yarn test:coverage ', 0) 
-" Open file test from current file
-cnoreabbrev to :call FindTestFiles() 
-
-" Run node app 
-cnoreabbrev up :call RunCmd('yarn devel', 0) 
-" Run node app in debug
-cnoreabbrev dg :call RunCmd('node --inspect src/server/index.js', 0) 
-
-"cnoreabbrev gpu :!git push 
-cnoreabbrev gst Gstatus
-cnoreabbrev gpl Gpull
-
-" Move 
-nnoremap gl $
-nnoremap gh 0
-nnoremap gk H
-nnoremap gj L
-
-vnoremap gl $
-vnoremap gh 0
-vnoremap gk H
-vnoremap gj L
-
-" Select all text
-nnoremap <Leader>a <Esc>ggVG<CR>
+" Split file in vertical 
+nmap s :vsplit<CR>
 
 " Move focus between split screens
 ""map <C-J> <Esc><C-W><C-J>
@@ -142,14 +54,21 @@ map <C-H> <Esc><C-W><C-H>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
-nnoremap <Leader>, 10<C-w><
-nnoremap <Leader>. 10<C-w>>
+" Got to definitions local
+nnoremap fs gd
 
-" Toggle relativenumber
-map <C-N> :set relativenumber!<CR>
+" Go to definition file, search firts occurrence, and search require('....
+nmap ff :call search('\V' . '(')<CR> gf
+nmap fd gf
 
-map <C-J> 10j
-map <C-K> 10k
+" Save file 
+nmap <Leader>w :w<CR>
+
+" Save file without prettier format
+cmap ww :noa w<CR>
+
+" Select all text
+nnoremap <Leader>a <Esc>ggVG<CR>
 
 "Move lines up / down
 nnoremap <S-j> :m .+1<CR>==
@@ -169,4 +88,86 @@ inoremap /d ()<Esc>i
 inoremap /s []<Esc>i
 inoremap /a {}<Esc>i
 
+" Mover up/down in 10 lines bloc
+map <C-J> 10j
+map <C-K> 10k
 
+" Move in file 
+nnoremap gl $
+nnoremap gh 0
+nnoremap gk H
+nnoremap gj L
+
+vnoremap gl $
+vnoremap gh 0
+vnoremap gk H
+vnoremap gj L
+
+""""""""""""""""""""""" Search into files 
+" Finder
+nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<CR>
+
+" Clean search result
+nnoremap <Leader><space> :noh<cr>
+
+" Seach word into files
+nmap F :Rg<CR>
+
+" Command find and replace
+command! -nargs=+ Replace :%s/<args>/gc
+cnoreabbrev replace Replace
+
+""""""""""""""""""""""" GIT Commands 
+" Show git blame 
+cmap bb :Git blame --date short<CR>
+
+" Show diferences 
+nmap <Leader>c :Gdiffsplit<CR>
+
+" Show file changes 
+nmap <Leader>d :0Git<CR>
+
+" Pull changes
+cnoreabbrev gpl :!git pull
+
+" Commit staged changes
+cnoreabbrev gco Git commit
+
+" Pushing changes commited
+cnoreabbrev gpu :call PushChanges() 
+
+" Move between changes 
+nnoremap <silent> <cr> :GitGutterNextHunk<cr>
+nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
+
+" git checkout -b branch_name
+command! -nargs=* Gc :!git checkout <args>
+cnoreabbrev gc Gc
+
+command! -nargs=* Gcb :!git checkout -b <args>
+cnoreabbrev gcb Gcb
+
+""""""""""""""""""""""" Commands for development
+" Run test focus describe
+cnoreabbrev td :call RunCmd('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
+
+" Run test focus it 
+cnoreabbrev ti :call RunCmd('yarn jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
+
+" Run test in focus file   
+cnoreabbrev te :call RunCmd('yarn jest --watch ' . expand('%'), 0) 
+
+" Run test and coverage in focus file   
+cnoreabbrev tc :call RunCmd('yarn test:coverage '  . expand('%'), 0) 
+
+" Run test and coverage all files   
+cnoreabbrev ta :call RunCmd('yarn test:coverage ', 0) 
+
+" Open file test from current file
+cnoreabbrev to :call FindTestFiles() 
+
+" Run node app 
+cnoreabbrev up :call RunCmd('yarn devel', 0) 
+
+" Run node app in debug
+cnoreabbrev dg :call RunCmd('node --inspect src/server/index.js', 0) 
