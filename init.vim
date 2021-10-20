@@ -1,5 +1,8 @@
 syntax on
 
+
+
+
 set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
