@@ -7,7 +7,7 @@ let mapleader = "\<space>"
 map ; : 
 
 " Enter VISUAL BLOCK 
-map f <C-V><left> 
+map f <C-V><left>
 
 " Enter COMMAND LINE 
 map t :call RunCmd()<CR> 
