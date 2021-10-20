@@ -3,6 +3,7 @@
 let mapleader = "\<space>"
 
 """"""""""""""""""""""" Remap Global Shortcuts
+
 " Enter COMMAND MODE
 map ; : 
 
@@ -21,7 +22,9 @@ imap kj <Esc>
 " Leave COMMAND MODE
 cmap kj <Esc>
 
+
 """"""""""""""""""""""" Interaction with files 
+
 " Change size of current file window
 nnoremap <Leader>, 10<C-w><
 nnoremap <Leader>. 10<C-w>>
@@ -101,7 +104,9 @@ vnoremap gh 0
 vnoremap gk H
 vnoremap gj L
 
+
 """"""""""""""""""""""" Search into files 
+
 " Finder
 nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<CR>
 
@@ -115,7 +120,9 @@ nmap F :Rg<CR>
 command! -nargs=+ Replace :%s/<args>/gc
 cnoreabbrev replace Replace
 
+
 """"""""""""""""""""""" GIT Commands 
+
 " Show git blame 
 cmap bb :Git blame --date short<CR>
 
@@ -145,7 +152,9 @@ cnoreabbrev gc Gc
 command! -nargs=* Gcb :!git checkout -b <args>
 cnoreabbrev gcb Gcb
 
+
 """"""""""""""""""""""" Commands for development
+
 " Run test focus describe
 cnoreabbrev td :call RunCmd('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
 
