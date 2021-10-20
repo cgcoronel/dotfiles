@@ -5,7 +5,7 @@ let mapleader = "\<space>"
 """"""""""""""""""""""" Remap Global Shortcuts
 
 " Enter COMMAND MODE
-map ; : 
+map ; :
 
 " Enter VISUAL BLOCK 
 map f <C-V><left>
