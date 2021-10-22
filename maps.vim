@@ -114,7 +114,7 @@ nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<C
 nnoremap <Leader><space> :noh<cr>
 
 " Seach word into files
-nmap F :Rg<CR>
+nmap ? :Rg<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
