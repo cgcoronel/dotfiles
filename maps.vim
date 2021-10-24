@@ -45,8 +45,8 @@ map ci bye
 nmap s :vsplit<CR>
 
 " Move focus between split screens
-""map <C-J> <Esc><C-W><C-J>
-""map <C-K> <Esc><C-W><C-K>
+map <Leader>j <Esc><C-W><C-J>
+map <Leader>k <Esc><C-W><C-K>
 map <C-L> <Esc><C-W><C-L>
 map <C-H> <Esc><C-W><C-H>
 
