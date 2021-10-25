@@ -11,10 +11,10 @@ map ; :
 map f <C-V><left>
 
 " Enter COMMAND LINE 
-map t :call RunCmd()<CR> 
+map <silent> t :call RunCmd()<CR> 
 
 " Open file explorer 
-nmap <Leader>n :NERDTreeFind<CR>
+nmap <silent> <Leader>e :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -30,13 +30,13 @@ nnoremap <Leader>, 10<C-w><
 nnoremap <Leader>. 10<C-w>>
 
 " Show opened files
-nmap <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
+nmap <silent> <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
 
 " Close file in NORMAL MODE 
-nmap <Leader>q :call CloseFile()<CR>
+nmap <silent> <Leader>q :call CloseFile()<CR>
 
 " Close file in VISUAL MODE 
-vmap <Leader>q :call CloseFile()<CR>
+vmap <silent> <Leader>q :call CloseFile()<CR>
 
 " Copy one word
 map ci bye 
