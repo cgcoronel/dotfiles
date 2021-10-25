@@ -1,5 +1,5 @@
 """"""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier', "coc-snippets"]
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier']
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
