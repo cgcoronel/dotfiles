@@ -113,7 +113,7 @@ vnoremap gj L
 nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<CR>
 
 " Clean search result
-nnoremap <Leader><space> :noh<cr>
+nnoremap <silent> <Leader><space> :noh<cr>
 
 " Seach word into files
 nmap ? :Rg<CR>
