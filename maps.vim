@@ -28,7 +28,7 @@ cmap kj <Esc>
 """"""""""""""""""""""" Interaction with files 
 
 " Change size of current file window
-nnoremap <Leader>, 10<C-w><
+nnoremap <Leader>m 10<C-w><
 nnoremap <Leader>. 10<C-w>>
 
 " Show opened files
@@ -132,7 +132,7 @@ cmap bb :Git blame --date short<CR>
 nmap <Leader>c :Gdiffsplit<CR>
 
 " Show file changes 
-nmap <Leader>d :0Git<CR>
+nmap <silent> <Leader>d :0Git<CR>
 
 " Pull changes
 cnoreabbrev gpl :!git pull
@@ -141,19 +141,11 @@ cnoreabbrev gpl :!git pull
 cnoreabbrev gco Git commit
 
 " Pushing changes commited
-cnoreabbrev gpu :call PushChanges() 
+cnoreabbrev <silent> gpu :call PushChanges() 
 
 " Move between changes 
 nnoremap <silent> <cr> :GitGutterNextHunk<cr>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
-
-" git checkout -b branch_name
-command! -nargs=* Gc :!git checkout <args>
-cnoreabbrev gc Gc
-
-command! -nargs=* Gcb :!git checkout -b <args>
-cnoreabbrev gcb Gcb
-
 
 """"""""""""""""""""""" Commands for development
 
