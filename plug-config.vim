@@ -25,12 +25,6 @@ let g:indentLine_fileTypeExclude = ["help"]
 let g:indentLine_bufTypeExclude = ["help"]
 let g:indentLine_indentLevel = 5 
 
-""""""""""""""""""" Blame
-let g:blamer_enabled = 0 
-let g:blamer_delay = 500 
-let g:blamer_show_in_visual_modes = 0
-let g:blamer_show_in_insert_modes = 0
-
 """"""""""""""""""" Vim Git Gutter 
 " Only show signs when save file
 autocmd BufWritePost * GitGutter
