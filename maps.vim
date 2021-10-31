@@ -35,6 +35,9 @@ nnoremap <Leader>. 10<C-w>>
 " Show opened files
 nmap <silent> <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
 
+" Close vim
+map <silent> Q :q<CR>
+
 " Close file in NORMAL MODE 
 nmap <silent> <Leader>q :call CloseFile()<CR>
 
