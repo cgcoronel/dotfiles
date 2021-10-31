@@ -32,7 +32,6 @@ call plug#begin('~/vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-""  Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
@@ -46,7 +45,6 @@ so ~/.config/nvim/plugins/push-changes.vim
 so ~/.config/nvim/plugins/run-cmd.vim
 so ~/.config/nvim/plugins/tests.vim
 so ~/.config/nvim/plugins/netrw.vim
-""so ~/.config/nvim/plugins/nerdtree.vim
 
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/plug-config.vim

@@ -10,3 +10,9 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*']
 let NERDTreeStatusline= ' '
 let g:NERDTreeWinSize= 40
 
+" add plug
+"Plug 'scrooloose/nerdtree'
+
+"add import
+"so ~/.config/nvim/plugins/nerdtree.vim
+
