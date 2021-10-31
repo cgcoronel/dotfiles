@@ -7,8 +7,6 @@ function! RunCmd(...)
   let command = get(a:, 1, '') 
   let focus = get(a:, 2, 1) 
 
-  echo('Running Command...' . command)
-
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&buftype", "not found")
 
