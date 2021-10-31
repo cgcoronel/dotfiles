@@ -3,7 +3,7 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier']
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
-let g:fzf_layout = { 'down': '~60%' }
+let g:fzf_layout = { 'down': '~80%' }
 
 """"""""""""""""""" IndentLine
 autocmd Filetype json let g:indentLine_setConceal = 0
