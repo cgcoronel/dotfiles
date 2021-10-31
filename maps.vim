@@ -33,7 +33,7 @@ nnoremap <Leader>m 10<C-w><
 nnoremap <Leader>. 10<C-w>>
 
 " Show opened files
-nmap <silent> <Leader>p :call fzf#vim#buffers({'down': '~15%' })<CR>
+nmap <silent> <Leader>p :call fzf#vim#buffers({'down': '~25%' })<CR>
 
 " Close vim
 map <silent> Q :q<CR>
@@ -114,7 +114,7 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~20%', 'options': ['-i']})<CR>
+nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
 
 " Clean search result
 nnoremap <silent> <Leader><space> :noh<cr>

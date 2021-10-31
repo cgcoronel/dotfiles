@@ -24,12 +24,6 @@ set foldlevelstart=99
 set ignorecase
 set diffopt+=vertical 
 
-
-
-
-
-
-
 language en_US.UTF-8
 
 """"""""""""""""""" Plugins
