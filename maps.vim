@@ -138,6 +138,12 @@ nmap <Leader>c :Gdiffsplit<CR>
 " Show file changes 
 nmap <silent> <Leader>d :0Git<CR>
 
+" Compare files
+augroup fugitive_mapping
+  autocmd!
+  autocmd filetype fugitive nmap <buffer> ff dd :resize 50<CR> 
+augroup END
+
 " Pull changes
 cnoreabbrev gpl :!git pull
 
