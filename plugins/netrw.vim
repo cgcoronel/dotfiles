@@ -26,3 +26,5 @@ function! NetrwMapping()
   nmap <buffer> a %
 endfunction
 
+" Save project dir in var
+autocmd VimEnter * let g:project = getcwd() 
