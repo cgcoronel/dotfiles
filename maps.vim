@@ -33,7 +33,7 @@ nnoremap <Leader>m 10<C-w><
 nnoremap <Leader>. 10<C-w>>
 
 " Show opened files
-nmap <silent> <Leader>p :call fzf#vim#buffers({'down': '~25%' })<CR>
+nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%' })<CR>
 
 " Close vim
 map <silent> Q :q<CR>
