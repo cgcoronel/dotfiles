@@ -16,7 +16,7 @@ map <silent> t :call RunCmd()<CR>
 " Open file explorer 
 ""nmap <silent> <Leader>n :NERDTreeFind<CR>
 ""nmap <silent> <Leader>e :NERDTreeFind<CR>
-nnoremap <leader>e :Vexplore.<CR>
+nnoremap <leader>e :Explore.<CR>
 nnoremap <Leader>n :Vexplore.<CR>
 
 " Leave INSERT MODE
