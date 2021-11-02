@@ -17,7 +17,7 @@ map <silent> t :call RunCmd()<CR>
 ""nmap <silent> <Leader>n :NERDTreeFind<CR>
 ""nmap <silent> <Leader>e :NERDTreeFind<CR>
 nnoremap <leader>e :exec 'Explore ' . project<CR>
-nnoremap <Leader>n :exec 'Vexplore ' . project)<CR>
+nnoremap <Leader>n :exec 'Vexplore ' . project<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
