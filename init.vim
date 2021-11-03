@@ -29,6 +29,7 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
+  Plug 'scrooloose/nerdtree'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -44,7 +45,8 @@ so ~/.config/nvim/plugins/close-buffer.vim
 so ~/.config/nvim/plugins/push-changes.vim
 so ~/.config/nvim/plugins/run-cmd.vim
 so ~/.config/nvim/plugins/tests.vim
-so ~/.config/nvim/plugins/netrw.vim
+"so ~/.config/nvim/plugins/netrw.vim
+so ~/.config/nvim/plugins/nerdtree.vim
 
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/plug-config.vim
