@@ -16,8 +16,6 @@ map <silent> t :call RunCmd()<CR>
 " Open file explorer 
 nmap <silent> <Leader>n :NERDTreeFind<CR>
 nmap <silent> <Leader>e :NERDTreeFind<CR>
-""nnoremap <leader>e :exec 'Explore ' . project<CR>
-""nnoremap <Leader>n :exec 'Vexplore ' . project<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -114,6 +112,7 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
+""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
 nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
 
 " Clean search result
