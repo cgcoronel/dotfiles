@@ -26,10 +26,6 @@ hi Pmenu ctermfg=15 ctermbg=236 guifg=bg guibg=#504945
 hi PmenuSel ctermfg=234 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "notifications simbols in status vertical bar
-""hi GitGutterAdd ctermfg=143 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
-""hi GitGutterChange ctermfg=108 ctermbg=234 guifg=#8ec07c guibg=#3c3836
-""hi GitGutterDelete ctermfg=167 ctermbg=234 guifg=#fb4934 guibg=#3c3836 
-""hi GitGutterChangeDelete ctermfg=108 ctermbg=234 guifg=#8ec07c guibg=#3c3836
 hi GitGutterAdd ctermfg=240 ctermbg=234 guifg=#b8bb26 guibg=#3c3836
 hi GitGutterChange ctermfg=240 ctermbg=234 guifg=#8ec07c guibg=#3c3836
 hi GitGutterDelete ctermfg=240 ctermbg=234 guifg=#fb4934 guibg=#3c3836 

@@ -36,11 +36,8 @@ nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%' })<CR>
 " Close vim
 map <silent> Q :q<CR>
 
-" Close file in NORMAL MODE 
-nmap <silent> <Leader>q :call CloseFile()<CR>
-
-" Close file in VISUAL MODE 
-vmap <silent> <Leader>q :call CloseFile()<CR>
+" Close file
+map <silent> <Leader>q :call CloseFile()<CR>
 
 " Copy one word
 map ci bye 

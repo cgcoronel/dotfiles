@@ -45,8 +45,8 @@ so ~/.config/nvim/plugins/close-buffer.vim
 so ~/.config/nvim/plugins/push-changes.vim
 so ~/.config/nvim/plugins/run-cmd.vim
 so ~/.config/nvim/plugins/tests.vim
-"so ~/.config/nvim/plugins/netrw.vim
 so ~/.config/nvim/plugins/nerdtree.vim
+"so ~/.config/nvim/plugins/netrw.vim
 
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/plug-config.vim

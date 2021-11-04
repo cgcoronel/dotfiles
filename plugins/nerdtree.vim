@@ -11,7 +11,7 @@ let NERDTreeStatusline= ' '
 let g:NERDTreeWinSize= 40
 
 " add plug
-"Plug 'scrooloose/nerdtree'
+"Plug 'preservim/nerdtree'
 
 "add import
 "so ~/.config/nvim/plugins/nerdtree.vim
