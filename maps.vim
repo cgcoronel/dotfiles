@@ -14,8 +14,11 @@ map f <C-V><left>
 map <silent> t :call RunCmd()<CR> 
 
 " Open file explorer 
-nmap <silent> <Leader>n :NERDTreeFind<CR>
-nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
+""nmap <silent> <Leader>n :NERDTreeFind<CR>
+""nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
+nnoremap <leader>e :call Opendir('edit')<CR>
+nnoremap <leader>n :call Opendir('edit')<CR>
+
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -31,7 +34,7 @@ nnoremap <Leader>m 10<C-w><
 nnoremap <Leader>. 10<C-w>>
 
 " Show opened files
-nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%' })<CR>
+nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
 
 " Close vim
 map <silent> Q :q<CR>
@@ -112,14 +115,16 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
+nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
+""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
 
 " Clean search result
 nnoremap <silent> <Leader><space> :noh<cr>
 
 " Seach word into files
-nmap ? :Rg<CR>
+command! -bang -nargs=* PRg
+  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
+nmap ? :PRg<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc

@@ -13,6 +13,7 @@ let g:netrw_hide = 1
 let g:netrw_fastbrowse = 2
 
 hi! link netrwMarkFile Search
+
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
@@ -20,7 +21,7 @@ augroup END
 
 function! NetrwMapping()
   nmap <buffer> o <CR>
-  nmap <buffer> s <CR>
+  nmap <buffer> s v 
   nmap <buffer> m R
   nmap <buffer> r D
   nmap <buffer> a %
@@ -29,6 +30,7 @@ endfunction
 " Save project dir in var
 autocmd VimEnter * let g:project = getcwd() 
 
+autocmd FileType netrw set nolist 
 
 let s:dotfiles = '\(^\|\s\s\)\zs\.\S\+'
 
@@ -64,7 +66,7 @@ function! Seek(file) abort
   return pattern
 endfunction
 
-nnoremap <leader>e :call Opendir('Vexplore')<CR>
-nnoremap <leader>n :call Opendir('edit')<CR>
+""nnoremap <leader>e :call Opendir('Vexplore')<CR>
+""nnoremap <leader>n :call Opendir('edit')<CR>
 
 
