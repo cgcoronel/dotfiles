@@ -66,7 +66,16 @@ function! Seek(file) abort
   return pattern
 endfunction
 
-""nnoremap <leader>e :call Opendir('Vexplore')<CR>
+"Finder
+"nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
+
+" Seach word into files
+"command! -bang -nargs=* PRg
+"  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
+""nmap ? :PRg<CR>
+
+
+""nnoremap <leader>e :call Opendir('edit')<CR>
 ""nnoremap <leader>n :call Opendir('edit')<CR>
 
 
