@@ -16,7 +16,7 @@ map <silent> t :call RunCmd()<CR>
 " Open file explorer 
 ""nmap <silent> <Leader>n :NERDTreeFind<CR>
 nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
-nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
+nmap <silent> <Leader>n :buffer NERD_tree_1<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
