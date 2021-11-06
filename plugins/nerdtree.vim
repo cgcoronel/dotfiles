@@ -16,3 +16,14 @@ let g:NERDTreeWinSize= 40
 "add import
 "so ~/.config/nvim/plugins/nerdtree.vim
 
+
+" Open file explorer NERDTree
+""nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
+""nmap <silent> <Leader>n :edit .<CR>
+
+" Finder
+""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
+
+" Seach word into files
+""nmap ? :Rg<CR>
+
