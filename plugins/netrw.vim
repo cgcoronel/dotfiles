@@ -29,3 +29,18 @@ endfunction
 
 " Save project dir in var
 autocmd VimEnter * let g:project = getcwd() 
+
+
+" Open file explore netrw
+""nnoremap <leader>e :exec 'edit ' . project<CR>
+""nnoremap <leader>n :exec 'edit ' . project<CR>
+
+" Seach word into files
+""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
+
+" Seach word into files
+""command! -bang -nargs=* PRg
+""  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
+""nmap ? :PRg<CR>
+
+
