@@ -15,7 +15,7 @@ map <silent> t :call RunCmd()<CR>
 
 " Open file explorer NERDTree
 nmap <silent> <Leader>e :edit .<CR>
-nmap <silent> <Leader>n :edit .<CR>
+nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
