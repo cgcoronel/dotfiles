@@ -17,8 +17,8 @@ map <silent> t :call RunCmd()<CR>
 ""nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
 ""nmap <silent> <Leader>n :edit .<CR>
 
-nnoremap <leader>e :exec 'edit ' . project<CR>
-nnoremap <leader>n :exec 'edit ' . project<CR>
+nnoremap <silent> <leader>e :exec 'edit ' . project<CR>
+nnoremap <silent> <leader>n :exec 'edit ' . project<CR>
 
 
 " Leave INSERT MODE
