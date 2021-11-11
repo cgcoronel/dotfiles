@@ -109,5 +109,5 @@ hi ALEWarningSign ctermfg=11 gui=bold guifg=Magenta
 hi ALEWarning cterm=bold ctermfg=238
 hi ALEStyleWarning cterm=bold ctermfg=238
 hi ALEStyleError cterm=bold ctermfg=238
-hi SpellBad ctermbg=167 gui=undercurl guisp=Red
+hi SpellBad cterm=bold cterm=italic ctermfg=167 ctermbg=237
 
