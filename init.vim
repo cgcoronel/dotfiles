@@ -23,6 +23,7 @@ set foldcolumn=0
 set foldlevelstart=99
 set ignorecase
 set diffopt+=vertical 
+set nowrap
 
 language en_US.UTF-8
 
@@ -35,9 +36,9 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
+  Plug 'sheerun/vim-polyglot'
 
   "Plug 'preservim/nerdtree'
-  "Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
