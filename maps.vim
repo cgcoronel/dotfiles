@@ -159,7 +159,7 @@ cnoreabbrev gpl :!git pull
 cnoreabbrev gco Git commit
 
 " Pushing changes commited
-cnoreabbrev <silent> gpu :call PushChanges() 
+cnoreabbrev gpu Git push 
 
 " Move between changes 
 nnoremap <silent> <cr> :GitGutterNextHunk<cr>
