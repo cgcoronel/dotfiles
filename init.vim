@@ -7,21 +7,17 @@ set noshowcmd
 set ruler
 set cursorline
 set encoding=UTF-8
+set showmatch
 set sw=2
+set number
+set laststatus=2
 set updatetime=100
 set ttimeoutlen=50
-set laststatus=2 	" Always show statusbar
-set nowrap      	" don't wrap long lines
-set number 		" show line numbers
-set showmatch		" higlight matching parentheses and brackets
-set history=1000 	" Increase history size
-set autoindent		" autoindent always ON.
 set directory=~/.vim/swap/
-
-" Persist undo history between file editing sessions.
 set undofile
 set undodir=~/.vim/undodir/
-
+set history=1000
+set autoindent
 set foldmethod=indent
 set foldcolumn=0   
 set foldlevelstart=99
@@ -59,4 +55,4 @@ so ~/.config/nvim/maps.vim
 so ~/.config/nvim/theme.vim
 
 """"""""""""""""""" Status line
-set statusline+=%#StatusBar#\ %f\ %m 
+set statusline+=\ %f\ %m 
