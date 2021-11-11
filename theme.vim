@@ -103,3 +103,11 @@ hi Function cterm=italic ctermfg=6 guifg=DarkCyan
 
 hi netrwTreeBar term=bold cterm=none ctermfg=237 guifg=SlateBlue
 
+hi ALEErrorSign ctermfg=11 gui=bold guifg=Magenta
+hi ALEWarningSign ctermfg=11 gui=bold guifg=Magenta
+
+hi ALEWarning cterm=bold ctermfg=238
+hi ALEStyleWarning cterm=bold ctermfg=238
+hi ALEStyleError cterm=bold ctermfg=238
+hi SpellBad ctermbg=167 gui=undercurl guisp=Red
+

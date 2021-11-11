@@ -37,6 +37,7 @@ call plug#begin('~/vim/plugged')
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
+  Plug 'dense-analysis/ale'
 
   "Plug 'preservim/nerdtree'
 
