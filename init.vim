@@ -39,15 +39,12 @@ call plug#begin('~/vim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'dense-analysis/ale'
 
-  "Plug 'preservim/nerdtree'
-
 call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/plugins/close-buffer.vim
 so ~/.config/nvim/plugins/run-cmd.vim
 so ~/.config/nvim/plugins/tests.vim
-""so ~/.config/nvim/plugins/nerdtree.vim
 so ~/.config/nvim/plugins/netrw.vim
 
 """"""""""""""""""" Imports other configs
