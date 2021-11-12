@@ -1,5 +1,5 @@
 """"""""""""""""""" Coc extensions
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-prettier']
+let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver' ]
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
@@ -24,3 +24,5 @@ let g:fugitive_dynamic_colors = 0
 
 """"""""""""""""""" ALE
 let g:ale_sign_warning = '~'
+let g:ale_disable_lsp = 1
+
