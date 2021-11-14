@@ -17,13 +17,8 @@ map <silent> t :call RunCmd()<CR>
 nnoremap <silent> <leader>e :exec 'edit ' . project<CR>
 nnoremap <silent> <leader>n :exec 'edit ' . project<CR>
 
-
 " Leave INSERT MODE
 imap kj <Esc>
-
-" Leave COMMAND MODE
-cmap kj <Esc>
-
 
 """"""""""""""""""""""" Interaction with files 
 
@@ -146,9 +141,6 @@ augroup fugitive_mapping
   autocmd!
   autocmd filetype fugitive nmap <buffer> ff dd :resize 50<CR> 
 augroup END
-
-" Pull changes
-cnoreabbrev gpl :!git pull
 
 " Commit staged changes
 cnoreabbrev gco Git commit
