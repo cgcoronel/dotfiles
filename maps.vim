@@ -14,8 +14,8 @@ map f <C-V><left>
 map <silent> t :call RunCmd()<CR> 
 
 " Open file explorer
-nnoremap <silent> <leader>e :exec 'edit ' . project<CR>
-nnoremap <silent> <leader>n :exec 'edit ' . project<CR>
+nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
+nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -108,17 +108,13 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
-
+nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
 
 " Clean search result
 nnoremap <silent> <Leader><space> :noh<cr>
 
 " Seach word into files
-command! -bang -nargs=* PRg
-  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
-nmap ? :PRg<CR>
-
+nmap ? :Rg<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc

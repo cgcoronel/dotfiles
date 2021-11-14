@@ -19,7 +19,7 @@ let g:NERDTreeWinSize= 40
 
 " Open file explorer NERDTree
 ""nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
-""nmap <silent> <Leader>n :edit .<CR>
+""nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Finder
 ""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
