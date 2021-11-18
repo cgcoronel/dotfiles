@@ -94,7 +94,7 @@ hi Question ctermfg=243 gui=bold guifg=Green
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=0 gui=reverse guifg=#b8bb26 guibg=#1d2021
 hi DiffText cterm=reverse ctermfg=179 ctermbg=0 gui=reverse guifg=#fabd2f guibg=#1d2021
 hi DiffChange cterm=reverse ctermfg=108 ctermbg=0 gui=reverse guifg=#8ec07c guibg=#1d2021
-hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=8 gui=bold guifg=LightBlue guibg=#f6e8d0
+hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=0 gui=bold guifg=LightBlue guibg=#f6e8d0
 
 hi WarningMsg ctermfg=243 guifg=Red
 
