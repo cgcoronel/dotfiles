@@ -15,7 +15,7 @@ hi Type term=underline ctermfg=2 gui=bold guifg=SeaGreen
 hi Error term=reverse cterm=bold ctermfg=7 ctermbg=1 gui=bold guifg=White guibg=Red
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi ModeMsg gui=none ctermfg=243 ctermfg=238 
-hi LineNr ctermfg=237 guifg=#3c3836
+hi LineNr ctermfg=238 guifg=#3c3836
 hi Folded cterm=italic ctermfg=245 ctermbg=8 gui=italic guifg=#928374 guibg=#3c3836
 hi FoldColumn ctermfg=245 ctermbg=8 guifg=#928374 guibg=#3c3836
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
