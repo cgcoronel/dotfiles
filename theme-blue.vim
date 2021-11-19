@@ -22,7 +22,7 @@ hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 hi Normal ctermfg=15 guifg=#928374
 
 "Coc suggestion box
-hi Pmenu ctermfg=15 ctermbg=236 guifg=bg guibg=#504945
+hi Pmenu ctermfg=15 ctermbg=8 guifg=bg guibg=#504945
 hi PmenuSel ctermfg=0 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "notifications simbols in status vertical bar
@@ -70,7 +70,7 @@ hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
 
 "Visual color selection
 hi clear Visual 
-hi Visual ctermbg=239 ctermfg=NONE
+hi Visual ctermbg=8 ctermfg=NONE
 
 " Fzf
 hi fzf1 ctermfg=241 ctermbg=8 guifg=#E12672 guibg=#565656
