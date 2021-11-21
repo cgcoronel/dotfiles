@@ -21,6 +21,7 @@ function! NetrwMapping()
   nmap <buffer> o <CR>
   nmap <buffer> s v 
 ""  nmap <buffer> m R
+  nmap <buffer> mm mtmfmc
   nmap <buffer> r D
   nmap <buffer> a %
 endfunction
