@@ -56,4 +56,4 @@ so ~/.config/nvim/maps.vim
 so ~/.config/nvim/theme-blue.vim
 
 """"""""""""""""""" Status line
-set statusline+=\ %F\ %M 
+set statusline+=\ %F\ %m 
