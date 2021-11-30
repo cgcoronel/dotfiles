@@ -48,7 +48,7 @@ hi MsgArea ctermfg=243
 
 "Cursor line
 hi CursorLine ctermbg=8 guibg=#3c3836 cterm=NONE
-hi CursorLineNr ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
+hi CursorLineNr cterm=none ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
 
 hi Ignore cterm=bold ctermfg=241 guifg=bg
 
