@@ -23,8 +23,8 @@ imap kj <Esc>
 """"""""""""""""""""""" Interaction with files 
 
 " Change size of current file window
-nnoremap <Leader>m 10<C-w><
-nnoremap <Leader>. 10<C-w>>
+nnoremap <Leader>m 20<C-w><
+nnoremap <Leader>. 20<C-w>>
 
 " Show opened files
 nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
