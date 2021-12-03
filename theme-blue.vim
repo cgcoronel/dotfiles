@@ -47,8 +47,11 @@ hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=8
 hi MsgArea ctermfg=243
 
 "Cursor line
-hi CursorLine ctermbg=8 guibg=#3c3836 cterm=NONE
-hi CursorLineNr cterm=none ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
+""hi CursorLine ctermbg=8 guibg=#3c3836 cterm=NONE
+""hi CursorLineNr cterm=none ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
+hi CursorLine ctermbg=NONE guibg=#3c3836 cterm=NONE
+hi CursorLineNr cterm=none ctermfg=3 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
+
 
 hi Ignore cterm=bold ctermfg=241 guifg=bg
 
