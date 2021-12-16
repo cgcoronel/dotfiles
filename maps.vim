@@ -137,7 +137,7 @@ nmap <silent> <Leader>d :0Git<CR>
 " Compare files
 augroup fugitive_mapping
   autocmd!
-  autocmd filetype fugitive nmap <buffer> ff dd :resize 45<CR> 
+  autocmd filetype fugitive nmap <buffer> ff dd :resize 50<CR> 
 augroup END
 
 " Commit staged changes
