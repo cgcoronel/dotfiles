@@ -116,6 +116,7 @@ nnoremap <silent> <Leader><space> :noh<cr>
 
 " Seach word into files
 nmap ? :Rg<CR>
+nmap > :Rg<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
