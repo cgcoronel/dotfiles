@@ -17,5 +17,4 @@
   "prettier.bracketSpacing": true,
   "prettier.disableSuccessMessage": true,
   "javascript.suggestionActions.enabled": false,
-  "diagnostic.displayByAle": true
 }
