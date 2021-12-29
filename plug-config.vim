@@ -21,8 +21,3 @@ let g:gitgutter_map_keys = 0
 
 """"""""""""""""""" Vim Fugitive
 let g:fugitive_dynamic_colors = 0 
-
-""""""""""""""""""" ALE
-let g:ale_sign_warning = '~'
-let g:ale_disable_lsp = 1
-
