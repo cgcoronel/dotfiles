@@ -126,6 +126,7 @@ cnoreabbrev replace Replace
 """"""""""""""""""""""" GIT Commands 
 
 " Show git blame 
+map bb :Git blame --date short<CR>
 cmap bb :Git blame --date short<CR>
 
 " Show diferences 
