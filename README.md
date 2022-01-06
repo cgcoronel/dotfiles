@@ -1,5 +1,5 @@
 <img src="https://culturacion.com/wp-content/uploads/2012/07/figura13.png" width='150px' aling="right">
-
+ss
 # Mi Setup en Vim!
 
 ### Instalar nvim!
