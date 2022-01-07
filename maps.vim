@@ -10,11 +10,8 @@ map ; :
 " Enter VISUAL BLOCK 
 map f <C-V><left>
 
-" Enter COMMAND LINE 
-map <silent> t :call RunCmd()<CR> 
 
 " Open file explorer
-""nmap <silent> <Leader>e :buffer NERD_tree_1<CR>
 nmap <silent> <Leader>e :NERDTreeFind<CR>
 nmap <silent> <Leader>n :NERDTreeFind<CR>
 

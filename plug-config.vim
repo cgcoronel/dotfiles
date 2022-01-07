@@ -21,3 +21,6 @@ let g:gitgutter_map_keys = 0
 
 """"""""""""""""""" Vim Fugitive
 let g:fugitive_dynamic_colors = 0 
+
+""""""""""""""""""" Simple terminal
+let g:simple_term_close = '<Leader>q' 
