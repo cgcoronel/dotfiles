@@ -127,7 +127,6 @@ cnoreabbrev replace Replace
 
 " Show git blame 
 map bb :Git blame --date short<CR>
-cmap bb :Git blame --date short<CR>
 
 " Show diferences 
 nmap <Leader>c :Gdiffsplit<CR>
