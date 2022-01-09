@@ -39,11 +39,11 @@ call plug#begin('~/vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
   Plug 'cgcoronel/simple-term.vim'
+  ""Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
-so ~/.config/nvim/plugins/close-buffer.vim
 so ~/.config/nvim/plugins/tests.vim
 so ~/.config/nvim/plugins/nerdtree.vim
 ""so ~/.config/nvim/plugins/netrw.vim

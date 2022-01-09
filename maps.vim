@@ -31,7 +31,7 @@ nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
 map <silent> Q :q<CR>
 
 " Close each buffer and close vim 
-function! CloseFile()
+function! CleanClose()
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
     :q 
   else
@@ -40,7 +40,7 @@ function! CloseFile()
 endfunction
 
 " Close file
-map <silent> <Leader>q :call CloseFile()<CR>
+map <silent> <Leader>q :call CleanClose()<CR>
 
 " Copy one word
 map ci bye 
