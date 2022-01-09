@@ -51,8 +51,7 @@ so ~/.config/nvim/plugins/nerdtree.vim
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/plug-config.vim
 so ~/.config/nvim/maps.vim
-""so ~/.config/nvim/theme.vim
-so ~/.config/nvim/theme-blue.vim
+so ~/.config/nvim/theme.vim
 
 """"""""""""""""""" Status line
 set statusline+=\ %F\ %m 
