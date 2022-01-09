@@ -1,6 +1,6 @@
 "" netrw
 let g:netrw_browse_split = 0
-let g:netrw_banner = 1 
+let g:netrw_banner = 0 
 let g:netrw_winsize = 50
 let g:netrw_localrmdir ='rm -r'
 let g:netrw_localcopydircmd = 'cp -r'
@@ -29,17 +29,19 @@ endfunction
 " Save project dir in var
 autocmd VimEnter * let g:project = getcwd() 
 
+let mapleader = "\<space>"
 
 " Open file explore netrw
-""nnoremap <leader>e :exec 'edit ' . project<CR>
-""nnoremap <leader>n :exec 'edit ' . project<CR>
+nnoremap <leader>e :exec 'edit ' . project<CR>
+nnoremap <leader>n :exec 'edit ' . project<CR>
 
 " Seach word into files
-""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
+nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
 
 " Seach word into files
-""command! -bang -nargs=* PRg
-""  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
-""nmap ? :PRg<CR>
+command! -bang -nargs=* PRg
+  \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
+nmap ? :PRg<CR>
+nmap > :PRg<CR>
 
 
