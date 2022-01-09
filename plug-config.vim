@@ -3,7 +3,21 @@ let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-tabnine', '
 let g:coc_snippet_next = '<tab>'
 
 """"""""""""""""""" fzf config
-let g:fzf_layout = { 'down': '~50%' }
+let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_action = { 'ctrl-o': 'vsplit' }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'fg+':     ['fg', 'CursorLine', 'Pmenu', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'Pmenu'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 """"""""""""""""""" IndentLine
 autocmd Filetype json let g:indentLine_setConceal = 0

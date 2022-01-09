@@ -106,10 +106,11 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
+""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
+nmap <Leader>f :FZF<CR>
 
 " Clean search result
-nnoremap <silent> <Leader><space> :noh<cr>
+nnoremap <silent> <Leader><space> :noh<CR>
 
 " Seach word into files
 nmap ? :Rg<CR>
@@ -144,8 +145,8 @@ cnoreabbrev gco Git commit
 cnoreabbrev gpu Git push 
 
 " Move between changes 
-nnoremap <silent> <cr> :GitGutterNextHunk<cr>
-nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
+nnoremap <silent> <CR> :GitGutterNextHunk<CR>
+nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
 """"""""""""""""""""""" Commands for development
 
