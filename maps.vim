@@ -30,6 +30,15 @@ nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
 " Close vim
 map <silent> Q :q<CR>
 
+" Close each buffer and close vim 
+function! CloseFile()
+  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    :q 
+  else
+    :bdelete
+  endif
+endfunction
+
 " Close file
 map <silent> <Leader>q :call CloseFile()<CR>
 
