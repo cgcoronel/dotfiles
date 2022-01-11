@@ -10,7 +10,6 @@ map ; :
 " Enter VISUAL BLOCK 
 map f <C-V><left>
 
-
 " Open file explorer
 nmap <silent> <Leader>e :NERDTreeFind<CR>
 nmap <silent> <Leader>n :NERDTreeFind<CR>
@@ -41,9 +40,6 @@ endfunction
 
 " Close file
 map <silent> <Leader>q :call CleanClose()<CR>
-
-" Copy one word
-map ci bye 
 
 " Split file in vertical 
 nmap s :vsplit<CR>
@@ -159,26 +155,23 @@ nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
 """"""""""""""""""""""" Commands for development
 
-" Run test focus describe
-cnoreabbrev td :call SimpleTerm('yarn jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
+" Run test in focus describe
+cnoreabbrev td :call SimpleTerm('npx jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
 
-" Run test focus it 
-cnoreabbrev ti :call SimpleTerm('yarn jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
+" Run test in focus it 
+cnoreabbrev ti :call SimpleTerm('npx jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
 
 " Run test in focus file   
-cnoreabbrev te :call SimpleTerm('yarn jest --watch ' . expand('%'), 0) 
+cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
 
 " Run test and coverage in focus file   
-cnoreabbrev tc :call SimpleTerm('yarn test:coverage '  . expand('%'), 0) 
+cnoreabbrev tc :call SimpleTerm('npm run test:coverage '  . expand('%'), 0) 
 
 " Run test and coverage all files   
-cnoreabbrev ta :call SimpleTerm('yarn test:coverage ', 0) 
+cnoreabbrev ta :call SimpleTerm('npm run test:coverage ', 0) 
 
 " Open file test from current file
 cnoreabbrev to :call FindTestFiles() 
 
 " Run node app 
-cnoreabbrev up :call SimpleTerm('yarn devel', 0) 
-
-" Run node app in debug
-cnoreabbrev dg :call SimpleTerm('node --inspect src/server/index.js', 0) 
+cnoreabbrev up call SimpleTerm('npm run devel', 0) 
