@@ -7,7 +7,7 @@ let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
+  \ { 'fg':      ['fg', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'Pmenu'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'prompt':  ['fg', 'Conditional'],
