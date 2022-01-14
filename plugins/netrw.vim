@@ -36,7 +36,7 @@ nnoremap <leader>e :exec 'edit ' . project<CR>
 nnoremap <leader>n :exec 'edit ' . project<CR>
 
 " Seach word into files
-nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i'], 'dir': project})<CR>
+nmap <Leader>f :call fzf#run({'down': '~45%', 'options': ['-i'], 'dir': project})<CR>
 
 " Seach word into files
 command! -bang -nargs=* PRg
