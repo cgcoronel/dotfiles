@@ -53,7 +53,13 @@ so ~/.config/nvim/maps.vim
 so ~/.config/nvim/theme.vim
 
 """"""""""""""""""" Status line
-""set statusline+=\ %f\ %m 
-""set statusline+=\ %F\ %m 
-set statusline=\ %{expand('%:p:h:t')}/%t\ %m
-""set statusline=\ %{expand('%:p:h:t')}/%t\ %m
+function! Project() abort
+  return substitute(getcwd(), '^.*/', '', '')
+endfunction
+
+""set statusline=\ %F\ %m 
+""set statusline=\ %{@%}\ %m
+""set statusline+=%=\ %#ProjectName#\ [\ %{Project()}\ ]\ 
+
+set statusline=\ %#ProjectName#\ %{Project()}\ %#StatusLine#%{@%}\ %m
+

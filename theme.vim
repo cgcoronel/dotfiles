@@ -42,6 +42,7 @@ hi SignColumn ctermbg=0 guibg=#3c3836
 hi StatusLine cterm=NONE ctermfg=241 ctermbg=8 
 hi StatusLineNC cterm=NONE ctermfg=241 ctermbg=8 
 hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=8
+hi ProjectName ctermfg=5 ctermbg=8 guifg=Magenta3
 
 "Mode color
 hi MsgArea ctermfg=243
