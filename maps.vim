@@ -111,7 +111,6 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-""nmap <Leader>f :call fzf#run({'sink': 'e', 'down': '~25%', 'options': ['-i']})<CR>
 nmap <Leader>f :FZF<CR>
 
 " Clean search result
