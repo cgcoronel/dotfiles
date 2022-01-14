@@ -6,6 +6,7 @@ let g:netrw_localrmdir ='rm -r'
 let g:netrw_localcopydircmd = 'cp -r'
 let g:netrw_liststyle = 3 
 let g:netrw_keepdir = 0
+let g:netrw_keepj=""
 let g:netrw_altv = 1
 let g:netrw_list_hide = '^\.git*,.*\.DS_Store,.\.vscode,node_modules'
 let g:netrw_hide = 1       
@@ -26,17 +27,14 @@ function! NetrwMapping()
   nmap <buffer> a %
 endfunction
 
-" Save project dir in var
-autocmd VimEnter * let g:project = getcwd() 
-
 let mapleader = "\<space>"
 
 " Open file explore netrw
-nnoremap <leader>e :exec 'edit ' . project<CR>
-nnoremap <leader>n :exec 'edit ' . project<CR>
+nnoremap <leader>e :Ex<CR>
+nnoremap <leader>n :Ex<CR>
 
 " Seach word into files
-nmap <Leader>f :call fzf#run({'down': '~45%', 'options': ['-i'], 'dir': project})<CR>
+""nmap <Leader>f :call fzf#run({'sik': 'e', 'down': '~45%', 'options': ['-i'], 'dir': project})<CR>
 
 " Seach word into files
 command! -bang -nargs=* PRg

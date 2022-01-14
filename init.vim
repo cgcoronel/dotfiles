@@ -54,5 +54,6 @@ so ~/.config/nvim/theme.vim
 
 """"""""""""""""""" Status line
 ""set statusline+=\ %f\ %m 
-set statusline+=\ %F\ %m 
+""set statusline+=\ %F\ %m 
+set statusline=\ %{expand('%:p:h:t')}/%t\ %m
 ""set statusline=\ %{expand('%:p:h:t')}/%t\ %m
