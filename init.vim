@@ -44,7 +44,6 @@ call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/plugins/tests.vim
-so ~/.config/nvim/plugins/nerdtree.vim
 ""so ~/.config/nvim/plugins/netrw.vim
 
 """"""""""""""""""" Imports other configs
