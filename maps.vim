@@ -111,7 +111,7 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :FZF<CR>
+nmap <Leader>f :FZF -i<CR>
 
 " Clean search result
 nnoremap <silent> <Leader><space> :noh<CR>
