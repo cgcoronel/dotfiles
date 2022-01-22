@@ -47,6 +47,10 @@ nmap s :vsplit<CR>
 " Split file in horizontal 
 nmap S :split<CR>
 
+" move between buffers
+nmap m :bprevious<CR>
+nmap . :bnext<CR>
+
 " Move focus between split screens
 map <Leader>j <Esc><C-W><C-J>
 map <Leader>k <Esc><C-W><C-K>
