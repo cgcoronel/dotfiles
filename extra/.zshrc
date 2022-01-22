@@ -14,6 +14,7 @@ alias up='pm2 start /Users/cristiancoronel/projects/xepelin/enviorement.json'
 alias config='cd /Users/cristiancoronel/.config/nvim; vim .'
 alias pm='pm2'
 alias pms='pm2 status'
+alias f='vim $(fzf)'
 
 #poner en el .zshenv
 #export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.git/*}"'
