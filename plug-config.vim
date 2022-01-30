@@ -7,7 +7,7 @@ let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_colors =
-  \ { 'fg':      ['fg', 'Normal'],
+  \ { 'fg':    ['fg', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'Pmenu'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'prompt':  ['fg', 'Conditional'],
@@ -33,6 +33,7 @@ let g:fugitive_dynamic_colors = 0
 
 """"""""""""""""""" Simple terminal
 let g:simple_term_close = '<Leader>q' 
+""let g:simple_term_position = 'top' 
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
