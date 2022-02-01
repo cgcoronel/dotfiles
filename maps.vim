@@ -41,6 +41,9 @@ endfunction
 " Close file
 map <silent> <Leader>q :call CleanClose()<CR>
 
+" Comment line 
+map <silent> <Leader>/ ghi//<Esc>
+
 " Split file in vertical 
 nmap s :vsplit<CR>
 
