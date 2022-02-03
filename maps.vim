@@ -150,7 +150,7 @@ augroup fugitive_mapping
 augroup END
 
 " Commit staged changes
-cnoreabbrev gco Git commit -m  
+cnoreabbrev gco Git commit 
 
 " Pushing changes commited
 cnoreabbrev gpu Git push 
