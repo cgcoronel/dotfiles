@@ -60,4 +60,4 @@ endfunction
 ""set statusline=\ %{@%}\ %m
 ""set statusline+=%=\ %#ProjectName#\ [\ %{Project()}\ ]\ 
 set statusline=\ %#ProjectName#\ %{Project()}\ %#StatusLine#%{@%}\ %m
-
+set statusline+=%=\ %#ProjectName#\ [\ %{Project()}\ ]\ 
