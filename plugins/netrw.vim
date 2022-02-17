@@ -22,7 +22,7 @@ function! NetrwMapping()
   nmap <buffer> o <CR>
   nmap <buffer> s v 
 ""  nmap <buffer> m R
-  nmap <buffer> mm mtmfmc
+""  nmap <buffer> mm mtmfmc
   nmap <buffer> r D
   nmap <buffer> a %
 endfunction
@@ -41,5 +41,35 @@ command! -bang -nargs=* PRg
   \ call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'dir': project}), <bang>0)
 nmap ? :PRg<CR>
 nmap > :PRg<CR>
+
+function! MoveFile()
+  let old = expand('%')
+  let new = input('', expand('%'))
+  
+  if (new == old)
+    return 0
+  else  
+    exe 'sav' fnameescape(new)
+    call delete(old)
+  endif
+endfunction
+
+command! -bar Mv call MoveFile()
+cnoreabbrev mv Mv
+
+function! CopyFile()
+  let new = input('', expand('%'))
+  exe 'sav' fnameescape(new)
+endfunction
+
+command! -bar Cp call CopyFile()
+cnoreabbrev cp Cp 
+
+function! RemoveFile()
+  call delete(expand('%')) | bdelete!
+endfunction
+
+command! -bar Rem call RemoveFile()
+cnoreabbrev rm Rem 
 
 
