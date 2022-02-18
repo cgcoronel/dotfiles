@@ -12,6 +12,7 @@ map f <C-V><left>
 
 " Open file explorer
 nmap <silent> <Leader>e :NERDTreeFind<CR>
+nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
