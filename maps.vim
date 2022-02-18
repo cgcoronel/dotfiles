@@ -12,7 +12,6 @@ map f <C-V><left>
 
 " Open file explorer
 nmap <silent> <Leader>e :NERDTreeFind<CR>
-nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -40,9 +39,6 @@ endfunction
 
 " Close file
 map <silent> <Leader>q :call CleanClose()<CR>
-
-" Comment line 
-map <silent> <Leader>/ ghi//<Esc>jgh
 
 " Split file in vertical 
 nmap s :vsplit<CR>
@@ -139,9 +135,6 @@ cnoreabbrev replace Replace
 
 " Show git blame 
 map bb :Git blame --date short<CR>
-
-" Show diferences 
-nmap <Leader>c :Gdiffsplit<CR>
 
 " Show file changes 
 nmap <silent> <Leader>d :0Git<CR>
