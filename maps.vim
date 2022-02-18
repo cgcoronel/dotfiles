@@ -127,6 +127,9 @@ nnoremap <silent> <Leader><space> :noh<CR>
 nmap ? :Rg<CR>
 nmap > :Rg<CR>
 
+" Seach into current directory
+nmap <Leader>. :Files %:p:h<CR>
+
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
 cnoreabbrev replace Replace
