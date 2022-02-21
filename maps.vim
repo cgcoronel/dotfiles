@@ -21,7 +21,7 @@ imap kj <Esc>
 
 " Change size of current file window
 nnoremap <Leader>m 20<C-w><
-nnoremap <Leader>, 20<C-w>>
+nnoremap <Leader>. 20<C-w>>
 
 " Show opened files
 nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
@@ -125,7 +125,7 @@ nmap ? :Rg<CR>
 nmap > :Rg<CR>
 
 " Seach into current directory
-nmap <Leader>. :Files %:p:h<CR>
+nmap <Leader>, :Files %:p:h<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
