@@ -56,10 +56,4 @@ function! Project() abort
   return substitute(getcwd(), '^.*/', '', '')
 endfunction
 
-set statusline=\%#StatusLine#%{Project()}\/%{@%}\ %m
-
-hi StatusLine cterm=NONE ctermfg=241 ctermbg=0
-hi StatusLineNC cterm=NONE ctermfg=241 ctermbg=0 
-hi fzf1 ctermfg=241 ctermbg=0 guifg=#E12672 guibg=#565656
-hi fzf3 ctermfg=241 ctermbg=0 guifg=#E12672 guibg=#565656
-
+set statusline=\ %#StatusLine#%{Project()}\/%{@%}\ %m
