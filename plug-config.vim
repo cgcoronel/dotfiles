@@ -33,7 +33,6 @@ let g:fugitive_dynamic_colors = 0
 
 """"""""""""""""""" Simple terminal
 let g:simple_term_close = '<Leader>q' 
-""let g:simple_term_position = 'top' 
 
 """"""""""""""""""" NERDTree config
 let NERDTreeQuitOnOpen = 1
