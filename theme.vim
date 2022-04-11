@@ -55,7 +55,8 @@ hi MsgArea ctermfg=243
 ""hi CursorLine ctermbg=8 guibg=#3c3836 cterm=NONE
 ""hi CursorLineNr cterm=none ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
 hi CursorLine ctermbg=NONE guibg=#3c3836 cterm=NONE
-hi CursorLineNr cterm=none ctermfg=3 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
+""hi CursorLineNr cterm=none ctermfg=3 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
+hi CursorLineNr cterm=none ctermfg=244 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
 ""hi LineNr ctermfg=238 guifg=#3c3836
 hi LineNr ctermfg=8 guifg=#3c3836
 
