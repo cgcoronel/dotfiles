@@ -91,7 +91,8 @@ hi fzf3 ctermfg=241 ctermbg=8 guifg=#E12672 guibg=#565656
 hi Search cterm=reverse ctermfg=179 ctermbg=0 gui=reverse guifg=#fabd2f guibg=#1d2021
 
 "hide buffer line ~
-hi EndOfBuffer cterm=bold ctermfg=237 ctermbg=0
+""hi EndOfBuffer cterm=bold ctermfg=237 ctermbg=0
+hi EndOfBuffer cterm=bold ctermfg=8 ctermbg=0
 
 hi Title ctermfg=11 
 hi VertSplit ctermfg=0 ctermbg=8
@@ -125,7 +126,10 @@ hi SpellBad ctermfg=9 cterm=underline ctermbg=none gui=underline guibg=DarkGrey 
 "" nerdtree
 hi NERDTreeCWD ctermfg=244 gui=bold guifg=Brown
 
+"" nerdtree directory name
 hi NERDTreeDir ctermfg=248 guifg=Blue
 hi NERDTreeDirSlash ctermfg=248 guifg=Blue
+
+"" nerdtree filename
 hi NERDTreeFile  ctermfg=244 guifg=Blue
  
