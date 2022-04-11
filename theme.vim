@@ -26,10 +26,14 @@ hi Pmenu ctermfg=15 ctermbg=8 guifg=bg guibg=#504945
 hi PmenuSel ctermfg=0 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "notifications simbols in status vertical bar
-hi GitGutterAdd ctermfg=240 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
-hi GitGutterChange ctermfg=240 ctermbg=0 guifg=#8ec07c guibg=#3c3836
-hi GitGutterDelete ctermfg=240 ctermbg=0 guifg=#fb4934 guibg=#3c3836 
-hi GitGutterChangeDelete ctermfg=240 ctermbg=0 guifg=#8ec07c guibg=#3c3836
+""hi GitGutterAdd ctermfg=240 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
+""hi GitGutterChange ctermfg=240 ctermbg=0 guifg=#8ec07c guibg=#3c3836
+""hi GitGutterDelete ctermfg=240 ctermbg=0 guifg=#fb4934 guibg=#3c3836 
+""hi GitGutterChangeDelete ctermfg=240 ctermbg=0 guifg=#8ec07c guibg=#3c3836
+hi GitGutterAdd ctermfg=8 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
+hi GitGutterChange ctermfg=8 ctermbg=0 guifg=#8ec07c guibg=#3c3836
+hi GitGutterDelete ctermfg=8 ctermbg=0 guifg=#fb4934 guibg=#3c3836 
+hi GitGutterChangeDelete ctermfg=8 ctermbg=0 guifg=#8ec07c guibg=#3c3836
 
 ""hi CocErrorSign ctermfg=167 ctembg=0 guifg=#b8bb26 guibg=#3c3836
 hi CocWarningSign ctermfg=179 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
@@ -52,7 +56,8 @@ hi MsgArea ctermfg=243
 ""hi CursorLineNr cterm=none ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
 hi CursorLine ctermbg=NONE guibg=#3c3836 cterm=NONE
 hi CursorLineNr cterm=none ctermfg=3 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
-
+""hi LineNr ctermfg=238 guifg=#3c3836
+hi LineNr ctermfg=8 guifg=#3c3836
 
 hi Ignore cterm=bold ctermfg=241 guifg=bg
 
