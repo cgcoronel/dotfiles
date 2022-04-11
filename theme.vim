@@ -121,3 +121,6 @@ hi ALEStyleWarning cterm=bold ctermfg=238
 hi ALEStyleError cterm=bold ctermfg=238
 hi SpellBad ctermfg=9 cterm=underline ctermbg=none gui=underline guibg=DarkGrey guisp=red 
 
+
+"" nerdtree
+hi NERDTreeCWD ctermfg=244 gui=bold guifg=Brown
