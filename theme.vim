@@ -127,9 +127,9 @@ hi SpellBad ctermfg=9 cterm=underline ctermbg=none gui=underline guibg=DarkGrey 
 hi NERDTreeCWD ctermfg=244 gui=bold guifg=Brown
 
 "" nerdtree directory name
-hi NERDTreeDir ctermfg=248 guifg=Blue
-hi NERDTreeDirSlash ctermfg=248 guifg=Blue
+""hi NERDTreeDir ctermfg=248 guifg=Blue
+""hi NERDTreeDirSlash ctermfg=248 guifg=Blue
 
 "" nerdtree filename
-hi NERDTreeFile  ctermfg=244 guifg=Blue
+""hi NERDTreeFile  ctermfg=244 guifg=Blue
  
