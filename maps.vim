@@ -29,22 +29,11 @@ nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
 " Close vim
 map <silent> Q :q<CR>
 
-" Close each buffer and close vim 
-function! CleanClose()
-  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    :q 
-  else
-    :bdelete
-  endif
-endfunction
-
 " Close file
-map <silent> <Leader>q :call CleanClose()<CR>
+map <silent> <Leader>q :bdelete<CR>
 
-" Split file in vertical 
+" Split file in vertical / horizontal 
 nmap s :vsplit<CR>
-
-" Split file in horizontal 
 nmap S :split<CR>
 
 " move between buffers
@@ -74,9 +63,6 @@ nmap <Leader>w :w<CR>
 
 " Save file without prettier format
 cmap ww :noa w<CR>
-
-" Select all text
-nnoremap <Leader>a <Esc>ggVG<CR>
 
 "Move lines up / down
 nnoremap <S-j> :m .+1<CR>==
@@ -118,14 +104,10 @@ vnoremap gj L
 nmap <Leader>f :FZF -i<CR>
 
 " Clean search result
-nnoremap <silent> <Leader><space> :noh<CR>
+noremap <silent> <Leader><space> :noh<CR>
 
 " Seach word into files
 nmap ? :Rg<CR>
-nmap > :Rg<CR>
-
-" Seach into current directory
-nmap <Leader>, :Files %:p:h<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
@@ -143,7 +125,7 @@ nmap <silent> <Leader>d :0Git<CR>
 " Compare files
 augroup fugitive_mapping
   autocmd!
-  autocmd filetype fugitive nmap <buffer> ff dd :resize 50<CR> 
+  autocmd filetype fugitive nmap <buffer> ff dd :resize 100<CR> 
 augroup END
 
 " Commit staged changes
@@ -152,7 +134,7 @@ cnoreabbrev gco Git commit
 " Pushing changes commited
 cnoreabbrev gpu Git push 
 
-" Move between changes 
+" Move between uncommit changes 
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
