@@ -1,4 +1,4 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Neovim-mark-flat.svg/489px-Neovim-mark-flat.svg.png?20150131093814" width='150px' aling="right">
+<a href="https://cdnlogo.com/logo/neovim_41944.html"><img src="https://cdn.cdnlogo.com/logos/n/21/neovim.svg"></a>
 
 # Dot Files 
 
