@@ -26,10 +26,6 @@ hi Pmenu ctermfg=15 ctermbg=8 guifg=bg guibg=#504945
 hi PmenuSel ctermfg=0 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "notifications simbols in status vertical bar
-""hi GitGutterAdd ctermfg=240 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
-""hi GitGutterChange ctermfg=240 ctermbg=0 guifg=#8ec07c guibg=#3c3836
-""hi GitGutterDelete ctermfg=240 ctermbg=0 guifg=#fb4934 guibg=#3c3836 
-""hi GitGutterChangeDelete ctermfg=240 ctermbg=0 guifg=#8ec07c guibg=#3c3836
 hi GitGutterAdd ctermfg=8 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
 hi GitGutterChange ctermfg=8 ctermbg=0 guifg=#8ec07c guibg=#3c3836
 hi GitGutterDelete ctermfg=8 ctermbg=0 guifg=#fb4934 guibg=#3c3836 
@@ -52,12 +48,8 @@ hi ProjectName ctermfg=5 ctermbg=8 guifg=Magenta3
 hi MsgArea ctermfg=243
 
 "Cursor line
-""hi CursorLine ctermbg=8 guibg=#3c3836 cterm=NONE
-""hi CursorLineNr cterm=none ctermfg=3 ctermbg=8 guifg=#fabd2f guibg=#3c3836
 hi CursorLine ctermbg=NONE guibg=#3c3836 cterm=NONE
-""hi CursorLineNr cterm=none ctermfg=3 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
 hi CursorLineNr cterm=none ctermfg=244 ctermbg=NONE guifg=#fabd2f guibg=#3c3836
-""hi LineNr ctermfg=238 guifg=#3c3836
 hi LineNr ctermfg=8 guifg=#3c3836
 
 hi Ignore cterm=bold ctermfg=241 guifg=bg
@@ -91,7 +83,6 @@ hi fzf3 ctermfg=241 ctermbg=8 guifg=#E12672 guibg=#565656
 hi Search cterm=reverse ctermfg=179 ctermbg=0 gui=reverse guifg=#fabd2f guibg=#1d2021
 
 "hide buffer line ~
-""hi EndOfBuffer cterm=bold ctermfg=237 ctermbg=0
 hi EndOfBuffer cterm=bold ctermfg=8 ctermbg=0
 
 hi Title ctermfg=11 
@@ -122,14 +113,7 @@ hi ALEStyleWarning cterm=bold ctermfg=238
 hi ALEStyleError cterm=bold ctermfg=238
 hi SpellBad ctermfg=9 cterm=underline ctermbg=none gui=underline guibg=DarkGrey guisp=red 
 
-
-"" nerdtree
+"nerdtree
 hi NERDTreeCWD ctermfg=244 gui=bold guifg=Brown
 
-"" nerdtree directory name
-""hi NERDTreeDir ctermfg=248 guifg=Blue
-""hi NERDTreeDirSlash ctermfg=248 guifg=Blue
 
-"" nerdtree filename
-""hi NERDTreeFile  ctermfg=244 guifg=Blue
- 
