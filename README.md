@@ -1,4 +1,4 @@
-<a href="https://cdnlogo.com/logo/neovim_41944.html"><img src="https://cdn.cdnlogo.com/logos/n/21/neovim.svg"></a>
+<img src="https://cdn.cdnlogo.com/logos/n/21/neovim.svg">
 
 # Dot Files 
 
