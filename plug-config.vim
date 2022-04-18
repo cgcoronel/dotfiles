@@ -62,6 +62,8 @@ let g:netrw_altv = 1
 let g:netrw_list_hide = '^\.git*,.*\.DS_Store,.\.vscode,node_modules'
 let g:netrw_hide = 1       
 
+hi! link netrwMarkFile Search
+
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
