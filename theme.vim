@@ -115,5 +115,3 @@ hi SpellBad ctermfg=9 cterm=underline ctermbg=none gui=underline guibg=DarkGrey 
 
 "nerdtree
 hi NERDTreeCWD ctermfg=244 gui=bold guifg=Brown
-
-

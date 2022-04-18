@@ -11,7 +11,7 @@ map ; :
 map f <C-V><left>
 
 " Open file explorer
-nmap <silent> <Leader>e :NERDTreeFind<CR>
+nmap <silent> <Leader>e :Ex<CR>
 nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
