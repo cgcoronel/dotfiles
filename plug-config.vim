@@ -71,6 +71,7 @@ augroup END
 
 function! NetrwMapping()
   nmap <buffer> o <CR>
+  nmap <buffer> s <CR>
 endfunction
 
 
