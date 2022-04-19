@@ -43,8 +43,7 @@ call plug#begin('~/vim/plugged')
 call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
-so ~/.config/nvim/plugins/tests.vim
-""so ~/.config/nvim/plugins/netrw.vim
+so ~/.config/nvim/test-functions.vim
 
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/plug-config.vim
