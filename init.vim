@@ -25,6 +25,8 @@ set ignorecase
 set diffopt+=vertical 
 set nowrap
 
+""set fillchars+=vert:\ 
+
 language en_US.UTF-8
 
 """"""""""""""""""" Plugins
