@@ -90,6 +90,9 @@ inoremap f/ */<Esc>
 inoremap /d ()<Esc>i
 inoremap /s []<Esc>i
 inoremap /a {}<Esc>i
+inoremap d/ )<Esc>
+inoremap s/ ]<Esc>
+inoremap a/ }<Esc>
 
 " Mover up/down in 10 lines bloc
 map <C-J> 10j
