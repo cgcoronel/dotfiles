@@ -15,7 +15,6 @@ hi Type term=underline ctermfg=2 gui=bold guifg=SeaGreen
 hi Error term=reverse cterm=bold ctermfg=7 ctermbg=1 gui=bold guifg=White guibg=Red
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi ModeMsg gui=none ctermfg=243 ctermfg=238 
-hi LineNr ctermfg=238 guifg=#3c3836
 hi Folded cterm=italic ctermfg=245 ctermbg=8 gui=italic guifg=#928374 guibg=#3c3836
 hi FoldColumn ctermfg=245 ctermbg=8 guifg=#928374 guibg=#3c3836
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
@@ -59,16 +58,8 @@ hi String ctermfg=144 guifg=#b8bb26
 "highlighting TODO
 hi Todo cterm=bold ctermfg=0 ctermbg=167 gui=bold guifg=#1d2021 guibg=#fb4934
 
-hi htmlBold ctermfg=15 
-hi htmlBoldUnderline ctermfg=15
-hi htmlBoldItalic ctermfg=15
-hi htmlBoldUnderlineItalic ctermfg=15
-hi htmlUnderline ctermfg=15
-hi htmlUnderlineItalic ctermfg=15
-hi htmlItalic ctermfg=15
-
 "require()
-hi jsGlobalNodeObjects cterm=italic gui=italic ctermfg=14 guifg=#fe8019
+hi jsGlobalNodeObjects cterm=italic ctermfg=14
 
 "Visual color selection
 hi clear Visual 
