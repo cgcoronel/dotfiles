@@ -39,8 +39,11 @@ hi CocHintSign ctermfg=109 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
 hi SignColumn ctermbg=0 guibg=#3c3836
 
 "Status bar
-hi StatusLine cterm=NONE ctermfg=241 ctermbg=8 
-hi StatusLineNC cterm=NONE ctermfg=241 ctermbg=8 
+""hi StatusLine cterm=NONE ctermfg=241 ctermbg=8 cterm=underline 
+""hi StatusLineNC cterm=NONE ctermfg=241 ctermbg=8 cterm=underline
+hi StatusLine cterm=NONE ctermfg=8 ctermbg=0 cterm=underline 
+hi StatusLineNC cterm=NONE ctermfg=8 ctermbg=0 cterm=underline
+
 hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=8
 hi ProjectName ctermfg=5 ctermbg=8 guifg=Magenta3
 
