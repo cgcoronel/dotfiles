@@ -24,7 +24,8 @@ nnoremap <Leader>m 20<C-w><
 nnoremap <Leader>. 20<C-w>>
 
 " Show opened files
-nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
+nmap <silent> <Leader>; :call fzf#vim#buffers()<CR>
+""nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
 
 " Close vim
 map <silent> Q :q<CR>
@@ -119,7 +120,7 @@ nmap <Leader>f :FZF -i<CR>
 noremap <silent> <Leader><space> :noh<CR>
 
 " Seach word into files
-nmap ? :Rg<CR>
+nmap > :Rg<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
