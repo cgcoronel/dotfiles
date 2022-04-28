@@ -10,7 +10,7 @@ set encoding=UTF-8
 set showmatch
 set sw=2
 set number
-set laststatus=2
+set laststatus=1
 set updatetime=100
 set ttimeoutlen=50
 set directory=~/.vim/swap/
