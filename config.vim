@@ -50,3 +50,6 @@ let NERDTreeDirArrowExpandable = ''
 let NERDTreeDirArrowCollapsible = ''
 let NERDTreeWinSize= 40
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
+
+""""""""""""""""""" Netrw config
+let g:netrw_banner = 0
