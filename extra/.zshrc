@@ -1,14 +1,14 @@
 alias gpu='git push'
-alias gco='git commit -m'
+alias gco='git commit'
 alias vim=nvim
-alias vim.='nvim .'
+alias vim.=nvim
 alias vi=nvim
 alias python=python3
 alias r=pwd
 alias x='cd /Users/cristiancoronel/projects/xepelin'
 alias p='cd /Users/cristiancoronel/projects/personal'
 alias b='git checkout $(git branch -a | fzf)'
-alias config='cd /Users/cristiancoronel/.config/nvim; vim .'
+alias config='cd /Users/cristiancoronel/.config/nvim; vim'
 alias f='vim $(fzf --preview="tail -n 100 {}")'
 
 #poner en el .zshenv
