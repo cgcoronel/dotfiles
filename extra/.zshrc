@@ -1,5 +1,6 @@
 alias gpu='git push'
 alias gco='git commit'
+alias gst='vim -c "0Git" .'
 alias vim=nvim
 alias vim.=nvim
 alias vi=nvim
