@@ -61,5 +61,5 @@ endfunction
 set statusline=\ \ \ \ \ \ %#StatusLine#%{Project()}\/%{@%}\ %m
 
 "when start vim without params open fzf
-autocmd VimEnter * if !argc() | FZF -i 
+""autocmd VimEnter * if !argc() | FZF -i 
 
