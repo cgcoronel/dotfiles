@@ -42,7 +42,6 @@ call plug#begin('~/vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
   Plug 'cgcoronel/simple-term.vim'
-  Plug 'bling/vim-bufferline'
 
 call plug#end()
 
