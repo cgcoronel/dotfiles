@@ -25,6 +25,8 @@ set ignorecase
 set diffopt+=vertical 
 set nowrap
 
+
+
 set fillchars=eob:\ 
 ""set fillchars+=vert:\ 
 
