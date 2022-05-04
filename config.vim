@@ -55,10 +55,8 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*']
 let g:netrw_banner = 0
 
 """"""""""""""""""" Buffer list
-function! BufferList(param)
-    let param = 'next'
-
-    if param == 'next'  
+function! BufferList(p = 'n')
+    if a:p == 'n'  
       :silent bnext
     else
       :silent bprevious
