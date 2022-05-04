@@ -53,3 +53,33 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
 """"""""""""""""""" Netrw config
 let g:netrw_banner = 0
+
+""""""""""""""""""" Buffer list
+function! BufferList(param)
+    let param = 'next'
+
+    if param == 'next'  
+      :bnext
+    else
+      :bprevious
+    endif
+
+    let l:blist = getbufinfo()
+    let bar = ''
+
+    for l:item in l:blist
+        let name = split(l:item.name, '/')[-1] 
+        
+        if name == 'NERD_tree_1' 
+          continue
+        endif
+
+        if expand('%:t') == name
+          let bar = bar . '[' . name . ']'
+        else
+          let bar = bar . ' ' . name . ' '
+        endif
+    endfor
+
+    echo bar 
+endfunction
