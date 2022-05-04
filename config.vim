@@ -68,8 +68,16 @@ function! BufferList(param)
     let bar = 'Buf> '
 
     for l:item in l:blist
-        let name = split(l:item.name, '/')[-1] 
-        
+        let name = ''
+        let array = split(l:item.name, '/')
+        ""[-1] 
+       
+        if len(array) > 0
+          let name = array[-1]
+        else
+          continue
+        endif  
+
         if name == 'NERD_tree_1' || name == 'index'
           continue
         endif
