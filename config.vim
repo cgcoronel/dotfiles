@@ -65,7 +65,7 @@ function! BufferList(param)
     endif
 
     let l:blist = getbufinfo()
-    let bar = ''
+    let bar = 'Buf> '
 
     for l:item in l:blist
         let name = split(l:item.name, '/')[-1] 
