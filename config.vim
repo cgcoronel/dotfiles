@@ -70,7 +70,7 @@ function! BufferList(param)
     for l:item in l:blist
         let name = split(l:item.name, '/')[-1] 
         
-        if name == 'NERD_tree_1' 
+        if name == 'NERD_tree_1' || name == 'index'
           continue
         endif
 
