@@ -59,9 +59,9 @@ function! BufferList(param)
     let param = 'next'
 
     if param == 'next'  
-      :bnext
+      :silent bnext
     else
-      :bprevious
+      :silent bprevious
     endif
 
     let l:blist = getbufinfo()
@@ -70,9 +70,12 @@ function! BufferList(param)
     for l:item in l:blist
         let name = ''
         let array = split(l:item.name, '/')
-        ""[-1] 
-       
-        if len(array) > 0
+      
+        if l:item.listed == 0 
+          continue
+        endif
+
+        if len(array) > 0 || index(tabpagebuflist(), l:item.bufnr) > 0 
           let name = array[-1]
         else
           continue
