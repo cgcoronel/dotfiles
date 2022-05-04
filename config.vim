@@ -56,7 +56,7 @@ let g:netrw_banner = 0
 
 """"""""""""""""""" Buffer list
 function! BufferList(p = 'n')
-    if a:p == 'n'  
+    if a:p == 'n' 
       :silent bnext
     else
       :silent bprevious
@@ -66,13 +66,11 @@ function! BufferList(p = 'n')
     let bar = 'Buf> '
 
     for l:item in l:blist
-        let name = ''
-        let array = split(l:item.name, '/')
-      
-        if l:item.listed == 0 
-          continue
-        endif
+        if l:item.listed == 0 | continue | endif
 
+        let array = split(l:item.name, '/')
+
+        let name = ''
         if len(array) > 0 || index(tabpagebuflist(), l:item.bufnr) > 0 
           let name = array[-1]
         else
