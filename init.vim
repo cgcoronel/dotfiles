@@ -47,6 +47,7 @@ call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/test.vim
+so ~/.config/nvim/bufferline.vim
 
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/config.vim
