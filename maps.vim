@@ -49,8 +49,6 @@ nmap S :split<CR>
 " move between buffers
 ""nmap m :bprevious<CR>
 ""nmap . :bnext<CR>
-nmap m :call BufferList("p")<cr>
-nmap . :call BufferList("n")<cr>
 
 " Move focus between split screens
 map <Leader>j <Esc><C-W><C-J>

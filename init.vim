@@ -42,12 +42,12 @@ call plug#begin('~/vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'sheerun/vim-polyglot'
   Plug 'cgcoronel/simple-term.vim'
+  Plug 'cgcoronel/simple-bufferline.vim'
 
 call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/test.vim
-so ~/.config/nvim/bufferline.vim
 
 """"""""""""""""""" Imports other configs
 so ~/.config/nvim/config.vim
