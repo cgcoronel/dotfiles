@@ -16,7 +16,6 @@ hi Error term=reverse cterm=bold ctermfg=7 ctermbg=1 gui=bold guifg=White guibg=
 hi PmenuThumb gui=bold ctermfg=124 ctermfg=black
 hi ModeMsg gui=none ctermfg=243 ctermfg=241 
 hi Folded cterm=italic ctermfg=245 ctermbg=8 gui=italic guifg=#928374 guibg=#3c3836
-"hi FoldColumn ctermfg=245 ctermbg=8 guifg=#928374 guibg=#3c3836
 hi FoldColumn ctermfg=0 ctermbg=0
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 hi Normal ctermfg=15 guifg=#928374
@@ -41,12 +40,6 @@ hi SignColumn ctermbg=0 guibg=#3c3836
 "Status bar
 hi StatusLine cterm=NONE ctermfg=243 ctermbg=8
 hi StatusLineNC cterm=NONE ctermfg=243 ctermbg=8
-
-""hi StatusLine cterm=NONE ctermfg=241 ctermbg=8 
-""hi StatusLineNC cterm=NONE ctermfg=241 ctermbg=8
-
-""hi StatusLine cterm=NONE ctermfg=8 ctermbg=0 cterm=underline 
-""hi StatusLineNC cterm=NONE ctermfg=8 ctermbg=0 cterm=underline
 
 hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=8
 hi ProjectName ctermfg=5 ctermbg=8 guifg=Magenta3
