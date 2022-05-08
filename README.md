@@ -1,6 +1,6 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Neovim-logo.svg/2560px-Neovim-logo.svg.png" width="300" height="80">
-
 # Dot Files 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Neovim-logo.svg/2560px-Neovim-logo.svg.png" width="300" height="80">
 
 ### Instalar nvim!
 
@@ -65,4 +65,15 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 ### Instalar dependencias Python
 ```console
 # python3 -m pip install --user --upgrade pynvim
+```
+
+
+### Keyboard layout for HHKB
+
+<img src="https://github.com/cgcoronel/dotfiles/blob/master/extra/layer1.jpeg">
+
+
+<img src="https://github.com/cgcoronel/dotfiles/blob/master/extra/layer2.jpeg">
+
+
 
