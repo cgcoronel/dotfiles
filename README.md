@@ -65,7 +65,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 ### Instalar dependencias Python
 ```console
 # python3 -m pip install --user --upgrade pynvim
-
+```
 
 
 ### Keyboard layout for HHKB
