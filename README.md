@@ -68,6 +68,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 ```
 
 
+<img src="https://www.hhkeyboard.com/_assets/images/header-images/hhkb_logo.png">
 ### Keyboard layout for HHKB
 
 <img src="https://github.com/cgcoronel/dotfiles/blob/master/extra/layer1.jpeg">
