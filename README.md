@@ -70,7 +70,7 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 
 
 
-### Keyboard layout for HHKB
+### Capas para HHKB
 
 <img src="https://github.com/cgcoronel/dotfiles/blob/master/extra/layer1.jpeg">
 
