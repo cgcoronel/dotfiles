@@ -66,3 +66,14 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.g
 ```console
 # python3 -m pip install --user --upgrade pynvim
 
+
+
+### Keyboard layout for HHKB
+
+<img src="https://github.com/cgcoronel/dotfiles/blob/master/extra/layer1.jpeg">
+
+
+<img src="https://github.com/cgcoronel/dotfiles/blob/master/extra/layer2.jpeg">
+
+
+
