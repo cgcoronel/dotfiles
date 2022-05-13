@@ -51,7 +51,6 @@ so ~/.config/nvim/test.vim
 
 """"""""""""""""""" theme
 color peachpuff
-""so ~/.config/nvim/theme.vim
 so ~/.config/nvim/theme_peachpuff.vim
 
 """"""""""""""""""" Imports other configs

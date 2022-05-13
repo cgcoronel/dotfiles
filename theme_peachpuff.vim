@@ -38,8 +38,8 @@ hi GitGutterChangeDelete ctermfg=8 ctermbg=0 guifg=#8ec07c guibg=#3c3836
 hi SignColumn ctermbg=0 guibg=#3c3836
 
 "Status bar
-hi StatusLine cterm=NONE ctermfg=243 ctermbg=8
-hi StatusLineNC cterm=NONE ctermfg=243 ctermbg=8
+hi StatusLine cterm=NONE ctermfg=243 ctermbg=15
+hi StatusLineNC cterm=NONE ctermfg=243 ctermbg=15
 
 ""hi StatusBar ctermfg=240 guifg=#fb4934 ctermbg=8
 ""hi ProjectName ctermfg=5 ctermbg=8 guifg=Magenta3
