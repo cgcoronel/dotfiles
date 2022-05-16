@@ -21,8 +21,8 @@ hi FoldColumn ctermfg=0 ctermbg=0
 ""hi Normal ctermfg=15 guifg=#928374
 
 "Coc suggestion box
-hi Pmenu ctermfg=15 ctermbg=8 guifg=bg guibg=#504945
-hi PmenuSel ctermfg=0 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
+hi Pmenu ctermfg=7 ctermbg=8 guifg=bg guibg=#504945
+hi PmenuSel ctermfg=7 ctermbg=241 gui=bold guifg=#1d2021 guibg=#fb4934
 
 "notifications simbols in status vertical bar
 hi GitGutterAdd ctermfg=8 ctermbg=0 guifg=#b8bb26 guibg=#3c3836
