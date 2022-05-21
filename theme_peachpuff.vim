@@ -17,7 +17,7 @@
 ""hi ModeMsg gui=none ctermfg=243 ctermfg=241 
 hi Folded cterm=italic ctermfg=245 ctermbg=8 gui=italic guifg=#928374 guibg=#3c3836
 hi FoldColumn ctermfg=0 ctermbg=0
-""hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
+hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 ""hi Normal ctermfg=15 guifg=#928374
 
 "Coc suggestion box
