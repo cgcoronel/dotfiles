@@ -92,7 +92,7 @@ hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=0 gui=bold guifg=LightBlue 
 
 ""hi WarningMsg ctermfg=243 guifg=Red
 ""
-""hi MatchParen ctermbg=14 ctermfg=0
+hi MatchParen ctermbg=14 ctermfg=0
 ""hi Function cterm=italic ctermfg=6 guifg=DarkCyan
 ""
 ""hi netrwTreeBar term=bold cterm=none ctermfg=237 guifg=SlateBlue
