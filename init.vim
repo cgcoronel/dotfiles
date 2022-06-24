@@ -50,8 +50,7 @@ call plug#end()
 so ~/.config/nvim/test.vim
 
 """"""""""""""""""" theme
-""color peachpuff
-color zellner 
+color peachpuff
 so ~/.config/nvim/theme_peachpuff.vim
 
 """"""""""""""""""" Imports other configs
