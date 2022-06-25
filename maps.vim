@@ -43,8 +43,8 @@ endfunction
 map <silent> <Leader>q :call CloseFile()<CR>
 
 " Split file in vertical / horizontal 
-nmap s :vsplit<CR>
-nmap S :split<CR>
+nmap s :vsp<CR>
+nmap S :sp<CR>
 
 " move between buffers
 ""nmap m :bprevious<CR>
@@ -141,10 +141,7 @@ augroup fugitive_mapping
   autocmd filetype fugitive nmap <buffer> ff dd :resize 100<CR> 
 augroup END
 
-" Commit staged changes
 cnoreabbrev gco Git commit 
-
-" Pushing changes commited
 cnoreabbrev gpu Git push 
 
 " Move between uncommit changes 
