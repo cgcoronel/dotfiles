@@ -44,6 +44,8 @@ call plug#begin('~/vim/plugged')
   Plug 'cgcoronel/simple-term.vim'
   Plug 'cgcoronel/simple-bufferline.vim'
 
+  Plug 'tomlion/vim-solidity'
+
 call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
@@ -63,6 +65,3 @@ function! Project() abort
 endfunction
 
 set statusline=\ \ \ \ \ \ %#StatusLine#%{Project()}\/%{@%}\ %m
-
-"when start vim without params open fzf
-""autocmd VimEnter * if !argc() | FZF -i 

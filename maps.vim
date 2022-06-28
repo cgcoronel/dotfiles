@@ -25,7 +25,6 @@ nnoremap <Leader>. 20<C-w>>
 
 " Show opened files
 nmap <silent> <Leader>; :call fzf#vim#buffers()<CR>
-""nmap <silent> <Leader>; :call fzf#vim#buffers({'down': '~25%'})<CR>
 
 " Close each buffer and close vim 
 function! CloseFile()
@@ -88,9 +87,6 @@ inoremap f/ */<Esc>
 inoremap /d ()<Esc>i
 inoremap /s []<Esc>i
 inoremap /a {}<Esc>i
-""inoremap d/ )<Esc>
-""inoremap s/ ]<Esc>
-""inoremap a/ }<Esc>
 
 " Mover up/down in 10 lines bloc
 map <C-J> 10j
