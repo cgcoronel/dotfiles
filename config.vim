@@ -36,6 +36,7 @@ let g:gitgutter_map_keys = 0
 let g:fugitive_dynamic_colors = 0 
 
 """"""""""""""""""" Simple terminal
+let g:simple_term_open = '<c-#>' 
 let g:simple_term_close = '<Leader>q' 
 
 """"""""""""""""""" NERDTree config
@@ -54,3 +55,9 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
 """"""""""""""""""" Netrw config
 let g:netrw_banner = 0
+
+""""""""""""""""""" FloatTerm
+let g:floaterm_keymap_toggle = '<c-p>'
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.62
+let g:floaterm_title = ' Command shell ' 

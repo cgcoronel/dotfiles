@@ -48,3 +48,5 @@ hi DiffChange cterm=reverse ctermfg=108 ctermbg=0
 hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=0
 
 hi MatchParen ctermbg=14 ctermfg=0
+
+hi FloatermBorder ctermfg=8 guifg=Grey7

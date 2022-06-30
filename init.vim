@@ -45,6 +45,7 @@ call plug#begin('~/vim/plugged')
   Plug 'cgcoronel/simple-bufferline.vim'
 
   Plug 'tomlion/vim-solidity'
+  Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
