@@ -60,4 +60,4 @@ let g:netrw_banner = 0
 let g:floaterm_keymap_toggle = '<c-p>'
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.62
-let g:floaterm_title = ' Command shell ' 
+let g:floaterm_title = ' # ' 
