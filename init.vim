@@ -33,7 +33,7 @@ language en_US.UTF-8
 """"""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+""  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -49,6 +49,7 @@ call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/test.vim
+so ~/.config/nvim/netrw.vim
 
 """"""""""""""""""" theme
 color peachpuff

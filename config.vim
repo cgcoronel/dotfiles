@@ -53,9 +53,6 @@ let NERDTreeDirArrowCollapsible = ''
 let NERDTreeWinSize= 40
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
-""""""""""""""""""" Netrw config
-let g:netrw_banner = 0
-
 """"""""""""""""""" FloatTerm
 let g:floaterm_keymap_toggle = '<c-p>'
 let g:floaterm_keymap_new = '<c-n>'
