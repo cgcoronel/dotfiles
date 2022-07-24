@@ -59,3 +59,4 @@ let g:floaterm_keymap_new = '<c-n>'
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.62
 let g:floaterm_title = ' # $1/$2 ' 
+map <c-;> :FloatermNew! cd %:p:h<CR>
