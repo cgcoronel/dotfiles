@@ -11,11 +11,10 @@ map ; :
 map f <C-V><left>
 
 " Open file explorer
-""nmap <silent> <Leader>n :NERDTreeToggle<CR>
-""nmap <silent> <Leader>e :NERDTreeToggle<CR>
-
-map <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
-map <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>e :NERDTreeToggle<CR>
+""map <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
+""map <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -29,17 +28,8 @@ nnoremap <Leader>. 20<C-w>>
 " Show opened files
 nmap <silent> <Leader>; :call fzf#vim#buffers()<CR>
 
-" Close each buffer and close vim 
-function! CloseFile()
-  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    :q 
-  else
-    :bdelete
-  endif
-endfunction
-
-" Close file
-map <silent> <Leader>q :call CloseFile()<CR>
+" Close buffer 
+map <silent> <Leader>q :bd<CR>
 
 " Split file in vertical / horizontal 
 nmap s :vsp<CR>
