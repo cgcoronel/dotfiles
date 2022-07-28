@@ -11,6 +11,8 @@ let g:fzf_colors =
   \ { 'pointer': ['fg', 'Exception'],
   \ 'prompt':  ['fg', 'Conditional'],
   \ 'border':  ['fg', 'Conceal'],
+  \ 'gutter':  ['fg', 'Visual'],
+  \ 'bg+':     ['bg', 'Visual' ],
   \ 'info':    ['fg', 'PreProc'] }
 
 """"""""""""""""""" IndentLine
