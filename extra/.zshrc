@@ -1,9 +1,9 @@
 alias gpu='git push'
 alias gco='git commit'
 alias gst='vim -c "0Git" .'
-alias vim=nvim
-alias vim.=nvim
-alias vi=nvim
+alias vim='nvim .'
+alias vi='nvim .'
+alias vim.='nvim .'
 alias python=python3
 alias r=pwd
 alias x='cd /Users/cristiancoronel/projects/xepelin'
