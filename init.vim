@@ -49,7 +49,6 @@ call plug#end()
 
 """"""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/test.vim
-""so ~/.config/nvim/netrw.vim
 
 """"""""""""""""""" theme
 color peachpuff
