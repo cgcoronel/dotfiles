@@ -47,14 +47,8 @@ call plug#begin('~/vim/plugged')
 
 call plug#end()
 
-""""""""""""""""""" Imports custom plugins 
 so ~/.config/nvim/test.vim
-
-""""""""""""""""""" theme
-color peachpuff
 so ~/.config/nvim/theme.vim
-
-""""""""""""""""""" Imports other configs
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 

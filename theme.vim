@@ -1,3 +1,5 @@
+color peachpuff
+
 hi Folded cterm=italic ctermfg=245 ctermbg=8
 hi FoldColumn ctermfg=0 ctermbg=0
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
