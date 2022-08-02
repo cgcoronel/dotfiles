@@ -34,7 +34,7 @@ let g:gitgutter_map_keys = 0
 let g:fugitive_dynamic_colors = 0 
 
 """"""""""""""""""" Simple terminal
-let g:simple_term_open = '<c-#>' 
+let g:simple_term_open = '<c-p>' 
 let g:simple_term_close = '<Leader>q' 
 
 """"""""""""""""""" NERDTree config
@@ -51,9 +51,3 @@ let NERDTreeDirArrowCollapsible = ''
 let NERDTreeWinSize= 40
 let g:indentLine_bufNameExclude = ['NERD_tree.*']
 
-""""""""""""""""""" FloatTerm
-let g:floaterm_keymap_toggle = '<c-p>'
-let g:floaterm_keymap_new = '<c-n>'
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.62
-let g:floaterm_title = ' # $1/$2 ' 

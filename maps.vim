@@ -17,9 +17,6 @@ nmap <silent> <Leader>e :NERDTreeFind<CR>
 " Leave INSERT MODE
 imap kj <Esc>
 
-" Open terminal
-nmap <silent> <c-p> :call SimpleTerm('', 1)<CR>
-
 """"""""""""""""""""""" Interaction with files 
 
 " Change size of current file window
