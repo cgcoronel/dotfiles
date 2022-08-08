@@ -25,6 +25,9 @@ set ignorecase
 set diffopt+=vertical 
 set nowrap
 
+""set rtp+=/usr/local/opt/fzf
+""set rtp+=/usr/local/opt/rg
+
 set fillchars=eob:\ 
 ""set fillchars+=vert:\ 
 

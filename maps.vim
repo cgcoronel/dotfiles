@@ -98,13 +98,14 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :FZF -i<CR>
+nmap <Leader>f :FZF --preview=head\ -100\ {}<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
 
 " Seach word into files
 nmap > :Rg<CR>
+""nmap > :FZF --preview=head\ -100\ {}<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
