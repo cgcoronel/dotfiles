@@ -23,9 +23,6 @@ imap kj <Esc>
 nnoremap <Leader>m 20<C-w><
 nnoremap <Leader>. 20<C-w>>
 
-" Show opened files
-nmap <silent> <Leader>; :call fzf#vim#buffers()<CR>
-
 " Close buffer 
 map <silent> <Leader>q :bd<CR>
 
@@ -105,7 +102,6 @@ noremap <silent> <Leader><space> :noh<CR>
 
 " Seach word into files
 nmap > :Rg<CR>
-""nmap > :FZF --preview=head\ -100\ {}<CR>
 
 " Command find and replace
 command! -nargs=+ Replace :%s/<args>/gc
@@ -119,6 +115,9 @@ map bb :Git blame --date short<CR>
 
 " Show file changes 
 nmap <silent> <Leader>d :0Git<CR>
+
+" Commits History current buffer  
+nmap <Leader>; :BCommits<CR>
 
 " Compare files
 augroup fugitive_mapping
