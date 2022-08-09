@@ -24,7 +24,6 @@ set foldlevelstart=99
 set ignorecase
 set diffopt+=vertical 
 set nowrap
-
 set rtp+=/usr/local/opt/fzf
 ""set rtp+=/usr/local/opt/rg
 
