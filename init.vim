@@ -25,7 +25,7 @@ set ignorecase
 set diffopt+=vertical 
 set nowrap
 
-""set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/local/opt/fzf
 ""set rtp+=/usr/local/opt/rg
 
 set fillchars=eob:\ 
@@ -38,7 +38,6 @@ call plug#begin('~/vim/plugged')
 
   Plug 'scrooloose/nerdtree'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
