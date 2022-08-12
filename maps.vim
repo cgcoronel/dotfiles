@@ -4,15 +4,15 @@ let mapleader = "\<space>"
 
 """"""""""""""""""""""" Remap Global Shortcuts
 
-" Enter COMMAND MODE
+" COMMAND MODE
 map ; :
 
-" Enter VISUAL BLOCK 
+" VISUAL BLOCK 
 map f <C-V><left>
 
-" Open file explorer
-nmap <silent> <Leader>n :NERDTreeFind<CR>
+" File Explorer
 nmap <silent> <Leader>e :NERDTreeFind<CR>
+nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -26,22 +26,16 @@ nnoremap <Leader>. 20<C-w>>
 " Close buffer 
 map <silent> <Leader>q :bd<CR>
 
-" Split file in vertical / horizontal 
+" Split file
 nmap s :vsp<CR>
 nmap S :sp<CR>
 
-" move between buffers
-""nmap m :bprevious<CR>
-""nmap . :bnext<CR>
-
-" Move focus between split screens
+" Move between split screens
 map <Leader>j <Esc><C-W><C-J>
 map <Leader>k <Esc><C-W><C-K>
 map <C-L> <Esc><C-W><C-L>
 map <C-H> <Esc><C-W><C-H>
 
-""imap <C-J> <Esc><C-W><C-J>
-""imap <C-K> <Esc><C-W><C-K>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
