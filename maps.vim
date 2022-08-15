@@ -39,6 +39,10 @@ map <C-H> <Esc><C-W><C-H>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
+" move between buffers
+""nmap m :bprevious<CR>
+""nmap . :bnext<CR>
+
 " Got to definitions local
 nnoremap fs gd
 
