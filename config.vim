@@ -1,6 +1,9 @@
 """"""""""""""""""" Coc extensions
 let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint' ]
 
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 """"""""""""""""""" fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
