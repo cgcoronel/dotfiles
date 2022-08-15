@@ -2,8 +2,6 @@
 let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint' ]
 
 """"""""""""""""""" fzf config
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_colors =
