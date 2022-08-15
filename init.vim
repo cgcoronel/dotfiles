@@ -19,7 +19,6 @@ set undodir=~/.vim/undodir/
 set history=1000
 set autoindent
 set foldmethod=indent
-""set foldcolumn=3  
 set foldlevelstart=99
 set ignorecase
 set diffopt+=vertical 
