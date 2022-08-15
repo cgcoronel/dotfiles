@@ -89,7 +89,7 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :FZF --preview=head\ -100\ {}<CR>
+nmap <Leader>f :FZF<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
