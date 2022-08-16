@@ -1,7 +1,7 @@
 syntax on
 
 set mouse=a
-set numberwidth=1
+set numberwidth=2
 set clipboard=unnamedplus
 set noshowcmd
 set noruler
