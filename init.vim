@@ -31,7 +31,6 @@ set fillchars=eob:\
 
 language en_US.UTF-8
 
-""""""""""""""""""" Plugins
 call plug#begin('~/vim/plugged')
 
   Plug 'scrooloose/nerdtree'
@@ -51,6 +50,5 @@ so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
-""""""""""""""""""" Status line
 let g:project = fnamemodify(getcwd(), ':t')
 set statusline=\ %{project}\/%{@%}\ %m
