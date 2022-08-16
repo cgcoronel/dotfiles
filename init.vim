@@ -52,8 +52,5 @@ so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
 """"""""""""""""""" Status line
-function! Project() abort
-  return substitute(getcwd(), '^.*/', '', '')
-endfunction
-
-set statusline=\ \ \ \ \ \ %#StatusLine#%{Project()}\/%{@%}\ %m
+let g:project = fnamemodify(getcwd(), ':t')
+set statusline=\ %{project}\/%{@%}\ %m
