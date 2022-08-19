@@ -13,6 +13,8 @@ map f <C-V><left>
 " File Explorer
 nmap <silent> <Leader>e :NERDTreeFind<CR>
 nmap <silent> <Leader>n :NERDTreeFind<CR>
+""map <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
+""map <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
