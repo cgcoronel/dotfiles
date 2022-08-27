@@ -41,7 +41,8 @@ let g:simple_term_close = '<Leader>q'
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeIgnore = ['^node_modules$', '^.git$']
+""let NERDTreeIgnore = ['^node_modules$', '^.git$']
+let NERDTreeIgnore = ['^node_modules$']
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 1
 let NERDTreeCascadeOpenSingleChildDir = 1
@@ -57,13 +58,14 @@ let g:indentLine_bufNameExclude = ['NERD_tree.*']
 ""let g:netrw_list_hide = '^\.git*,.*\.DS_Store,.\.vscode,node_modules'
 ""let g:netrw_hide = 1       
 ""let g:netrw_fastbrowse = 2
-
+""let g:netrw_bufsettings = 'nonu noma nomod nobl nowrap ro'
+""
 ""hi! link netrwMarkFile Search
 ""augroup netrw_mapping
 ""  autocmd!
 ""  autocmd filetype netrw call NetrwMapping()
 ""augroup END
-
+""
 ""function! NetrwMapping()
 ""  nmap <buffer> o <CR>
 ""  nmap <buffer> = <CR>
