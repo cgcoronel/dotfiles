@@ -2,7 +2,7 @@
 let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint' ]
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 """"""""""""""""""" fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
@@ -21,7 +21,7 @@ let g:indentLine_char_list = ['│']
 let g:indentLine_color_term = 8 
 let g:indentLine_fileTypeExclude = ["help"]
 let g:indentLine_bufTypeExclude = ["help"]
-let g:indentLine_indentLevel = 5 
+let g:indentLine_indentLevel = 3 
 
 """"""""""""""""""" Vim Git Gutter 
 " Only show signs when save file
