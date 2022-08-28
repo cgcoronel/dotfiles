@@ -26,10 +26,3 @@ function! GetFullDescribe() abort
   let describe = GetDescribe()
   return  describe . ' ' . it 
 endfunction
-
-" Open file test from current file
-function! FindTestFiles()
-  let s:file = '**/*test**/*' . expand('%:t')
-  execute 'edit' s:file 
-endfunction
-

@@ -149,8 +149,5 @@ cnoreabbrev tc :call SimpleTerm('npm run test:coverage '  . expand('%'), 0)
 " Run test and coverage all files   
 cnoreabbrev ta :call SimpleTerm('npm run test:coverage ', 0) 
 
-" Open file test from current file
-cnoreabbrev to :call FindTestFiles() 
-
 " Run node app 
 cnoreabbrev up call SimpleTerm('npm run devel', 0) 
