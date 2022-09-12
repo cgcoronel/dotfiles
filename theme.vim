@@ -52,3 +52,5 @@ hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=0
 hi MatchParen ctermbg=14 ctermfg=0
 
 hi FloatermBorder ctermfg=8 guifg=Grey7
+
+hi Conceal ctermfg=8 guifg=Grey70
