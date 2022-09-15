@@ -16,8 +16,8 @@ imap kj <Esc>
 """"""""""""""""""""""" Interaction with files 
 
 " Change size of current file window
-nnoremap <C-i> 20<C-w><
-nnoremap <C-,> 20<C-w>>
+nnoremap <C-i> 5<C-w><
+nnoremap <C-,> 5<C-w>>
 
 " Close each buffer and close vim 
 function! CloseFile()
