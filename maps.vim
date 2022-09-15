@@ -4,15 +4,11 @@ let mapleader = "\<space>"
 
 """"""""""""""""""""""" Remap Global Shortcuts
 
-" COMMAND MODE
-map ; :
-
 " VISUAL BLOCK 
-map f <C-V><left>
+""map f <C-V><left>
 
 " File Explorer
 nmap <silent> <Leader>e :NERDTreeFind<CR>
-nmap <silent> <Leader>n :NERDTreeFind<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -20,12 +16,20 @@ imap kj <Esc>
 """"""""""""""""""""""" Interaction with files 
 
 " Change size of current file window
-nnoremap <Leader>m 20<C-w><
-nnoremap <Leader>. 20<C-w>>
+nnoremap <C-i> 20<C-w><
+nnoremap <C-,> 20<C-w>>
 
-" Close buffer 
-map <silent> <Leader>q :bd<CR>
+" Close each buffer and close vim 
+function! CloseFile()
+  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    :q 
+  else
+    :bdelete
+  endif
+endfunction
 
+" Close file
+map <silent> <Leader>q :call CloseFile()<CR>
 " Split file
 nmap s :vsp<CR>
 nmap S :sp<CR>
@@ -40,21 +44,17 @@ imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
 " move between buffers
-""nmap <silent> m :bprevious<CR>
-""nmap <silent> . :bnext<CR>
+"nmap <silent> m :bprevious<CR>
+"nmap <silent> . :bnext<CR>
 
 " Got to definitions local
 nnoremap fs gd
 
 " Go to definition file, search firts occurrence, and search require('....
-nmap ff :call search('\V' . '(')<CR> gf
 nmap fd gf
 
 " Save file 
 nmap <Leader>w :w<CR>
-
-" Save file without prettier format
-cmap ww :noa w<CR>
 
 "Move lines up / down
 nnoremap <S-j> :m .+1<CR>==
@@ -63,16 +63,11 @@ nnoremap <S-k> :m .-2<CR>==
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i
 inoremap { {}<Esc>i
 
-inoremap /f /*<Esc>
 inoremap f/ */<Esc>
-inoremap /d ()<Esc>i
-inoremap /s []<Esc>i
-inoremap /a {}<Esc>i
+inoremap /f /*<Esc>
 
 " Mover up/down in 10 lines bloc
 map <C-J> 10j
@@ -108,29 +103,30 @@ cnoreabbrev replace Replace
 
 """"""""""""""""""""""" GIT Commands 
 
-" Show git blame 
-map bb :Git blame --date short<CR>
-
 " Show file changes 
 nmap <silent> <Leader>d :0Git<CR>
-
-" Commits History current buffer  
-nmap <Leader>; :BCommits<CR>
 
 " Compare files
 augroup fugitive_mapping
   autocmd!
-  autocmd filetype fugitive nmap <buffer> ff dd :resize 100<CR> 
+  autocmd filetype fugitive nmap <buffer> <silent> ff dd :resize 100<CR> 
+  autocmd filetype fugitive nmap <buffer> <silent> o gO <C-l>:q<CR> 
 augroup END
 
 cnoreabbrev gco Git commit 
 cnoreabbrev gpu Git push 
+cnoreabbrev gbb Git blame --date short 
+cnoreabbrev gcc BCommits 
 
 " Move between uncommit changes 
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
+nmap <silent> <F8> :set relativenumber!<cr>
 """"""""""""""""""""""" Commands for development
+
+" Run test in focus file   
+cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
 
 " Run test in focus describe
 cnoreabbrev td :call SimpleTerm('npx jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
@@ -138,14 +134,4 @@ cnoreabbrev td :call SimpleTerm('npx jest --watch -t "' . GetDescribe() . '" ' .
 " Run test in focus it 
 cnoreabbrev ti :call SimpleTerm('npx jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
 
-" Run test in focus file   
-cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
 
-" Run test and coverage in focus file   
-cnoreabbrev tc :call SimpleTerm('npm run test:coverage '  . expand('%'), 0) 
-
-" Run test and coverage all files   
-cnoreabbrev ta :call SimpleTerm('npm run test:coverage ', 0) 
-
-" Run node app 
-cnoreabbrev up call SimpleTerm('npm run devel', 0) 

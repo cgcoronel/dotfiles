@@ -4,7 +4,7 @@ set mouse=a
 set numberwidth=2
 set clipboard=unnamedplus
 set noshowcmd
-set noruler
+""set noruler
 set cursorline
 set encoding=UTF-8
 set showmatch
@@ -25,6 +25,9 @@ set diffopt+=vertical
 set nowrap
 set rtp+=/usr/local/opt/fzf
 
+set so=999
+set relativenumber
+
 set fillchars=eob:\ 
 
 language en_US.UTF-8
@@ -34,6 +37,7 @@ call plug#begin('~/vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'junegunn/fzf.vim'
+  Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
@@ -47,5 +51,5 @@ so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
-let g:project = fnamemodify(getcwd(), ':t')
-set statusline=\ %{project}\/%{@%}\ %m
+""let g:project = fnamemodify(getcwd(), ':t')
+""set statusline=\ %{project}\/%{@%}\ %m
