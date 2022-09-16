@@ -17,8 +17,11 @@ hi GitGutterChangeDelete ctermfg=8 ctermbg=0
 hi SignColumn ctermbg=0
 
 "Status bar
-hi StatusLine cterm=NONE ctermfg=243 ctermbg=15
-hi StatusLineNC cterm=NONE ctermfg=243 ctermbg=15
+"hi StatusLine cterm=NONE ctermfg=243 ctermbg=15
+"hi StatusLineNC cterm=NONE ctermfg=243 ctermbg=15
+
+hi StatusLine cterm=NONE ctermfg=11 ctermbg=15
+hi StatusLineNC cterm=NONE ctermfg=11 ctermbg=15
 
 "Mode color
 hi MsgArea ctermfg=243
