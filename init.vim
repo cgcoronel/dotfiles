@@ -4,7 +4,7 @@ set mouse=a
 set numberwidth=2
 set clipboard=unnamedplus
 set noshowcmd
-""set noruler
+"set noruler
 set cursorline
 set encoding=UTF-8
 set showmatch

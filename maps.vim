@@ -14,6 +14,7 @@ nmap <silent> <Leader>n :NERDTreeFind<CR>
 " Leave INSERT MODE
 imap kj <Esc>
 
+nmap <silent> <F8> :set relativenumber!<cr>
 """"""""""""""""""""""" Interaction with files 
 
 " Change size of current file window
@@ -123,7 +124,6 @@ cnoreabbrev gcc BCommits
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
-nmap <silent> <F8> :set relativenumber!<cr>
 """"""""""""""""""""""" Commands for development
 
 " Run test in focus file   
