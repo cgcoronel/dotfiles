@@ -25,7 +25,7 @@ hi MsgArea ctermfg=243
 
 "Cursor line
 hi CursorLine ctermbg=NONE cterm=NONE
-hi CursorLineNr cterm=none ctermfg=244 ctermbg=NONE
+hi CursorLineNR cterm=none ctermfg=3 
 hi LineNr ctermfg=8
 
 hi Ignore cterm=bold ctermfg=241
