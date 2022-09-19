@@ -28,13 +28,14 @@ set rtp+=/usr/local/opt/fzf
 set so=999
 set relativenumber
 
+" Hide buffer line
 set fillchars=eob:\ 
 
 language en_US.UTF-8
 
 call plug#begin('~/vim/plugged')
 
-  Plug 'scrooloose/nerdtree'
+"  Plug 'scrooloose/nerdtree'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'junegunn/fzf.vim'
   Plug 'sheerun/vim-polyglot'

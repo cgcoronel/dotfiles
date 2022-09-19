@@ -5,11 +5,13 @@ let mapleader = "\<space>"
 """"""""""""""""""""""" Remap Global Shortcuts
 
 " VISUAL BLOCK 
-""map f <C-V><left>
-
+" nmap f <C-V><left>
+ 
 " File Explorer
-nmap <silent> <Leader>e :NERDTreeFind<CR>
-nmap <silent> <Leader>n :NERDTreeFind<CR>
+"nmap <silent> <Leader>e :NERDTreeFind<CR>
+"nmap <silent> <Leader>n :NERDTreeFind<CR>
+nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
+nmap <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -90,7 +92,8 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-nmap <Leader>f :FZF<CR>
+"nmap <Leader>f :FZF<CR>
+nmap <Leader>f :GitFiles<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
