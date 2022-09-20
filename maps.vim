@@ -1,9 +1,4 @@
-":help key-notation
-
 let mapleader = "\<space>"
-
-" VISUAL BLOCK 
-" nmap f <C-V><left>
  
 " File Explorer
 "nmap <silent> <Leader>e :NERDTreeFind<CR>
@@ -47,8 +42,6 @@ nmap <silent> . :bnext<CR>
 
 " Got to definitions local
 nnoremap fs gd
-
-" Go to definition file, search firts occurrence, and search require('....
 nmap fd gf
 
 " Save file 
@@ -86,7 +79,6 @@ vnoremap gj L
 """"""""""""""""""""""" Search into files 
 
 " Finder
-"nmap <Leader>f :FZF<CR>
 nmap <Leader>f :GitFiles<CR>
 
 " Clean search result
