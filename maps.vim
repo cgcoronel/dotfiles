@@ -101,11 +101,6 @@ noremap <silent> <Leader><space> :noh<CR>
 " Seach word into files
 nmap > :Rg<CR>
 
-" Command find and replace
-command! -nargs=+ Replace :%s/<args>/gc
-cnoreabbrev replace Replace
-
-
 """"""""""""""""""""""" GIT Commands 
 
 " Show file changes 
