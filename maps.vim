@@ -2,8 +2,6 @@
 
 let mapleader = "\<space>"
 
-""""""""""""""""""""""" Remap Global Shortcuts
-
 " VISUAL BLOCK 
 " nmap f <C-V><left>
  
