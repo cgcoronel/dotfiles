@@ -15,11 +15,6 @@ nmap <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar>
 imap kj <Esc>
 
 nmap <silent> <F8> :set relativenumber!<cr>
-""""""""""""""""""""""" Interaction with files 
-
-" Change size of current file window
-nnoremap <C-i> 5<C-w><
-nnoremap <C-,> 5<C-w>>
 
 " Close each buffer and close vim 
 function! CloseFile()
@@ -32,6 +27,7 @@ endfunction
 
 " Close file
 map <silent> <Leader>q :call CloseFile()<CR>
+
 " Split file
 nmap s :vsp<CR>
 nmap S :sp<CR>
@@ -46,8 +42,8 @@ imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
 " move between buffers
-"nmap <silent> m :bprevious<CR>
-"nmap <silent> . :bnext<CR>
+nmap <silent> m :bprevious<CR>
+nmap <silent> . :bnext<CR>
 
 " Got to definitions local
 nnoremap fs gd

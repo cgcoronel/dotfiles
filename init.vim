@@ -43,7 +43,6 @@ call plug#begin('~/vim/plugged')
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
   Plug 'cgcoronel/simple-term.vim'
-  Plug 'cgcoronel/simple-bufferline.vim'
 
 call plug#end()
 
