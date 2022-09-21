@@ -54,3 +54,6 @@ hi MatchParen ctermbg=14 ctermfg=0
 hi FloatermBorder ctermfg=8 guifg=Grey7
 
 hi Conceal ctermfg=8 guifg=Grey70
+
+" ~
+hi EndOfBuffer ctermfg=8 guifg=Red3
