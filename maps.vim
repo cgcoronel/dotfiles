@@ -4,7 +4,6 @@ let mapleader = "\<space>"
 "nmap <silent> <Leader>e :NERDTreeFind<CR>
 "nmap <silent> <Leader>n :NERDTreeFind<CR>
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
-nmap <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
