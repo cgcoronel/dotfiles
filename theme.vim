@@ -7,6 +7,7 @@ hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 "Coc suggestion box
 hi Pmenu ctermfg=7 ctermbg=8
 hi PmenuSel ctermfg=7 ctermbg=241
+hi CocFloating ctermfg=7 ctermbg=8
 
 "notifications simbols in status vertical bar
 hi GitGutterAdd ctermfg=8 ctermbg=0
