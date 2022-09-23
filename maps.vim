@@ -1,7 +1,5 @@
 let mapleader = "\<space>"
 
-nnoremap <leader><CR> : so ~/.config/nvim/init.vim<CR>
-
 " File Explorer
 "nmap <silent> <Leader>e :NERDTreeFind<CR>
 "nmap <silent> <Leader>n :NERDTreeFind<CR>
