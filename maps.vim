@@ -118,4 +118,9 @@ cnoreabbrev td :call SimpleTerm('npx jest --watch -t "' . GetDescribe() . '" ' .
 " Run test in focus it 
 cnoreabbrev ti :call SimpleTerm('npx jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
 
+" Commands for terminal
+"cnoreabbrev t :sp<cr> <C-w><C-j> :resize 15<cr> :term<cr> 
+"tnoremap <silent> <Esc> <C-\><C-n> 
+
+
 
