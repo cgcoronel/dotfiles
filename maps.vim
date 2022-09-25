@@ -3,6 +3,7 @@ let mapleader = "\<space>"
 " File Explorer
 "nmap <silent> <Leader>e :NERDTreeFind<CR>
 "nmap <silent> <Leader>n :NERDTreeFind<CR>
+nmap <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 " Leave INSERT MODE
@@ -107,20 +108,13 @@ cnoreabbrev gcc BCommits
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
-""""""""""""""""""""""" Commands for development
-
-" Run test in focus file   
-cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
-
-" Run test in focus describe
-cnoreabbrev td :call SimpleTerm('npx jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
-
-" Run test in focus it 
-cnoreabbrev ti :call SimpleTerm('npx jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
+" Run test current file
+cnoreabbrev te :vsp<cr> :exe ':term npx jest --watch ' . expand('%') 
 
 " Commands for terminal
-"cnoreabbrev t :sp<cr> <C-w><C-j> :resize 15<cr> :term<cr> 
-"tnoremap <silent> <Esc> <C-\><C-n> 
+cnoreabbrev t :sp<cr> <C-w><C-j> :resize 15<cr> :term<cr>i 
+nmap <C-p> :t<CR>
+tnoremap <silent> <Esc> <C-\><C-n> 
 
 
 

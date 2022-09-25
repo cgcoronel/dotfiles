@@ -38,11 +38,9 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
-  Plug 'cgcoronel/simple-term.vim'
 
 call plug#end()
 
-so ~/.config/nvim/test.vim
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim

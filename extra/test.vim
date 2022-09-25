@@ -26,3 +26,21 @@ function! GetFullDescribe() abort
   let describe = GetDescribe()
   return  describe . ' ' . it 
 endfunction
+
+
+
+"  Plug 'cgcoronel/simple-term.vim'
+"so ~/.config/nvim/test.vim
+
+ """"""""""""""""""""""" Commands for development
+
+" Run test in focus file   
+cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
+
+" Run test in focus describe
+cnoreabbrev td :call SimpleTerm('npx jest --watch -t "' . GetDescribe() . '" ' . expand('%'), 0) 
+
+" Run test in focus it 
+cnoreabbrev ti :call SimpleTerm('npx jest --watch -t "' . GetFullDescribe() . '" ' . expand('%'), 0) 
+
+
