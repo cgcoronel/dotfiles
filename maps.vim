@@ -20,6 +20,7 @@ endfunction
 
 " Close file
 map <silent> <S-q> :call CloseFile()<CR>
+map <silent> <leader>q :call CloseFile()<CR>
 
 " Split file
 nmap s :vsp<CR>
