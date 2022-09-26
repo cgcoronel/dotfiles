@@ -37,21 +37,7 @@ let g:fugitive_dynamic_colors = 0
 let g:simple_term_open = '<c-p>' 
 let g:simple_term_close = '<Leader>q' 
 
-""""""""""""""""""" NERDTree config
-"let NERDTreeQuitOnOpen = 1
-"let NERDTreeShowHidden = 1
-"let NERDTreeAutoDeleteBuffer = 1
-"""let NERDTreeIgnore = ['^node_modules$', '^.git$']
-"let NERDTreeIgnore = ['^node_modules$']
-"let NERDTreeMinimalUI = 1
-"let NERDTreeMinimalMenu = 1
-"let NERDTreeCascadeOpenSingleChildDir = 1
-"let NERDTreeStatusline= ' '
-"let NERDTreeDirArrowExpandable = '' 
-"let NERDTreeDirArrowCollapsible = ''
-"let NERDTreeWinSize= 40
-"let g:indentLine_bufNameExclude = ['NERD_tree.*']
-
+""""""""""""""""""" Netrw 
 let g:netrw_liststyle = 4 
 let g:netrw_keepdir = 1
 let g:netrw_altv=1

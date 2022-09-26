@@ -1,8 +1,6 @@
 let mapleader = "\<space>"
 
 " File Explorer
-"nmap <silent> <Leader>e :NERDTreeFind<CR>
-"nmap <silent> <Leader>n :NERDTreeFind<CR>
 nmap <Leader>n :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
@@ -28,13 +26,16 @@ nmap s :vsp<CR>
 nmap S :sp<CR>
 
 " Move between split screens
-map <Leader>j <Esc><C-W><C-J>
-map <Leader>k <Esc><C-W><C-K>
-map <C-L> <Esc><C-W><C-L>
-map <C-H> <Esc><C-W><C-H>
+map <C-j> <C-W><C-J>
+map <C-k> <C-W><C-K>
+map <C-L> <C-W><C-L>
+map <C-H> <C-W><C-H>
 
+imap <C-j> <Esc><C-W><C-J>
+imap <C-k> <Esc><C-W><C-K>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
+
 
 " move between buffers
 nmap <silent> m :bprevious<CR>
@@ -47,10 +48,6 @@ nmap fd gf
 " Save file 
 nmap <Leader>w :w<CR>
 
-"Move lines up / down
-nnoremap <S-j> :m .+1<CR>==
-nnoremap <S-k> :m .-2<CR>==
-
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
@@ -61,8 +58,8 @@ inoremap f/ */<Esc>
 inoremap /f /*<Esc>
 
 " Mover up/down in 10 lines bloc
-map <C-J> 10j
-map <C-K> 10k
+map <S-J> 10j
+map <S-K> 10k
 
 " Move in file 
 nnoremap gl $
