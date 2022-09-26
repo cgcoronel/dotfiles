@@ -19,7 +19,7 @@ function! CloseFile()
 endfunction
 
 " Close file
-map <silent> <Leader>q :call CloseFile()<CR>
+map <silent> <S-q> :call CloseFile()<CR>
 
 " Split file
 nmap s :vsp<CR>
