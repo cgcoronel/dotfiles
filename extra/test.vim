@@ -27,15 +27,6 @@ function! GetFullDescribe() abort
   return  describe . ' ' . it 
 endfunction
 
-
-
-"  Plug 'cgcoronel/simple-term.vim'
-"so ~/.config/nvim/test.vim
-
-" config """""""""""""""""" Simple terminal
-"let g:simple_term_open = '<c-p>' 
-"let g:simple_term_close = '<Leader>q' 
-
  """"""""""""""""""""""" Commands for development
 
 " Run test in focus file   

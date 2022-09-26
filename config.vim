@@ -68,6 +68,7 @@ augroup END
 
 function! NetrwMapping()
   nmap <buffer> o <CR>
+  nmap <buffer> p - 
   nmap <buffer> = <CR>
   nmap <buffer> s <CR>
   nmap <buffer> m R
