@@ -80,6 +80,7 @@ vnoremap gj L
 
 " Finder
 nmap <Leader>f :GitFiles<CR>
+nmap <Leader>b :Buffers<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
@@ -109,12 +110,17 @@ nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
 " Run test current file
-cnoreabbrev te :vsp<cr> :exe ':term npx jest --watch ' . expand('%') 
+"cnoreabbrev te :vsp<cr> :exe ':term npx jest --watch ' . expand('%') 
 
 " Commands for terminal
-cnoreabbrev t :sp<cr> <C-w><C-j> :resize 15<cr> :term<cr>i 
-nmap <C-p> :t<CR>
-tnoremap <silent> <Esc> <C-\><C-n> 
+"cnoreabbrev t :sp<cr> <C-w><C-j> :resize 15<cr> :term<cr>i 
+"nmap <C-p> :t<CR>
+"autocmd filetype term* map <buffer> <silent> <Esc>  <C-\><C-n> 
+
+"tnoremap <silent> <C-n> <C-\><C-n> 
+
+" Run test in focus file   
+cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
 
 
 
