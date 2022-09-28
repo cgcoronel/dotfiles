@@ -27,8 +27,8 @@ nmap s :vsp<CR>
 nmap S :sp<CR>
 
 " Move between split screens
-map <C-j> <C-W><C-J>
-map <C-k> <C-W><C-K>
+map <Leader>j <C-W><C-J>
+map <Leader>k <C-W><C-K>
 map <C-L> <C-W><C-L>
 map <C-H> <C-W><C-H>
 
@@ -41,6 +41,7 @@ imap <C-H> <Esc><C-W><C-H>
 " move between buffers
 nmap <silent> m :bprevious<CR>
 nmap <silent> . :bnext<CR>
+
 
 " Got to definitions local
 nnoremap fs gd
@@ -59,8 +60,8 @@ inoremap f/ */<Esc>
 inoremap /f /*<Esc>
 
 " Mover up/down in 10 lines bloc
-map <S-J> 10j
-map <S-K> 10k
+map <C-J> 10j
+map <C-K> 10k
 
 " Move in file 
 nnoremap gl $
@@ -106,16 +107,6 @@ cnoreabbrev gcc BCommits
 " Move between uncommit changes 
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
-
-" Run test current file
-"cnoreabbrev te :vsp<cr> :exe ':term npx jest --watch ' . expand('%') 
-
-" Commands for terminal
-"cnoreabbrev t :sp<cr> <C-w><C-j> :resize 15<cr> :term<cr>i 
-"nmap <C-p> :t<CR>
-"autocmd filetype term* map <buffer> <silent> <Esc>  <C-\><C-n> 
-
-"tnoremap <silent> <C-n> <C-\><C-n> 
 
 " Run test in focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
