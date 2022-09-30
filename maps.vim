@@ -19,7 +19,7 @@ function! CloseFile()
 endfunction
 
 " Close file
-map <silent> <S-q> :call CloseFile()<CR>
+map <silent> Q :call CloseFile()<CR>
 map <silent> <leader>q :call CloseFile()<CR>
 
 " Split file
@@ -110,6 +110,4 @@ nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
 " Run test in focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
-
-
 
