@@ -58,3 +58,5 @@ hi Conceal ctermfg=8 guifg=Grey70
 
 " ~
 hi EndOfBuffer ctermfg=8 guifg=Red3
+
+hi VertSplit ctermbg=NONE guibg=NONE
