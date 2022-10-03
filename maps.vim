@@ -27,13 +27,9 @@ nmap s :vsp<CR>
 nmap S :sp<CR>
 
 " Move between split screens
-map <Leader>j <C-W><C-J>
-map <Leader>k <C-W><C-K>
 map <C-L> <C-W><C-L>
 map <C-H> <C-W><C-H>
 
-imap <C-j> <Esc><C-W><C-J>
-imap <C-k> <Esc><C-W><C-K>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
@@ -111,3 +107,6 @@ nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 " Run test in focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
 
+"Move lines up / down
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
