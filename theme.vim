@@ -60,3 +60,5 @@ hi Conceal ctermfg=8 guifg=Grey70
 hi EndOfBuffer ctermfg=8 guifg=Red3
 
 hi VertSplit ctermbg=NONE guibg=NONE
+
+hi Statement cterm=bold ctermfg=179 gui=bold guifg=#a52a2a;
