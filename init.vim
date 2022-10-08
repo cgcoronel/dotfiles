@@ -36,7 +36,6 @@ call plug#begin('~/vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
-""  Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
   Plug 'cgcoronel/simple-term.vim'
 
