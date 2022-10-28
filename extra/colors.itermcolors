@@ -59,13 +59,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.32941177487373352</real>
+		<real>0.67450982332229614</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.24705882370471954</real>
+		<real>0.7137255072593689</real>
 		<key>Red Component</key>
-		<real>0.23921568691730499</real>
+		<real>0.54509806632995605</real>
 	</dict>
 	<key>Ansi 13 Color</key>
 	<dict>
