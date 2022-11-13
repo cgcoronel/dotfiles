@@ -75,7 +75,6 @@ vnoremap gj L
 
 " Finder
 nmap <Leader>f :GitFiles<CR>
-nmap <Leader>b :Buffers<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
