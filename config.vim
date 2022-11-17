@@ -37,7 +37,7 @@ let g:netrw_list_hide = '.*\.DS_Store,.\.vscode,node_modules'
 let g:netrw_hide = 1       
 let g:netrw_fastbrowse = 2
 let g:netrw_bufsettings = 'nonu noma nomod nobl nowrap ro'
-let g:netrw_banner = 0
+"let g:netrw_banner = 0
 
 hi! link netrwMarkFile Search
 augroup netrw_mapping
@@ -52,11 +52,11 @@ function! NetrwMapping()
 endfunction
 
 """""""""""""""""" IndentLine
-autocmd Filetype json let g:indentLine_setConceal = 0
-let g:indentLine_char_list = ['│'] 
-let g:indentLine_color_term = 8 
-let g:indentLine_fileTypeExclude = ["help"]
-let g:indentLine_bufTypeExclude = ["help"]
-let g:indentLine_indentLevel = 3 
+"autocmd Filetype json let g:indentLine_setConceal = 0
+"let g:indentLine_char_list = ['│'] 
+"let g:indentLine_color_term = 8 
+"let g:indentLine_fileTypeExclude = ["help"]
+"let g:indentLine_bufTypeExclude = ["help"]
+"let g:indentLine_indentLevel = 3 
 
 

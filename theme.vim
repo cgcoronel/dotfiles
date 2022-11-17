@@ -1,5 +1,3 @@
-color peachpuff
-
 hi Folded cterm=italic ctermfg=245 ctermbg=8
 hi FoldColumn ctermfg=0 ctermbg=0
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
@@ -62,3 +60,8 @@ hi EndOfBuffer ctermfg=8 guifg=Red3
 hi VertSplit ctermbg=NONE guibg=NONE
 
 hi Statement cterm=bold ctermfg=179 gui=bold guifg=#a52a2a;
+
+" import & export
+hi Special ctermfg=5 guifg=Orange
+
+hi Type ctermfg=4
