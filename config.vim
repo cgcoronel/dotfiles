@@ -37,7 +37,7 @@ let g:netrw_list_hide = '.*\.DS_Store,.\.vscode,node_modules'
 let g:netrw_hide = 1       
 let g:netrw_fastbrowse = 2
 let g:netrw_bufsettings = 'nonu noma nomod nobl nowrap ro'
-"let g:netrw_banner = 0
+let g:netrw_banner = 0
 
 hi! link netrwMarkFile Search
 augroup netrw_mapping
@@ -60,3 +60,14 @@ endfunction
 "let g:indentLine_indentLevel = 3 
 
 
+" focus mode
+"function! Focus()
+"      set numberwidth=2
+"      set relativenumber
+"      set noshowcmd
+"      set showmatch
+"      set sw=2
+"      set laststatus=2
+"endfunction
+
+"autocmd! User GoyoEnter nested call <SID>focus_enter()
