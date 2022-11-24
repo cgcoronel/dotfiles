@@ -1,9 +1,9 @@
-hi Folded cterm=italic ctermfg=245 ctermbg=8
+hi Folded cterm=italic ctermfg=245 ctermbg=15
 hi FoldColumn ctermfg=0 ctermbg=0
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 
 "Coc suggestion box
-hi Pmenu ctermfg=7 ctermbg=8
+hi Pmenu ctermfg=7 ctermbg=15
 hi PmenuSel ctermfg=7 ctermbg=241
 hi CocFloating ctermfg=7 ctermbg=15
 
@@ -34,13 +34,13 @@ hi Todo cterm=bold ctermfg=0 ctermbg=167
 
 "Visual color selection
 hi clear Visual 
-hi Visual ctermbg=8 ctermfg=NONE
+hi Visual ctermbg=15 ctermfg=NONE
 
 " Search 
 hi Search cterm=reverse ctermfg=179 ctermbg=0
 
 ""hi Title ctermfg=11 
-hi VertSplit ctermfg=8 ctermbg=0
+hi VertSplit ctermfg=15 ctermbg=0
 
 "git diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=0
