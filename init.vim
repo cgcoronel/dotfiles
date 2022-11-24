@@ -48,11 +48,6 @@ lua << EOF
     window = {
       width = 150,
     },
-    plugins = {
-      options = {
-        showcmd = true,
-      }
-    }
   }
 EOF
 
