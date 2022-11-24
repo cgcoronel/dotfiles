@@ -111,5 +111,17 @@ nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
 
 noremap ;; :s/
-nmap <Leader>z :ZenMode<CR>
+nmap <Leader>a :ZenMode<CR>
+
+
+"function! GoZen()
+"    :vsp
+"    :ene
+"    :vertical resize 50
+"    execute "normal \<C-w>\<C-l>"
+"endfunction
+"
+"" Close file
+"map <leader>a :call GoZen()<CR>
+
 
