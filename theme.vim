@@ -43,7 +43,7 @@ hi Visual ctermbg=15 ctermfg=NONE
 hi Search cterm=reverse ctermfg=179 ctermbg=0
 
 ""hi Title ctermfg=11 
-"hi VertSplit ctermfg=15 ctermbg=0
+hi VertSplit ctermfg=15 ctermbg=0
 
 "git diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=0
