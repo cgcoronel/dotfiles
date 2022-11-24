@@ -39,8 +39,25 @@ call plug#begin('~/vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'cgcoronel/simple-term.vim'
 "  Plug 'Yggdroot/indentLine'
+  Plug 'folke/zen-mode.nvim'
 
 call plug#end()
+
+lua << EOF
+  require("zen-mode").setup {
+    window = {
+      width = 150,
+    },
+    plugins = {
+      options = {
+        showcmd = true,
+      }
+    }
+  }
+EOF
+
+
+
 
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim

@@ -5,13 +5,13 @@ hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 "Coc suggestion box
 hi Pmenu ctermfg=7 ctermbg=8
 hi PmenuSel ctermfg=7 ctermbg=241
-hi CocFloating ctermfg=7 ctermbg=8
+hi CocFloating ctermfg=7 ctermbg=15
 
 "notifications simbols in status vertical bar
-hi GitGutterAdd ctermfg=8 ctermbg=0
-hi GitGutterChange ctermfg=8 ctermbg=0
-hi GitGutterDelete ctermfg=8 ctermbg=0 
-hi GitGutterChangeDelete ctermfg=8 ctermbg=0
+hi GitGutterAdd ctermfg=15 ctermbg=0
+hi GitGutterChange ctermfg=15 ctermbg=0
+hi GitGutterDelete ctermfg=15 ctermbg=0 
+hi GitGutterChangeDelete ctermfg=15 ctermbg=0
 
 hi SignColumn ctermbg=0
 
@@ -25,7 +25,7 @@ hi MsgArea ctermfg=243
 "Cursor line
 hi CursorLine ctermbg=NONE cterm=NONE
 hi CursorLineNR cterm=none ctermfg=3 
-hi LineNr ctermfg=8
+hi LineNr ctermfg=15
 
 hi Ignore cterm=bold ctermfg=241
 
@@ -50,12 +50,12 @@ hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=0
 
 hi MatchParen ctermbg=14 ctermfg=0
 
-hi FloatermBorder ctermfg=8 guifg=Grey7
+hi FloatermBorder ctermfg=15 guifg=Grey7
 
-hi Conceal ctermfg=8 guifg=Grey70
+hi Conceal ctermfg=15 guifg=Grey70
 
 " ~
-hi EndOfBuffer ctermfg=8 guifg=Red3
+hi EndOfBuffer ctermfg=15 guifg=Red3
 
 hi VertSplit ctermbg=NONE guibg=NONE
 
