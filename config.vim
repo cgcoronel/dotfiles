@@ -14,6 +14,7 @@ let g:fzf_colors =
   \ 'gutter':  ['fg', 'Visual'],
   \ 'bg+':     ['bg', 'Visual' ],
   \ 'info':    ['fg', 'PreProc'] }
+let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
 """"""""""""""""""" Vim Git Gutter 
 " Only show signs when save file
