@@ -18,7 +18,6 @@ function! CloseFile()
 endfunction
 
 " Close file
-map <silent> Q :call CloseFile()<CR>
 map <silent> <leader>q :call CloseFile()<CR>
 
 " Split file
@@ -31,7 +30,6 @@ map <C-H> <C-W><C-H>
 
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
-
 
 " move between buffers
 nmap <silent> m :bprevious<CR>
@@ -51,9 +49,6 @@ inoremap [ []<Esc>i
 inoremap ` ``<Esc>i
 inoremap { {}<Esc>i
 
-inoremap f/ */<Esc>
-inoremap /f /*<Esc>
-
 " Mover up/down in 10 lines bloc
 map <C-J> 10j
 map <C-K> 10k
@@ -68,7 +63,6 @@ vnoremap gl $
 vnoremap gh 0
 vnoremap gk H
 vnoremap gj L
-
 
 """"""""""""""""""""""" Search into files 
 
