@@ -26,6 +26,7 @@ set rtp+=/usr/local/opt/fzf
 
 set so=999
 set relativenumber
+
 set ch=0 
 
 language en_US.UTF-8
