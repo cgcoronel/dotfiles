@@ -39,6 +39,7 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'cgcoronel/simple-term.vim'
+  Plug 'folke/zen-mode.nvim'
 
 call plug#end()
 
@@ -46,4 +47,12 @@ so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
+lua << EOF
+  require("zen-mode").setup {
+    window = {
+      width = 150,
+      top = 10,
+    },
+  }
+EOF
 

@@ -99,6 +99,13 @@ nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 " Run test in focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
 
+" fix linter
+cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0) 
+
 "Move lines up / down
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
+
+
+nmap <Leader>a :ZenMode<CR>
+

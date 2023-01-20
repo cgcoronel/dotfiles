@@ -3,7 +3,9 @@ hi FoldColumn ctermfg=0 ctermbg=0
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 
 "Coc suggestion box
-hi Pmenu ctermfg=7 ctermbg=0
+"hi Pmenu ctermfg=7 ctermbg=0
+hi Pmenu ctermfg=7 ctermbg=none
+
 hi PmenuSel ctermfg=7 ctermbg=241
 hi CocFloating ctermfg=7 ctermbg=15
 hi CocMenuSel    ctermbg=14 guibg=#ffffff
@@ -68,3 +70,5 @@ hi Statement cterm=bold ctermfg=179 gui=bold guifg=#a52a2a;
 hi Special ctermfg=5 guifg=Orange
 
 hi Type ctermfg=4
+
+
