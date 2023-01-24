@@ -28,6 +28,8 @@ let g:fugitive_dynamic_colors = 0
 
 """"""""""""""""""" Simple terminal
 let g:simple_term_open = '<c-p>' 
+"let g:simple_term_open = '<c-i>' 
+
 let g:simple_term_close = '<Leader>q' 
 
 """"""""""""""""""" Netrw 

@@ -68,6 +68,7 @@ vnoremap gj L
 
 " Finder
 nmap <Leader>f :GitFiles<CR>
+"nmap <C-P> :GitFiles<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
