@@ -1,7 +1,8 @@
 let mapleader = "\<space>"
+""let mapleader = ";"
 
 " File Explorer
-nmap <c-;> :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
+nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 " Leave INSERT MODE
 imap kj <Esc>
@@ -47,7 +48,9 @@ nmap <Leader>w :w<CR>
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap ` ``<Esc>i
+inoremap " ""<Esc>i
 inoremap { {}<Esc>i
+inoremap ' ''<Esc>i
 
 " Mover up/down in 10 lines bloc
 map <C-J> 10j
