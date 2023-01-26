@@ -45,7 +45,7 @@ let g:netrw_banner = 0
 
 " Create file without opening buffer
 function! CreateInPreview()
-  let l:filename = input('sss please enter filename: ')
+  let l:filename = input('new file: ')
   execute 'silent !touch ' . b:netrw_curdir.'/'.l:filename
   redraw!
 endfunction
