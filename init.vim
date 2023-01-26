@@ -23,6 +23,7 @@ set ignorecase
 set diffopt+=vertical 
 set nowrap
 set rtp+=/usr/local/opt/fzf
+set hidden
 
 set so=999
 set relativenumber
