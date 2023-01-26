@@ -42,6 +42,14 @@ let g:netrw_fastbrowse = 2
 let g:netrw_bufsettings = 'nonu noma nomod nobl nowrap ro'
 let g:netrw_banner = 0
 
+
+" Create file without opening buffer
+function! CreateInPreview()
+  let l:filename = input('sss please enter filename: ')
+  execute 'silent !touch ' . b:netrw_curdir.'/'.l:filename
+  redraw!
+endfunction
+
 hi! link netrwMarkFile Search
 augroup netrw_mapping
   autocmd!
@@ -49,8 +57,10 @@ augroup netrw_mapping
 augroup END
 
 function! NetrwMapping()
+  noremap <buffer> a :call CreateInPreview()<cr>
   nmap <buffer> o <CR>
   nmap <buffer> p - 
-  nmap <buffer> a %
+""  nmap <buffer> a %
 endfunction
+
 

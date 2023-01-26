@@ -11,7 +11,8 @@ set sw=2
 set number
 set laststatus=2
 set updatetime=100
-set ttimeoutlen=50
+""set ttimeoutlen=50
+set ttimeoutlen=0
 set directory=~/.vim/swap/
 set undofile
 set undodir=~/.vim/undodir/
@@ -24,6 +25,7 @@ set diffopt+=vertical
 set nowrap
 set rtp+=/usr/local/opt/fzf
 set hidden
+set wildmenu
 
 set so=999
 set relativenumber
