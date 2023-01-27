@@ -36,11 +36,11 @@ call plug#begin('~/vim/plugged')
 
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'junegunn/fzf.vim'
-  Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'cgcoronel/simple-term.vim'
   Plug 'folke/zen-mode.nvim'
+  Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
