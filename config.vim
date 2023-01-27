@@ -44,7 +44,7 @@ let g:netrw_banner = 0
 
 function! CopyFile()
   let file = expand("%:p") . netrw#Call('NetrwGetWord')
-  let newfile = input('new file: ', file)
+  let newfile = input('copy file: ', file)
   execute 'silent !cp ' . file . ' ' . newfile 
   redraw!
 endfunction
@@ -56,9 +56,9 @@ augroup netrw_mapping
 augroup END
 
 function! NetrwMapping()
-  noremap <buffer> c :call CopyFile()<cr>
-  nmap <buffer> o <CR>
-  nmap <buffer> p - 
-  nmap <buffer> a %
+  nmap <buffer> <nowait> c :exe CopyFile()<CR>
+  nmap <buffer> <nowait> o <CR>
+  nmap <buffer> <nowait> p - 
+  nmap <buffer> <nowait> a %
 endfunction
 

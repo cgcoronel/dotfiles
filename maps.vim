@@ -19,7 +19,7 @@ function! CloseFile()
 endfunction
 
 " Close file
-map <silent> <leader>q :call CloseFile()<CR>
+map <silent> <nowait> <leader>q :call CloseFile()<CR>
 
 " Split file
 nmap s :vsp<CR>
@@ -87,8 +87,8 @@ nmap <silent> <Leader>d :0Git<CR>
 " Compare files
 augroup fugitive_mapping
   autocmd!
-  autocmd filetype fugitive nmap <buffer> <silent> ff dd :resize 100<CR> 
-  autocmd filetype fugitive nmap <buffer> <silent> o gO <C-l>:q<CR> 
+  autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dd :resize 100<CR> 
+  autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR> 
 augroup END
 
 cnoreabbrev gco Git commit 
