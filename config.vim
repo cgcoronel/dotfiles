@@ -44,7 +44,7 @@ let g:netrw_banner = 0
 
 function! CopyFile()
   let file = expand("%:p") . netrw#Call('NetrwGetWord')
-  let newfile = input('copy file: ', file)
+  let newfile = input('Copy file: ', file)
   execute 'silent !cp ' . file . ' ' . newfile 
   redraw!
 endfunction
