@@ -1,5 +1,4 @@
 let mapleader = "\<space>"
-""let mapleader = ";"
 
 " File Explorer
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
@@ -71,7 +70,6 @@ vnoremap gj L
 
 " Finder
 nmap <Leader>f :GitFiles<CR>
-"nmap <C-P> :GitFiles<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
@@ -109,6 +107,6 @@ cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0)
 "Move lines up / down
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
-
+ 
 nmap <Leader>a :ZenMode<CR>
 

@@ -1,12 +1,10 @@
 """"""""""""""""""" Coc extensions
 let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint' ]
 
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 """"""""""""""""""" fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
-let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_colors =
   \ { 'pointer': ['fg', 'Exception'],
   \ 'prompt':  ['fg', 'Conditional'],
@@ -28,8 +26,6 @@ let g:fugitive_dynamic_colors = 0
 
 """"""""""""""""""" Simple terminal
 let g:simple_term_open = '<c-p>' 
-"let g:simple_term_open = '<c-i>' 
-
 let g:simple_term_close = '<Leader>q' 
 
 """"""""""""""""""" Netrw 

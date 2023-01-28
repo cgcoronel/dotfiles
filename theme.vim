@@ -3,7 +3,6 @@ hi FoldColumn ctermfg=0 ctermbg=0
 hi Comment cterm=italic ctermfg=241 gui=italic guifg=#928374
 
 "Coc suggestion box
-"hi Pmenu ctermfg=7 ctermbg=0
 hi Pmenu ctermfg=7 ctermbg=none
 
 hi PmenuSel ctermfg=7 ctermbg=241
@@ -35,17 +34,15 @@ hi LineNr ctermfg=15
 hi Ignore cterm=bold ctermfg=241
 
 "highlighting TODO
-hi Todo cterm=bold ctermfg=0 ctermbg=167
+hi Todo cterm=bold ctermbg=167
 
 "Visual color selection
-hi clear Visual 
-hi Visual ctermbg=15 ctermfg=NONE
+hi Visual ctermbg=15 guibg=NONE
 
 " Search 
 hi Search cterm=reverse ctermfg=179 ctermbg=0
 
-""hi Title ctermfg=11 
-hi VertSplit ctermfg=15 ctermbg=0
+hi VertSplit ctermfg=15 
 
 "git diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=0
@@ -62,12 +59,10 @@ hi Conceal ctermfg=15 guifg=Grey70
 " ~
 hi EndOfBuffer ctermfg=15 guifg=Red3
 
-hi VertSplit ctermbg=NONE guibg=NONE
-
 hi Statement cterm=bold ctermfg=179 gui=bold guifg=#a52a2a;
 
 " import & export
-hi Special ctermfg=5 guifg=Orange
+hi Special ctermfg=5 
 
 hi Type ctermfg=4
 
