@@ -29,7 +29,6 @@ let g:simple_term_open = '<c-p>'
 let g:simple_term_close = '<Leader>q' 
 
 """"""""""""""""""" Netrw 
-let g:netrw_liststyle = 4 
 let g:netrw_keepdir = 1
 let g:netrw_altv=1
 let g:netrw_list_hide = '.*\.DS_Store,.\.vscode,node_modules'
