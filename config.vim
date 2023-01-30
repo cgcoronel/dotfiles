@@ -55,5 +55,6 @@ function! NetrwMapping()
   nmap <buffer> <nowait> o <CR>
   nmap <buffer> <nowait> p - 
   nmap <buffer> <nowait> a %
+  nmap <buffer> <nowait> s v<C-h>
 endfunction
 
