@@ -56,15 +56,10 @@ map <C-J> 10j
 map <C-K> 10k
 
 " Move in file 
-nnoremap gl $
-nnoremap gh 0
-nnoremap gk H
-nnoremap gj L
-
-vnoremap gl $
-vnoremap gh 0
-vnoremap gk H
-vnoremap gj L
+map gl $
+map gh 0
+map gk H
+map gj L
 
 """"""""""""""""""""""" Search into files 
 
