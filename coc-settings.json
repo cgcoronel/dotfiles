@@ -1,14 +1,11 @@
 {
-  "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
     "typescriptreact",
     "json",
     "javascriptreact",
-    "typescript.tsx",
-    "css",
-    "scss"
+    "typescript.tsx"
   ],
   "suggest.languageSourcePriority": 90,
   "prettier.useTabs": false,
