@@ -94,7 +94,7 @@ nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
 " Run test in focus file   
-cnoreabbrev te :call SimpleTerm('npx jest --watch ' . expand('%'), 0) 
+cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0) 
 
 " fix linter
 cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0) 
