@@ -3,12 +3,10 @@ let mapleader = "\<space>"
 " File Explorer
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
-" Leave INSERT MODE
 imap kj <Esc>
 
 nmap <silent> <F8> :set relativenumber!<cr>
 
-" Close file
 function! CloseFile()
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
     :q 
@@ -61,14 +59,11 @@ map gj L
 
 """"""""""""""""""""""" Search into files 
 
-" Finder
 nmap <Leader>f :GitFiles<CR>
+nmap > :Rg<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
-
-" Seach word into files
-nmap > :Rg<CR>
 
 """"""""""""""""""""""" GIT Commands 
 
