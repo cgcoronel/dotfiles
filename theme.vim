@@ -11,7 +11,6 @@ hi CocMenuSel    ctermbg=14 guibg=#ffffff
 hi CocFloatThumb ctermbg=14 guibg=#ffffff
 hi CocFloatSbar  ctermbg=14 guibg=#ffffff
 
-"notifications simbols in status vertical bar
 hi GitGutterAdd ctermfg=15 ctermbg=0
 hi GitGutterChange ctermfg=15 ctermbg=0
 hi GitGutterDelete ctermfg=15 ctermbg=0 
@@ -19,32 +18,26 @@ hi GitGutterChangeDelete ctermfg=15 ctermbg=0
 
 hi SignColumn ctermbg=0
 
-"Status bar
 hi StatusLine cterm=NONE ctermfg=243 ctermbg=15
 hi StatusLineNC cterm=NONE ctermfg=243 ctermbg=15
 
 "Mode color
 hi MsgArea ctermfg=243
 
-"Cursor line
 hi CursorLine ctermbg=NONE cterm=NONE
 hi CursorLineNR cterm=none ctermfg=3 
 hi LineNr ctermfg=15
 
 hi Ignore cterm=bold ctermfg=241
 
-"highlighting TODO
 hi Todo cterm=bold ctermbg=167
 
-"Visual color selection
 hi Visual ctermbg=15 guibg=NONE
 
-" Search 
 hi Search cterm=reverse ctermfg=179 ctermbg=0
 
 hi VertSplit ctermfg=15 
 
-"git diff
 hi DiffAdd cterm=reverse ctermfg=10 ctermbg=0
 hi DiffText cterm=reverse ctermfg=179 ctermbg=0
 hi DiffChange cterm=reverse ctermfg=108 ctermbg=0
@@ -56,7 +49,6 @@ hi FloatermBorder ctermfg=15 guifg=Grey7
 
 hi Conceal ctermfg=15 guifg=Grey70
 
-" ~
 hi EndOfBuffer ctermfg=15 guifg=Red3
 
 hi Statement cterm=bold ctermfg=179 gui=bold guifg=#a52a2a;

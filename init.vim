@@ -11,7 +11,6 @@ set sw=2
 set number
 set laststatus=2
 set updatetime=100
-""set ttimeoutlen=50
 set ttimeoutlen=0
 set directory=~/.vim/swap/
 set undofile
