@@ -8,7 +8,7 @@ imap kj <Esc>
 
 nmap <silent> <F8> :set relativenumber!<cr>
 
-" Close each buffer and close vim 
+" Close file
 function! CloseFile()
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
     :q 
@@ -17,7 +17,6 @@ function! CloseFile()
   endif
 endfunction
 
-" Close file
 map <silent> <nowait> <leader>q :call CloseFile()<CR>
 
 " Split file
@@ -35,12 +34,11 @@ imap <C-H> <Esc><C-W><C-H>
 nmap <silent> m :bprevious<CR>
 nmap <silent> . :bnext<CR>
 
-
 " Got to definitions local
 nnoremap fs gd
 nmap fd gf
 
-" Save file 
+" Save  
 nmap <Leader>w :w<CR>
 
 " Autocomplete parents pairs
@@ -93,15 +91,14 @@ cnoreabbrev gcc BCommits
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
+"Move lines up / down
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
+
+nmap <Leader>a :ZenMode<CR>
+
 " Run test in focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0) 
 
 " fix linter
 cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0) 
-
-"Move lines up / down
-nnoremap <S-j> :m .+1<CR>==
-nnoremap <S-k> :m .-2<CR>==
- 
-nmap <Leader>a :ZenMode<CR>
-
