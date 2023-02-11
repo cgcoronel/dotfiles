@@ -8,7 +8,7 @@
  https://github.com/neovim/neovim/wiki/Installing-Neovim 
 ```
 
-### Copiar init.vim dentro de 
+### Copiar el contenido de este repo dentro de 
 ```console
 .config/nvim/
 ```
@@ -30,23 +30,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 :CocConfig
 ```
 
-#### Agregar la siguientre configuración
-```console
- {
-  "suggest.noselect": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "graphql",
-    "css",
-    "scss"
-  ]
- }
-```
 ### Instalar fd-find
 ```console
 # sudo apt install fd-find
