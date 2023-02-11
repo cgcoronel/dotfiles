@@ -90,8 +90,6 @@ nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
 
-nmap <Leader>a :ZenMode<CR>
-
 " Run test in focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0) 
 

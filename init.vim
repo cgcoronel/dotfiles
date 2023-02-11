@@ -38,7 +38,6 @@ call plug#begin('~/vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'cgcoronel/simple-term.vim'
-  Plug 'folke/zen-mode.nvim'
   Plug 'pangloss/vim-javascript'
 
 call plug#end()
