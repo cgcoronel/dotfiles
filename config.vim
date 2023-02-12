@@ -1,9 +1,8 @@
-""""""""""""""""""" Coc extensions
+" Coc
 let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint' ]
-
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-""""""""""""""""""" fzf config
+" fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_colors =
   \ { 'pointer': ['fg', 'Exception'],
@@ -14,21 +13,20 @@ let g:fzf_colors =
   \ 'info':    ['fg', 'PreProc'] }
 let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
-""""""""""""""""""" Vim Git Gutter 
-" Only show signs when save file
+" Git Gutter - Only show signs when save file
 autocmd BufWritePost * GitGutter
 
 let g:gitgutter_highlight_linenrs = 0 
 let g:gitgutter_map_keys = 0
 
-""""""""""""""""""" Vim Fugitive
+" fugitive
 let g:fugitive_dynamic_colors = 0 
 
-""""""""""""""""""" Simple terminal
+" Simple terminal
 let g:simple_term_open = '<c-p>' 
 let g:simple_term_close = '<Leader>q' 
 
-""""""""""""""""""" Netrw 
+" Netrw 
 let g:netrw_keepdir = 1
 let g:netrw_altv=1
 let g:netrw_list_hide = '.*\.DS_Store,.\.vscode,node_modules'

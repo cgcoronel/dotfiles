@@ -1,6 +1,6 @@
 let mapleader = "\<space>"
 
-" File Explorer
+" Explorer
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 imap kj <Esc>
@@ -17,7 +17,7 @@ endfunction
 
 map <silent> <nowait> <leader>q :call CloseFile()<CR>
 
-" Split file
+" Split
 nmap s :vsp<CR>
 nmap S :sp<CR>
 
@@ -28,7 +28,7 @@ map <C-H> <C-W><C-H>
 imap <C-L> <Esc><C-W><C-L>
 imap <C-H> <Esc><C-W><C-H>
 
-" move between buffers
+" Move between buffers
 nmap <silent> m :bprevious<CR>
 nmap <silent> . :bnext<CR>
 
@@ -47,25 +47,20 @@ inoremap " ""<Esc>i
 inoremap { {}<Esc>i
 inoremap ' ''<Esc>i
 
-" Mover up/down in 10 lines bloc
+" Move next/prev 10 lines
 map <C-J> 10j
 map <C-K> 10k
 
-" Move in file 
+" Move start - end line 
 map gl $
 map gh 0
-map gk H
-map gj L
 
-""""""""""""""""""""""" Search into files 
-
+" Search
 nmap <Leader>f :GitFiles<CR>
 nmap > :Rg<CR>
 
 " Clean search result
 noremap <silent> <Leader><space> :noh<CR>
-
-""""""""""""""""""""""" GIT Commands 
 
 " Show file changes 
 nmap <silent> <Leader>d :0Git<CR>
@@ -86,11 +81,11 @@ cnoreabbrev gcc BCommits
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
-"Move lines up / down
+" Move line 
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
 
-" Run test in focus file   
+" Run test focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0) 
 
 " fix linter
