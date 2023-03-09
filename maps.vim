@@ -90,3 +90,5 @@ cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runI
 
 " fix linter
 cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0) 
+
+nmap cp :let @+ = expand("%")<cr>
