@@ -46,3 +46,4 @@ so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
+
