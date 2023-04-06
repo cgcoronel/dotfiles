@@ -22,7 +22,6 @@ set foldlevelstart=99
 set ignorecase
 set diffopt+=vertical 
 set nowrap
-set rtp+=/usr/local/opt/fzf
 set hidden
 set wildmenu
 
@@ -34,6 +33,7 @@ language en_US.UTF-8
 call plug#begin('~/vim/plugged')
 
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
@@ -45,5 +45,3 @@ call plug#end()
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
-
-
