@@ -13,16 +13,18 @@
 .config/nvim/
 ```
 
-### Instalar vim-plug para gestionar plugins en vim
-
+### Descargar plugins dentro del directorio 
 ```console
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-```
+.config/plugged
 
-### Instalar Plugins, correr desde la consola de Vim
-```console
-:PlugInstall
+
+git clone -b release https://github.com/neoclide/coc.nvim
+git clone https://github.com/junegunn/fzf
+git clone https://github.com/junegunn/fzf.vim
+git clone https://github.com/tpope/vim-fugitive
+git clone https://github.com/airblade/vim-gitgutter
+git clone https://github.com/cgcoronel/simple-term.vim
+git clone https://github.com/pangloss/vim-javascript
 ```
 
 ### Configurar Coc, correr desde la consola de Vim.
@@ -30,22 +32,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 :CocConfig
 ```
 
-### Instalar fd-find
+### Instalar FZF 
 ```console
-# sudo apt install fd-find
-```
-
-### Instalar Ripgrep
-```console
-# brew install ripgrep
-```
-
-### Agregar la siguiente linea al .bashrc o .zshrc
-```console
-export FZF_DEFAULT_COMMAND='rg --files --follow --hidden -g "!{node_modules/*,.git/*}"'
+:brew install fzf
 ```
 
 ### Instalar dependencias Python
 ```console
 # python3 -m pip install --user --upgrade pynvim
 ```
+

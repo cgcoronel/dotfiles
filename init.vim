@@ -12,9 +12,9 @@ set number
 set laststatus=2
 set updatetime=100
 set ttimeoutlen=0
-set directory=~/.vim/swap/
+set directory=~/.nvim/swap/
 set undofile
-set undodir=~/.vim/undodir/
+set undodir=~/.nvim/undodir/
 set history=1000
 set autoindent
 set foldmethod=indent
@@ -30,18 +30,17 @@ set relativenumber
 
 language en_US.UTF-8
 
-call plug#begin('~/vim/plugged')
-
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'cgcoronel/simple-term.vim'
-  Plug 'pangloss/vim-javascript'
-
-call plug#end()
+set runtimepath^=
+      \~/.config/nvim/plugged/coc.nvim,
+      \~/.config/nvim/plugged/fzf,
+      \~/.config/nvim/plugged/fzf.vim,
+      \~/.config/nvim/plugged/simple-term.vim,
+      \~/.config/nvim/plugged/vim-fugitive,
+      \~/.config/nvim/plugged/vim-gitgutter,
+      \~/.config/nvim/plugged/vim-javascript,
 
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
+
+
