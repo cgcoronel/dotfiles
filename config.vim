@@ -1,5 +1,5 @@
 " Coc
-let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint' ]
+let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint', 'coc-json' ]
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " fzf config

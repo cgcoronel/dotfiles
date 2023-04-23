@@ -1,18 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx"
-  ],
+  "coc.preferences.formatOnSave": true,
   "suggest.languageSourcePriority": 90,
   "prettier.useTabs": false,
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "prettier.bracketSpacing": true,
-  "prettier.disableSuccessMessage": true,
   "javascript.suggestionActions.enabled": true,
   "diagnostic.virtualTextCurrentLineOnly": true
 }
