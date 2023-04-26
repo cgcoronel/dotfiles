@@ -6,5 +6,6 @@
   "prettier.singleQuote": true,
   "prettier.bracketSpacing": true,
   "javascript.suggestionActions.enabled": true,
-  "diagnostic.virtualTextCurrentLineOnly": true
+  "diagnostic.virtualTextCurrentLineOnly": true,
+  "eslint.enable": true
 }
