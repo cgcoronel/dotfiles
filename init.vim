@@ -30,7 +30,7 @@ set relativenumber
 
 language en_US.UTF-8
 
-set runtimepath^=~/.config/nvim/plugged/*,
+set runtimepath^=~/.config/nvim/plugged/*
 
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
