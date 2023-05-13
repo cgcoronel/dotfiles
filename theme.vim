@@ -25,7 +25,8 @@ hi StatusLine cterm=underline,bold ctermfg=15 ctermbg=0
 hi StatusLineNC cterm=underline,bold ctermfg=15 ctermbg=0
 
 "Mode color
-hi MsgArea ctermfg=243
+""hi MsgArea ctermfg=243
+hi MsgArea ctermfg=15
 
 hi CursorLine ctermbg=NONE cterm=NONE
 hi CursorLineNR cterm=none ctermfg=3 
