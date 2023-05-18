@@ -55,5 +55,6 @@ function! NetrwMapping()
   nmap <buffer> <nowait> a %
   nmap <buffer> <nowait> s v<C-h>
   nmap <buffer> <nowait> m :bprevious<CR>
+  nmap <buffer> <nowait> . :bnext<CR>
 endfunction
 
