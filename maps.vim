@@ -75,7 +75,6 @@ augroup END
 cnoreabbrev gco Git commit 
 cnoreabbrev gpu Git push 
 cnoreabbrev gbb Git blame --date short 
-cnoreabbrev gcc BCommits 
 
 " Move between uncommit changes 
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
