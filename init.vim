@@ -29,8 +29,7 @@ set so=999
 set relativenumber
 
 language en_US.UTF-8
-
-set runtimepath^=~/.config/nvim/plugged/*
+set rtp^=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf 
 
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
