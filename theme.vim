@@ -49,7 +49,8 @@ hi FloatermBorder ctermfg=15 guifg=Grey7
 
 hi Conceal ctermfg=15 guifg=Grey70
 
-hi EndOfBuffer ctermfg=15 guifg=Red3
+""hi EndOfBuffer ctermfg=15 guifg=Red3
+hi EndOfBuffer ctermfg=0
 
 hi Statement cterm=bold ctermfg=179 gui=bold guifg=#a52a2a;
 
