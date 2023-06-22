@@ -81,8 +81,8 @@ nnoremap <silent> <CR> :GitGutterNextHunk<CR>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
 
 " Move line 
-nnoremap <S-j> :m .+1<CR>==
-nnoremap <S-k> :m .-2<CR>==
+nnoremap <S-j> :m .+1<CR>
+nnoremap <S-k> :m .-2<CR>
 
 " Run test focus file   
 cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0) 
