@@ -1,21 +1,21 @@
-let mapleader = "\<space>"
+let mapleader = "\<Space>"
 
 " Explorer
 nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 imap kj <Esc>
 
-nmap <silent> <F8> :set relativenumber!<cr>
+nmap <silent> <F8> :set number <Bar> set relativenumber!<CR>
 
 function! CloseFile()
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    :q 
+    q
   else
-    :bdelete
+    bdelete
   endif
 endfunction
 
-map <silent> <nowait> <leader>q :call CloseFile()<CR>
+map <silent> <nowait> <Leader>q :call CloseFile()<CR>
 
 " Split
 nmap s :vsp<CR>
@@ -36,7 +36,7 @@ nmap <silent> . :bnext<CR>
 nnoremap fs gd
 nmap fd gf
 
-" Save  
+" Save
 nmap <Leader>w :w<CR>
 
 " Autocomplete parents pairs
@@ -51,7 +51,7 @@ inoremap ' ''<Esc>i
 map <C-J> 10j
 map <C-K> 10k
 
-" Move start - end line 
+" Move start - end line
 map gl $
 map gh 0
 
@@ -60,34 +60,34 @@ nmap <Leader>f :GitFiles<CR>
 nmap > :Rg<CR>
 
 " Clean search result
-noremap <silent> <Leader><space> :noh<CR>
+noremap <silent> <Leader><Space> :noh<CR>
 
-" Show file changes 
+" Show file changes
 nmap <silent> <Leader>d :0Git<CR>
 
 " Compare files
 augroup fugitive_mapping
   autocmd!
-  autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR> 
-  autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR> 
+  autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR>
+  autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR>
 augroup END
 
-cnoreabbrev gco Git commit 
-cnoreabbrev gpu Git push 
-cnoreabbrev gbb Git blame --date short 
+cnoreabbrev gco Git commit
+cnoreabbrev gpu Git push
+cnoreabbrev gbb Git blame --date short
 
-" Move between uncommit changes 
+" Move between uncommit changes
 nnoremap <silent> <CR> :GitGutterNextHunk<CR>
-nnoremap <silent> <backspace> :GitGutterPrevHunk<CR>
+nnoremap <silent> <Backspace> :GitGutterPrevHunk<CR>
 
-" Move line 
+" Move line
 nnoremap <S-j> :m .+1<CR>
 nnoremap <S-k> :m .-2<CR>
 
-" Run test focus file   
-cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0) 
+" Run test focus file
+cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0)
 
 " fix linter
-cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0) 
+cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0)
 
-nmap cp :let @+ = expand("%")<cr>
+nmap cp :let @+ = expand("%")<CR>
