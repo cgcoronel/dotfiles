@@ -37,7 +37,7 @@ git clone https://github.com/pangloss/vim-javascript
 4. Instala FZF en tu sistema ejecutando el siguiente comando:
 
 ```console
-:brew install fzf
+# brew install fzf
 ```
 
 5. Instala las dependencias de Python ejecutando el siguiente comando:
