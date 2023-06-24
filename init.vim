@@ -3,13 +3,10 @@ syntax on
 set mouse=a
 set numberwidth=2
 set clipboard=unnamedplus
-set noshowcmd
-set cursorline
 set encoding=UTF-8
 set showmatch
+set relativenumber
 set sw=2
-set number
-set laststatus=2
 set updatetime=100
 set ttimeoutlen=0
 set directory=~/.nvim/swap/
@@ -20,13 +17,10 @@ set autoindent
 set foldmethod=indent
 set foldlevelstart=99
 set ignorecase
-set diffopt+=vertical 
 set nowrap
 set hidden
-set wildmenu
 
 set so=999
-set relativenumber
 
 language en_US.UTF-8
 set rtp^=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf 

@@ -1,19 +1,20 @@
 " Coc
-let g:coc_global_extensions = [ 'coc-prettier', 'coc-tsserver', 'coc-eslint', 'coc-json' ]
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-eslint', 'coc-json']
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
-let g:fzf_colors =
-  \ { 'pointer': ['fg', 'Exception'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'border':  ['fg', 'Conceal'],
-  \ 'gutter':  ['fg', 'Visual'],
-  \ 'bg+':     ['bg', 'Visual' ],
-  \ 'info':    ['fg', 'PreProc'] }
+let g:fzf_colors = {
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'prompt': ['fg', 'Conditional'],
+      \ 'border': ['fg', 'Conceal'],
+      \ 'gutter': ['fg', 'Visual'],
+      \ 'bg+': ['bg', 'Visual' ],
+      \ 'info': ['fg', 'PreProc']
+      \ }
 let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
-" Git Gutter - Only show signs when save file
+" Git Gutter - Only show signs when saving file
 autocmd BufWritePost * GitGutter
 
 let g:gitgutter_highlight_linenrs = 0 
@@ -28,7 +29,7 @@ let g:simple_term_close = '<Leader>q'
 
 " Netrw 
 let g:netrw_keepdir = 1
-let g:netrw_altv=1
+let g:netrw_altv = 1
 let g:netrw_list_hide = '.*\.DS_Store,.\.vscode,node_modules'
 let g:netrw_hide = 1       
 let g:netrw_fastbrowse = 2
@@ -49,6 +50,7 @@ augroup netrw_mapping
 augroup END
 
 function! NetrwMapping()
+  set nocursorline
   nmap <buffer> <nowait> c :exe CopyFile()<CR>
   nmap <buffer> <nowait> o <CR>
   nmap <buffer> <nowait> p - 

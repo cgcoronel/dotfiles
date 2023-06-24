@@ -68,7 +68,7 @@ nmap <silent> <Leader>d :0Git<CR>
 " Compare files
 augroup fugitive_mapping
   autocmd!
-  autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dd :resize 100<CR> 
+  autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR> 
   autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR> 
 augroup END
 
