@@ -17,7 +17,7 @@ Sigue las instrucciones en [este enlace](https://github.com/neovim/neovim/wiki/I
 2. Descarga los plugins necesarios ejecutando los siguientes comandos en tu terminal:
 
 ```console
-cd .config/plugged
+cd .config/nvim/plugged
 
 git clone -b release https://github.com/neoclide/coc.nvim
 git clone https://github.com/junegunn/fzf
