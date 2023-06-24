@@ -7,7 +7,6 @@ set encoding=UTF-8
 set showmatch
 set relativenumber
 set sw=2
-set updatetime=100
 set ttimeoutlen=0
 set directory=~/.nvim/swap/
 set undofile
