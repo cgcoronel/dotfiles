@@ -18,7 +18,6 @@ set foldlevelstart=99
 set ignorecase
 set nowrap
 set hidden
-
 set so=999
 
 language en_US.UTF-8
