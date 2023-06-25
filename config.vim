@@ -39,8 +39,7 @@ let g:netrw_banner = 0
 function! CopyFile()
   let file = expand("%:p") . netrw#Call('NetrwGetWord')
   let newfile = input('Copy file: ', file)
-  execute 'silent !cp ' . file . ' ' . newfile 
-  redraw!
+  silent execute '!cp' file newfile
 endfunction
 
 hi! link netrwMarkFile Search
@@ -50,10 +49,10 @@ augroup netrw_mapping
 augroup END
 
 function! NetrwMapping()
-  set nocursorline
-  nmap <buffer> <nowait> c :exe CopyFile()<CR>
+  setlocal nocursorline
+  nmap <buffer> <nowait> c :call CopyFile()<CR>
   nmap <buffer> <nowait> o <CR>
-  nmap <buffer> <nowait> p - 
+  nmap <buffer> <nowait> p -
   nmap <buffer> <nowait> a %
   nmap <buffer> <nowait> s v<C-h>
   nmap <buffer> <nowait> m :bprevious<CR>
