@@ -19,9 +19,9 @@ set ignorecase
 set nowrap
 set hidden
 set so=999
+set rtp+=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf
 
 language en_US.UTF-8
-set rtp^=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf 
 
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
