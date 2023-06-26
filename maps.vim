@@ -5,7 +5,7 @@ nnoremap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <
 
 inoremap kj <Esc>
 
-nnoremap <silent> <F8> :set number <Bar> set relativenumber!<CR>
+nnoremap <F8> :set number <Bar> set relativenumber!<CR>
 
 function! Close()
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
@@ -29,8 +29,8 @@ inoremap <C-L> <Esc><C-W><C-L>
 inoremap <C-H> <Esc><C-W><C-H>
 
 " Move between buffers
-nnoremap <silent> m :bprevious<CR>
-nnoremap <silent> . :bnext<CR>
+nnoremap m :bprevious<CR>
+nnoremap . :bnext<CR>
 
 " Got to definitions local
 nnoremap fs gd
@@ -60,10 +60,10 @@ nnoremap <Leader>f :GitFiles<CR>
 nnoremap > :Rg<CR>
 
 " Clean search result
-noremap <silent> <Leader><Space> :noh<CR>
+noremap <Leader><Space> :noh<CR>
 
 " Show file changes
-nnoremap <silent> <Leader>d :0Git<CR>
+nnoremap <Leader>d :0Git<CR>
 
 " Compare files
 augroup fugitive_mapping
