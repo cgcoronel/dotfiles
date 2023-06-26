@@ -1,13 +1,13 @@
 let mapleader = "\<Space>"
 
 " Explorer
-nmap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
+nnoremap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
-imap kj <Esc>
+inoremap kj <Esc>
 
-nmap <silent> <F8> :set number <Bar> set relativenumber!<CR>
+nnoremap <silent> <F8> :set number <Bar> set relativenumber!<CR>
 
-function! CloseFile()
+function! Close()
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
     q
   else
@@ -15,29 +15,29 @@ function! CloseFile()
   endif
 endfunction
 
-map <silent> <nowait> <Leader>q :call CloseFile()<CR>
+noremap <nowait> <Leader>q :call Close()<CR>
 
 " Split
-nmap s :vsp<CR>
-nmap S :sp<CR>
+nnoremap s :vsp<CR>
+nnoremap S :sp<CR>
 
 " Move between split screens
-map <C-L> <C-W><C-L>
-map <C-H> <C-W><C-H>
+noremap <C-L> <C-W><C-L>
+noremap <C-H> <C-W><C-H>
 
-imap <C-L> <Esc><C-W><C-L>
-imap <C-H> <Esc><C-W><C-H>
+inoremap <C-L> <Esc><C-W><C-L>
+inoremap <C-H> <Esc><C-W><C-H>
 
 " Move between buffers
-nmap <silent> m :bprevious<CR>
-nmap <silent> . :bnext<CR>
+nnoremap <silent> m :bprevious<CR>
+nnoremap <silent> . :bnext<CR>
 
 " Got to definitions local
 nnoremap fs gd
-nmap fd gf
+nnoremap fd gf
 
 " Save
-nmap <Leader>w :w<CR>
+nnoremap <Leader>w :w<CR>
 
 " Autocomplete parents pairs
 inoremap ( ()<Esc>i
@@ -48,22 +48,22 @@ inoremap { {}<Esc>i
 inoremap ' ''<Esc>i
 
 " Move next/prev 10 lines
-map <C-J> 10j
-map <C-K> 10k
+noremap <C-J> 10j
+noremap <C-K> 10k
 
 " Move start - end line
-map gl $
-map gh 0
+noremap gl $
+noremap gh 0
 
 " Search
-nmap <Leader>f :GitFiles<CR>
-nmap > :Rg<CR>
+nnoremap <Leader>f :GitFiles<CR>
+nnoremap > :Rg<CR>
 
 " Clean search result
 noremap <silent> <Leader><Space> :noh<CR>
 
 " Show file changes
-nmap <silent> <Leader>d :0Git<CR>
+nnoremap <silent> <Leader>d :0Git<CR>
 
 " Compare files
 augroup fugitive_mapping
@@ -77,8 +77,8 @@ cnoreabbrev gpu Git push
 cnoreabbrev gbb Git blame --date short
 
 " Move between uncommit changes
-nnoremap <silent> <CR> :GitGutterNextHunk<CR>
-nnoremap <silent> <Backspace> :GitGutterPrevHunk<CR>
+nnoremap <CR> :GitGutterNextHunk<CR>
+nnoremap <Backspace> :GitGutterPrevHunk<CR>
 
 " Move line
 nnoremap <S-j> :m .+1<CR>
@@ -90,4 +90,4 @@ cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runI
 " fix linter
 cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0)
 
-nmap cp :let @+ = expand("%")<CR>
+nnoremap cp :let @+ = expand("%")<CR>
