@@ -17,14 +17,8 @@ function! Term(...)
       autocmd BufEnter,BufWinEnter,WinEnter <buffer> startinsert!
     augroup END
 
-    tnoremap <buffer> <c-h> <C-\\><C-n><C-w><C-h>
-    tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>
-    tnoremap <buffer> <leader>q <C-\\><C-n>:bd!<CR>
-
     execute "tnoremap <buffer> <leader>q <C-\\><C-n>:bd!<CR>"
     execute "tnoremap <buffer> <c-h> <C-\\><C-n><C-w><C-h>"
-    execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
-
     execute "normal \<C-h>\<C-l>"
   endif
 endfunction

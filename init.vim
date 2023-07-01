@@ -6,8 +6,7 @@ set numberwidth=2
 set clipboard=unnamedplus
 set encoding=UTF-8
 set showmatch
-set number
-set relativenumber
+set number relativenumber
 set sw=2
 set ttimeoutlen=0
 set directory=~/.nvim/swap/
