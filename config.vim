@@ -23,10 +23,6 @@ let g:gitgutter_map_keys = 0
 " fugitive
 let g:fugitive_dynamic_colors = 0 
 
-" Simple terminal
-let g:simple_term_open = '<c-p>' 
-let g:simple_term_close = '<Leader>q' 
-
 " Netrw 
 let g:netrw_keepdir = 1
 let g:netrw_altv = 1

@@ -26,3 +26,4 @@ set rtp+=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf
 so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
+so ~/.config/nvim/terminal.vim

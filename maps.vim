@@ -85,9 +85,9 @@ nnoremap <S-j> :m .+1<CR>
 nnoremap <S-k> :m .-2<CR>
 
 " Run test focus file
-cnoreabbrev te :call SimpleTerm('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'), 0)
+cnoreabbrev te :call Term('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'))
 
 " fix linter
-cnoreabbrev fix :call SimpleTerm('npx eslint --fix ' . expand('%'), 0)
+cnoreabbrev fix :call Term('npx eslint --fix ' . expand('%'))
 
 nnoremap cp :let @+ = expand("%")<CR>
