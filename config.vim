@@ -4,14 +4,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
-let g:fzf_colors = {
-      \ 'pointer': ['fg', 'Exception'],
-      \ 'prompt': ['fg', 'Conditional'],
-      \ 'border': ['fg', 'Conceal'],
-      \ 'gutter': ['fg', 'Visual'],
-      \ 'bg+': ['bg', 'Visual' ],
-      \ 'info': ['fg', 'PreProc']
-      \ }
+let g:fzf_colors = { 'border': ['fg', 'Conceal'], 'bg+': ['bg', 'Visual' ] }
 let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
 " Git Gutter - Only show signs when saving file
@@ -44,7 +37,7 @@ augroup netrw_mapping
   autocmd filetype netrw call NetrwMapping()
 augroup END
 
-function! NetrwMapping()
+function! NetrwMapping() abort
   setlocal nocursorline
   nmap <buffer> <nowait> c :call CopyFile()<CR>
   nmap <buffer> <nowait> o <CR>

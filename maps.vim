@@ -1,6 +1,5 @@
 let mapleader = "\<Space>"
 
-" Explorer
 nnoremap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 
 inoremap kj <Esc>
@@ -8,18 +7,14 @@ inoremap kj <Esc>
 nnoremap <F8> :set number <Bar> set relativenumber!<CR>
 
 function! Close()
-  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    q
-  else
-    bdelete
-  endif
+  let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val)')
+  if len(buffers) == 1 | q | else | bdelete | endif
 endfunction
 
 noremap <nowait> <Leader>q :call Close()<CR>
 
 " Split
 nnoremap s :vsp<CR>
-nnoremap S :sp<CR>
 
 " Move between split screens
 noremap <C-L> <C-W><C-L>
@@ -39,7 +34,6 @@ nnoremap fd gf
 " Save
 nnoremap <Leader>w :w<CR>
 
-" Autocomplete parents pairs
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap ` ``<Esc>i
@@ -65,7 +59,6 @@ noremap <Leader><Space> :noh<CR>
 " Show file changes
 nnoremap <Leader>d :0Git<CR>
 
-" Compare files
 augroup fugitive_mapping
   autocmd!
   autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR>
@@ -84,10 +77,7 @@ nnoremap <Backspace> :GitGutterPrevHunk<CR>
 nnoremap <S-j> :m .+1<CR>
 nnoremap <S-k> :m .-2<CR>
 
-" Run test focus file
 cnoreabbrev te :call Term('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'))
-
-" fix linter
 cnoreabbrev fix :call Term('npx eslint --fix ' . expand('%'))
 
 nnoremap cp :let @+ = expand("%")<CR>
