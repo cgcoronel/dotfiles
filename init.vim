@@ -7,9 +7,7 @@ set showmatch
 set number relativenumber
 set sw=2
 set ttimeoutlen=0
-set directory=~/.nvim/swap/
 set undofile
-set undodir=~/.nvim/undodir/
 set history=1000
 set autoindent
 set foldmethod=indent
