@@ -27,7 +27,7 @@ function! Buffers()
   endif
 endfunction
 
-nnoremap F :call Buffers()<CR>
+nnoremap <silent> F :call Buffers()<CR>
 
 " Git Gutter - Only show signs when saving file
 autocmd BufWritePost * GitGutter
