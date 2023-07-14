@@ -19,6 +19,7 @@ function! ListFiles()
         \ 'source': buffers,
         \ 'sink': 'e',
         \ 'window': { 'width': 0.4, 'height': 0.5 },
+        \ 'options': '--color=bg+:15,border:15'
         \ })
 
   if !empty(fileSelected)
