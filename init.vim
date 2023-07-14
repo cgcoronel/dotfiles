@@ -1,8 +1,6 @@
 syntax on
-language en_US.UTF-8
 
 set mouse=a
-set numberwidth=2
 set clipboard=unnamedplus
 set encoding=UTF-8
 set showmatch
