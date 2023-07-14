@@ -7,7 +7,7 @@ let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_colors = { 'border': ['fg', 'Conceal'], 'bg+': ['bg', 'Visual' ] }
 let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
-function! ListFiles()
+function! Buffers()
   let buffers = []
   for i in range(1, bufnr('$'))
     if buflisted(i) && bufname(i) !=# '' && filereadable(bufname(i)) 
@@ -27,8 +27,7 @@ function! ListFiles()
   endif
 endfunction
 
-nnoremap <silent> F :call ListFiles()<CR>
-
+nnoremap F :call Buffers()<CR>
 
 " Git Gutter - Only show signs when saving file
 autocmd BufWritePost * GitGutter
@@ -67,7 +66,5 @@ function! NetrwMapping() abort
   nmap <buffer> <nowait> p -
   nmap <buffer> <nowait> a %
   nmap <buffer> <nowait> s v<C-h>
-  nmap <buffer> <nowait> m :bprevious<CR>
-  nmap <buffer> <nowait> . :bnext<CR>
 endfunction
 

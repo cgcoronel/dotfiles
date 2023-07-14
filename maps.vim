@@ -23,10 +23,6 @@ noremap <C-H> <C-W><C-H>
 inoremap <C-L> <Esc><C-W><C-L>
 inoremap <C-H> <Esc><C-W><C-H>
 
-" Move between buffers
-nnoremap m :bprevious<CR>
-nnoremap . :bnext<CR>
-
 " Got to definitions local
 nnoremap fs gd
 nnoremap fd gf
@@ -51,8 +47,8 @@ noremap gh 0
 
 " Search
 nnoremap > :Rg<CR>
-nnoremap <Leader>f :call fzf#vim#gitfiles('*', {'options': '--no-preview', 'window': { 'width': 0.4, 'height': 0.5 }})<CR>
-nnoremap <Leader>s :call fzf#vim#gitfiles('?', {'options': '--no-preview', 'window': { 'width': 0.4, 'height': 0.5 }})<CR>
+nnoremap <Leader>f :GitFiles<CR>
+nnoremap <Leader>s :GitFiles?<CR>
 
 " Clean search result
 noremap <Leader><Space> :noh<CR>
