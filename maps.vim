@@ -25,7 +25,8 @@ inoremap <C-H> <Esc><C-W><C-H>
 
 " Got to definitions local
 nnoremap fs gd
-nnoremap fd gf
+""nnoremap fd gf
+nnoremap fd :echo "prueba con gf"<cr>
 
 " Save
 nnoremap <Leader>w :w<CR>

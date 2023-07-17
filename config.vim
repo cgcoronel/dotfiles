@@ -68,3 +68,16 @@ function! NetrwMapping() abort
   nmap <buffer> <nowait> s v<C-h>
 endfunction
 
+" Term
+autocmd TermOpen * tnoremap <buffer> <leader>q <C-\><C-n>:bd!<CR>
+autocmd TermOpen * startinsert
+autocmd TermOpen * tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
+autocmd TermOpen * tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
+autocmd BufEnter term://* startinsert
+
+function! Term(...)
+  vsp
+  wincmd l
+  execute "term " . get(a:, 1, '')
+  set nonu nornu
+endfunction
