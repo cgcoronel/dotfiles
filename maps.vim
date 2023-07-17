@@ -75,7 +75,10 @@ nnoremap <Backspace> :GitGutterPrevHunk<CR>
 nnoremap <S-j> :m .+1<CR>
 nnoremap <S-k> :m .-2<CR>
 
-cnoreabbrev te :call Term('npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%'))
-cnoreabbrev fix :call Term('npx eslint --fix ' . expand('%'))
+command! TestJest :vsp | wincmd l | exec 'term npx jest --resetMocks --forceExit --bail --runInBand --watch ' . expand('%')
+cnoreabbrev te TestJest
+
+command! EslintFix :sp | wincmd j | resize 15 | exec 'term npx eslint --fix ' . expand('%')
+cnoreabbrev fix EslintFix 
 
 nnoremap cp :let @+ = expand("%")<CR>
