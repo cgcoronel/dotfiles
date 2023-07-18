@@ -7,28 +7,6 @@ let g:fzf_action = { 'ctrl-o': 'vsplit' }
 let g:fzf_colors = { 'border': ['fg', 'Conceal'], 'bg+': ['bg', 'Visual' ] }
 let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
-function! Buffers()
-  let buffers = []
-  for i in range(1, bufnr('$'))
-    if buflisted(i) && bufname(i) !=# '' && filereadable(bufname(i)) 
-      call add(buffers, bufname(i))
-    endif
-  endfor
-
-  let fileSelected = fzf#run({
-        \ 'source': buffers,
-        \ 'sink': 'e',
-        \ 'window': { 'width': 0.4, 'height': 0.5 },
-        \ 'options': '--color=bg+:15,border:15'
-        \ })
-
-  if !empty(fileSelected)
-    execute 'e ' . fileSelected
-  endif
-endfunction
-
-nnoremap <silent> F :call Buffers()<CR>
-
 " Git Gutter - Only show signs when saving file
 autocmd BufWritePost * GitGutter
 
