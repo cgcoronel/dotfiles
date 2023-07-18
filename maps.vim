@@ -8,7 +8,7 @@ nnoremap <F8> :set number <Bar> set relativenumber!<CR>
 
 function! Quit()
   let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val)')
-  if len(buffers) == 1 | q | else | bdelete | endif
+  if len(buffers) == 1 | q | else | bd | endif
 endfunction
 
 noremap <nowait> <Leader>q :call Quit()<CR>
