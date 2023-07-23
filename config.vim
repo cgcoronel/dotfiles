@@ -44,8 +44,8 @@ function! NetrwMapping() abort
   nmap <buffer> <nowait> p -
   nmap <buffer> <nowait> a %
   nmap <buffer> <nowait> s v<C-h>
-  nmap <buffer> <nowait> m :bprevious<CR>
-  nmap <buffer> <nowait> . :bnext<CR>
+  nmap <buffer> <nowait> m :call BufferList("p")<CR>
+  nmap <buffer> <nowait> . :call BufferList("n")<CR>
 endfunction
 
 " Term
