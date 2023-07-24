@@ -56,3 +56,6 @@ autocmd TermOpen * tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
 autocmd TermOpen * tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
 autocmd BufEnter term://* startinsert
 
+" Simple buffer line
+let g:simple_bufferline_sel_open= ' '
+let g:simple_bufferline_sel_close= ' '
