@@ -42,8 +42,8 @@ inoremap ' ''<Esc>i
 noremap <C-J> 10j
 noremap <C-K> 10k
 
-noremap m :bnext<cr>
-noremap . :bprevious<cr> 
+""noremap m :bnext<cr>
+""noremap . :bprevious<cr> 
 
 " Move start - end line
 noremap gl $
