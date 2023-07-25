@@ -30,4 +30,4 @@ hi GitGutterChange guifg=#545c7e
 hi GitGutterDelete guifg=#545c7e
 hi GitGutterChangeDelete guifg=#545c7e
 
-
+hi DiagnosticError guifg=#545c7e
