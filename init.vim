@@ -31,3 +31,6 @@ hi GitGutterDelete guifg=#545c7e
 hi GitGutterChangeDelete guifg=#545c7e
 
 hi DiagnosticError guifg=#545c7e
+
+ let g:copilot_node_command =
+  \ "~/node-v18.17.0/bin/node"
