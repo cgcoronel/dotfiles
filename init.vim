@@ -23,3 +23,11 @@ so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
 
 colorscheme tokyonight-night
+
+" GitGutter
+hi GitGutterAdd guifg=#545c7e 
+hi GitGutterChange guifg=#545c7e 
+hi GitGutterDelete guifg=#545c7e
+hi GitGutterChangeDelete guifg=#545c7e
+
+
