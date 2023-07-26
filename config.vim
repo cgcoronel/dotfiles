@@ -59,3 +59,21 @@ autocmd BufEnter term://* startinsert
 " Simple buffer line
 let g:simple_bufferline_sel_open= ' '
 let g:simple_bufferline_sel_close= ' '
+
+" Github Copilot
+let g:copilot_node_command = "~/node-v18.17.0/bin/node"
+let g:copilot_filetypes = {
+    \ 'gitcommit': v:true,
+    \ 'markdown': v:true,
+    \ 'yaml': v:true
+    \ }
+
+" Theme
+colorscheme tokyonight-night
+
+hi GitGutterAdd guifg=#545c7e 
+hi GitGutterChange guifg=#545c7e 
+hi GitGutterDelete guifg=#545c7e
+hi GitGutterChangeDelete guifg=#545c7e
+hi DiagnosticError guifg=#545c7e
+

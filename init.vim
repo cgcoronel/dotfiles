@@ -18,19 +18,5 @@ set hidden
 set so=999
 set rtp+=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf
 
-""so ~/.config/nvim/theme.vim
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
-
-colorscheme tokyonight-night
-
-" GitGutter
-hi GitGutterAdd guifg=#545c7e 
-hi GitGutterChange guifg=#545c7e 
-hi GitGutterDelete guifg=#545c7e
-hi GitGutterChangeDelete guifg=#545c7e
-
-hi DiagnosticError guifg=#545c7e
-
- let g:copilot_node_command =
-  \ "~/node-v18.17.0/bin/node"
