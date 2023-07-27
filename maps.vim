@@ -24,11 +24,8 @@ inoremap <C-L> <Esc><C-W><C-L>
 inoremap <C-H> <Esc><C-W><C-H>
 
 " Got to definitions local
-""nnoremap fs gd
-""nnoremap fs : echo "prueba con gd"<cr> 
-
-""nnoremap fd gf
-""nnoremap fd :echo "prueba con gf"<cr>
+"nnoremap fs gd
+"nnoremap fd gf
 
 " Save
 nnoremap <Leader>w :w<CR>
@@ -44,6 +41,7 @@ inoremap ' ''<Esc>i
 noremap <C-J> 10j
 noremap <C-K> 10k
 
+" Move between buffers
 noremap m :bnext<cr>
 noremap . :bprevious<cr> 
 
@@ -68,6 +66,7 @@ augroup fugitive_mapping
   autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR>
 augroup END
 
+" Remaps for git
 cnoreabbrev gco Git commit
 cnoreabbrev gpu Git push
 cnoreabbrev gbb Git blame --date short
