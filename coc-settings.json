@@ -8,8 +8,8 @@
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "prettier.bracketSpacing": true,
-  "javascript.suggestionActions.enabled": false,
   "diagnostic.virtualTextCurrentLineOnly": true,
   "eslint.enable": true,
-  "suggest.autoTrigger": "none"
+  "javascript.suggestionActions.enabled": true,
+  "suggest.autoTrigger": "always"
 }

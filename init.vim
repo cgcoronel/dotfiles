@@ -20,3 +20,8 @@ set rtp+=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf
 
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
+
+lua << EOF
+require("bufferline").setup{}
+EOF
+

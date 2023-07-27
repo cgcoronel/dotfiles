@@ -20,12 +20,14 @@ Sigue las instrucciones en [este enlace](https://github.com/neovim/neovim/wiki/I
 cd .config/nvim/plugged
 
 git clone -b release https://github.com/neoclide/coc.nvim
-git clone https://github.com/junegunn/fzf
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/airblade/vim-gitgutter
-git clone https://github.com/cgcoronel/simple-term.vim
 git clone https://github.com/pangloss/vim-javascript
+git clone git@github.com:akinsho/bufferline.nvim.git
+git clone https://github.com/github/copilot.vim.git
+git clone git@github.com:nvim-tree/nvim-web-devicons.git
+git clone git@github.com:folke/tokyonight.nvim.git
 ```
 
 3. Configura el plugin Coc ejecutando el siguiente comando en la consola de Neovim:

@@ -24,9 +24,11 @@ inoremap <C-L> <Esc><C-W><C-L>
 inoremap <C-H> <Esc><C-W><C-H>
 
 " Got to definitions local
-nnoremap fs gd
+""nnoremap fs gd
+""nnoremap fs : echo "prueba con gd"<cr> 
+
 ""nnoremap fd gf
-nnoremap fd :echo "prueba con gf"<cr>
+""nnoremap fd :echo "prueba con gf"<cr>
 
 " Save
 nnoremap <Leader>w :w<CR>
@@ -42,8 +44,8 @@ inoremap ' ''<Esc>i
 noremap <C-J> 10j
 noremap <C-K> 10k
 
-""noremap m :bnext<cr>
-""noremap . :bprevious<cr> 
+noremap m :bnext<cr>
+noremap . :bprevious<cr> 
 
 " Move start - end line
 noremap gl $

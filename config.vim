@@ -44,8 +44,8 @@ function! NetrwMapping() abort
   nmap <buffer> <nowait> p -
   nmap <buffer> <nowait> a %
   nmap <buffer> <nowait> s v<C-h>
-  nmap <buffer> <nowait> m :call BufferList("prev")<CR>
-  nmap <buffer> <nowait> . :call BufferList("next")<CR>
+  nmap <buffer> <nowait> m :bprevious<CR>
+  nmap <buffer> <nowait> . :bnext<CR>
 endfunction
 
 " Term
@@ -55,10 +55,6 @@ autocmd TermOpen * tnoremap <buffer> <leader>q <C-\><C-n>:bd!<CR>
 autocmd TermOpen * tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
 autocmd TermOpen * tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
 autocmd BufEnter term://* startinsert
-
-" Simple buffer line
-let g:simple_bufferline_sel_open= ' '
-let g:simple_bufferline_sel_close= ' '
 
 " Github Copilot
 let g:copilot_node_command = "~/node-v18.17.0/bin/node"
