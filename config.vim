@@ -73,3 +73,16 @@ hi GitGutterDelete guifg=#545c7e
 hi GitGutterChangeDelete guifg=#545c7e
 hi DiagnosticError guifg=#545c7e
 
+" Bufferline
+lua << EOF
+require("bufferline").setup{
+  options = {
+   custom_filter = function(buf_number, buf_numbers)
+        if vim.bo[buf_number].filetype ~= "netrw" then
+	  return true
+        end
+   end,
+  }
+}
+EOF
+

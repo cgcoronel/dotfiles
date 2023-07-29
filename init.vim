@@ -17,12 +17,7 @@ set nowrap
 set hidden
 set so=999
 set rtp+=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf
+set laststatus=0
 
 so ~/.config/nvim/config.vim
 so ~/.config/nvim/maps.vim
-
-lua << EOF
-require("bufferline").setup{}
-EOF
-
-set laststatus=0
