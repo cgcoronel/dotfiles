@@ -42,8 +42,8 @@ noremap <C-J> 10j
 noremap <C-K> 10k
 
 " Move between buffers
-noremap m :bnext<cr>
-noremap . :bprevious<cr> 
+noremap . :bnext<cr>
+noremap m :bprevious<cr> 
 
 " Move start - end line
 noremap gl $
