@@ -25,3 +25,4 @@ lua << EOF
 require("bufferline").setup{}
 EOF
 
+set laststatus=0
