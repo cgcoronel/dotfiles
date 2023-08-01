@@ -49,12 +49,16 @@ function! NetrwMapping() abort
 endfunction
 
 " Term
-autocmd TermOpen * startinsert
-autocmd TermOpen * setlocal nonu nornu
-autocmd TermOpen * tnoremap <buffer> <leader>q <C-\><C-n>:bd!<CR>
-autocmd TermOpen * tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
-autocmd TermOpen * tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
-autocmd BufEnter term://* startinsert
+function! TerminalMappings()
+  startinsert
+  setlocal nonu nornu
+  tnoremap <buffer> <leader>q <C-\><C-n>:bd!<CR>
+  tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
+  tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
+endfunction
+
+autocmd TermOpen term://*zsh call TerminalMappings()
+autocmd BufEnter term://*zsh startinsert
 
 " Github Copilot
 let g:copilot_node_command = "~/node-v18.17.0/bin/node"
