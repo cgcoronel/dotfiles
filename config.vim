@@ -55,10 +55,12 @@ function! TerminalMappings()
   tnoremap <buffer> <leader>q <C-\><C-n>:bd!<CR>
   tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
   tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
+  tnoremap <buffer> <esc><esc> <C-\><C-n><C-w>j
 endfunction
 
 autocmd TermOpen term://*zsh call TerminalMappings()
-autocmd BufEnter term://*zsh startinsert
+autocmd TermOpen term://*npx* call TerminalMappings()
+autocmd BufEnter term://* startinsert
 
 " Github Copilot
 let g:copilot_node_command = "~/node-v18.17.0/bin/node"
