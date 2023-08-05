@@ -51,8 +51,10 @@ noremap gh 0
 
 " Search
 nnoremap > :Rg<CR>
-nnoremap <Leader>f :GitFiles<CR>
-nnoremap <Leader>s :GitFiles?<CR>
+"nnoremap <Leader>f :GitFiles<CR>
+"nnoremap <Leader>s :GitFiles?<CR>
+nnoremap <Leader>f :call fzf#vim#gitfiles('*', {'options': '--no-preview'})<CR>
+nnoremap <Leader>s :call fzf#vim#gitfiles('?', {'options': '--no-preview'})<CR>
 
 " Clean search result
 noremap <Leader><Space> :noh<CR>
