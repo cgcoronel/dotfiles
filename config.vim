@@ -88,6 +88,14 @@ require("bufferline").setup{
 	  return true
         end
    end,
+   offsets = {
+      {
+        filetype = "netrw",
+        text = "netrw",
+        highlight = "Directory",
+        text_align = "left",
+      },
+    },
   }
 }
 EOF
