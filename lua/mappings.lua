@@ -26,9 +26,7 @@ function M.setup()
   end
   vim.keymap.set('n', '<leader>f', '<cmd>lua fuzzy_find_files()<CR>', { noremap = true, silent = true })
 
-
   -- git fugitive
-  vim.keymap.set('n', '<leader>d', ':0Git<CR>', {})
   vim.cmd([[
     augroup fugitive_mapping
       autocmd!
@@ -43,9 +41,6 @@ function M.setup()
 
   -- coc
 --  vim.cmd("let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-eslint', 'coc-json']")
-
-  -- neo tree
-  vim.keymap.set('n', '<leader>e', ':Neotree current reveal_force_cwd<CR>', {})
 
   vim.keymap.set('i', 'kj', '<Esc>')
   vim.keymap.set('n', '<leader>w', ':w<CR>')
@@ -85,9 +80,6 @@ function M.setup()
  
   -- split buffer
   vim.keymap.set('n', 's', ':vsp<CR>')
-
-
-
 
 end
 

@@ -32,7 +32,7 @@ require("lazy").setup({
 
   {
     'akinsho/bufferline.nvim', 
-    event='VeryLazy',
+    event = 'VeryLazy',
     version = "*", 
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
@@ -41,11 +41,19 @@ require("lazy").setup({
 
   { 
     'lewis6991/gitsigns.nvim',
-    lazy=true
+    lazy = true,
+    keys = {
+      { "<Backspace>", "<cmd>Gitsigns prev_hunk<CR>" },
+      { "<CR>", "<cmd>Gitsigns next_hunk<CR>" },
+    }
   },
 
   { 
-    'tpope/vim-fugitive'
+    'tpope/vim-fugitive',
+    lazy = true,
+    keys = {
+      { "<leader>d", "<cmd>0Git<CR>" },
+    }
   },
 
   -- {
@@ -67,6 +75,9 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons", 
       "MunifTanjim/nui.nvim",
     },
+    keys = {
+      { '<leader>e', '<cmd>Neotree current reveal_force_cwd<CR>'}
+    }
   },
 
   { 
