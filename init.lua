@@ -20,13 +20,15 @@ require("lazy").setup({
     lazy = false,
     priority = 1000, 
     config = function()
-      vim.cmd('colorscheme tokyonight-night')
+      require("tokyonight").setup({
+	style = 'night'
+      })
+      vim.cmd.colorscheme('tokyonight-night')
     end,
   },
 
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
---    event = 'VeryLazy',
     lazy = false,
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
@@ -135,6 +137,33 @@ require("lazy").setup({
     keys = {
       { '<leader>e', '<cmd>Neotree current reveal_force_cwd<CR>'}
     },
+    init = function()
+      if vim.fn.argc() == 1 then
+        local stat = vim.loop.fs_stat(vim.fn.argv(0))
+        if stat and stat.type == "directory" then
+          require("neo-tree")
+        end
+      end
+    end,
+    opts = {
+      filesystem = {
+        hijack_netrw_behavior = "open_current",
+        window = {
+          mappings = {
+    	["o"] = "open",
+    	["p"] = "close_node"
+          }
+        },
+        filtered_items = {
+           visible = false, -- when true, they will just be displayed differently than normal items
+           hide_dotfiles = false,
+           hide_gitignored = true,
+           hide_by_name = {
+             "node_modules",
+           },
+         },
+      }
+    }
   },
 
   { 
@@ -218,22 +247,4 @@ vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
 
 -- init.lua
 require('mappings').setup()
-require("neo-tree").setup({
-  filesystem = {
-    hijack_netrw_behavior = "open_current",
-    window = {
-      mappings = {
-	["o"] = "open",
-	["p"] = "close_node"
-      }
-    },
-    filtered_items = {
-       visible = false, -- when true, they will just be displayed differently than normal items
-       hide_dotfiles = false,
-       hide_gitignored = true,
-       hide_by_name = {
-         "node_modules",
-       },
-     },
-  }
-})
+
