@@ -14,15 +14,20 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " 
 
 require("lazy").setup({
+
   {
     "folke/tokyonight.nvim",
-    lazy = true,
-    opts = { style = "moon" },
+    lazy = false,
+    priority = 1000, 
+    config = function()
+      vim.cmd('colorscheme tokyonight-night')
+    end,
   },
 
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
-    event = 'VeryLazy',
+--    event = 'VeryLazy',
+    lazy = false,
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
 --       { "<leader>f", "<cmd>Telescope find_files<CR>" },
@@ -30,11 +35,26 @@ require("lazy").setup({
     },
   },
 
+-- {
+--    "hrsh7th/nvim-cmp",
+--    -- load cmp on InsertEnter
+--    event = "InsertEnter",
+--    -- these dependencies will only be loaded when cmp loads
+--    -- dependencies are always lazy-loaded unless specified otherwise
+--    dependencies = {
+--      "hrsh7th/cmp-nvim-lsp",
+--      "hrsh7th/cmp-buffer",
+--    },
+--    config = function()
+--      -- ...
+--    end,
+--  },
+--
+  { "nvim-tree/nvim-web-devicons", lazy = true },
   {
     'akinsho/bufferline.nvim', 
     event = 'VeryLazy',
     version = "*", 
-    dependencies = 'nvim-tree/nvim-web-devicons'
   },
 
   { 'github/copilot.vim' },
@@ -50,7 +70,7 @@ require("lazy").setup({
 
   { 
     'tpope/vim-fugitive',
-    lazy = true,
+    lazy = false,
     keys = {
       { "<leader>d", "<cmd>0Git<CR>" },
     }
@@ -72,7 +92,6 @@ require("lazy").setup({
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", 
       "MunifTanjim/nui.nvim",
     },
     keys = {
@@ -88,11 +107,45 @@ require("lazy").setup({
     } 
   },
 
+  {
+    'RRethy/vim-illuminate',
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {
+      delay = 200,
+      large_file_cutoff = 2000,
+      large_file_overrides = {
+        providers = { "lsp" },
+      },
+    },
+    config = function(_, opts)
+      require("illuminate").configure(opts)
+
+      local function map(key, dir, buffer)
+        vim.keymap.set("n", key, function()
+          require("illuminate")["goto_" .. dir .. "_reference"](false)
+        end, { desc = dir:sub(1, 1):upper() .. dir:sub(2) .. " Reference", buffer = buffer })
+      end
+
+      map("]]", "next")
+      map("[[", "prev")
+
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function()
+          local buffer = vim.api.nvim_get_current_buf()
+          map("]]", "next", buffer)
+          map("[[", "prev", buffer)
+        end,
+      })
+    end,
+    keys = {
+      { "]]", desc = "Next Reference" },
+      { "[[", desc = "Prev Reference" },
+    },
+  }
 })
 
 -- Configuraciones generales
 vim.cmd([[
-  colorscheme tokyonight-night
   set mouse=a
   set clipboard=unnamedplus
   set encoding=UTF-8
@@ -114,10 +167,6 @@ vim.cmd([[
 
 -- Configuración específica para el plugin "copilot.nvim"
 vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
-
--- Configuración de la variable 'runtimepath' para plugins
-vim.cmd('set rtp+=~/.config/nvim/plugged/*,/opt/homebrew/opt/fzf')
-
 
 require('gitsigns').setup {
   signs = {
