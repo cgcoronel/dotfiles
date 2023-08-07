@@ -144,13 +144,16 @@ require("lazy").setup({
   }
 })
 
--- Configuraciones generales
+-- global options 
+vim.o.mouse = "a"
+vim.o.wrap = false
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.clipboard = "unnamedplus"
+vim.o.showmode = true
+
 vim.cmd([[
-  set mouse=a
-  set clipboard=unnamedplus
   set encoding=UTF-8
-  set showmatch
-  set number relativenumber
   set sw=2
   set ttimeoutlen=0
   set undofile
@@ -159,7 +162,6 @@ vim.cmd([[
   set foldmethod=indent
   set foldlevelstart=99
   set ignorecase
-  set nowrap
   set hidden
   set so=999
   set laststatus=0
