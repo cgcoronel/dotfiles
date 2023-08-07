@@ -32,32 +32,38 @@ require("lazy").setup({
     keys = {
 --       { "<leader>f", "<cmd>Telescope find_files<CR>" },
       { ">", "<cmd>Telescope live_grep<CR>" },
+      { "<", "<cmd>Telescope git_branches<CR>" },
     },
   },
 
--- {
---    "hrsh7th/nvim-cmp",
---    -- load cmp on InsertEnter
---    event = "InsertEnter",
---    -- these dependencies will only be loaded when cmp loads
---    -- dependencies are always lazy-loaded unless specified otherwise
---    dependencies = {
---      "hrsh7th/cmp-nvim-lsp",
---      "hrsh7th/cmp-buffer",
---    },
---    config = function()
---      -- ...
---    end,
---  },
---
   { "nvim-tree/nvim-web-devicons", lazy = true },
+
   {
     'akinsho/bufferline.nvim', 
     event = 'VeryLazy',
     version = "*", 
+    config = function()
+      require("bufferline").setup{
+        options = {
+         custom_filter = function(buf_number, buf_numbers)
+              if vim.bo[buf_number].filetype ~= "netrw" then
+      	  return true
+              end
+         end,
+         offsets = {
+            {
+              filetype = "neo-tree",
+              text = "Neo tree",
+              highlight = "Directory",
+              text_align = "left",
+            },
+          },
+        }
+      }
+    end
   },
 
-  { 'github/copilot.vim' },
+  'github/copilot.vim',
 
   { 
     'lewis6991/gitsigns.nvim',
@@ -65,7 +71,50 @@ require("lazy").setup({
     keys = {
       { "<Backspace>", "<cmd>Gitsigns prev_hunk<CR>" },
       { "<CR>", "<cmd>Gitsigns next_hunk<CR>" },
-    }
+    },
+    init = function()
+      require('gitsigns').setup {
+        signs = {
+          add          = { text = '+' },
+          change       = { text = '~' },
+          delete       = { text = '_' },
+          topdelete    = { text = '‾' },
+          changedelete = { text = '~' },
+          untracked    = { text = '┆' },
+        },
+        signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+        numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+        linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+        word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+        watch_gitdir = {
+          follow_files = true
+        },
+        attach_to_untracked = true,
+        current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+        current_line_blame_opts = {
+          virt_text = true,
+          virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+          delay = 1000,
+          ignore_whitespace = false,
+        },
+        current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
+        sign_priority = 6,
+        update_debounce = 100,
+        status_formatter = nil, -- Use default
+        max_file_length = 40000, -- Disable if file is longer than this (in lines)
+        preview_config = {
+          -- Options passed to nvim_open_win
+          border = 'single',
+          style = 'minimal',
+          relative = 'cursor',
+          row = 0,
+          col = 1
+        },
+        yadm = {
+          enable = false
+        },
+      }
+    end
   },
 
   { 
@@ -76,17 +125,6 @@ require("lazy").setup({
     }
   },
 
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   opts = function(_, opts)
-  --     -- add tsx and treesitter
-  --     vim.list_extend(opts.ensure_installed, {
-  --       "typescript",
-  --       "javascript",
-  --     })
-  --   end,
-  -- },
-  
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -96,7 +134,7 @@ require("lazy").setup({
     },
     keys = {
       { '<leader>e', '<cmd>Neotree current reveal_force_cwd<CR>'}
-    }
+    },
   },
 
   { 
@@ -104,7 +142,15 @@ require("lazy").setup({
     dependencies = {
       'ggandor/leap.nvim',
       'tpope/vim-repeat'
-    } 
+    },
+    config = function()
+      require('flit').setup {
+        keys = { f = 'f', F = 'F', t = 't', T = 'T' },
+        labeled_modes = "v",
+        multiline = true,
+        opts = {}
+      }
+    end
   },
 
   {
@@ -170,48 +216,6 @@ vim.cmd([[
 -- Configuración específica para el plugin "copilot.nvim"
 vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
 
-require('gitsigns').setup {
-  signs = {
-    add          = { text = '+' },
-    change       = { text = '~' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
-    changedelete = { text = '~' },
-    untracked    = { text = '┆' },
-  },
-  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-  numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
-  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
-  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
-  watch_gitdir = {
-    follow_files = true
-  },
-  attach_to_untracked = true,
-  current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
-  current_line_blame_opts = {
-    virt_text = true,
-    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-    delay = 1000,
-    ignore_whitespace = false,
-  },
-  current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
-  sign_priority = 6,
-  update_debounce = 100,
-  status_formatter = nil, -- Use default
-  max_file_length = 40000, -- Disable if file is longer than this (in lines)
-  preview_config = {
-    -- Options passed to nvim_open_win
-    border = 'single',
-    style = 'minimal',
-    relative = 'cursor',
-    row = 0,
-    col = 1
-  },
-  yadm = {
-    enable = false
-  },
-}
-
 -- init.lua
 require('mappings').setup()
 require("neo-tree").setup({
@@ -233,28 +237,3 @@ require("neo-tree").setup({
      },
   }
 })
-
-require("bufferline").setup{
-  options = {
-   custom_filter = function(buf_number, buf_numbers)
-        if vim.bo[buf_number].filetype ~= "netrw" then
-	  return true
-        end
-   end,
-   offsets = {
-      {
-        filetype = "neo-tree",
-        text = "Neo tree",
-        highlight = "Directory",
-        text_align = "left",
-      },
-    },
-  }
-}
-
-require('flit').setup {
-  keys = { f = 'f', F = 'F', t = 't', T = 'T' },
-  labeled_modes = "v",
-  multiline = true,
-  opts = {}
-}
