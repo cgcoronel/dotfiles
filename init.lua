@@ -150,8 +150,10 @@ require("lazy").setup({
         hijack_netrw_behavior = "open_current",
         window = {
           mappings = {
-    	["o"] = "open",
-    	["p"] = "close_node"
+	    ["o"] = "open",
+	    ["p"] = "close_node",
+	    ["<"] = "noop",
+	    [">"] = "noop"
           }
         },
         filtered_items = {
