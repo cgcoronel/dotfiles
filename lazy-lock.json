@@ -1,6 +1,6 @@
 {
   "bufferline.nvim": { "branch": "main", "commit": "d24378edc14a675c820a303b4512af3bbc5761e9" },
-  "copilot.vim": { "branch": "release", "commit": "4a361e8cf327590d51d214c5c01c6391727390d7" },
+  "copilot.vim": { "branch": "release", "commit": "97a9f1af97627b6aebeef864c981539ac1776b69" },
   "flit.nvim": { "branch": "main", "commit": "498b3a4864e697f1ed1145e518c4c78c776c55d8" },
   "gitsigns.nvim": { "branch": "main", "commit": "31178496552584e84fa9e74e087dec1f6c347f5d" },
   "lazy.nvim": { "branch": "main", "commit": "dac844ed617dda4f9ec85eb88e9629ad2add5e05" },
