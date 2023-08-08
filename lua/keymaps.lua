@@ -81,6 +81,8 @@ function M.setup()
   -- split buffer
   vim.keymap.set('n', 's', ':vsp<CR>')
 
+  -- copy file path
+  vim.keymap.set('n', 'cp', ':let @+ = expand("%")<CR>')
 end
 
 return M
