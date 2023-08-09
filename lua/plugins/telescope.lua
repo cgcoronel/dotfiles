@@ -3,7 +3,6 @@ return {
     lazy = false,
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
---       { "<leader>f", "<cmd>Telescope find_files<CR>" },
       { ">", "<cmd>Telescope live_grep<CR>" },
       { "<", "<cmd>Telescope git_branches<CR>" },
     }
