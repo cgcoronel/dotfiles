@@ -17,31 +17,6 @@ function M.setup()
   end
   vim.keymap.set('n', '<Leader>q', ':lua Quit()<CR>', {})
 
-  function fuzzy_find_files()
-    require('telescope.builtin').find_files({
-        find_command = {'rg', '--files', '--iglob', '!.git', '--hidden'},
-        prompt_title = 'Fuzzy Find Files',
-        hidden = true,
-    })
-  end
-  vim.keymap.set('n', '<leader>f', '<cmd>lua fuzzy_find_files()<CR>', { noremap = true, silent = true })
-
-  -- git fugitive
-  vim.cmd([[
-    augroup fugitive_mapping
-      autocmd!
-      autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR>
-      autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR>
-    augroup END
-  ]])
-
-  vim.cmd('cnoreabbrev gco Git commit')
-  vim.cmd('cnoreabbrev gpu Git push')
-  vim.cmd('cnoreabbrev gbb Git blame ')
-
-  -- coc
---  vim.cmd("let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-eslint', 'coc-json']")
-
   vim.keymap.set('i', 'kj', '<Esc>')
   vim.keymap.set('n', '<leader>w', ':w<CR>')
   vim.keymap.set('n', 'm', ':bprevious<CR>')
