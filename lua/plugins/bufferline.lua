@@ -6,9 +6,9 @@ return {
       require("bufferline").setup{
         options = {
          custom_filter = function(buf_number, buf_numbers)
-              if vim.bo[buf_number].filetype ~= "netrw" then
-      	  return true
-              end
+	    if vim.bo[buf_number].filetype ~= "netrw" then
+	      return true
+            end
          end,
          offsets = {
             {
@@ -21,5 +21,4 @@ return {
         }
       }
     end
-
 }
