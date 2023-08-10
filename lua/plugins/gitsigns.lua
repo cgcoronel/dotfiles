@@ -6,7 +6,7 @@ return {
     { "<CR>", "<cmd>Gitsigns next_hunk<CR>" },
   },
   init = function()
-    require('gitsigns').setup {
+    require('gitsigns').setup({
       signs = {
         add          = { text = '+' },
         change       = { text = '~' },
@@ -23,7 +23,7 @@ return {
       yadm = {
         enable = false 
       },
-    }
+    })
   end
 }
 
