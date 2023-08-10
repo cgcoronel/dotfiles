@@ -15,49 +15,54 @@ function M.setup()
           vim.cmd('bd')
       end
   end
-  vim.keymap.set('n', '<Leader>q', ':lua Quit()<CR>', {})
 
-  vim.keymap.set('i', 'kj', '<Esc>')
-  vim.keymap.set('n', '<leader>w', ':w<CR>')
-  vim.keymap.set('n', 'm', ':bprevious<CR>')
-  vim.keymap.set('n', '.', ':bnext<CR>')
+  local map = vim.keymap.set
+  
+  map('n', '<Leader>q', ':lua Quit()<CR>', {})
+
+  map('i', 'kj', '<Esc>')
+  map('n', '<leader>w', ':w<CR>')
+  map('n', 'm', ':bprevious<CR>')
+  map('n', '.', ':bnext<CR>')
 
   -- move between windows
-  vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
-  vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
-  vim.keymap.set('i', '<C-L>', '<Esc><C-W><C-L>')
-  vim.keymap.set('i', '<C-H>', '<Esc><C-W><C-H>')
+  map('n', '<C-L>', '<C-W><C-L>')
+  map('n', '<C-H>', '<C-W><C-H>')
+  map('i', '<C-L>', '<Esc><C-W><C-L>')
+  map('i', '<C-H>', '<Esc><C-W><C-H>')
  
   -- auto close brackets
-  vim.keymap.set('i', '(', '()<Esc>i')
-  vim.keymap.set('i', '[', '[]<Esc>i')
-  vim.keymap.set('i', '`', '``<Esc>i')
-  vim.keymap.set('i', '"', '""<Esc>i')
-  vim.keymap.set('i', '{', '{}<Esc>i')
-  vim.keymap.set('i', "'", "''<Esc>i")
+  map('i', '(', '()<Esc>i')
+  map('i', '[', '[]<Esc>i')
+  map('i', '`', '``<Esc>i')
+  map('i', '"', '""<Esc>i')
+  map('i', '{', '{}<Esc>i')
+  map('i', "'", "''<Esc>i")
  
   -- move lines up and down
-  vim.keymap.set('n', '<C-J>', "10j")
-  vim.keymap.set('n', '<C-K>', "10k")
+  map('n', '<C-J>', "10j")
+  map('n', '<C-K>', "10k")
  
   -- move start and end of line
-  vim.keymap.set('n', 'gl', "$")
-  vim.keymap.set('n', 'gh', "0")
-  vim.keymap.set('v', 'gl', "$")
-  vim.keymap.set('v', 'gh', "0")
+  map('n', 'gl', "$")
+  map('n', 'gh', "0")
+  map('v', 'gl', "$")
+  map('v', 'gh', "0")
  
   -- clean search
-  vim.keymap.set('n', '<leader><space>', ":noh<CR>")
+  map('n', '<leader><space>', ":noh<CR>")
  
   -- move lines up and down
-  vim.keymap.set('n', '<S-j>', ':m .+1<CR>')
-  vim.keymap.set('n', '<S-k>', ':m .-2<CR>')
+  map('n', '<S-j>', ':m .+1<CR>')
+  map('n', '<S-k>', ':m .-2<CR>')
  
   -- split buffer
-  vim.keymap.set('n', 's', ':vsp<CR>')
+  map('n', 's', ':vsp<CR>')
 
   -- copy file path
-  vim.keymap.set('n', 'cp', ':let @+ = expand("%")<CR>')
+  map('n', 'cp', ':let @+ = expand("%")<CR>')
+
+  map("n", "<leader>ee", ":vsp .env<CR>", { desc = "Open .env file in a vertical split" })
 end
 
 return M
