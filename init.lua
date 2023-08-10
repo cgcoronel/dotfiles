@@ -38,7 +38,12 @@ vim.cmd([[
   set hidden
   set so=999
   set laststatus=0
+  hi TelescopeNormal guibg=0
+  hi TelescopeBorder guibg=0
+  hi NeoTreeNormal guibg=0
+  hi NeoTreeNormalNC guibg=0
 ]])
+
 vim.g.netrw_banner = 0
 
 -- Configuración específica para el plugin "copilot.nvim"
