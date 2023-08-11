@@ -62,7 +62,7 @@ function M.setup()
   -- copy file path
   map('n', 'cp', ':let @+ = expand("%")<CR>')
 
-  map('n', '<leader>ee', ':vsp .env<CR>', { desc = 'Open .env file in a vertical split' })
+  map('n', '<leader>.', ':vsp .env<CR>', { desc = 'Open .env file in a vertical split' })
 end
 
 return M
