@@ -16,7 +16,7 @@ local on_attach = function(_, bufnr)
  -- bufmap('<leader>s', require('telescope.builtin').lsp_document_symbols)
  -- bufmap('<leader>S', require('telescope.builtin').lsp_dynamic_workspace_symbols)
 
-  bufmap('K', vim.lsp.buf.hover)
+  bufmap('L', vim.lsp.buf.hover)
 
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
