@@ -1,4 +1,4 @@
-return { 
+return {
   'lewis6991/gitsigns.nvim',
   lazy = true,
   keys = {
@@ -15,13 +15,13 @@ return {
         changedelete = { text = '~' },
         untracked    = { text = '┆' },
       },
-      signcolumn = true, 
+      signcolumn = true,
       watch_gitdir = {
         follow_files = true
       },
       attach_to_untracked = true,
       yadm = {
-        enable = false 
+        enable = false
       },
     })
   end
