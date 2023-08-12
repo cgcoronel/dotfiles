@@ -1,7 +1,7 @@
 return {
-    'akinsho/bufferline.nvim', 
+    'akinsho/bufferline.nvim',
     event = 'VeryLazy',
-    version = "*", 
+    version = "*",
     config = function()
       require("bufferline").setup{
         options = {
