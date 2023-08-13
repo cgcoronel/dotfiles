@@ -19,6 +19,7 @@ function M.setup()
   local map = vim.keymap.set
 
   map("n", "<Leader>q", ":lua Quit()<CR>", {})
+  map("n", "<Leader>p", ":Format<CR>", {})
 
   map("i", "kj", "<Esc>")
   map("n", "<leader>w", ":w<CR>")
