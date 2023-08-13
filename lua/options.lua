@@ -29,14 +29,15 @@ vim.cmd([[
 ]])
 
 -- Configuración específica para el plugin "copilot.nvim"
-vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
-vim.cmd([[
-let g:copilot_filetypes = {
-  \ 'gitcommit': v:true,
-  \ 'markdown': v:true,
-  \ 'yaml': v:true
-  \ }
+--vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
+-- vim.cmd([[
+-- let g:copilot_filetypes = {
+--   \ 'gitcommit': v:true,
+--   \ 'markdown': v:true,
+--   \ 'yaml': v:true
+--   \ }
 
+vim.cmd([[
 function! TerminalMappings()
   startinsert
   setlocal nonu nornu
