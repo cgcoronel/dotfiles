@@ -5,6 +5,8 @@ return {
      cmd = "Copilot",
      event = "InsertEnter",
      config = function()
+	vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
+
 	require("copilot").setup({
 	  suggestion = {
 	    auto_trigger = true,
@@ -14,8 +16,6 @@ return {
 	    gitcommit = true,
 	  },
 	})
-
-	vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
 
 	vim.keymap.set("i", '<Tab>', function()
 	  if require("copilot.suggestion").is_visible() then
