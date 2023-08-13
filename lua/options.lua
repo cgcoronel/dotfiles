@@ -1,4 +1,4 @@
--- global options 
+-- global options
 vim.g.mapleader = " "
 
 vim.o.mouse = "a"
@@ -22,6 +22,7 @@ vim.cmd([[
   set hidden
   set so=999
   set laststatus=0
+  set expandtab
   hi TelescopeNormal guibg=0
   hi TelescopeBorder guibg=0
   hi NeoTreeNormal guibg=0
@@ -50,5 +51,3 @@ autocmd TermOpen term://*zsh call TerminalMappings()
 autocmd TermOpen term://*npx* call TerminalMappings()
 autocmd BufEnter term://* startinsert
 ]])
-
-

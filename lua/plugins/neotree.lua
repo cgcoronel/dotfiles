@@ -6,7 +6,7 @@ return {
     "MunifTanjim/nui.nvim",
   },
   keys = {
-    { '<leader>e', '<cmd>Neotree current reveal_force_cwd<CR>'}
+    { "<leader>e", "<cmd>Neotree current reveal_force_cwd<CR>" },
   },
   init = function()
     require("neo-tree")
@@ -19,17 +19,17 @@ return {
           ["o"] = "open",
           ["p"] = "close_node",
           ["<"] = "noop",
-          [">"] = "noop"
-        }
+          [">"] = "noop",
+        },
       },
       filtered_items = {
-         visible = false, -- when true, they will just be displayed differently than normal items
-         hide_dotfiles = false,
-         hide_gitignored = true,
-         hide_by_name = {
-           "node_modules",
-         },
-       },
-    }
-  }
+        visible = false, -- when true, they will just be displayed differently than normal items
+        hide_dotfiles = false,
+        hide_gitignored = true,
+        hide_by_name = {
+          "node_modules",
+        },
+      },
+    },
+  },
 }
