@@ -5,11 +5,11 @@ local on_attach = function(_, bufnr)
 
   bufmap("L", vim.lsp.buf.hover)
 
-  --  vim.api.nvim_create_autocmd("BufWrite", {
-  --    callback = function()
-  --      vim.lsp.buf.format({ async = false })
-  --    end,
-  --  })
+    vim.api.nvim_create_autocmd("BufWrite", {
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end,
+    })
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
