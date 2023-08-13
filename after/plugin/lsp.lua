@@ -5,7 +5,7 @@ local on_attach = function(_, bufnr)
 
   bufmap("L", vim.lsp.buf.hover)
 
-  vim.api.nvim_create_autocmd("BufWritePre", {
+  vim.api.nvim_create_autocmd("BufWrite", {
     callback = function()
       vim.lsp.buf.format({ async = false })
     end,
