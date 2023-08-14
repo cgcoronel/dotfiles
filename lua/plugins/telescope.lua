@@ -1,4 +1,5 @@
 return {
+ -- "sindrets/diffview.nvim",
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make",
