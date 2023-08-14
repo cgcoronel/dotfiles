@@ -1,28 +1,28 @@
 -- global options
 vim.g.mapleader = " "
 
-vim.o.mouse = "a"
-vim.o.wrap = false
+vim.o.clipboard = "unnamedplus"
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.clipboard = "unnamedplus"
+vim.o.wrap = false
 vim.o.showmode = true
-
+vim.o.mouse = "a"
 vim.g.netrw_banner = 0
+vim.o.scrolloff = 999
+vim.o.shiftwidth = 2
+vim.o.autoindent = true
+vim.o.ignorecase = true
+vim.o.undofile = true
+vim.o.history = 1000
+vim.o.laststatus = 0
+vim.o.ttimeoutlen = 0
+vim.o.hidden = true
+vim.o.expandtab = true
+vim.o.encoding = "utf-8"
+vim.o.foldmethod = "indent"
+vim.o.foldlevelstart=99
+
 vim.cmd([[
-  set encoding=UTF-8
-  set sw=2
-  set ttimeoutlen=0
-  set undofile
-  set history=1000
-  set autoindent
-  set foldmethod=indent
-  set foldlevelstart=99
-  set ignorecase
-  set hidden
-  set so=999
-  set laststatus=0
-  set expandtab
   hi TelescopeNormal guibg=0
   hi TelescopeBorder guibg=0
   hi NeoTreeNormal guibg=0
