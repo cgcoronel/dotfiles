@@ -23,8 +23,6 @@ vim.o.foldmethod = "indent"
 vim.o.foldlevelstart=99
 
 vim.cmd([[
-  hi TelescopeNormal guibg=0
-  hi TelescopeBorder guibg=0
   hi NeoTreeNormal guibg=0
   hi NeoTreeNormalNC guibg=0
 ]])

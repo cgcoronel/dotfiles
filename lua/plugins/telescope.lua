@@ -30,6 +30,11 @@ return {
       })
 
       require("telescope").load_extension("fzf")
+
+      vim.cmd([[
+        hi TelescopeNormal guibg=0
+        hi TelescopeBorder guibg=0
+      ]])
     end,
   },
 }

@@ -30,6 +30,18 @@ require("mason-lspconfig").setup_handlers({
     })
   end,
 
+  ["tsserver"] = function()
+    require("neodev").setup()
+    require("lspconfig").tsserver.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      --      Lua = {
+      --        workspace = { checkThirdParty = false },
+      --        telemetry = { enable = false },
+      --      },
+    })
+  end,
+
   ["lua_ls"] = function()
     require("neodev").setup()
     require("lspconfig").lua_ls.setup({
