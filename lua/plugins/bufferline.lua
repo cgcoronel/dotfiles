@@ -12,6 +12,12 @@ return {
             highlight = "Directory",
             text_align = "left",
           },
+          {
+            filetype = "netrw",
+            text = "Netrw",
+            highlight = "Directory",
+            text_align = "left",
+          },
         },
       },
     })
