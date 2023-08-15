@@ -33,6 +33,5 @@ endfunction
 autocmd FileType netrw setl bufhidden=wipe
 
 nnoremap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
-
 ]])
 
