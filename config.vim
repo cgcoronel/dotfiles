@@ -21,7 +21,7 @@ let g:netrw_keepdir = 1
 let g:netrw_altv = 1
 let g:netrw_list_hide = '.*\.DS_Store,.\.vscode,node_modules'
 let g:netrw_hide = 1       
-let g:netrw_fastbrowse = 2
+let g:netrw_fastbrowse = 0
 let g:netrw_bufsettings = 'nonu noma nomod nobl nowrap ro'
 let g:netrw_banner = 0
 
@@ -35,6 +35,7 @@ hi! link netrwMarkFile Search
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
+  autocmd fileType netrw setl bufhidden=wipe
 augroup END
 
 function! NetrwMapping() abort
@@ -47,6 +48,7 @@ function! NetrwMapping() abort
   nmap <buffer> <nowait> . :bnext<CR>
   nmap <buffer> <nowait> m :bprevious<CR>
 endfunction
+
 
 " Term
 function! TerminalMappings()
