@@ -93,7 +93,7 @@ require("bufferline").setup{
    offsets = {
       {
         filetype = "netrw",
-        text = "netrw",
+        text = "Netrw",
         highlight = "Directory",
         text_align = "left",
       },
