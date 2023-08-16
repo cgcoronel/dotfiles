@@ -53,8 +53,12 @@ noremap gh 0
 nnoremap > :Rg<CR>
 "nnoremap <Leader>f :GitFiles<CR>
 "nnoremap <Leader>s :GitFiles?<CR>
-nnoremap <Leader>f :call fzf#vim#gitfiles('*', {'options': '--no-preview'})<CR>
-nnoremap <Leader>s :call fzf#vim#gitfiles('?', {'options': '--no-preview'})<CR>
+""nnoremap <Leader>f :call fzf#vim#gitfiles('*', {'options': '--no-preview'})<CR>
+""nnoremap <Leader>s :call fzf#vim#gitfiles('?', {'options': '--no-preview'})<CR>
+
+nnoremap > :Telescope live_grep<CR>
+nnoremap < :Telescope git_branches<CR>
+nnoremap <leader>f :Telescope fd<CR>
 
 " Clean search result
 noremap <Leader><Space> :noh<CR>
