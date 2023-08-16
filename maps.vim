@@ -50,7 +50,7 @@ noremap gl $
 noremap gh 0
 
 " Search
-nnoremap > :Rg<CR>
+""nnoremap > :Rg<CR>
 "nnoremap <Leader>f :GitFiles<CR>
 "nnoremap <Leader>s :GitFiles?<CR>
 ""nnoremap <Leader>f :call fzf#vim#gitfiles('*', {'options': '--no-preview'})<CR>
