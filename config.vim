@@ -120,7 +120,10 @@ require("telescope").setup({
 })
 require("telescope").load_extension("fzf")
 
-
+require("illuminate").configure({
+  delay = 200,
+  large_file_cutoff = 2000,
+})
 EOF
 
 hi TelescopeNormal guibg=0
