@@ -61,7 +61,7 @@ function M.setup()
   map("n", "s", ":vsp<CR>")
 
   -- copy file path
-  map("n", "cp", ':let @+ = expand("%")<CR>')
+  map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
 
   map("n", "<leader>.", ":vsp .env<CR>", { desc = "Open .env file in a vertical split" })
 end
