@@ -91,4 +91,4 @@ cnoreabbrev te TestJest
 command! EslintFix :sp | wincmd j | resize 15 | exec 'term npx eslint --fix ' . expand('%')
 cnoreabbrev fix EslintFix 
 
-nnoremap cp :let @+ = expand("%")<CR>
+nnoremap cp :let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>
