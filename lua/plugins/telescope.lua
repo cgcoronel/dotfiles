@@ -1,5 +1,4 @@
 return {
- -- "sindrets/diffview.nvim",
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make",
@@ -7,7 +6,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.2",
-    event = "VeryLazy",
+    cmd = 'Telescope',
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",

@@ -1,6 +1,6 @@
 return {
   "tpope/vim-fugitive",
-  lazy = false,
+  cmd = 'Git',
   keys = {
     { "<leader>d", "<cmd>0Git<CR>" },
   },
