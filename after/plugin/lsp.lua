@@ -8,13 +8,13 @@ local on_attach = function(_, bufnr)
   --  vim.api.nvim_create_augroup("LspFormatting", { clear = true })
   --  vim.api.nvim_create_autocmd("BufWrite", {
   --    callback = function()
-  --      vim.lsp.buf.format({ async = false })
+  --      vim.lsp.buf.format()
   --    end,
   --  })
 
-  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-    vim.lsp.buf.format({ async = false })
-  end, {})
+  -- vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+  --   vim.lsp.buf.format({ async = false })
+  -- end, {})
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -34,11 +34,7 @@ require("mason-lspconfig").setup_handlers({
     require("neodev").setup()
     require("lspconfig").tsserver.setup({
       on_attach = on_attach,
-      capabilities = capabilities,
-      --      Lua = {
-      --        workspace = { checkThirdParty = false },
-      --        telemetry = { enable = false },
-      --      },
+      capabilities = capabilities
     })
   end,
 
