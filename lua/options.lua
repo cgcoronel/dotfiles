@@ -22,6 +22,8 @@ vim.o.encoding = "utf-8"
 vim.o.foldmethod = "indent"
 vim.o.foldlevelstart = 99
 
+vim.o.tabstop = 2
+
 vim.cmd([[
 function! TerminalMappings()
   startinsert
