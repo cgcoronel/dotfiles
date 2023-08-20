@@ -1,9 +1,5 @@
 return {
   {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
-  },
-  {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.2",
     cmd = 'Telescope',
@@ -36,5 +32,9 @@ return {
         hi TelescopeBorder guibg=0
       ]])
     end,
+  },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
   },
 }
