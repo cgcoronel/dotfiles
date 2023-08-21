@@ -33,8 +33,6 @@ function M.setup()
 
 	imap("kj", "<Esc>")
 	nmap("<leader>w", ":w<CR>")
-	nmap("m", ":bprevious<CR>")
-	nmap(".", ":bnext<CR>")
 
 	-- move between windows
 	nmap("<C-L>", "<C-W><C-L>")
