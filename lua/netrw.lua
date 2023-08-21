@@ -1,9 +1,9 @@
 vim.g.netrw_keepdir = 1
 vim.g.netrw_altv = 1
-vim.g.netrw_list_hide = '.*\\.DS_Store,.\\.vscode,node_modules'
+vim.g.netrw_list_hide = ".*\\.DS_Store,.\\.vscode,node_modules"
 vim.g.netrw_hide = 1
 vim.g.netrw_fastbrowse = 0
-vim.g.netrw_bufsettings = 'nonu noma nomod nobl nowrap ro'
+vim.g.netrw_bufsettings = "nonu noma nomod nobl nowrap ro nu"
 vim.g.netrw_banner = 0
 
 vim.cmd([[
@@ -34,4 +34,3 @@ autocmd FileType netrw setl bufhidden=wipe
 
 nnoremap <Leader>e :let @/=expand("%:t") <Bar> execute 'Explore' expand("%:h") <Bar> normal n<CR>
 ]])
-
