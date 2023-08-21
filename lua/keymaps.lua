@@ -1,69 +1,79 @@
 local M = {}
 
 function M.setup()
-  function Quit()
-    local buffers = {}
-    for i = 1, vim.fn.bufnr("$") do
-      if vim.fn.buflisted(i) then
-        table.insert(buffers, i)
-      end
-    end
+	function Quit()
+		local buffers = {}
+		for i = 1, vim.fn.bufnr("$") do
+			if vim.fn.buflisted(i) then
+				table.insert(buffers, i)
+			end
+		end
 
-    if #buffers == 1 then
-      vim.cmd("q")
-    else
-      vim.cmd("bd")
-    end
-  end
+		if #buffers == 1 then
+			vim.cmd("q")
+		else
+			vim.cmd("bd")
+		end
+	end
 
-  local map = vim.keymap.set
+	local nmap = function(keys, func)
+		vim.keymap.set("n", keys, func)
+	end
 
-  map("n", "<Leader>q", ":lua Quit()<CR>", {})
-  map("n", "<Leader>p", ":Format<CR>", {})
+	local imap = function(keys, func)
+		vim.keymap.set("i", keys, func)
+	end
 
-  map("i", "kj", "<Esc>")
-  map("n", "<leader>w", ":w<CR>")
-  map("n", "m", ":bprevious<CR>")
-  map("n", ".", ":bnext<CR>")
+	local vmap = function(keys, func)
+		vim.keymap.set("v", keys, func)
+	end
 
-  -- move between windows
-  map("n", "<C-L>", "<C-W><C-L>")
-  map("n", "<C-H>", "<C-W><C-H>")
-  map("i", "<C-L>", "<Esc><C-W><C-L>")
-  map("i", "<C-H>", "<Esc><C-W><C-H>")
+	nmap("<Leader>q", ":lua Quit()<CR>")
+	nmap("<Leader>p", ":Format<CR>")
 
-  -- auto close brackets
-  map("i", "(", "()<Esc>i")
-  map("i", "[", "[]<Esc>i")
-  map("i", "`", "``<Esc>i")
-  map("i", '"', '""<Esc>i')
-  map("i", "{", "{}<Esc>i")
-  map("i", "'", "''<Esc>i")
+	imap("kj", "<Esc>")
+	nmap("<leader>w", ":w<CR>")
+	nmap("m", ":bprevious<CR>")
+	nmap(".", ":bnext<CR>")
 
-  -- move lines up and down
-  map("n", "<C-J>", "10j")
-  map("n", "<C-K>", "10k")
+	-- move between windows
+	nmap("<C-L>", "<C-W><C-L>")
+	nmap("<C-H>", "<C-W><C-H>")
+	imap("<C-L>", "<Esc><C-W><C-L>")
+	imap("<C-H>", "<Esc><C-W><C-H>")
 
-  -- move start and end of line
-  map("n", "gl", "$")
-  map("n", "gh", "0")
-  map("v", "gl", "$")
-  map("v", "gh", "0")
+	-- auto close brackets
+	imap("(", "()<Esc>i")
+	imap("[", "[]<Esc>i")
+	imap("`", "``<Esc>i")
+	imap('"', '""<Esc>i')
+	imap("{", "{}<Esc>i")
+	imap("'", "''<Esc>i")
 
-  -- clean search
-  map("n", "<leader><space>", ":noh<CR>")
+	-- move lines up and down
+	nmap("<C-J>", "10j")
+	nmap("<C-K>", "10k")
 
-  -- move lines up and down
-  map("n", "<S-j>", ":m .+1<CR>")
-  map("n", "<S-k>", ":m .-2<CR>")
+	-- move start and end of line
+	nmap("gl", "$")
+	nmap("gh", "0")
+	vmap("gl", "$")
+	vmap("gh", "0")
 
-  -- split buffer
-  map("n", "s", ":vsp<CR>")
+	-- clean search
+	nmap("<leader><space>", ":noh<CR>")
 
-  -- copy file path
-  map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
+	-- move lines up and down
+	nmap("<S-j>", ":m .+1<CR>")
+	nmap("<S-k>", ":m .-2<CR>")
 
-  map("n", "<leader>.", ":vsp .env<CR>", { desc = "Open .env file in a vertical split" })
+	-- split buffer
+	nmap("s", ":vsp<CR>")
+
+	-- copy file path
+	nmap("cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
+
+	nmap("<leader>.", ":vsp .env<CR>")
 end
 
 return M
