@@ -81,6 +81,9 @@ hi GitGutterDelete guifg=#545c7e
 hi GitGutterChangeDelete guifg=#545c7e
 hi DiagnosticError guifg=#545c7e
 
+hi TelescopeNormal guibg=0
+hi TelescopeBorder guibg=0
+
 " Bufferline
 lua << EOF
 require("bufferline").setup{
@@ -110,11 +113,10 @@ require('flit').setup{
 require("telescope").setup({
   extensions = {
     fzf = {
-      fuzzy = true,             -- false will only do exact matching
-      override_generic_sorter = true, -- override the generic sorter
-      override_file_sorter = true, -- override the file sorter
-      case_mode = "ignore_case", -- or "ignore_case" or "respect_case"
-      -- the default case_mode is "smart_case"
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "ignore_case",
     },
   },
 })
@@ -125,7 +127,3 @@ require("illuminate").configure({
   large_file_cutoff = 2000,
 })
 EOF
-
-hi TelescopeNormal guibg=0
-hi TelescopeBorder guibg=0
-
