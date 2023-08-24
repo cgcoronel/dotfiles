@@ -47,11 +47,5 @@ null_ls.setup({
 			},
 			only_local = "node_modules/.bin",
 		}),
-		-- setting eslint_d only if we have a ".eslintrc.js" file in the project
-		--    null_ls.builtins.diagnostics.eslint_d.with({
-		--      condition = function(utils)
-		--        return utils.root_has_file({ '.eslintrc.js' })
-		--      end
-		--    }),
 	},
 })

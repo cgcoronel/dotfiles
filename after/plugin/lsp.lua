@@ -12,9 +12,9 @@ local on_attach = function(_, bufnr)
 	--    end,
 	--  })
 
-	-- vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-	--   vim.lsp.buf.format({ async = false })
-	-- end, {})
+	--	vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+	--		vim.lsp.buf.format({ async = false })
+	--	end, {})
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -25,14 +25,6 @@ require("mason").setup()
 require("mason-lspconfig").setup_handlers({
 	function(server_name)
 		require("lspconfig")[server_name].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
-	end,
-
-	["tsserver"] = function()
-		require("neodev").setup()
-		require("lspconfig").tsserver.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
