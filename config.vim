@@ -64,6 +64,13 @@ autocmd TermOpen term://*zsh call TerminalMappings()
 autocmd TermOpen term://*npx* call TerminalMappings()
 autocmd BufEnter term://* startinsert
 
+" Github Copilot
+ let g:copilot_node_command = "~/node-v18.17.0/bin/node"
+ let g:copilot_filetypes = {
+     \ 'gitcommit': v:true,
+     \ 'markdown': v:true,
+     \ 'yaml': v:true
+     \ }
 " Theme
 colorscheme tokyonight-night
 
