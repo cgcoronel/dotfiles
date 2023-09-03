@@ -1,6 +1,7 @@
 " Coc
 let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-eslint', 'coc-json']
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+let g:coc_node_path = '/Users/cristiancoronel/nvode-v18.17.0'
 
 " fzf config
 let g:fzf_action = { 'ctrl-o': 'vsplit' }
