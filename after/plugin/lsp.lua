@@ -3,18 +3,7 @@ local on_attach = function(_, bufnr)
 		vim.keymap.set("n", keys, func, { buffer = bufnr })
 	end
 
-	bufmap("L", vim.lsp.buf.hover)
-
-	--  vim.api.nvim_create_augroup("LspFormatting", { clear = true })
-	--  vim.api.nvim_create_autocmd("BufWrite", {
-	--    callback = function()
-	--      vim.lsp.buf.format()
-	--    end,
-	--  })
-
-	--	vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-	--		vim.lsp.buf.format({ async = false })
-	--	end, {})
+	--	bufmap("L", vim.lsp.buf.hover)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
