@@ -3,11 +3,10 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
-		--    event = "InsertEnter",
+		event = "InsertEnter",
 		config = function()
-			vim.cmd('let g:copilot_node_command = "~/node-v18.17.0/bin/node"')
-
 			require("copilot").setup({
+				copilot_node_command = vim.fn.expand("$HOME") .. "/node-v18.17.0/bin/node",
 				suggestion = {
 					auto_trigger = true,
 					accept = false,
