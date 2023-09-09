@@ -7,10 +7,10 @@ local on_attach = function(_, bufnr)
 			buffer = bufnr,
 			callback = function()
 				vim.lsp.buf.format({
-					bufnr = bufnr,
 					filter = function(client)
 						return client.name == "null-ls"
 					end,
+					bufnr = bufnr,
 				})
 			end,
 		})
@@ -19,18 +19,25 @@ end
 
 return {
 	"jose-elias-alvarez/null-ls.nvim",
+	-- event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local null_ls = require("null-ls")
 
+		local null_ls_utils = require("null-ls.utils")
+
+		local formatting = null_ls.builtins.formatting
+		local diagnostics = null_ls.builtins.diagnostics
+
 		null_ls.setup({
-			debug = false,
-			on_attach = on_attach,
+			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
 			sources = {
-				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.diagnostics.eslint,
-				null_ls.builtins.completion.spell,
-				--    null_ls.builtins.formatting.prettier,
-				null_ls.builtins.formatting.prettier.with({
+				formatting.stylua,
+				diagnostics.eslint_d.with({
+					condition = function(utils)
+						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" })
+					end,
+				}),
+				formatting.prettierd.with({
 					filetypes = {
 						"javascript",
 						"typescript",
@@ -43,6 +50,8 @@ return {
 					fonly_local = "node_modules/.bin",
 				}),
 			},
+			debug = false,
+			on_attach = on_attach,
 		})
 	end,
 }
