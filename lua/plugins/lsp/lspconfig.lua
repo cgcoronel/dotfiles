@@ -18,6 +18,7 @@ return {
 
 			vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 			vim.keymap.set("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+			--			vim.keymap.set("n", "<leader>a", vim.diagnostic.open_float, opts)
 		end
 
 		lspconfig["tsserver"].setup({
