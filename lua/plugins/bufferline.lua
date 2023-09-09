@@ -23,10 +23,8 @@ return {
 		{ "m", "<cmd>bprevious<CR>" },
 		{ ".", "<cmd>bnext<CR>" },
 	},
-	config = function()
-		require("bufferline").setup({
-			highlights = {},
-			options = options,
-		})
-	end,
+	opts = {
+		highlights = {},
+		options = options,
+	},
 }
