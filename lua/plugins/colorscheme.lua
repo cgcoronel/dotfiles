@@ -7,7 +7,7 @@ return {
 		-- vim.cmd.colorscheme("catppuccin")
 		-- vim.cmd.colorscheme("tokyonight-night")
 
-		vim.cmd.colorscheme("nord")
+--	vim.cmd.colorscheme("nord")
 		vim.g.nord_disable_background = true
 		vim.g.nord_italic = false
 		vim.g.nord_bold = true
