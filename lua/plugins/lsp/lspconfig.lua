@@ -38,6 +38,9 @@ return {
 			on_attach = on_attach,
 			settings = {
 				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
 					workspace = { checkThirdParty = false },
 					telemetry = { enable = false },
 				},
