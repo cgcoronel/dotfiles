@@ -2,7 +2,7 @@ return {
 	"tpope/vim-fugitive",
 	cmd = "Git",
 	keys = {
-		{ "<leader>d", "<cmd>0Git<CR>" },
+		{ "<leader>d", "<cmd>0Git<CR><cmd>6<CR>" },
 	},
 	config = function()
 		vim.cmd([[
