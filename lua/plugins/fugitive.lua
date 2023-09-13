@@ -15,6 +15,6 @@ return {
 
 		vim.cmd("cnoreabbrev gco Git commit")
 		vim.cmd("cnoreabbrev gpu Git push")
-		vim.cmd("cnoreabbrev gbb Git blame ")
+		vim.cmd("cnoreabbrev gbb Git blame --date short")
 	end,
 }
