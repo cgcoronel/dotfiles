@@ -17,8 +17,8 @@ return {
 			end, { desc = dir:sub(1, 1):upper() .. dir:sub(2) .. " Reference", buffer = buffer })
 		end
 
-		map("]]", "next")
-		map("[[", "prev")
+		map(";", "next")
+		map("<C-;>", "prev")
 
 		vim.api.nvim_create_autocmd("FileType", {
 			callback = function()
