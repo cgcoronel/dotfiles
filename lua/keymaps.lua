@@ -6,58 +6,48 @@ function Quit()
 	end
 end
 
-local nmap = function(keys, func)
-	vim.keymap.set("n", keys, func)
-end
+local map = vim.keymap.set
 
-local imap = function(keys, func)
-	vim.keymap.set("i", keys, func)
-end
+map("n", "<Leader>q", ":lua Quit()<CR>")
 
-local vmap = function(keys, func)
-	vim.keymap.set("v", keys, func)
-end
-
-nmap("<Leader>q", ":lua Quit()<CR>")
-
-imap("kj", "<Esc>")
-nmap("<leader>w", ":w<CR>")
+map("i", "kj", "<Esc>")
+map("n", "<leader>w", ":w<CR>")
 
 -- move between windows
-nmap("<C-L>", "<C-W><C-L>")
-nmap("<C-H>", "<C-W><C-H>")
-imap("<C-L>", "<Esc><C-W><C-L>")
-imap("<C-H>", "<Esc><C-W><C-H>")
+map("n", "<C-L>", "<C-W><C-L>")
+map("n", "<C-H>", "<C-W><C-H>")
+map("i", "<C-L>", "<Esc><C-W><C-L>")
+map("i", "<C-H>", "<Esc><C-W><C-H>")
 
 -- auto close brackets
-imap("(", "()<Esc>i")
-imap("[", "[]<Esc>i")
-imap("`", "``<Esc>i")
-imap('"', '""<Esc>i')
-imap("{", "{}<Esc>i")
-imap("'", "''<Esc>i")
+map("i", "(", "()<Esc>i")
+map("i", "[", "[]<Esc>i")
+map("i", "`", "``<Esc>i")
+map("i", '"', '""<Esc>i')
+map("i", "{", "{}<Esc>i")
+map("i", "'", "''<Esc>i")
 
 -- move lines up and down
-nmap("<C-J>", "10j")
-nmap("<C-K>", "10k")
+map("n", "<C-J>", "10j")
+map("n", "<C-K>", "10k")
 
 -- move start and end of line
-nmap("gl", "$")
-nmap("gh", "0")
-vmap("gl", "$")
-vmap("gh", "0")
+map("n", "gl", "$")
+map("n", "gh", "0")
+map("v", "gl", "$")
+map("v", "gh", "0")
 
 -- clean search
-nmap("<leader><space>", ":noh<CR>")
+map("n", "<leader><space>", ":noh<CR>")
 
 -- move lines up and down
-nmap("<S-j>", ":m .+1<CR>")
-nmap("<S-k>", ":m .-2<CR>")
+map("n", "<S-j>", ":m .+1<CR>")
+map("n", "<S-k>", ":m .-2<CR>")
 
 -- split buffer
-nmap("s", ":vsp<CR>")
+map("n", "s", ":vsp<CR>")
 
 -- copy file path
-nmap("cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
+map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
 
-nmap("<leader>.", ":vsp .env<CR>")
+map("n", "<leader>.", ":vsp .env<CR>")
