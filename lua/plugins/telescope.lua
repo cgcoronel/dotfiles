@@ -21,10 +21,8 @@ return {
 		})
 		telescope.load_extension("fzf")
 
-		vim.cmd([[
-        hi TelescopeNormal guibg=0
-        hi TelescopeBorder guibg=0
-      ]])
+		vim.cmd("hi TelescopeNormal guibg=0")
+		vim.cmd("hi TelescopeBorder guibg=0")
 	end,
 	keys = {
 		{ ">", "<cmd>Telescope live_grep<CR>" },
