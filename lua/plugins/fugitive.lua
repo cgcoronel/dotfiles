@@ -1,14 +1,14 @@
-vim.cmd("cnoreabbrev gco Git commit")
-vim.cmd("cnoreabbrev gpu Git push")
-vim.cmd("cnoreabbrev gbb Git blame --date short")
-
 return {
 	"tpope/vim-fugitive",
 	cmd = "Git",
 	keys = {
 		{ "<leader>d", "<cmd>0Git<CR><cmd>6<CR>" },
 	},
-	config = function()
+	init = function()
+		vim.cmd("cnoreabbrev gco Git commit")
+		vim.cmd("cnoreabbrev gpu Git push")
+		vim.cmd("cnoreabbrev gbb Git blame --date short")
+
 		vim.cmd([[
        augroup fugitive_mapping
          autocmd!
