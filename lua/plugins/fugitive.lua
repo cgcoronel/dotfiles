@@ -1,3 +1,7 @@
+vim.cmd("cnoreabbrev gco Git commit")
+vim.cmd("cnoreabbrev gpu Git push")
+vim.cmd("cnoreabbrev gbb Git blame --date short")
+
 return {
 	"tpope/vim-fugitive",
 	cmd = "Git",
@@ -12,9 +16,5 @@ return {
          autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR>
        augroup END
      ]])
-
-		vim.cmd("cnoreabbrev gco Git commit")
-		vim.cmd("cnoreabbrev gpu Git push")
-		vim.cmd("cnoreabbrev gbb Git blame --date short")
 	end,
 }
