@@ -3,6 +3,7 @@ local on_attach = function(_, bufnr)
 	opts.buffer = bufnr
 
 	vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	vim.keymap.set("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 end
 
