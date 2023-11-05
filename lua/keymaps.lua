@@ -51,3 +51,5 @@ map("n", "s", ":vsp<CR>")
 map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
 
 map("n", "<leader>.", ":vsp .env<CR>")
+
+vim.keymap.set("v", "p", '"_dP')
