@@ -1,4 +1,6 @@
 local options = {
+	max_name_length = 50,
+	tab_size = 40,
 	offsets = {
 		{
 			filetype = "neo-tree",
