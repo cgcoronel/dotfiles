@@ -15,19 +15,26 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = {},
-				lualine_b = { "diagnostics" },
-				lualine_c = {
+				lualine_a = {
 					{
 						"filetype",
+						color = { bg = "#0f1c1e" },
 						icon_only = true,
 					},
 					{
 						"filename",
-						file_status = true,
+						color = { bg = "#0f1c1e", fg = "#e6eaea" },
+						file_status = false,
 						path = 1,
 					},
 				},
+				lualine_b = {
+					{
+						"diagnostics",
+						color = { bg = "#0f1c1e", fg = "#e6eaea" },
+					},
+				},
+				lualine_c = {},
 				lualine_x = {},
 				lualine_y = {
 					{
@@ -47,7 +54,7 @@ return {
 					},
 					{
 						"filename",
-						file_status = true,
+						file_status = false,
 						path = 1,
 					},
 				},
