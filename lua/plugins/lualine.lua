@@ -15,8 +15,7 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { "branch" },
-				lualine_b = {
+				lualine_a = {
 					{
 						"filetype",
 						color = { bg = "#0f1c1e" },
@@ -29,12 +28,13 @@ return {
 						path = 1,
 					},
 				},
-				lualine_c = {
+				lualine_b = {
 					{
 						"diagnostics",
 						color = { bg = "#0f1c1e", fg = "#e6eaea" },
 					},
 				},
+				lualine_c = {},
 				lualine_x = {},
 				lualine_y = {
 					{
