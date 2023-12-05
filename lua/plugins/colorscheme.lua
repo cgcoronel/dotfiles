@@ -30,7 +30,7 @@ return {
 		}
 	end,
 	config = function()
-		--		vim.cmd("colorscheme nightfox")
-		vim.cmd("colorscheme terafox")
+		vim.cmd("colorscheme nightfox")
+		-- vim.cmd("colorscheme terafox")
 	end,
 }
