@@ -18,11 +18,28 @@ return {
 					case_mode = "ignore_case",
 				},
 			},
+			defaults = {
+				selection_caret = "  ",
+				entry_prefix = "  ",
+				initial_mode = "insert",
+				selection_strategy = "reset",
+				sorting_strategy = "ascending",
+				layout_strategy = "horizontal",
+				layout_config = {
+					horizontal = {
+						prompt_position = "top",
+						preview_width = 0.5,
+						results_width = 0.5,
+					},
+					vertical = {
+						mirror = false,
+					},
+					width = 0.7,
+					height = 0.50,
+				},
+			},
 		})
 		telescope.load_extension("fzf")
-
-		vim.cmd("hi TelescopeNormal guibg=0")
-		vim.cmd("hi TelescopeBorder guibg=0")
 	end,
 	keys = {
 		{ ">", "<cmd>Telescope live_grep<CR>" },
