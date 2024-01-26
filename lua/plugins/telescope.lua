@@ -45,5 +45,9 @@ return {
 		{ ">", "<cmd>Telescope live_grep<CR>" },
 		{ "<", "<cmd>Telescope git_branches<CR>" },
 		{ "<leader>f", "<cmd>Telescope fd<CR>" },
+		{
+			"<leader>s",
+			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{ previewer = false })<CR>",
+		},
 	},
 }

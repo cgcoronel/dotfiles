@@ -53,3 +53,6 @@ map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
 map("n", "<leader>.", ":vsp .env<CR>")
 
 map("v", "p", '"_dP')
+
+map("n", "m", "<cmd>bprevious<cr>")
+map("n", ".", "<cmd>bnext<cr>")
