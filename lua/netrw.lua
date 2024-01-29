@@ -1,10 +1,16 @@
-vim.g.netrw_keepdir = 1
-vim.g.netrw_altv = 1
-vim.g.netrw_list_hide = ".*\\.DS_Store,.\\.vscode,node_modules"
-vim.g.netrw_hide = 1
-vim.g.netrw_fastbrowse = 0
-vim.g.netrw_bufsettings = "nonu noma nomod nobl nowrap ro nu"
-vim.g.netrw_banner = 0
+local netrw_options = {
+	netrw_keepdir = 1,
+	netrw_altv = 1,
+	netrw_list_hide = ".*\\.DS_Store,.\\.vscode,node_modules",
+	netrw_hide = 1,
+	netrw_fastbrowse = 0,
+	netrw_bufsettings = "nonu noma nomod nobl nowrap ro nu",
+	netrw_banner = 0,
+}
+
+for option, value in pairs(netrw_options) do
+	vim.g[option] = value
+end
 
 vim.cmd([[
 function! CopyFile()
