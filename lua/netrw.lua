@@ -1,4 +1,4 @@
-local netrwOptions = {
+local netrw_options = {
 	netrw_keepdir = 1,
 	netrw_altv = 1,
 	netrw_list_hide = ".*\\.DS_Store,.\\.vscode,node_modules",
@@ -8,7 +8,7 @@ local netrwOptions = {
 	netrw_banner = 0,
 }
 
-for option, value in pairs(netrwOptions) do
+for option, value in pairs(netrw_options) do
 	vim.g[option] = value
 end
 

@@ -1,7 +1,3 @@
--- Global options
-vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true })
-vim.g.mapleader = " "
-
 local global_options = {
 	clipboard = "unnamedplus",
 	number = true,
@@ -28,5 +24,3 @@ local global_options = {
 for option, value in pairs(global_options) do
 	vim.o[option] = value
 end
-
-vim.cmd("cnoreabbrev pr lua vim.lsp.buf.format()")

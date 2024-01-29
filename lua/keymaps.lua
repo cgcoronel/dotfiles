@@ -1,6 +1,9 @@
 local cmd = vim.cmd
 local map = vim.keymap.set
 
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true })
+
 function Quit()
 	local bufinfo = vim.fn.getbufinfo({ buflisted = 1 })
 	cmd(#bufinfo == 1 and "q" or "bd")
@@ -54,3 +57,5 @@ map("v", "p", '"_dP')
 
 map("n", "m", "<cmd>bprevious<cr>")
 map("n", ".", "<cmd>bnext<cr>")
+
+vim.cmd("cnoreabbrev pr lua vim.lsp.buf.format()")
