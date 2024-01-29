@@ -29,29 +29,4 @@ for option, value in pairs(global_options) do
 	vim.o[option] = value
 end
 
--- Terminal mappings
-local function TerminalMappings()
-	vim.cmd("startinsert")
-	vim.cmd("setlocal nonu nornu")
-
-	local bufmap = vim.api.nvim_buf_set_keymap
-	bufmap(0, "tnoremap", "<buffer> <leader>q", "<C-\\><C-n>:bd!<CR>", { noremap = true })
-	bufmap(0, "tnoremap", "<buffer> <c-h>", "<C-\\><C-n><C-w><C-h>", { noremap = true })
-	bufmap(0, "tnoremap", "<buffer> <c-l>", "<C-\\><C-n><C-w><C-l>", { noremap = true })
-end
-
-vim.cmd([[
-function! TerminalMappings()
-  startinsert
-  setlocal nonu nornu
-  tnoremap <buffer> <leader>q <C-\><C-n>:bd!<CR>
-  tnoremap <buffer> <c-h> <C-\><C-n><C-w><C-h>
-  tnoremap <buffer> <c-l> <C-\><C-n><C-w><C-l>
-endfunction
-
-autocmd TermOpen term://*zsh call TerminalMappings()
-autocmd TermOpen term://*npx* call TerminalMappings()
-autocmd BufEnter term://* startinsert
-]])
-
 vim.cmd("cnoreabbrev pr lua vim.lsp.buf.format()")
