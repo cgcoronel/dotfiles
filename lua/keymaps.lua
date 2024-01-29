@@ -1,12 +1,10 @@
-function Quit()
-	if #vim.fn.getbufinfo({ buflisted = 1 }) == 1 then
-		vim.cmd("q")
-	else
-		vim.cmd("bd")
-	end
-end
-
+local cmd = vim.cmd
 local map = vim.keymap.set
+
+function Quit()
+	local bufinfo = vim.fn.getbufinfo({ buflisted = 1 })
+	cmd(#bufinfo == 1 and "q" or "bd")
+end
 
 map("n", "<Leader>q", ":lua Quit()<CR>")
 

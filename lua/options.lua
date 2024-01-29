@@ -1,27 +1,44 @@
--- global options
+-- Global options
+vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true })
 vim.g.mapleader = " "
 
-vim.o.clipboard = "unnamedplus"
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.wrap = false
-vim.o.showmode = true
-vim.o.mouse = "a"
-vim.o.scrolloff = 999
-vim.o.shiftwidth = 2
-vim.o.autoindent = true
-vim.o.ignorecase = true
-vim.o.undofile = true
-vim.o.history = 1000
-vim.o.laststatus = 2
-vim.o.ttimeoutlen = 0
-vim.o.hidden = true
-vim.o.expandtab = true
-vim.o.encoding = "utf-8"
-vim.o.foldmethod = "indent"
-vim.o.foldlevelstart = 99
+local global_options = {
+	clipboard = "unnamedplus",
+	number = true,
+	relativenumber = true,
+	wrap = false,
+	showmode = true,
+	mouse = "a",
+	scrolloff = 999,
+	shiftwidth = 2,
+	autoindent = true,
+	ignorecase = true,
+	undofile = true,
+	history = 1000,
+	laststatus = 2,
+	ttimeoutlen = 0,
+	hidden = true,
+	expandtab = true,
+	encoding = "utf-8",
+	foldmethod = "indent",
+	foldlevelstart = 99,
+	tabstop = 2,
+}
 
-vim.o.tabstop = 2
+for option, value in pairs(global_options) do
+	vim.o[option] = value
+end
+
+-- Terminal mappings
+local function TerminalMappings()
+	vim.cmd("startinsert")
+	vim.cmd("setlocal nonu nornu")
+
+	local bufmap = vim.api.nvim_buf_set_keymap
+	bufmap(0, "tnoremap", "<buffer> <leader>q", "<C-\\><C-n>:bd!<CR>", { noremap = true })
+	bufmap(0, "tnoremap", "<buffer> <c-h>", "<C-\\><C-n><C-w><C-h>", { noremap = true })
+	bufmap(0, "tnoremap", "<buffer> <c-l>", "<C-\\><C-n><C-w><C-l>", { noremap = true })
+end
 
 vim.cmd([[
 function! TerminalMappings()
