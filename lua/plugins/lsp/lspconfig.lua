@@ -1,10 +1,11 @@
 local opts = { noremap = true, silent = true }
 local on_attach = function(_, bufnr)
 	opts.buffer = bufnr
+  local map = vim.keymap.set
 
-	vim.keymap.set("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	vim.keymap.set("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	map("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	map("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 end
 
 return {

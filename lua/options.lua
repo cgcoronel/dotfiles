@@ -7,7 +7,6 @@ vim.o.relativenumber = true
 vim.o.wrap = false
 vim.o.showmode = true
 vim.o.mouse = "a"
-vim.g.netrw_banner = 0
 vim.o.scrolloff = 999
 vim.o.shiftwidth = 2
 vim.o.autoindent = true
