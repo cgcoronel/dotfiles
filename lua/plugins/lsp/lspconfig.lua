@@ -1,7 +1,7 @@
 local opts = { noremap = true, silent = true }
 local on_attach = function(_, bufnr)
 	opts.buffer = bufnr
-  local map = vim.keymap.set
+	local map = vim.keymap.set
 
 	map("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
@@ -17,7 +17,6 @@ return {
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
-
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
