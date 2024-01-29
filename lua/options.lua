@@ -30,16 +30,6 @@ for option, value in pairs(global_options) do
 end
 
 -- Terminal mappings
-local function TerminalMappings()
-	vim.cmd("startinsert")
-	vim.cmd("setlocal nonu nornu")
-
-	local bufmap = vim.api.nvim_buf_set_keymap
-	bufmap(0, "tnoremap", "<buffer> <leader>q", "<C-\\><C-n>:bd!<CR>", { noremap = true })
-	bufmap(0, "tnoremap", "<buffer> <c-h>", "<C-\\><C-n><C-w><C-h>", { noremap = true })
-	bufmap(0, "tnoremap", "<buffer> <c-l>", "<C-\\><C-n><C-w><C-l>", { noremap = true })
-end
-
 vim.cmd([[
 function! TerminalMappings()
   startinsert
