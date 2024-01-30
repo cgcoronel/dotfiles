@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(lazyPath) then
 end
 vim.opt.rtp:prepend(lazyPath)
 
-local config = {
+local plugins = {
 	{ import = "plugins" },
 	{ import = "plugins.lsp" },
 }
@@ -30,4 +30,4 @@ local options = {
 require("options")
 require("keymaps")
 require("netrw")
-require("lazy").setup(config, options)
+require("lazy").setup(plugins, options)
