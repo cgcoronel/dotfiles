@@ -1,7 +1,8 @@
 local global_options = {
 	clipboard = "unnamedplus",
 	number = true,
-	relativenumber = true,
+	-- relativenumber = true,
+	relativenumber = false,
 	wrap = false,
 	showmode = true,
 	mouse = "a",
