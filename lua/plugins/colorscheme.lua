@@ -1,13 +1,21 @@
+-- return {
+-- 	"folke/tokyonight.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	opts = function()
+-- 		return {
+-- 			transparent = true,
+-- 		}
+-- 	end,
+-- 	config = function()
+-- 		vim.cmd("colorscheme tokyonight-night")
+-- 	end,
+-- }
+
 return {
-	"folke/tokyonight.nvim",
+	"getomni/neovim",
 	lazy = false,
-	priority = 1000,
-	opts = function()
-		return {
-			transparent = true,
-		}
-	end,
 	config = function()
-		vim.cmd("colorscheme tokyonight-night")
+		vim.cmd([[colorscheme omni]])
 	end,
 }
