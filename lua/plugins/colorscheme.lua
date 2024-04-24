@@ -1,13 +1,23 @@
+-- return {
+-- 	"folke/tokyonight.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	opts = function()
+-- 		return {
+-- 			transparent = true,
+-- 		}
+-- 	end,
+-- 	config = function()
+-- 		vim.cmd("colorscheme tokyonight-night")
+-- 	end,
+-- }
+
 return {
-	"folke/tokyonight.nvim",
+	"eldritch-theme/eldritch.nvim",
 	lazy = false,
 	priority = 1000,
-	opts = function()
-		return {
-			transparent = true,
-		}
-	end,
+	opts = {},
 	config = function()
-		vim.cmd("colorscheme tokyonight-night")
+		vim.cmd("colorscheme eldritch")
 	end,
 }
