@@ -8,9 +8,8 @@ source ${CURE_HOME}/init.zsh
 
 unset key
 
+# brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(fnm env --use-on-cd)"
-
 export PATH=$PATH:/usr/local/bin
 
 alias vim.='nvim' ivm.='nvim' imv.='nvim'
@@ -33,12 +32,8 @@ alias p='cd /Users/cristiancoronel/projects/personal'
 alias b='git checkout $(git branch -a | fzf)'
 alias config='cd /Users/cristiancoronel/.config/nvim; vim .'
 
-eval "$(fnm env --use-on-cd)"
 
 # fnm
 export PATH="/Users/Cristian/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
-
-# zoxide
-alias cd="z"
-eval "$(zoxide init zsh)"
+# eval "`fnm env`"
+eval "$(fnm env --use-on-cd)"
