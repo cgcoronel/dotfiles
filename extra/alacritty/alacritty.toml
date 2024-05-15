@@ -45,3 +45,5 @@ bindings = [
   { key = "Enter", mods = "Command", action = "ToggleFullScreen" }
 ]
 
+[selection]
+save_to_clipboard= true
