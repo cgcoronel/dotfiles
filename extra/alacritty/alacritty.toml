@@ -1,0 +1,47 @@
+# Default colors
+[colors.primary]
+background = '#212337'
+foreground = '#a9b1d6'
+
+[colors.normal]
+black   = '#32344a'
+red     = '#f7768e'
+green   = '#9ece6a'
+yellow  = '#e0af68'
+blue    = '#7aa2f7'
+magenta = '#ad8ee6'
+cyan    = '#449dab'
+white   = '#787c99'
+
+# Bright colors
+[colors.bright]
+black   = '#444b6a'
+red     = '#ff7a93'
+green   = '#b9f27c'
+yellow  = '#ff9e64'
+blue    = '#7da6ff'
+magenta = '#bb9af7'
+cyan    = '#0db9d7'
+white   = '#acb0d0'
+
+[ env ]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 12
+padding.y = 10
+
+[font]
+normal.family = "VictorMono Nerd Font Mono"
+size = 16
+bold.style = "SemiBold"
+offset = { x = 1, y = 19 }
+glyph_offset = { x = 1, y = 12 }
+
+[keyboard]
+bindings = [
+  { key = "m", mods = "Control", action = "SelectPreviousTab" },
+  { key = ".", mods = "Control", action = "SelectNextTab" },
+  { key = "Enter", mods = "Command", action = "ToggleFullScreen" }
+]
+
