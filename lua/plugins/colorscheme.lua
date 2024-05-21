@@ -19,5 +19,6 @@ return {
 	opts = {},
 	config = function()
 		vim.cmd("colorscheme eldritch")
+    vim.cmd("hi NormalFloat guifg=#ebfafa guibg=#171928")
 	end,
 }
