@@ -10,7 +10,7 @@ instalar: brew install fzf
 desde nvim correr: Codeium Auth
 
 para solucionar erroes de mason-null-ls es 
-borrar el directorio y volver a abrir nvim
+borrar el directorio y volver a abrir nvim y correr :Mason
 ~/.local/share/nvim/mason
 
 configurar git:
