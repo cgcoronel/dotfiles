@@ -1,0 +1,33 @@
+instalar iterm
+instaler brew
+instalar fnm
+instalar node
+instalar nvim: brew install nvim
+instalar: https://github.com/cgcoronel/cure
+hacer git clone https://github.com/cgcoronel/dotfiles /Users/Cristian/.config/nvim
+instalar: brew install ripgrep
+instalar: brew install fzf
+desde nvim correr: Codeium Auth
+
+para solucionar erroes de mason-null-ls es 
+borrar el directorio y volver a abrir nvim
+~/.local/share/nvim/mason
+
+configurar git:
+------------------------------
+# crear el directorio /app
+sudo mkdir /app
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_rsa
+
+cat ~/.ssh/id_rsa.pub
+
+# Agregar la key al repositorio de github desde las propiedades de gitlab agregar la nueva clave
+
+----------------------
+
+
