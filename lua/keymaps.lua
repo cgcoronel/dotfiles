@@ -59,3 +59,5 @@ map("n", "m", "<cmd>bprevious<cr>")
 map("n", ".", "<cmd>bnext<cr>")
 
 vim.cmd("cnoreabbrev pr lua vim.lsp.buf.format()")
+
+map("n", "z", "<cmd>ZenMode<cr>")
