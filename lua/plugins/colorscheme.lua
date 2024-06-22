@@ -30,7 +30,7 @@ return {
 	config = function()
 		require("github-theme").setup({
 			options = {
-				transparent = true,
+				--				transparent = true,
 				styles = {
 					comments = "italic",
 					keywords = "bold",
@@ -40,6 +40,10 @@ return {
 		})
 
 		vim.cmd("colorscheme github_dark_tritanopia")
-		vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = "#6e7681" })
+		vim.cmd([[
+      hi EndOfBuffer guifg=#1a1a25
+      hi StatusLine guifg=#c9d1d9 guibg=#03060b
+      hi StatusLineNC cterm=NONE gui=NONE guifg=#30363d guibg=#03060b
+    ]])
 	end,
 }
