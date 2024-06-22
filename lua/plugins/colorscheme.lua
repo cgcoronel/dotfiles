@@ -40,5 +40,6 @@ return {
 		})
 
 		vim.cmd("colorscheme github_dark_tritanopia")
+		vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = "#6e7681" })
 	end,
 }
