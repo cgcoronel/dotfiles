@@ -18,8 +18,8 @@ return {
 				lualine_a = {
 					{
 						"filetype",
+						color = { bg = "#0d1117", fg = "#e6eaea" },
 						--						color = { bg = "#1a1b26" }, -- tokyonight
-						color = { bg = "#181c22" },
 						icon_only = true,
 					},
 					{
@@ -33,10 +33,16 @@ return {
 				lualine_b = {
 					{
 						"diagnostics",
-						--						color = { bg = "#1a1b26", fg = "#e6eaea" }, -- tokyonight
 					},
 				},
-				lualine_c = {},
+				lualine_c = {
+					{
+						function()
+							return ""
+						end,
+						color = { bg = "#0d1117" },
+					},
+				},
 				lualine_x = {},
 				lualine_y = {
 					{
@@ -47,21 +53,38 @@ return {
 				lualine_z = {},
 			},
 			inactive_sections = {
-				lualine_a = {},
-				lualine_b = {},
-				lualine_c = {
+				lualine_a = {
 					{
 						"filetype",
+						color = { bg = "#0d1117", fg = "#e6eaea" },
 						icon_only = true,
 					},
 					{
 						"filename",
+						color = { bg = "#0d1117", fg = "#e6eaea" },
 						file_status = false,
 						path = 1,
 					},
 				},
-				lualine_x = { "location" },
-				lualine_y = {},
+				lualine_b = {
+					{
+						"diagnostics",
+					},
+				},
+				lualine_c = {
+					{
+						function()
+							return ""
+						end,
+						color = { bg = "#0d1117" },
+					},
+				},
+				lualine_x = {},
+				lualine_y = {
+					{
+						"location",
+					},
+				},
 				lualine_z = {},
 			},
 		})

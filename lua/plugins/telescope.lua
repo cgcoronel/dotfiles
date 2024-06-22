@@ -49,7 +49,7 @@ return {
 		--		]])
 
 		vim.cmd([[ 
-			  hi TelescopeBorder guifg=#333a43 
+			  hi TelescopeBorder guifg=#333a43
 			]])
 	end,
 	keys = {
