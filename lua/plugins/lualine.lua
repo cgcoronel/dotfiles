@@ -18,12 +18,14 @@ return {
 				lualine_a = {
 					{
 						"filetype",
-						color = { bg = "#1a1b26" },
+						--						color = { bg = "#1a1b26" }, -- tokyonight
+						color = { bg = "#181c22" },
 						icon_only = true,
 					},
 					{
 						"filename",
-						color = { bg = "#1a1b26", fg = "#e6eaea" },
+						--						color = { bg = "#1a1b26", fg = "#e6eaea" }, -- tokyonight
+						color = { bg = "#0d1117", fg = "#e6eaea" },
 						file_status = false,
 						path = 1,
 					},
@@ -31,7 +33,7 @@ return {
 				lualine_b = {
 					{
 						"diagnostics",
-						color = { bg = "#1a1b26", fg = "#e6eaea" },
+						--						color = { bg = "#1a1b26", fg = "#e6eaea" }, -- tokyonight
 					},
 				},
 				lualine_c = {},
@@ -39,7 +41,7 @@ return {
 				lualine_y = {
 					{
 						"location",
-						color = { bg = "#1a1b26" },
+						--						color = { bg = "#1a1b26" }, -- tokyonight
 					},
 				},
 				lualine_z = {},
