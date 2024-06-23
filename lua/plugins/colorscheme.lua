@@ -29,8 +29,16 @@ return {
 	priority = 1000,
 	config = function()
 		require("github-theme").setup({
+
+			groups = {
+				all = {
+					Normal = { bg = "#171a21" },
+					NormalNC = { bg = "#171a21" },
+				},
+			},
+
 			options = {
-				--				transparent = true,
+				transparent = false,
 				styles = {
 					comments = "italic",
 					keywords = "bold",
@@ -42,8 +50,8 @@ return {
 		vim.cmd("colorscheme github_dark_tritanopia")
 		vim.cmd([[
       hi EndOfBuffer guifg=#1a1a25
-      hi StatusLine guifg=#c9d1d9 guibg=#03060b
-      hi StatusLineNC cterm=NONE gui=NONE guifg=#30363d guibg=#03060b
+      hi StatusLine guifg=#c9d1d9 guibg=#0e1116
+      hi StatusLineNC cterm=NONE gui=NONE guifg=#30363d guibg=#0e1116
     ]])
 	end,
 }
