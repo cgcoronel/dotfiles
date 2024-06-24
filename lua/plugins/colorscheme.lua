@@ -40,7 +40,9 @@ return {
       hi GitSignsAdd guibg=none 
       hi GitSignsChange guibg=none 
       hi GitSignsDelete guibg=none 
-
+      hi DiagnosticSignHint guibg=none
+      hi DiagnosticSignError guibg=none
+      hi DiagnosticSignWarn guibg=none
 		]])
 	end,
 }
