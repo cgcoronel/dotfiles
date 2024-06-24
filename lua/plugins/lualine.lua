@@ -18,10 +18,12 @@ return {
 				lualine_a = {
 					{
 						"filetype",
+						color = { bg = "#16181d" },
 						icon_only = true,
 					},
 					{
 						"filename",
+						color = { bg = "#16181d" },
 						file_status = false,
 						path = 1,
 					},
@@ -36,6 +38,7 @@ return {
 						function()
 							return ""
 						end,
+						color = { bg = "#16181d" },
 					},
 				},
 				lualine_x = {},
@@ -50,10 +53,13 @@ return {
 				lualine_a = {
 					{
 						"filetype",
+						color = { bg = "#16181d" },
 						icon_only = true,
 					},
 					{
 						"filename",
+						color = { bg = "#16181d" },
+
 						file_status = false,
 						path = 1,
 					},
@@ -68,7 +74,7 @@ return {
 						function()
 							return ""
 						end,
-						color = { bg = "#0d1117" },
+						color = { bg = "#16181d" },
 					},
 				},
 				lualine_x = {},
