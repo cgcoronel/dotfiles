@@ -30,6 +30,10 @@ return {
 
 	config = function()
 		vim.cmd("colorscheme minimal")
+
+		vim.cmd([[
+		  hi EndOfBuffer guifg=#1a1a25 
+		]])
 	end,
 }
 
