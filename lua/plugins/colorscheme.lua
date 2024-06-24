@@ -24,34 +24,44 @@
 -- }
 
 return {
-	"projekt0n/github-nvim-theme",
+	"Yazeed1s/minimal.nvim",
 	lazy = false,
 	priority = 1000,
+
 	config = function()
-		require("github-theme").setup({
-
-			groups = {
-				all = {
-					Normal = { bg = "#1e2129" },
-					NormalNC = { bg = "#1e2129" },
-				},
-			},
-
-			options = {
-				transparent = false,
-				styles = {
-					comments = "italic",
-					keywords = "bold",
-					types = "italic,bold",
-				},
-			},
-		})
-
-		vim.cmd("colorscheme github_dark_tritanopia")
-		vim.cmd([[
-      hi EndOfBuffer guifg=#1e2129
-      hi StatusLine guifg=#c9d1d9 guibg=#0e1116
-      hi StatusLineNC cterm=NONE gui=NONE guifg=#30363d guibg=#0e1116
-    ]])
+		vim.cmd("colorscheme minimal")
 	end,
 }
+
+-- return {
+-- 	"projekt0n/github-nvim-theme",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("github-theme").setup({
+--
+-- 			groups = {
+-- 				all = {
+-- 					Normal = { bg = "#1e2129" },
+-- 					NormalNC = { bg = "#1e2129" },
+-- 				},
+-- 			},
+--
+-- 			options = {
+-- 				transparent = false,
+-- 				styles = {
+-- 					comments = "italic",
+-- 					keywords = "bold",
+-- 					types = "italic,bold",
+-- 				},
+-- 			},
+-- 		})
+--
+-- 		vim.cmd("colorscheme github_dark_tritanopia")
+-- 		vim.cmd([[
+--       hi EndOfBuffer guifg=#1e2129
+--       hi StatusLine guifg=#c9d1d9 guibg=#0e1116
+--       hi StatusLineNC cterm=NONE gui=NONE guifg=#30363d guibg=#0e1116
+--     ]])
+-- 	end,
+-- }

@@ -25,3 +25,10 @@ local global_options = {
 for option, value in pairs(global_options) do
 	vim.o[option] = value
 end
+
+vim.cmd([[
+let g:minimal_italic_functions = 1
+let g:minimal_transparent_background = 1 
+]])
+
+
