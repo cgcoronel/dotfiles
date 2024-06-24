@@ -33,6 +33,8 @@ return {
 
 		vim.cmd([[
 		  hi EndOfBuffer guifg=#1a1a25 
+      hi WinSeparator guibg=#171b21 guifg=#16181d
+      hi LineNr guibg=#171b21 
 		]])
 	end,
 }
