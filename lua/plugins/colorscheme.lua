@@ -32,8 +32,8 @@ return {
 
 			groups = {
 				all = {
-					Normal = { bg = "#171a21" },
-					NormalNC = { bg = "#171a21" },
+					Normal = { bg = "#1e2129" },
+					NormalNC = { bg = "#1e2129" },
 				},
 			},
 
@@ -49,7 +49,7 @@ return {
 
 		vim.cmd("colorscheme github_dark_tritanopia")
 		vim.cmd([[
-      hi EndOfBuffer guifg=#1a1a25
+      hi EndOfBuffer guifg=#1e2129
       hi StatusLine guifg=#c9d1d9 guibg=#0e1116
       hi StatusLineNC cterm=NONE gui=NONE guifg=#30363d guibg=#0e1116
     ]])
