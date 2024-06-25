@@ -4,7 +4,10 @@ return {
 	cmd = "Telescope",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
@@ -40,13 +43,6 @@ return {
 			},
 		})
 		telescope.load_extension("fzf")
-
-		--		vim.cmd([[ -- tokionight
-		--		  hi TelescopeBorder guifg=#545c7e guibg=#1a1b26
-		--		  hi TelescopeNormal guifg=#c0caf5 guibg=#1a1b26
-		--		  hi TelescopePromptBorder guifg=#545c7e guibg=#1a1b26
-		--		  hi TelescopePromptTitle guifg=#545c7e guibg=#1a1b26
-		--		]])
 
 		vim.cmd([[ 
 			  hi TelescopeBorder guifg=#333a43
