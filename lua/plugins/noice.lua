@@ -12,7 +12,7 @@ return {
 				enabled = true,
 				opts = {
 					position = {
-						row = "90%",
+						row = "60%",
 						col = "50%",
 					},
 					size = {
