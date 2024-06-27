@@ -4,15 +4,17 @@ local map = vim.keymap.set
 vim.g.mapleader = " "
 vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true })
 
+local silent = { silent = true, noremap = true }
+
 function Quit()
 	local bufinfo = vim.fn.getbufinfo({ buflisted = 1 })
 	cmd(#bufinfo == 1 and "q" or "bd")
 end
 
-map("n", "<Leader>q", ":lua Quit()<CR>")
+map("n", "<Leader>q", ":lua Quit()<CR>", silent)
 
 map("i", "kj", "<Esc>")
-map("n", "<leader>w", ":w<CR>")
+map("n", "<leader>w", ":w<CR>", silent)
 
 -- move between windows
 map("n", "<C-L>", "<C-W><C-L>")
@@ -39,24 +41,24 @@ map("v", "gl", "$")
 map("v", "gh", "0")
 
 -- clean search
-map("n", "<leader><space>", ":noh<CR>")
+map("n", "<leader><space>", ":noh<CR>", silent)
 
 -- move lines up and down
-map("n", "<S-j>", ":m .+1<CR>")
-map("n", "<S-k>", ":m .-2<CR>")
+map("n", "<S-j>", ":m .+1<CR>", silent)
+map("n", "<S-k>", ":m .-2<CR>", silent)
 
 -- split buffer
-map("n", "s", ":vsp<CR>")
+map("n", "s", ":vsp<CR>", silent)
 
 -- copy file path
-map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>')
+map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', silent)
 
 map("n", "<leader>.", ":vsp .env<CR>")
 
 map("v", "p", '"_dP')
 
-map("n", "m", "<cmd>bprevious<cr>")
-map("n", ".", "<cmd>bnext<cr>")
+map("n", "m", "<cmd>bprevious<cr>", silent)
+map("n", ".", "<cmd>bnext<cr>", silent)
 
 vim.cmd("cnoreabbrev pr lua vim.lsp.buf.format()")
 
