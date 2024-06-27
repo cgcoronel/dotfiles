@@ -9,12 +9,17 @@ return {
 	config = function()
 		require("noice").setup({
 			messages = {
-				enabled = false, 
+				enabled = false,
 			},
 			presets = {
---				bottom_search = true,
+				--				bottom_search = true,
 				command_palette = true,
 			},
+      lsp = {
+        progress = {
+          enabled = false,
+        }
+      }
 		})
 		vim.cmd([[
       hi NoiceCmdlinePopupBorder guifg=#333a43 guibg=none
