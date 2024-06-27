@@ -24,9 +24,6 @@ return {
 	end,
 }
 
-
-
-
 -- hi GitSignsChangedelete guibg=none
 -- hi GitSignsTopdelete guibg=none
 -- hi GitSignsUntracked guibg=none
