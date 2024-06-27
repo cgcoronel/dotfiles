@@ -15,11 +15,11 @@ return {
 				--				bottom_search = true,
 				command_palette = true,
 			},
-      lsp = {
-        progress = {
-          enabled = false,
-        }
-      }
+			lsp = {
+				progress = {
+					enabled = false,
+				},
+			},
 		})
 		vim.cmd([[
       hi NoiceCmdlinePopupBorder guifg=#333a43 guibg=none
