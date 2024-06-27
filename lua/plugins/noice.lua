@@ -13,11 +13,11 @@ return {
 				opts = {
 					position = {
 						row = "90%",
-            col = "5%",
+						col = "50%",
 					},
 					size = {
-						width = 60, -- ancho del cmdline (ajusta según prefieras)
-						height = "auto", -- altura automática
+						width = 60,
+						height = "auto",
 					},
 				},
 			},
