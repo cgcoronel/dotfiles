@@ -19,5 +19,10 @@ return {
 
 		map(";", "next")
 		map("<C-;>", "prev")
+
+    vim.cmd([[
+      hi IlluminatedWordRead gui=none guifg=none guibg=#272932
+    ]])
+
 	end,
 }
