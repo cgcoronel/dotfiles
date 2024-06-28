@@ -21,9 +21,6 @@ return {
 				follow_files = true,
 			},
 			attach_to_untracked = true,
-			yadm = {
-				enable = false,
-			},
 		})
 	end,
 }
