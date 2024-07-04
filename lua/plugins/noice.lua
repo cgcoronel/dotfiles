@@ -9,24 +9,10 @@ return {
 	config = function()
 		require("noice").setup({
 			cmdline = {
-				enabled = true,
-				opts = {
-					position = {
-						row = "90%",
-						col = "50%",
-					},
-					size = {
-						width = 60,
-						height = "auto",
-					},
-				},
+				view = "cmdline",
 			},
 			messages = {
 				enabled = false,
-			},
-			presets = {
-				--	bottom_search = true,
-				--	command_palette = true,
 			},
 			lsp = {
 				progress = {
@@ -35,11 +21,11 @@ return {
 			},
 		})
 
+ --     hi NoiceCmdlinePopupBorder guifg=#333a43 guibg=none
+ --     hi NoiceCmdlineIconSearch guifg=#333a43 guibg=none
+ --     hi NoiceCmdlinePopupBorderSearch guifg=#333a43 guibg=none
 		vim.cmd([[
-      hi NoiceCmdlinePopupBorder guifg=#333a43 guibg=none
       hi NoiceCmdlineIconCmdline guifg=#333a43 guibg=none
-      hi NoiceCmdlineIconSearch guifg=#333a43 guibg=none
-      hi NoiceCmdlinePopupBorderSearch guifg=#333a43 guibg=none
     ]])
 	end,
 }
