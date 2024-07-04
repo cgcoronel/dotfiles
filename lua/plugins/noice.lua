@@ -21,10 +21,10 @@ return {
 			},
 		})
 
- --     hi NoiceCmdlinePopupBorder guifg=#333a43 guibg=none
- --     hi NoiceCmdlineIconSearch guifg=#333a43 guibg=none
- --     hi NoiceCmdlinePopupBorderSearch guifg=#333a43 guibg=none
+		--     hi NoiceCmdlineIconSearch guifg=#333a43 guibg=none
+		--     hi NoiceCmdlinePopupBorderSearch guifg=#333a43 guibg=none
 		vim.cmd([[
+      hi NoiceCmdlinePopupBorder guifg=#333a43 guibg=none
       hi NoiceCmdlineIconCmdline guifg=#333a43 guibg=none
     ]])
 	end,
