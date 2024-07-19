@@ -33,6 +33,8 @@ map("i", "'", "''<Esc>i")
 -- move lines up and down
 map("n", "<C-J>", "10j")
 map("n", "<C-K>", "10k")
+map("v", "<C-J>", "10j")
+map("v", "<C-K>", "10k")
 
 -- move start and end of line
 map("n", "gl", "$")
