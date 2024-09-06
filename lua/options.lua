@@ -1,12 +1,12 @@
 local global_options = {
 	clipboard = "unnamedplus",
 	number = true,
-	--	relativenumber = true,
-	relativenumber = false,
+	relativenumber = true,
+	-- relativenumber = false,
 	wrap = false,
 	showmode = true,
 	mouse = "a",
-	--	scrolloff = 999,
+	scrolloff = 999,
 	shiftwidth = 2,
 	autoindent = true,
 	ignorecase = true,
@@ -30,5 +30,3 @@ vim.cmd([[
 let g:minimal_italic_functions = 1
 let g:minimal_transparent_background = 1 
 ]])
-
-
