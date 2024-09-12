@@ -23,12 +23,12 @@ map("i", "<C-L>", "<Esc><C-W><C-L>")
 map("i", "<C-H>", "<Esc><C-W><C-H>")
 
 -- auto close brackets
-map("i", "(", "()<Esc>i")
+-- map("i", "(", "()<Esc>i")
 map("i", "[", "[]<Esc>i")
-map("i", "`", "``<Esc>i")
-map("i", '"', '""<Esc>i')
+-- map("i", "`", "``<Esc>i")
+-- map("i", '"', '""<Esc>i')
 map("i", "{", "{}<Esc>i")
-map("i", "'", "''<Esc>i")
+-- map("i", "'", "''<Esc>i")
 
 -- move lines up and down
 map("n", "<C-J>", "10j")
@@ -55,13 +55,9 @@ map("n", "s", ":vsp<CR>", silent)
 -- copy file path
 map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', silent)
 
-map("n", "<leader>.", ":vsp .env<CR>")
-
 map("v", "p", '"_dP')
 
 map("n", "m", "<cmd>bprevious<cr>", silent)
 map("n", ".", "<cmd>bnext<cr>", silent)
 
 vim.cmd("cnoreabbrev pr lua vim.lsp.buf.format()")
-
-map("n", "z", "<cmd>ZenMode<cr>")
