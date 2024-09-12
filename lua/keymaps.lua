@@ -23,12 +23,9 @@ map("i", "<C-L>", "<Esc><C-W><C-L>")
 map("i", "<C-H>", "<Esc><C-W><C-H>")
 
 -- auto close brackets
--- map("i", "(", "()<Esc>i")
+map("i", "(", "()<Esc>i")
 map("i", "[", "[]<Esc>i")
--- map("i", "`", "``<Esc>i")
--- map("i", '"', '""<Esc>i')
 map("i", "{", "{}<Esc>i")
--- map("i", "'", "''<Esc>i")
 
 -- move lines up and down
 map("n", "<C-J>", "10j")
