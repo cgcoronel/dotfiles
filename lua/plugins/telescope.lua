@@ -51,7 +51,6 @@ return {
 	end,
 	keys = {
 		{ ">", "<cmd>Telescope live_grep<CR>" },
-		{ "<", "<cmd>Telescope git_branches<CR>" },
 		{ "<leader>f", "<cmd>Telescope fd<CR>" },
 		{
 			"<leader>s",
