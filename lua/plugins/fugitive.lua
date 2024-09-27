@@ -13,7 +13,7 @@ return {
        augroup fugitive_mapping
          autocmd!
          autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR>
-         autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR>
+         autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR><C-h>
        augroup END
      ]])
 	end,
