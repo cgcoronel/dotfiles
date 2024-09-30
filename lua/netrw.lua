@@ -34,6 +34,8 @@ function! NetrwMapping() abort
   nmap <buffer> <nowait> s v<C-h>
   nmap <buffer> <nowait> . :bnext<CR>
   nmap <buffer> <nowait> m :bprevious<CR>
+  nmap <buffer> <nowait> <C-L> <C-W><C-L>
+  nmap <buffer> <nowait> <C-H> <C-W><C-H>
 endfunction
 
 autocmd FileType netrw setl bufhidden=wipe
