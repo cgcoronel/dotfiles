@@ -13,6 +13,9 @@ para solucionar erroes de mason-null-ls es
 borrar el directorio y volver a abrir nvim y correr :Mason
 ~/.local/share/nvim/mason
 
+si llega a fallar la instalacion de prettier correr:
+sudo chown -R 501:20 "/Users/cristiancoronel/.npm"
+
 configurar git:
 ------------------------------
 # crear el directorio /app
