@@ -20,8 +20,8 @@ return {
       hi GitSignsStagedDelete guibg=none
       hi GitSignsStagedAdd guibg=none
       hi GitSignsStagedTopdelete guibg=none
-      hi StatusLine cterm=reverse guifg=#555b6c guibg=#16181d
-      hi StatusLineNC cterm=bold,underline guifg=#555b6c guibg=#16181d
+      hi StatusLine cterm=reverse gui=none guifg=#555b6c guibg=#16181d
+      hi StatusLineNC cterm=bold,underline gui=none guifg=#555b6c guibg=#16181d
 		]])
 	end,
 }
