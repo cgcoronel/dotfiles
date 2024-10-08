@@ -20,6 +20,8 @@ return {
       hi GitSignsStagedDelete guibg=none
       hi GitSignsStagedAdd guibg=none
       hi GitSignsStagedTopdelete guibg=none
+      hi StatusLine cterm=reverse guifg=#555b6c guibg=#16181d
+      hi StatusLineNC cterm=bold,underline guifg=#555b6c guibg=#16181d
 		]])
 	end,
 }
@@ -39,4 +41,3 @@ return {
 --     vim.cmd([[ colorscheme neofusion ]])
 --  	end,
 -- }
-
