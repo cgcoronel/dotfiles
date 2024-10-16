@@ -73,7 +73,16 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_user_command("QuickfixBuffers", function()
-	vim.fn.setqflist(vim.fn.getbufinfo({ bufloaded = 1 }), "r")
+	local buffers = vim.fn.getbufinfo({ bufloaded = 1 })
+
+	local qflist = {}
+	for _, buf in ipairs(buffers) do
+		if buf.name ~= "" then
+			table.insert(qflist, { filename = buf.name, lnum = 0 })
+		end
+	end
+
+	vim.fn.setqflist(qflist, "r")
 	vim.cmd("copen")
 	vim.cmd("resize 5")
 end, {})
