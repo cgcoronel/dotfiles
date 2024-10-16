@@ -71,3 +71,11 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.api.nvim_buf_set_keymap(0, "n", "o", "<CR>", { noremap = true, silent = true })
 	end,
 })
+
+vim.api.nvim_create_user_command("QuickfixBuffers", function()
+	vim.fn.setqflist(vim.fn.getbufinfo({ bufloaded = 1 }), "r")
+	vim.cmd("copen")
+	vim.cmd("resize 5")
+end, {})
+
+map("n", "<leader>s", ":QuickfixBuffers<cr>", silent)
