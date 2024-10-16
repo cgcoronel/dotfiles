@@ -58,3 +58,16 @@ map("n", "m", "<cmd>bprevious<cr>", silent)
 map("n", ".", "<cmd>bnext<cr>", silent)
 
 map("n", "<leader>a", ":windo diffthis<cr>", silent)
+
+-- map("n", "<leader>j", ":cnext<cr>", silent)
+-- map("n", "<leader>k", ":cprev<cr>", silent)
+map("n", "<leader>;", ":cclose<cr>", silent)
+map("n", "<leader>l", ":copen<cr>", silent)
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "qf",
+	callback = function()
+		--	vim.api.nvim_buf_set_keymap(0, "n", "<CR>", "<CR>", { noremap = true, silent = true })
+		vim.api.nvim_buf_set_keymap(0, "n", "o", "<CR>", { noremap = true, silent = true })
+	end,
+})
