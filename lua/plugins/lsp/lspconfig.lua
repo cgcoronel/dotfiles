@@ -6,6 +6,7 @@ local on_attach = function(_, bufnr)
 	map("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	map("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 end
 
 return {

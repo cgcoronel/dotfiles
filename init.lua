@@ -26,8 +26,8 @@ local options = {
 		notify = false,
 	},
 }
-
 require("options")
 require("keymaps")
 require("netrw")
+require("listBuffers")
 require("lazy").setup(plugins, options)
