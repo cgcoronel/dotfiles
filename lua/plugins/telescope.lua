@@ -24,6 +24,7 @@ return {
 			defaults = {
 				selection_caret = "  ",
 				entry_prefix = "  ",
+				path_display = { "smart" },
 				initial_mode = "insert",
 				selection_strategy = "reset",
 				sorting_strategy = "ascending",
@@ -39,8 +40,8 @@ return {
 					},
 					--					width = 0.7,
 					--					height = 0.50,
-					width = 0.9,
-					height = 0.9,
+					width = 0.99,
+					height = 0.99,
 				},
 			},
 		})
