@@ -1,8 +1,10 @@
+local map = vim.keymap.set
+local silent = { silent = true, noremap = true }
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "qf",
 	callback = function()
-		--	vim.api.nvim_buf_set_keymap(0, "n", "<CR>", "<CR>", { noremap = true, silent = true })
-		vim.api.nvim_buf_set_keymap(0, "n", "o", "<CR>:cclose<CR>", { noremap = true, silent = true })
+		map("n", "o", "<CR>", silent)
 	end,
 })
 
@@ -18,10 +20,9 @@ vim.api.nvim_create_user_command("QuickfixBuffers", function()
 
 	vim.fn.setqflist(qflist, "r")
 	vim.cmd("copen")
-	vim.cmd("resize 5")
 end, {})
 
-local map = vim.keymap.set
-local silent = { silent = true, noremap = true }
-
-map("n", "<leader>s", ":QuickfixBuffers<cr>", silent)
+map("n", "<leader>a", ":QuickfixBuffers<cr>", silent)
+map("n", "<leader>s", ":copen<cr>", silent)
+map("n", "<leader>j", ":cnext<cr>", silent)
+map("n", "<leader>k", ":cprev<cr>", silent)
