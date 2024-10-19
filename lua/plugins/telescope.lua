@@ -40,8 +40,8 @@ return {
 					},
 					--					width = 0.7,
 					--					height = 0.50,
-					width = 0.99,
-					height = 0.99,
+					width = { padding = 0 },
+					height = { padding = 0 },
 				},
 			},
 		})
