@@ -57,8 +57,4 @@ map("v", "p", '"_dP')
 map("n", "m", "<cmd>bprevious<cr>", silent)
 map("n", ".", "<cmd>bnext<cr>", silent)
 
-map("n", "<leader>a", ":windo diffthis<cr>", silent)
-
--- map("n", "<leader>j", ":cnext<cr>", silent)
--- map("n", "<leader>k", ":cprev<cr>", silent)
-map("n", "<leader>;", ":cclose<cr>", silent)
+map("n", "<leader>D", ":windo diffthis<cr>", silent)
