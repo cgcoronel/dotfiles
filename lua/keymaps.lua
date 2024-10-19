@@ -22,16 +22,21 @@ map("n", "<C-H>", "<C-W><C-H>")
 map("i", "<C-L>", "<Esc><C-W><C-L>")
 map("i", "<C-H>", "<Esc><C-W><C-H>")
 
+map("n", "<C-J>", "<C-W><C-J>")
+map("n", "<C-K>", "<C-W><C-K>")
+map("i", "<C-J>", "<Esc><C-W><C-J>")
+map("i", "<C-K>", "<Esc><C-W><C-K>")
+
 -- auto close brackets
 map("i", "(", "()<Esc>i")
 map("i", "[", "[]<Esc>i")
 map("i", "{", "{}<Esc>i")
 
 -- move lines up and down
-map("n", "<C-J>", "10j")
-map("n", "<C-K>", "10k")
-map("v", "<C-J>", "10j")
-map("v", "<C-K>", "10k")
+-- map("n", "<C-J>", "10j")
+-- map("n", "<C-K>", "10k")
+-- map("v", "<C-J>", "10j")
+-- map("v", "<C-K>", "10k")
 
 -- move start and end of line
 map("n", "gl", "$")
@@ -48,6 +53,7 @@ map("n", "<S-k>", ":m .-2<CR>", silent)
 
 -- split buffer
 map("n", "s", ":vsp<CR>", silent)
+map("n", "S", ":sp<CR>", silent)
 
 -- copy file path
 map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', silent)
