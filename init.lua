@@ -31,3 +31,10 @@ require("keymaps")
 require("netrw")
 require("quickfixlits")
 require("lazy").setup(plugins, options)
+
+vim.api.nvim_create_autocmd("User", {
+	pattern = "LazyVimStarted",
+	callback = function()
+		vim.cmd([[colorscheme xcodedarkhc]])
+	end,
+})
