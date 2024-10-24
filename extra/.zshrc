@@ -9,8 +9,13 @@ source ${CURE_HOME}/init.zsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH=$PATH:/usr/local/bin
 
-alias vim.='nvim' ivm.='nvim' imv.='nvim'
-alias ivm='nvim' vim='nvim' imv='nvim'
+alias vim.='nvim' 
+alias ivm.='nvim' 
+alias imv.='nvim'
+alias ivm='nvim' 
+alias vim='nvim' 
+alias imv='nvim'
+
 
 alias python=python3
 
@@ -22,8 +27,13 @@ alias xt='cd /Users/Cristian/projects/xepelin/risk/xepelin-sls-xtree-orchestrato
 alias xr='cd /Users/Cristian/projects/xepelin/risk/xepelin-sls-xraas-ms'
 alias bu='cd /Users/Cristian/projects/xepelin/risk/xepelin-sls-buro-credito'
 alias cl='cd /Users/Cristian/projects/xepelin/risk/xepelin-xtree-creditLine'
+alias av='cd /Users/Cristian/projects/xepelin/risk/xtree-api-variables/'
+alias xh='cd /Users/Cristian/projects/xepelin/risk/xtree-in-house/'
 alias gl='cd /Users/Cristian/projects/xepelin/xepelin-server-global'
 alias bo='cd /Users/Cristian/projects/xepelin/xepelin-backoffice-server'
+alias cc='sh /Users/Cristian/.config/nvim/extra/clean.sh'
+alias ap='cd /Users/Cristian/projects/xepelin/risk/xtree-api-variables'
+
 
 
 # fnm
