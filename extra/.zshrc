@@ -9,9 +9,9 @@ source ${CURE_HOME}/init.zsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH=$PATH:/usr/local/bin
 
-alias vim.='nvim' 
-alias ivm.='nvim' 
-alias imv.='nvim'
+alias vim.='nvim .' 
+alias ivm.='nvim .' 
+alias imv.='nvim .'
 alias ivm='nvim' 
 alias vim='nvim' 
 alias imv='nvim'
