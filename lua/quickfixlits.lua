@@ -4,7 +4,7 @@ local silent = { silent = true, noremap = true }
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "qf",
 	callback = function()
-		map("n", "o", "<CR>", silent)
+		vim.api.nvim_buf_set_keymap(0, "n", "o", "<CR>", silent)
 	end,
 })
 
