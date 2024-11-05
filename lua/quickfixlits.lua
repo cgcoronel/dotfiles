@@ -4,7 +4,7 @@ local silent = { silent = true, noremap = true }
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "qf",
 	callback = function()
-		vim.api.nvim_buf_set_keymap(0, "n", "o", "<CR>", silent)
+		map("n", "o", "<CR>", silent, { buffer = 0 })
 	end,
 })
 
@@ -22,7 +22,7 @@ vim.api.nvim_create_user_command("QuickfixBuffers", function()
 	vim.cmd("copen")
 end, {})
 
-map("n", "<leader>a", ":QuickfixBuffers<cr>", silent)
-map("n", "<leader>s", ":copen<cr>", silent)
-map("n", "<leader>j", ":cnext<cr>", silent)
-map("n", "<leader>k", ":cprev<cr>", silent)
+map("n", "<leader>a", ":QuickfixBuffers<CR>", silent)
+map("n", "<leader>s", ":copen<CR>", silent)
+map("n", "<leader>j", ":cnext<CR>", silent)
+map("n", "<leader>k", ":cprev<CR>", silent)

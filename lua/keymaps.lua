@@ -1,17 +1,15 @@
-local cmd = vim.cmd
 local map = vim.keymap.set
+local silent = { silent = true, noremap = true }
 
 vim.g.mapleader = " "
-vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", { noremap = true, silent = true })
-
-local silent = { silent = true, noremap = true }
+map("n", "<Space>", "<NOP>", silent)
 
 function Quit()
 	local bufinfo = vim.fn.getbufinfo({ buflisted = 1 })
-	cmd(#bufinfo == 1 and "q" or "bd")
+	vim.cmd(#bufinfo == 1 and "qa" or "bd")
 end
 
-map("n", "<Leader>q", ":lua Quit()<CR>", silent)
+map("n", "<Leader>q", Quit, silent)
 
 map("i", "kj", "<Esc>")
 map("n", "<leader>w", ":w<CR>", silent)
@@ -31,12 +29,6 @@ map("i", "<C-K>", "<Esc><C-W><C-K>")
 map("i", "(", "()<Esc>i")
 map("i", "[", "[]<Esc>i")
 map("i", "{", "{}<Esc>i")
-
--- move lines up and down
--- map("n", "<C-J>", "10j")
--- map("n", "<C-K>", "10k")
--- map("v", "<C-J>", "10j")
--- map("v", "<C-K>", "10k")
 
 -- move start and end of line
 map("n", "gl", "$")
@@ -59,9 +51,6 @@ map("n", "S", ":sp<CR>", silent)
 map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', silent)
 
 map("v", "p", '"_dP')
-
--- map("n", "m", "<cmd>bprevious<cr>", silent)
--- map("n", ".", "<cmd>bnext<cr>", silent)
 
 map("n", "<leader>D", ":windo diffthis<cr>", silent)
 
