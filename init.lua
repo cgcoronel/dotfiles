@@ -32,12 +32,12 @@ require("netrw")
 require("quickfixlits")
 require("lazy").setup(plugins, options)
 
+--    colorscheme xcodedarkhc
 vim.api.nvim_create_autocmd("User", {
 	pattern = "LazyVimStarted",
 	callback = function()
 		vim.cmd([[
-       colorscheme xcodedarkhc
-
+      colorscheme xcode
        hi StatusLine guifg=#838991 guibg=#34353b
        hi WinSeparator guibg=none guifg=#52555c
      ]])
