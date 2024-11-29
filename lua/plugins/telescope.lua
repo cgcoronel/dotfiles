@@ -38,10 +38,10 @@ return {
 					vertical = {
 						mirror = false,
 					},
-					--					width = 0.7,
-					--					height = 0.50,
-					width = { padding = 0 },
-					height = { padding = 0 },
+					width = 0.9,
+					height = 0.60,
+					-- width = { padding = 0 },
+					-- height = { padding = 0 },
 				},
 			},
 		})
