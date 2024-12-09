@@ -49,3 +49,5 @@ autocmd TermOpen term://*zsh call TerminalMappings()
 autocmd TermOpen term://*npx* call TerminalMappings()
 autocmd BufEnter term://* startinsert
 ]])
+
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=o")

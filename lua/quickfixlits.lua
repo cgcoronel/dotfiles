@@ -1,10 +1,11 @@
 local map = vim.keymap.set
 local silent = { silent = true, noremap = true }
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "qf",
+vim.api.nvim_create_autocmd("BufWinEnter", {
 	callback = function()
-		map("n", "o", "<CR>", silent, { buffer = 0 })
+		if vim.bo.buftype == "quickfix" then
+			vim.api.nvim_buf_set_keymap(0, "n", "o", "<CR>", silent)
+		end
 	end,
 })
 
