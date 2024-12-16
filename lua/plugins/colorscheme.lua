@@ -1,3 +1,11 @@
+-- return {
+-- 	"arzg/vim-colors-xcode",
+-- }
+-- lua/plugins/rose-pine.lua
 return {
-	"arzg/vim-colors-xcode",
+	"rose-pine/neovim",
+	name = "rose-pine",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end,
 }
