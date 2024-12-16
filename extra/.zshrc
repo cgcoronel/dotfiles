@@ -41,3 +41,4 @@ export PATH="/Users/Cristian/Library/Application Support/fnm:$PATH"
 # eval "`fnm env`"
 eval "$(fnm env --use-on-cd)"
 
+alias save-branch='git rev-parse --abbrev-ref HEAD | pbcopy && echo "Branch actual copiada al portapapeles: $(pbpaste)"'
