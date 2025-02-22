@@ -6,7 +6,6 @@ opt.cursorline = false
 opt.signcolumn = "yes"
 opt.termguicolors = true
 opt.wrap = false
--- opt.mouse = "a"
 
 opt.expandtab = true
 opt.shiftwidth = 4
@@ -33,7 +32,6 @@ let g:minimal_italic_functions = 1
 let g:minimal_transparent_background = 1 
 ]])
 
--- Terminal mappings
 vim.cmd([[
 function! TerminalMappings()
   startinsert

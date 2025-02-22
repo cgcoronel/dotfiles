@@ -40,17 +40,15 @@ return {
 					},
 					width = 0.9,
 					height = 0.60,
-					-- width = { padding = 0 },
-					-- height = { padding = 0 },
 				},
 			},
 		})
 		telescope.load_extension("fzf")
 
-		vim.cmd([[ 
-			  hi TelescopeBorder guifg=#333a43
-        hi TelescopePromptPrefix guifg=#333a43 guibg=none 
-			]])
+		vim.cmd([[
+			hi TelescopeBorder guifg=#333a43
+			hi TelescopePromptPrefix guifg=#333a43 guibg=none
+		]])
 	end,
 	keys = {
 		{ ">", "<cmd>Telescope live_grep<CR>" },
