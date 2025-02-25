@@ -15,6 +15,7 @@ return {
          autocmd!
          autocmd filetype fugitive nmap <buffer> <nowait> <silent> ff dv :resize 100<CR>
          autocmd filetype fugitive nmap <buffer> <nowait> <silent> o gO <C-l>:q<CR><C-h>
+         autocmd filetype fugitive nmap <buffer> <nowait> <silent> a s
        augroup END
      ]])
 	end,
