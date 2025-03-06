@@ -23,7 +23,7 @@ vim.api.nvim_create_user_command("QuickfixBuffers", function()
 	vim.cmd("copen")
 end, {})
 
-map("n", "<leader>a", ":QuickfixBuffers<CR>", silent)
+-- map("n", "<leader>a", ":QuickfixBuffers<CR>", silent)
 map("n", "<leader>s", ":copen<CR>", silent)
 map("n", "<leader>j", ":cnext<CR>", silent)
 map("n", "<leader>k", ":cprev<CR>", silent)
