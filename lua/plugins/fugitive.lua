@@ -7,7 +7,6 @@ return {
 	init = function()
 		vim.cmd("cnoreabbrev gco Git commit")
 		vim.cmd("cnoreabbrev gpu Git push")
-		vim.cmd("cnoreabbrev gpl Git pull")
 		vim.cmd("cnoreabbrev gbb Git blame --date short")
 
 		vim.cmd([[

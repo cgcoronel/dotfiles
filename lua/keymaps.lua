@@ -45,7 +45,6 @@ map("n", "<S-k>", ":m .-2<CR>", silent)
 
 -- split buffer
 map("n", "s", ":vsp<CR>", silent)
-map("n", "S", ":sp<CR>", silent)
 
 -- copy file path
 map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', silent)
