@@ -53,5 +53,3 @@ map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', s
 map("v", "p", '"_dP')
 
 map("n", "<leader>D", ":windo diffthis<cr>", silent)
-
--- map("n", "<leader>t", ":split<cr><c-w><c-j>:resize 10<cr>:term<cr>", silent)
