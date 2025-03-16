@@ -33,3 +33,7 @@ let g:minimal_transparent_background = 1
 ]])
 
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=o")
+
+vim.keymap.set("n", "<C-j>", "<Nop>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-j>", "<Nop>", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-j>", "<Nop>", { noremap = true, silent = true })
