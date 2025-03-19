@@ -42,3 +42,6 @@ export PATH="/Users/Cristian/Library/Application Support/fnm:$PATH"
 eval "$(fnm env --use-on-cd)"
 
 alias save-branch='git rev-parse --abbrev-ref HEAD | pbcopy && echo "Branch actual copiada al portapapeles: $(pbpaste)"'
+
+PS1='%(!.%B%F{red}%n%f%b in .${SSH_TTY:+"%B%F{yellow}%n%f%b in "})${SSH_TTY:+"%B%F{green}%m%f%b in "}%B%F{cyan}%~%f%b${(e)git_info[prompt]}${VIRTUAL_ENV:+" via %B%F{yellow}${VIRTUAL_ENV:t}%f%b"}${duration_info}
+%B%(1j.%F{blue}*%f .)%(?.%F{green}.%F{red}%? )❯%f%b '
