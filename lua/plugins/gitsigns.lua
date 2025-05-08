@@ -6,7 +6,7 @@ return {
 		{ "<Backspace>", "<cmd>Gitsigns prev_hunk<CR>" },
 		{ "<CR>", "<cmd>Gitsigns next_hunk<CR>" },
 	},
-	init = function()
+	config = function()
 		require("gitsigns").setup({
 			signs = {
 				add = { text = "+" },

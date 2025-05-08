@@ -12,21 +12,12 @@ return {
 	},
 	config = function()
 		local telescope = require("telescope")
+
 		telescope.setup({
-			extensions = {
-				fzf = {
-					fuzzy = true,
-					override_generic_sorter = true,
-					override_file_sorter = true,
-					case_mode = "ignore_case",
-				},
-			},
 			defaults = {
 				selection_caret = "  ",
 				entry_prefix = "  ",
 				path_display = { "smart" },
-				initial_mode = "insert",
-				selection_strategy = "reset",
 				sorting_strategy = "ascending",
 				layout_strategy = "horizontal",
 				layout_config = {
@@ -35,23 +26,28 @@ return {
 						preview_width = 0.6,
 						results_width = 0.4,
 					},
-					vertical = {
-						mirror = false,
-					},
 					width = 0.9,
-					height = 0.60,
+					height = 0.6,
+				},
+			},
+			extensions = {
+				fzf = {
+					fuzzy = true,
+					override_generic_sorter = true,
+					override_file_sorter = true,
+					case_mode = "ignore_case",
 				},
 			},
 		})
+
 		telescope.load_extension("fzf")
 
-		vim.cmd([[
-			hi TelescopeBorder guifg=#333a43
-			hi TelescopePromptPrefix guifg=#333a43 guibg=none
-		]])
+		-- Colores más prolijos
+		vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#333a43" })
+		vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { fg = "#333a43", bg = "NONE" })
 	end,
 	keys = {
-		{ ">", "<cmd>Telescope live_grep<CR>" },
-		{ "<leader>f", "<cmd>Telescope fd<CR>" },
+		{ ">", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
+		{ "<leader>f", "<cmd>Telescope fd<CR>", desc = "Find file (fd)" },
 	},
 }
