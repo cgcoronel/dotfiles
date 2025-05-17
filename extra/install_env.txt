@@ -7,6 +7,8 @@ instalar: https://github.com/cgcoronel/cure
 hacer git clone https://github.com/cgcoronel/dotfiles /Users/Cristian/.config/nvim
 instalar: brew install ripgrep
 instalar: brew install fzf
+installar: brew install findutils
+instalar: brew install pngpaste
 desde nvim correr: Codeium Auth
 
 para solucionar erroes de mason-null-ls es 
