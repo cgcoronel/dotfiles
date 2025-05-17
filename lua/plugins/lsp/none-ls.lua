@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
 end
 
 return {
-	"jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local null_ls = require("null-ls")
@@ -31,11 +31,6 @@ return {
 		null_ls.setup({
 			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
 			sources = {
-				diagnostics.eslint_d.with({
-					condition = function(utils)
-						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" })
-					end,
-				}),
 				formatting.stylua,
 				formatting.prettierd.with({
 					filetypes = {
