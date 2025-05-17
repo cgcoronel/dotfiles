@@ -53,4 +53,3 @@ map("v", "p", '"_dP')
 
 map("n", "<leader>D", ":windo diffthis<cr>", silent)
 
-map("n", "<leader>z", ":ZenMode<CR>", silent)

@@ -27,7 +27,21 @@ return {
 						results_width = 0.4,
 					},
 					width = 0.9,
-					height = 0.6,
+					height = 0.9,
+				},
+			},
+			pickers = {
+				lsp_references = {
+					show_line = false,
+				},
+				lsp_definitions = {
+					show_line = false,
+				},
+				lsp_implementations = {
+					show_line = false,
+				},
+				lsp_declarations = {
+					show_line = false,
 				},
 			},
 			extensions = {

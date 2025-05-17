@@ -2,11 +2,19 @@ local opts = { noremap = true, silent = true }
 local on_attach = function(_, bufnr)
 	opts.buffer = bufnr
 	local map = vim.keymap.set
+-- local map = vim.api.nvim_set_keymap
 
-	map("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	map("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+-- local builtin = require("telescope.builtin")
+
+map("n", "gd", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", opts)
+map("n", "gi", "<cmd>lua require('telescope.builtin').lsp_implementations()<CR>", opts)
+map("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", opts)
+map("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- hover es flotante, no usa Telescope
+
+--	map("n", "gf", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+--	map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+--	map("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+--	map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 end
 
 return {
