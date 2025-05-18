@@ -9,7 +9,7 @@ function Quit()
 	vim.cmd(#bufinfo == 1 and "qa" or "bd")
 end
 
-map("n", "<Leader>q", Quit, silent)
+map("n", "<leader>q", Quit, silent)
 
 map("i", "kj", "<Esc>")
 map("n", "<leader>w", ":w<CR>", silent)
@@ -52,4 +52,3 @@ map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', s
 map("v", "p", '"_dP')
 
 map("n", "<leader>D", ":windo diffthis<cr>", silent)
-
