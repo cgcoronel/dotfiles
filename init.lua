@@ -1,32 +1,27 @@
-local lazyPath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-if not vim.loop.fs_stat(lazyPath) then
+if not vim.loop.fs_stat(lazy_path) then
 	vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
-		lazyPath,
+		lazy_path,
 	})
 end
-vim.opt.rtp:prepend(lazyPath)
+vim.opt.rtp:prepend(lazy_path)
 
-local plugins = {
-	{ import = "plugins" },
-	{ import = "plugins.lsp" },
+local opts = {
+	checker = { enabled = true, notify = false },
+	change_detection = { notify = false },
 }
 
-local options = {
-	checker = {
-		enabled = true,
-		notify = false,
-	},
-	change_detection = {
-		notify = false,
-	},
-}
 require("options")
 require("keymaps")
 require("netrw")
-require("lazy").setup(plugins, options)
+
+require("lazy").setup({
+	{ import = "plugins" },
+	{ import = "plugins.lsp" },
+}, opts)

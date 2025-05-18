@@ -27,12 +27,13 @@ opt.writebackup = false
 opt.clipboard = "unnamedplus"
 opt.ttimeoutlen = 0
 
-vim.cmd([[
-let g:minimal_italic_functions = 1
-let g:minimal_transparent_background = 1 
-]])
+vim.g.minimal_italic_functions = 1
+vim.g.minimal_transparent_background = 1
 
-vim.cmd("autocmd BufEnter * setlocal formatoptions-=o")
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*",
+	command = "setlocal formatoptions-=o",
+})
 
 vim.keymap.set("n", "<C-j>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-j>", "<Nop>", { noremap = true, silent = true })
