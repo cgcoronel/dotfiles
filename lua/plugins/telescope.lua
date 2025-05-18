@@ -61,7 +61,9 @@ return {
 		vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { fg = "#333a43", bg = "NONE" })
 	end,
 	keys = {
-		{ ">", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
+		--	{ ">", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
+		{ ">", ":echo 'usa: leader/'<cr>", desc = "Live grep" },
+		{ "<leader>/", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
 		{ "<leader>f", "<cmd>Telescope fd<CR>", desc = "Find file (fd)" },
 	},
 }
