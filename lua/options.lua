@@ -6,6 +6,7 @@ opt.cursorline = false
 opt.signcolumn = "yes"
 opt.termguicolors = true
 opt.wrap = false
+vim.opt.scrolloff = 5
 
 opt.expandtab = true
 opt.shiftwidth = 4
