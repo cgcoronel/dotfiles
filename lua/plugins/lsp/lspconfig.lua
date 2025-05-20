@@ -3,9 +3,13 @@ local on_attach = function(_, bufnr)
 	opts.buffer = bufnr
 	local map = vim.keymap.set
 
-	map("n", "gf", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", opts)
-	map("n", "gi", "<cmd>lua require('telescope.builtin').lsp_implementations()<CR>", opts)
-	map("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", opts)
+	map("n", "gf", "<cmd>FzfLua lsp_definitions<CR>", opts)
+	map("n", "gi", "<cmd>FzfLua lsp_implementations<CR>", opts)
+	map("n", "gr", "<cmd>FzfLua lsp_references<CR>", opts)
+
+	--	map("n", "gf", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", opts)
+	--	map("n", "gi", "<cmd>lua require('telescope.builtin').lsp_implementations()<CR>", opts)
+	--	map("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", opts)
 	map("n", "L", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- hover es flotante, no usa Telescope
 end
 
