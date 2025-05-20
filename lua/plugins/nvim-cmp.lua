@@ -36,7 +36,8 @@ return {
 					name = "buffer",
 					option = {
 						get_bufnrs = function()
-							return vim.api.nvim_list_bufs()
+							-- return vim.api.nvim_list_bufs()
+                            return { vim.api.nvim_get_current_buf() },
 						end,
 					},
 				},
