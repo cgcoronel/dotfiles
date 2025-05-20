@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
 end
 
 return {
-    "nvimtools/none-ls.nvim",
+	"nvimtools/none-ls.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local null_ls = require("null-ls")
@@ -26,7 +26,6 @@ return {
 		local null_ls_utils = require("null-ls.utils")
 
 		local formatting = null_ls.builtins.formatting
-		local diagnostics = null_ls.builtins.diagnostics
 
 		null_ls.setup({
 			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),

@@ -29,6 +29,7 @@ return {
 					width = 0.9,
 					height = 0.9,
 				},
+				file_ignore_patterns = { "node_modules", ".git" },
 			},
 			pickers = {
 				lsp_references = {
