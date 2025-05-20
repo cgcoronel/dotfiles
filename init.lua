@@ -15,6 +15,11 @@ vim.opt.rtp:prepend(lazy_path)
 local opts = {
 	checker = { enabled = true, notify = false },
 	change_detection = { notify = false },
+	performance = {
+		cache = {
+			enabled = true,
+		},
+	},
 }
 
 require("options")

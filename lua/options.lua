@@ -3,7 +3,7 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = false
-opt.signcolumn = "yes"
+opt.signcolumn = "auto" -- "yes"
 opt.termguicolors = true
 opt.wrap = false
 vim.opt.scrolloff = 5
@@ -18,7 +18,7 @@ opt.smartcase = true
 opt.incsearch = true
 
 opt.lazyredraw = true
-opt.updatetime = 250
+opt.updatetime = 100 -- 250
 opt.timeoutlen = 400
 
 opt.undofile = true
