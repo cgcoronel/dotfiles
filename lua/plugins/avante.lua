@@ -1,52 +1,52 @@
 return {
-	"yetone/avante.nvim",
-	event = "VeryLazy",
-	lazy = true,
-	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
-	opts = {
-		provider = "copilot",
-		windows = {
-			position = "left",
-			width = 30,
-		},
-		mappings = {
-			suggestions = {
-				accept = "<CR>",
-			},
-			submit = {
-				normal = "<CR>",
-				insert = "<CR>",
-			},
-		},
-	},
-	build = "make",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter",
-	    "stevearc/dressing.nvim",
-		"nvim-lua/plenary.nvim",
-		"MunifTanjim/nui.nvim",
-		"echasnovski/mini.pick",
-		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-		"github/copilot.vim",
-		{
-			"HakonHarnes/img-clip.nvim",
-			event = "VeryLazy",
-			opts = {
-				default = {
-					embed_image_as_base64 = false,
-					prompt_for_file_name = false,
-					drag_and_drop = {
-						insert_mode = true,
-					},
-				},
-			},
-		},
-		{
-			"MeanderingProgrammer/render-markdown.nvim",
-			opts = {
-				file_types = { "markdown", "Avante" },
-			},
-			ft = { "markdown", "Avante" },
-		},
-	},
+	--	"yetone/avante.nvim",
+	--	event = "VeryLazy",
+	--	lazy = true,
+	--	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+	--	opts = {
+	--		provider = "copilot",
+	--		windows = {
+	--			position = "left",
+	--			width = 30,
+	--		},
+	--		mappings = {
+	--			suggestions = {
+	--				accept = "<CR>",
+	--			},
+	--			submit = {
+	--				normal = "<CR>",
+	--				insert = "<CR>",
+	--			},
+	--		},
+	--	},
+	--	build = "make",
+	--	dependencies = {
+	--		"nvim-treesitter/nvim-treesitter",
+	--	    "stevearc/dressing.nvim",
+	--		"nvim-lua/plenary.nvim",
+	--		"MunifTanjim/nui.nvim",
+	--		"echasnovski/mini.pick",
+	--		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+	--		"github/copilot.vim",
+	--		{
+	--			"HakonHarnes/img-clip.nvim",
+	--			event = "VeryLazy",
+	--			opts = {
+	--				default = {
+	--					embed_image_as_base64 = false,
+	--					prompt_for_file_name = false,
+	--					drag_and_drop = {
+	--						insert_mode = true,
+	--					},
+	--				},
+	--			},
+	--		},
+	--		{
+	--			"MeanderingProgrammer/render-markdown.nvim",
+	--			opts = {
+	--				file_types = { "markdown", "Avante" },
+	--			},
+	--			ft = { "markdown", "Avante" },
+	--		},
+	--	},
 }
