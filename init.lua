@@ -28,5 +28,4 @@ require("netrw")
 
 require("lazy").setup({
 	{ import = "plugins" },
-	{ import = "plugins.lsp" },
 }, opts)
