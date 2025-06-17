@@ -22,6 +22,7 @@ local opts = {
 	},
 }
 
+-- plugins
 require("options")
 require("keymaps")
 require("netrw")
