@@ -4,13 +4,9 @@ local opts = { silent = true, noremap = true }
 vim.g.mapleader = " "
 map({ "n", "v" }, "<Space>", "<NOP>", opts)
 
-map("n", "<leader>q", function()
-	local buffers = vim.fn.getbufinfo({ buflisted = 1 })
-	vim.cmd(#buffers == 1 and "qa" or "bd")
-end, opts)
-
 map("i", "kj", "<Esc>", opts)
 map("n", "<leader>w", vim.cmd.w, opts)
+map("n", "<leader>q", vim.cmd.q, opts)
 
 -- move between windows
 map("n", "<C-L>", "<C-W><C-L>")
