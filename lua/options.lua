@@ -1,12 +1,13 @@
 local opt = vim.opt
 
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false 
 opt.cursorline = false
 opt.signcolumn = "auto"
 opt.termguicolors = true
 opt.wrap = false
 vim.opt.scrolloff = 5
+vim.opt.laststatus = 0
 
 opt.expandtab = true
 opt.shiftwidth = 4
@@ -39,3 +40,13 @@ vim.api.nvim_create_autocmd("BufEnter", {
 vim.keymap.set("n", "<C-j>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-j>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-j>", "<Nop>", { noremap = true, silent = true })
+
+vim.opt.fillchars:append({ eob = " " })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "fugitive",
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+  end,
+})
