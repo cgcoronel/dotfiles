@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 if [[ -z "$OPENAI_API_KEY" ]]; then
   echo "API Key not found"
   exit 1
@@ -36,10 +36,12 @@ COMMIT_MSG=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
 echo -e "\nSuggested commit message:"
 echo -e "\"$COMMIT_MSG\""
 
-read -p "Use this message? [y/N]: " CONFIRM
+read -p "Use this message? [Y/n]: " CONFIRM
+CONFIRM=${CONFIRM:-y}  # Si está vacío, toma 'y'
+
 if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
   git commit -m "$COMMIT_MSG"
-  echo "Commit updated"
+  echo "Commit done"
 else
   echo "Canceled"
 fi
