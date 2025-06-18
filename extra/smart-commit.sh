@@ -38,8 +38,8 @@ echo -e "\"$COMMIT_MSG\""
 
 read -p "Use this message? [y/N]: " CONFIRM
 if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
-  git commit --amend -m "$COMMIT_MSG"
-  echo "✅ Commit updated"
+  git commit -m "$COMMIT_MSG"
+  echo "Commit updated"
 else
-  echo "❌ Canceled"
+  echo "Canceled"
 fi
