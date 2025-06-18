@@ -1,54 +1,45 @@
 #!/bin/bash
 
-# Cargar API Key
-source .env
-
-# Obtener diff del último commit
-DIFF=$(git diff HEAD^..HEAD)
-
-# Validar si hay diff
-if [ -z "$DIFF" ]; then
-  echo "❌ No hay cambios para analizar."
+if [[ -z "$OPENAI_API_KEY" ]]; then
+  echo "API Key not found"
   exit 1
 fi
 
-# Prompt del sistema + diff
-PROMPT=$(cat <<EOF
-Quiero que seas un generador de mensajes de commit. 
-Tu tarea es analizar el siguiente diff y devolver un mensaje de commit corto y claro en español, siguiendo buenas prácticas (en imperativo y sin punto final). 
-No uses palabras genéricas como "cambios", "ajustes", etc. Sé específico y claro.
+DIFF=$(git diff HEAD^..HEAD)
 
-Aquí está el diff:
-$DIFF
-EOF
-)
+if [[ -z "$DIFF" ]]; then
+  echo "No diff to analyze"
+  exit 1
+fi
 
-# Llamada a la API de OpenAI
+PROMPT="Quiero que seas un generador de mensajes de commit usando el estándar Conventional Commits. Debes devolver **solo una línea** que empiece con alguno de estos prefijos: 'feat:', 'fix:', 'refactor:', 'chore:', 'test:', seguido de un espacio y una descripción clara, en ingles, en modo imperativo, sin punto final. No expliques, no des contexto, no uses comillas ni ningún otro texto extra. Tu respuesta debe ser solo el mensaje de commit. Aquí está el diff:\n\n$DIFF"
+
+JSON=$(jq -n \
+  --arg model "gpt-4" \
+  --arg prompt "$PROMPT" \
+  '{
+    model: $model,
+    messages: [
+      {role: "system", content: "Sos un generador experto en Conventional Commits en ingles"},
+      {role: "user", content: $prompt}
+    ],
+    temperature: 0.4
+  }')
+
 RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{
-    "model": "gpt-4",
-    "messages": [
-      {"role": "system", "content": "Sos un generador de mensajes de commit útiles y profesionales"},
-      {"role": "user", "content": "'"${PROMPT}"'"}
-    ],
-    "temperature": 0.4
-  }')
+  -d "$JSON")
 
-# Extraer respuesta
-COMMIT_MSG=$(echo "$RESPONSE" | jq -r '.choices[0].message.content' | head -n 1)
+COMMIT_MSG=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
 
-# Mostrar resultado
-echo -e "\n💬 Sugerencia de commit:"
+echo -e "\nSuggested commit message:"
 echo -e "\"$COMMIT_MSG\""
 
-# Confirmar y aplicar
-read -p "¿Usar este mensaje? [s/N]: " CONFIRM
-
+read -p "Use this message? [s/N]: " CONFIRM
 if [[ "$CONFIRM" == "s" || "$CONFIRM" == "S" ]]; then
   git commit --amend -m "$COMMIT_MSG"
-  echo "✅ Commit actualizado"
+  echo "Commit updated"
 else
-  echo "❌ Cancelado"
+  echo "Canceled"
 fi
