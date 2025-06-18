@@ -36,8 +36,8 @@ COMMIT_MSG=$(echo "$RESPONSE" | jq -r '.choices[0].message.content')
 echo -e "\nSuggested commit message:"
 echo -e "\"$COMMIT_MSG\""
 
-read -p "Use this message? [s/N]: " CONFIRM
-if [[ "$CONFIRM" == "s" || "$CONFIRM" == "S" ]]; then
+read -p "Use this message? [y/N]: " CONFIRM
+if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
   git commit --amend -m "$COMMIT_MSG"
   echo "Commit updated"
 else
