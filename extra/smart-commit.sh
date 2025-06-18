@@ -5,17 +5,17 @@ if [[ -z "$OPENAI_API_KEY" ]]; then
   exit 1
 fi
 
-DIFF=$(git diff HEAD^..HEAD)
+DIFF=$(git diff --cached)
 
 if [[ -z "$DIFF" ]]; then
-  echo "No diff to analyze"
+  echo "No staged changes to analyze"
   exit 1
 fi
 
 PROMPT="Quiero que seas un generador de mensajes de commit usando el estándar Conventional Commits. Debes devolver **solo una línea** que empiece con alguno de estos prefijos: 'feat:', 'fix:', 'refactor:', 'chore:', 'test:', seguido de un espacio y una descripción clara, en ingles, en modo imperativo, sin punto final. No expliques, no des contexto, no uses comillas ni ningún otro texto extra. Tu respuesta debe ser solo el mensaje de commit. Aquí está el diff:\n\n$DIFF"
 
 JSON=$(jq -n \
-  --arg model "gpt-4" \
+  --arg model "gpt-3.5-turbo" \
   --arg prompt "$PROMPT" \
   '{
     model: $model,
@@ -39,7 +39,7 @@ echo -e "\"$COMMIT_MSG\""
 read -p "Use this message? [y/N]: " CONFIRM
 if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
   git commit --amend -m "$COMMIT_MSG"
-  echo "Commit updated"
+  echo "✅ Commit updated"
 else
-  echo "Canceled"
+  echo "❌ Canceled"
 fi
