@@ -5,7 +5,7 @@ if [[ -z "$OPENAI_API_KEY" ]]; then
   exit 1
 fi
 
-DIFF=$(git diff HEAD^..HEAD)
+DIFF=$(git diff)
 
 if [[ -z "$DIFF" ]]; then
   echo "No diff to analyze"
