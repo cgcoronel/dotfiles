@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 if [[ -z "$OPENAI_API_KEY" ]]; then
   echo "API Key not found"
   exit 1
