@@ -1,5 +1,4 @@
 CURE_HOME=${ZDOTDIR:-${HOME}}/.cure
-# ddd
 if [ ! -d "$CURE_HOME" ]; then
   git clone https://github.com/cgcoronel/cure "$CURE_HOME"
 fi
