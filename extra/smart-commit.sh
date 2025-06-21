@@ -28,12 +28,12 @@ success() {
     echo -e "${GREEN}Success:${NC} $1"
 }
 
-# Función para mostrar advertencias
+# Function to display warnings
 warning() {
     echo -e "${YELLOW}Warning:${NC} $1"
 }
 
-# Verificar dependencias
+# Check dependencies
 check_dependencies() {
     if ! command -v jq &> /dev/null; then
         error "jq is required but not installed. Please install jq first."
@@ -44,23 +44,23 @@ check_dependencies() {
     fi
 }
 
-# Verificar configuración
+# Check configuration
 check_config() {
     if [[ -z "$OPENAI_API_KEY" ]]; then
         error "OPENAI_API_KEY environment variable is not set"
     fi
     
-    # Verificar que estamos en un repositorio git
+    # Check if we are in a git repository
     if ! git rev-parse --git-dir > /dev/null 2>&1; then
         error "Not in a git repository"
     fi
 }
 
-# Validar formato del mensaje de commit
+# Validate commit message format
 validate_commit_message() {
     local message="$1"
     
-    # Patrón para Conventional Commits
+    # Pattern for Conventional Commits
     local pattern='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .+'
     
     if [[ ! "$message" =~ $pattern ]]; then
@@ -75,7 +75,7 @@ validate_commit_message() {
     return 0
 }
 
-# Mostrar el diff actual
+# Show current diff
 show_diff() {
     local diff_content="$1"
     echo -e "\n${BLUE}=== Staged Changes ===${NC}"
@@ -83,7 +83,7 @@ show_diff() {
     echo -e "${BLUE}=====================${NC}\n"
 }
 
-# Generar mensaje de commit usando OpenAI
+# Generate commit message using OpenAI
 generate_commit_message() {
     local diff_content="$1"
     
@@ -112,7 +112,7 @@ $diff_content"
             max_tokens: ($max_tokens | tonumber)
         }')
 
-    # Debug: mostrar payload si está habilitado
+    # Debug: show payload if enabled
     if [[ "$DEBUG" == "1" ]]; then
         echo "Debug: JSON payload:" >&2
         echo "$json_payload" >&2
@@ -123,11 +123,11 @@ $diff_content"
         -H "Content-Type: application/json" \
         -d "$json_payload")
     
-    # Extraer HTTP code y response body de forma compatible con macOS
+    # Extract HTTP code and response body in a way compatible with macOS
     local http_code=$(echo "$response" | tail -n1)
     local response_body=$(echo "$response" | sed '$d')
     
-    # Debug: mostrar respuesta si está habilitado
+    # Debug: show response if enabled
     if [[ "$DEBUG" == "1" ]]; then
         echo "Debug: HTTP Code: $http_code" >&2
         echo "Debug: Response body:" >&2
@@ -139,19 +139,19 @@ $diff_content"
         error "API request failed with status $http_code: $error_msg"
     fi
     
-    # Verificar que la respuesta es JSON válido
+    # Check if the response is a valid JSON
     if ! echo "$response_body" | jq empty 2>/dev/null; then
         error "Invalid JSON response from API"
     fi
     
-    # Extraer el mensaje con mejor manejo de errores
+    # Extract the message with better error handling
     local commit_msg=""
     
-    # Intentar diferentes formas de extraer el mensaje
+    # Try different ways to extract the message
     commit_msg=$(echo "$response_body" | jq -r '.choices[0].message.content // empty' 2>/dev/null)
     
     if [[ -z "$commit_msg" ]]; then
-        # Intentar alternativa si la primera falla
+        # Try alternative if the first fails
         commit_msg=$(echo "$response_body" | jq -r '.choices[0].message.content' 2>/dev/null | grep -v '^null$' | head -1)
     fi
     
