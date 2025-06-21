@@ -7,7 +7,7 @@ DIFF_FILE="$TEMP_DIR/pr.diff"
 REVIEW_FILE="$TEMP_DIR/cursor_review.txt"
 
 # Cleanup function
-echo "Cleaning up..."
+echo "Cleaning up files..."
 rm -f "$DIFF_FILE" "$REVIEW_FILE"
 
 # Verify we are in a git repository
