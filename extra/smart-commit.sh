@@ -1,29 +1,29 @@
 #!/bin/bash
 
-# Colores para mejor UX
+# Colors for better UX
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Configuración por defecto (puede ser sobrescrita por variables de entorno)
+# Default configuration (can be overridden by environment variables)
 MODEL=${OPENAI_MODEL:-"gpt-3.5-turbo"}
 TEMPERATURE=${OPENAI_TEMPERATURE:-"0.4"}
 MAX_TOKENS=${OPENAI_MAX_TOKENS:-"150"}
 
-# Función para mostrar errores
+# Function to display errors
 error() {
     echo -e "${RED}Error:${NC} $1" >&2
     exit 1
 }
 
-# Función para mostrar información
+# Function to display information
 info() {
     echo -e "${BLUE}Info:${NC} $1"
 }
 
-# Función para mostrar éxito
+# Function to display success
 success() {
     echo -e "${GREEN}Success:${NC} $1"
 }
