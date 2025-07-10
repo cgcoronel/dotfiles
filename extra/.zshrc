@@ -46,3 +46,6 @@ PS1='%(!.%B%F{red}%n%f%b in .${SSH_TTY:+"%B%F{yellow}%n%f%b in "})${SSH_TTY:+"%B
 %B%(1j.%F{blue}*%f .)%(?.%F{green}.%F{red}%? )❯%f%b '
 
 alias gco='sh /Users/Cristian/.config/nvim/extra/smart-commit.sh'
+
+alias pr-main='gh pr create --base main --head devel --title "Release: devel → main" --body "devel into main" | tee >(pbcopy)'
+
