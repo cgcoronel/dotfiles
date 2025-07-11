@@ -4,8 +4,10 @@ return {
   keys = {
     { "<leader>d", "<cmd>0Git<CR><cmd>6<CR>" },
   },
+  -- vim.cmd("cnoreabbrev gco Git commit")
+  -- 
   init = function()
-    vim.cmd("cnoreabbrev gco Git commit")
+    vim.cmd("cnoreabbrev gco !zsh -ic 'gco'")
     vim.cmd("cnoreabbrev gpu Git push")
     vim.cmd("cnoreabbrev gbb Git blame --date short")
 
