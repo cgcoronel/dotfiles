@@ -1,5 +1,4 @@
 CURE_HOME=${ZDOTDIR:-${HOME}}/.cure
-
 if [ ! -d "$CURE_HOME" ]; then
   git clone https://github.com/cgcoronel/cure "$CURE_HOME"
 fi
@@ -45,3 +44,25 @@ alias save-branch='git rev-parse --abbrev-ref HEAD | pbcopy && echo "Branch actu
 
 PS1='%(!.%B%F{red}%n%f%b in .${SSH_TTY:+"%B%F{yellow}%n%f%b in "})${SSH_TTY:+"%B%F{green}%m%f%b in "}%B%F{cyan}%~%f%b${(e)git_info[prompt]}${VIRTUAL_ENV:+" via %B%F{yellow}${VIRTUAL_ENV:t}%f%b"}${duration_info}
 %B%(1j.%F{blue}*%f .)%(?.%F{green}.%F{red}%? )❯%f%b '
+
+alias gco='sh /Users/Cristian/.config/nvim/extra/smart-commit.sh'
+
+alias pr-main='gh pr create --base main --head devel --title "Release: devel → main" --body "devel into main" | tee >(pbcopy)'
+
+
+#alias prd='sh /Users/Cristian/.config/nvim/extra/smart-review.sh'
+prd() {
+  cat <<EOF | pbcopy
+Please review these PRs and leave inline code comments for any of the following:
+
+- 🐞 Potential bugs or incorrect logic
+- ✨ Possible improvements or refactors
+- 🧼 Code that could be cleaner or more readable
+- ❓ Ambiguous naming, unclear intent, or missing context
+- 🛡️ Edge cases that may not be handled
+
+Be thorough but concise.
+EOF
+}
+
+
