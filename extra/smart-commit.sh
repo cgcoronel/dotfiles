@@ -80,7 +80,7 @@ show_diff() {
     local diff_content="$1"
     echo -e "\n${BLUE}=== Staged Changes ===${NC}"
     echo "$diff_content"
-    echo -e "${BLUE}=====================${NC}\n"
+    echo -e "${BLUE}=====================${NC}"
 }
 
 # Generate commit message using OpenAI
@@ -176,7 +176,7 @@ $diff_content"
 
 # Función principal
 main() {
-    echo -e "${BLUE}🤖 Smart Commit Generator${NC}"
+    echo " ${BLUE}🤖 Smart Commit Generator${NC}"
     echo "================================"
     
     # Verificaciones iniciales
@@ -191,7 +191,7 @@ main() {
     fi
     
     # Mostrar configuración actual
-    info "Using model: $MODEL (temperature: $TEMPERATURE)"
+#    info "Using model: $MODEL (temperature: $TEMPERATURE)"
     
     # Mostrar diff si se solicita
     if [[ "$1" == "--show-diff" ]]; then
@@ -199,7 +199,7 @@ main() {
     fi
     
     # Generar mensaje de commit
-    info "Generating commit message..."
+#    info "Generating commit message..."
     local commit_msg=$(generate_commit_message "$diff_content")
     
     if [[ -z "$commit_msg" ]]; then
@@ -212,17 +212,10 @@ main() {
     fi
     
     # Mostrar mensaje sugerido
-    echo -e "\n${GREEN}Suggested commit message:${NC}"
-    echo -e "${YELLOW}\"$commit_msg\"${NC}\n"
+    echo " \n${GREEN}Commit message:${NC}"
+    echo " ${YELLOW}\"$commit_msg\"${NC}\n"
     
-    # Opciones para el usuario
-    echo "Options:"
-    echo "  [Y] Use this message (default)"
-    echo "  [e] Edit message"
-    echo "  [n] Cancel"
-    echo "  [r] Regenerate"
-    
-    read -p "Choose option [Y/e/n/r]: " choice
+    read -p "Option: [enter] accept / (e)edit] / (n)cancel / (r)egenerate: " choice
     
     # Normalizar la elección (vacío = y, lowercase)
     choice=${choice:-y}
