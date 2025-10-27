@@ -177,7 +177,7 @@ $diff_content"
 # Función principal
 main() {
     echo " ${BLUE}🤖 Smart Commit Generator${NC}"
-    echo "================================"
+#    echo "================================"
     
     # Verificaciones iniciales
     check_dependencies
@@ -210,10 +210,9 @@ main() {
     if ! validate_commit_message "$commit_msg"; then
         warning "The generated message doesn't follow Conventional Commits format"
     fi
-    
+#    
     # Mostrar mensaje sugerido
-    echo " \n${GREEN}Commit message:${NC}"
-    echo " ${YELLOW}\"$commit_msg\"${NC}\n"
+    echo " ${GREEN}Message:${NC} ${YELLOW}\"$commit_msg\"${NC}\n"
     
     read -p "Option: [enter] accept / (e)edit] / (n)cancel / (r)egenerate: " choice
     
