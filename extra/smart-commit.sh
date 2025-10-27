@@ -214,7 +214,7 @@ main() {
     # Mostrar mensaje sugerido
     echo " ${GREEN}Message:${NC} ${YELLOW}\"$commit_msg\"${NC}\n"
     
-    read -p "Option: [enter] accept / (e)edit] / (n)cancel / (r)egenerate: " choice
+    read -p "Confirm? " choice
     
     # Normalizar la elección (vacío = y, lowercase)
     choice=${choice:-y}
@@ -229,28 +229,6 @@ main() {
         y|yes)
             git commit -m "$commit_msg"
             success "Commit created successfully!"
-            ;;
-        e|edit)
-            # Permitir editar el mensaje
-            echo "$commit_msg" > /tmp/commit_msg.txt
-            ${EDITOR:-vim} /tmp/commit_msg.txt
-            local edited_msg=$(cat /tmp/commit_msg.txt | tr -d '\n')
-            rm /tmp/commit_msg.txt
-            
-            if [[ -n "$edited_msg" ]]; then
-                git commit -m "$edited_msg"
-                success "Commit created with edited message!"
-            else
-                warning "Empty commit message, operation cancelled"
-            fi
-            ;;
-        r|regenerate)
-            echo "Regenerating..."
-            exec "$0" "$@"
-            ;;
-        n|no|cancel)
-            info "Operation cancelled"
-            exit 0
             ;;
         *)
             error "Invalid option: $choice"
