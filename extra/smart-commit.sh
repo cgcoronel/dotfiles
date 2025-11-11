@@ -11,6 +11,7 @@ NC='\033[0m' # No Color
 MODEL=${OPENAI_MODEL:-"gpt-3.5-turbo"}
 TEMPERATURE=${OPENAI_TEMPERATURE:-"0.4"}
 MAX_TOKENS=${OPENAI_MAX_TOKENS:-"150"}
+MAX_DIFF_LINES=${MAX_DIFF_LINES:-1500}  # Maximum lines of diff to send to API (to avoid token limits)
 
 # Function to display errors
 error() {
@@ -73,6 +74,21 @@ validate_commit_message() {
     fi
     
     return 0
+}
+
+# Truncate diff to avoid exceeding token limits
+truncate_diff() {
+	local diff_content="$1"
+	local max_lines=${MAX_DIFF_LINES:-1500}
+	
+	local line_count=$(echo "$diff_content" | wc -l | tr -d ' ')
+	
+	if [[ $line_count -gt $max_lines ]]; then
+		warning "Diff is too large ($line_count lines). Truncating to first $max_lines lines to avoid token limit."
+		echo "$diff_content" | head -n $max_lines
+	else
+		echo "$diff_content"
+	fi
 }
 
 # Show current diff
@@ -189,6 +205,9 @@ main() {
     if [[ -z "$diff_content" ]]; then
         error "No staged changes to analyze. Use 'git add' to stage changes first."
     fi
+    
+    # Truncar diff si es muy grande para evitar exceder límite de tokens
+    diff_content=$(truncate_diff "$diff_content")
     
     # Mostrar configuración actual
 #    info "Using model: $MODEL (temperature: $TEMPERATURE)"
