@@ -231,9 +231,9 @@ main() {
     fi
 #    
     # Mostrar mensaje sugerido
-    echo " ${GREEN}Message:${NC} ${YELLOW}\"$commit_msg\"${NC}\n"
+    echo " ${GREEN}Message:${NC} ${YELLOW}\"$commit_msg\"${NC}"
     
-    read -p "Confirm? " choice
+    read -p " Confirm? " choice
     
     # Normalizar la elección (vacío = y, lowercase)
     choice=${choice:-y}
