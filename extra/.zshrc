@@ -65,4 +65,11 @@ Be thorough but concise.
 EOF
 }
 
-
+last-commit() {
+    git log --oneline -1
+    local ID=$(git rev-parse --short HEAD)
+    echo
+    echo "ID: $ID"
+    echo -n $ID | pbcopy
+}
+alias last-commit='last-commit'
