@@ -39,7 +39,7 @@ map("v", "<S-j>", ":m '>+1<CR>gv=gv", opts)
 map("v", "<S-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- split buffer
-map("n", "s", ":vsp<CR>", opts)
+map("n", "s", ":vsp<CR><C-w>l", opts)
 
 -- copy file path
 map("n", "cp", ':let @+ = expand("%") <bar> echo "copied " . expand("%")<CR>', opts)
