@@ -8,8 +8,8 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Default configuration (can be overridden by environment variables)
-MODEL=${OPENAI_MODEL:-"gpt-3.5-turbo"}
-TEMPERATURE=${OPENAI_TEMPERATURE:-"0.4"}
+MODEL=${OPENAI_MODEL:-"gpt-6-luna"}
+TEMPERATURE=${OPENAI_TEMPERATURE:-"0.2"}
 MAX_TOKENS=${OPENAI_MAX_TOKENS:-"150"}
 MAX_DIFF_LINES=${MAX_DIFF_LINES:-1500}  # Maximum lines of diff to send to API (to avoid token limits)
 
