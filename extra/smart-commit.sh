@@ -1,253 +1,298 @@
 #!/bin/bash
 
-# Colors for better UX
+# Smart Commit Generator
+# Requirements: git, jq, curl, OPENAI_API_KEY
+
+# Colors
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# Default configuration (can be overridden by environment variables)
+# Configuration
 MODEL=${OPENAI_MODEL:-"gpt-6-luna"}
 TEMPERATURE=${OPENAI_TEMPERATURE:-"0.2"}
 MAX_TOKENS=${OPENAI_MAX_TOKENS:-"150"}
-MAX_DIFF_LINES=${MAX_DIFF_LINES:-1500}  # Maximum lines of diff to send to API (to avoid token limits)
+MAX_DIFF_LINES=${MAX_DIFF_LINES:-1500}
+DEBUG=${DEBUG:-0}
 
-# Function to display errors
+# Messages
 error() {
-    echo -e "${RED}Error:${NC} $1" >&2
+    printf "${RED}Error:${NC} %s\n" "$1" >&2
     exit 1
 }
 
-# Function to display information
 info() {
-    echo -e "${BLUE}Info:${NC} $1"
+    printf "${BLUE}Info:${NC} %s\n" "$1" >&2
 }
 
-# Function to display success
 success() {
-    echo -e "${GREEN}Success:${NC} $1"
+    printf "${GREEN}Success:${NC} %s\n" "$1"
 }
 
-# Function to display warnings
 warning() {
-    echo -e "${YELLOW}Warning:${NC} $1"
+    printf "${YELLOW}Warning:${NC} %s\n" "$1" >&2
 }
 
 # Check dependencies
 check_dependencies() {
-    if ! command -v jq &> /dev/null; then
-        error "jq is required but not installed. Please install jq first."
-    fi
-    
-    if ! command -v curl &> /dev/null; then
-        error "curl is required but not installed. Please install curl first."
-    fi
+    local dep
+
+    for dep in git jq curl; do
+        if ! command -v "$dep" >/dev/null 2>&1; then
+            error "$dep is required but not installed"
+        fi
+    done
 }
 
 # Check configuration
 check_config() {
-    if [[ -z "$OPENAI_API_KEY" ]]; then
+    if [[ -z "${OPENAI_API_KEY:-}" ]]; then
         error "OPENAI_API_KEY environment variable is not set"
     fi
-    
-    # Check if we are in a git repository
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+
+    if ! git rev-parse --is-inside-work-tree \
+        >/dev/null 2>&1; then
         error "Not in a git repository"
     fi
+
+    if ! git diff --cached --quiet --exit-code; then
+        return 0
+    fi
+
+    error "No staged changes. Use 'git add' first."
 }
 
-# Validate commit message format
+# Validate Conventional Commits
 validate_commit_message() {
     local message="$1"
-    
-    # Pattern for Conventional Commits
-    local pattern='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .+'
-    
+
+    local pattern='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\([a-zA-Z0-9._/-]+\))?(!)?: .+'
+
     if [[ ! "$message" =~ $pattern ]]; then
-        warning "Generated message doesn't follow Conventional Commits format:"
-        echo "  $message"
-        echo ""
-        echo "Expected format: type(scope): description"
-        echo "Types: feat, fix, docs, style, refactor, test, chore, perf, ci, build, revert"
+        warning "Invalid Conventional Commits format:"
+        printf '  %s\n' "$message" >&2
         return 1
     fi
-    
+
     return 0
 }
 
-# Truncate diff to avoid exceeding token limits
+# Truncate diff safely
 truncate_diff() {
-	local diff_content="$1"
-	local max_lines=${MAX_DIFF_LINES:-1500}
-	
-	local line_count=$(echo "$diff_content" | wc -l | tr -d ' ')
-	
-	if [[ $line_count -gt $max_lines ]]; then
-		warning "Diff is too large ($line_count lines). Truncating to first $max_lines lines to avoid token limit."
-		echo "$diff_content" | head -n $max_lines
-	else
-		echo "$diff_content"
-	fi
+    local diff_content="$1"
+    local line_count
+
+    line_count=$(printf '%s\n' "$diff_content" | wc -l)
+    line_count=${line_count//[[:space:]]/}
+
+    if (( line_count > MAX_DIFF_LINES )); then
+        warning "Diff has $line_count lines. Limiting to $MAX_DIFF_LINES."
+
+        printf '%s\n' "$diff_content" |
+            sed -n "1,${MAX_DIFF_LINES}p"
+    else
+        printf '%s\n' "$diff_content"
+    fi
 }
 
-# Show current diff
+# Show staged diff
 show_diff() {
     local diff_content="$1"
-    echo -e "\n${BLUE}=== Staged Changes ===${NC}"
-    echo "$diff_content"
-    echo -e "${BLUE}=====================${NC}"
+
+    printf "\n${BLUE}=== Staged Changes ===${NC}\n"
+    printf '%s\n' "$diff_content"
+    printf "${BLUE}======================${NC}\n\n"
 }
 
-# Generate commit message using OpenAI
+# Generate commit message with OpenAI
 generate_commit_message() {
     local diff_content="$1"
-    
-    local prompt="You are an expert in generating Conventional Commits messages. 
-Generate a single-line commit message that follows the Conventional Commits standard.
-Use one of these prefixes: feat, fix, docs, style, refactor, test, chore, perf, ci, build, revert
-Followed by a clear description in English, in imperative mood, without a period.
-Return ONLY the commit message, no explanations or extra text.
+    local prompt
+    local json_payload
+    local response
+    local response_body
+    local http_code
+    local commit_msg
+    local error_msg
 
-Here's the diff to analyze:
+    prompt="Analyze the following staged Git diff and generate
+exactly one Conventional Commits message.
+
+Rules:
+- Write in English.
+- Use imperative mood.
+- Return exactly one line.
+- Do not use quotes, Markdown, or explanations.
+- Do not end with a period.
+- Prefer concise descriptions.
+- Describe the intent, not just the changed files.
+- Use a scope only when it adds useful context.
+- Never invent changes not present in the diff.
+
+Allowed types:
+feat, fix, docs, style, refactor, test,
+chore, perf, ci, build, revert
+
+Expected format:
+type(scope): short description
+
+Git diff:
 
 $diff_content"
 
-    local json_payload=$(jq -n \
+    # Build JSON payload
+    if ! json_payload=$(jq -n \
         --arg model "$MODEL" \
         --arg prompt "$prompt" \
         --arg temperature "$TEMPERATURE" \
         --arg max_tokens "$MAX_TOKENS" \
         '{
             model: $model,
+            reasoning_effort: "none",
             messages: [
-                {role: "system", content: "You are an expert Conventional Commits generator. Always respond with a single line following the format: type(scope): description"},
-                {role: "user", content: $prompt}
+                {
+                    role: "system",
+                    content: "Generate valid Conventional Commits messages. Return only the commit message."
+                },
+                {
+                    role: "user",
+                    content: $prompt
+                }
             ],
             temperature: ($temperature | tonumber),
-            max_tokens: ($max_tokens | tonumber)
-        }')
-
-    # Debug: show payload if enabled
-    if [[ "$DEBUG" == "1" ]]; then
-        echo "Debug: JSON payload:" >&2
-        echo "$json_payload" >&2
+            max_completion_tokens: ($max_tokens | tonumber)
+        }'); then
+        error "Failed to build JSON payload"
     fi
 
-    local response=$(curl -s -w "\n%{http_code}" https://api.openai.com/v1/chat/completions \
+    if [[ "$DEBUG" == "1" ]]; then
+        info "Model: $MODEL"
+        printf '%s\n' "$json_payload" >&2
+    fi
+
+    # API request
+    response=$(curl -sS \
+        --connect-timeout 10 \
+        --max-time 90 \
+        -w '\n%{http_code}' \
+        https://api.openai.com/v1/chat/completions \
         -H "Authorization: Bearer $OPENAI_API_KEY" \
         -H "Content-Type: application/json" \
-        -d "$json_payload")
-    
-    # Extract HTTP code and response body in a way compatible with macOS
-    local http_code=$(echo "$response" | tail -n1)
-    local response_body=$(echo "$response" | sed '$d')
-    
-    # Debug: show response if enabled
+        -d "$json_payload") || {
+            error "Unable to connect to OpenAI API"
+        }
+
+    # Separate HTTP status and body
+    http_code=$(printf '%s\n' "$response" | tail -n 1)
+    response_body=$(printf '%s\n' "$response" | sed '$d')
+
     if [[ "$DEBUG" == "1" ]]; then
-        echo "Debug: HTTP Code: $http_code" >&2
-        echo "Debug: Response body:" >&2
-        echo "$response_body" >&2
+        info "HTTP status: $http_code"
+        printf '%s\n' "$response_body" | jq '.' >&2
     fi
-    
+
+    # Validate HTTP response
     if [[ "$http_code" != "200" ]]; then
-        local error_msg=$(echo "$response_body" | jq -r '.error.message // .error.type // "Unknown error"' 2>/dev/null || echo "Failed to parse error message")
-        error "API request failed with status $http_code: $error_msg"
+        error_msg=$(printf '%s\n' "$response_body" |
+            jq -r '.error.message // "Unknown API error"' \
+            2>/dev/null)
+
+        error "OpenAI API ($http_code): ${error_msg:-Unknown error}"
     fi
-    
-    # Check if the response is a valid JSON
-    if ! echo "$response_body" | jq empty 2>/dev/null; then
-        error "Invalid JSON response from API"
+
+    # Validate JSON
+    if ! printf '%s\n' "$response_body" |
+        jq -e . >/dev/null 2>&1; then
+        error "Invalid JSON response from OpenAI"
     fi
-    
-    # Extract the message with better error handling
-    local commit_msg=""
-    
-    # Try different ways to extract the message
-    commit_msg=$(echo "$response_body" | jq -r '.choices[0].message.content // empty' 2>/dev/null)
-    
+
+    # Extract generated message
+    commit_msg=$(printf '%s\n' "$response_body" |
+        jq -r '.choices[0].message.content // empty')
+
     if [[ -z "$commit_msg" ]]; then
-        # Try alternative if the first fails
-        commit_msg=$(echo "$response_body" | jq -r '.choices[0].message.content' 2>/dev/null | grep -v '^null$' | head -1)
+        error "OpenAI returned an empty commit message"
     fi
-    
+
+    # Clean output
+    commit_msg=$(printf '%s' "$commit_msg" |
+        tr -d '\r' |
+        sed -n '1p' |
+        sed 's/^[[:space:]]*//;s/[[:space:]]*$//' |
+        sed 's/^"//;s/"$//')
+
     if [[ -z "$commit_msg" ]]; then
-        # Debug: mostrar estructura de la respuesta
-        if [[ "$DEBUG" == "1" ]]; then
-            echo "Debug: Full response structure:" >&2
-            echo "$response_body" | jq '.' >&2
-        fi
-        error "Failed to extract commit message from API response. Response structure may have changed."
+        error "Commit message is empty after cleaning"
     fi
-    
-    # Limpiar el mensaje (remover comillas extra, espacios, etc.)
-    commit_msg=$(echo "$commit_msg" | sed 's/^"//;s/"$//' | tr -d '\n\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-    
-    if [[ -z "$commit_msg" ]]; then
-        error "Extracted commit message is empty after cleaning"
-    fi
-    
-    echo "$commit_msg"
+
+    printf '%s\n' "$commit_msg"
 }
 
-# Función principal
+# Main
 main() {
-    echo " ${BLUE}🤖 Smart Commit Generator${NC}"
-#    echo "================================"
-    
-    # Verificaciones iniciales
+    local diff_content
+    local commit_msg
+    local choice
+
+    printf " ${BLUE}🤖 Smart Commit Generator${NC}\n"
+
     check_dependencies
     check_config
-    
-    # Obtener diff de cambios staged
-    local diff_content=$(git diff --cached)
-    
+
+    # Get staged changes
+    diff_content=$(git diff --cached --no-ext-diff --no-color) ||
+        error "Failed to read staged changes"
+
     if [[ -z "$diff_content" ]]; then
-        error "No staged changes to analyze. Use 'git add' to stage changes first."
+        error "No staged diff available"
     fi
-    
-    # Truncar diff si es muy grande para evitar exceder límite de tokens
-    diff_content=$(truncate_diff "$diff_content")
-    
-    # Mostrar configuración actual
-#    info "Using model: $MODEL (temperature: $TEMPERATURE)"
-    
-    # Mostrar diff si se solicita
-    if [[ "$1" == "--show-diff" ]]; then
+
+    # Truncate large diffs
+    diff_content=$(truncate_diff "$diff_content") ||
+        error "Failed to process diff"
+
+    # Optional diff display
+    if [[ "${1:-}" == "--show-diff" ]]; then
         show_diff "$diff_content"
     fi
-    
-    # Generar mensaje de commit
-#    info "Generating commit message..."
-    local commit_msg=$(generate_commit_message "$diff_content")
-    
-    if [[ -z "$commit_msg" ]]; then
+
+    # Generate message
+    commit_msg=$(generate_commit_message "$diff_content") ||
         error "Failed to generate commit message"
-    fi
-    
-    # Validar formato
+
+    # Validate message before committing
     if ! validate_commit_message "$commit_msg"; then
-        warning "The generated message doesn't follow Conventional Commits format"
+        error "Generated message does not follow Conventional Commits"
     fi
-#    
-    # Mostrar mensaje sugerido
-    echo " ${GREEN}Message:${NC} ${YELLOW}\"$commit_msg\"${NC}"
-    
-    read -p " Confirm? " choice
-    
-    # Normalizar la elección (vacío = y, lowercase)
+
+    # Show suggestion
+    printf " ${GREEN}Message:${NC} ${YELLOW}\"%s\"${NC}\n" \
+        "$commit_msg"
+
+    printf " Confirm? [Y/n] "
+    read -r choice
+
+    # Default to yes
     choice=${choice:-y}
-    choice=$(printf '%s' "$choice" | tr '[:upper:]' '[:lower:]')
-    
-    # Debug: mostrar la elección si está habilitado
+    choice=$(printf '%s' "$choice" |
+        tr '[:upper:]' '[:lower:]')
+
     if [[ "$DEBUG" == "1" ]]; then
-        echo "Debug: User choice: '$choice'" >&2
+        info "User choice: $choice"
     fi
-    
+
     case "$choice" in
         y|yes)
-            git commit -m "$commit_msg"
-            success "Commit created successfully!"
+            if git commit -m "$commit_msg"; then
+                success "Commit created successfully!"
+            else
+                error "Git commit failed"
+            fi
+            ;;
+        n|no)
+            warning "Commit cancelled"
             ;;
         *)
             error "Invalid option: $choice"
@@ -255,5 +300,5 @@ main() {
     esac
 }
 
-# Ejecutar función principal
 main "$@"
+
